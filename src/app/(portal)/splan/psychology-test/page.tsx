@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 // Types
+type DimensionKey = 'risk' | 'emotion' | 'decision' | 'discipline' | 'stress';
+
 interface QuestionOption {
   text: string;
   score: number;
@@ -13,7 +15,7 @@ interface QuestionOption {
 interface Question {
   id: number;
   category: string;
-  dimension: keyof typeof DIMENSIONS;
+  dimension: DimensionKey;
   text: string;
   options: QuestionOption[];
 }
