@@ -148,11 +148,11 @@ export const blogPosts: BlogPost[] = [
  <p class="font-bold text-xl mb-2">职业交易员阶段 | 大额矩阵</p>
  <p class="mb-3">小额实盘 20 工作日固化无误，进入大额矩阵</p>
  <ul class="text-sm space-y-1">
- <li>✓ 拥有完全自由的工作时间，每天不限制交易量，保证每日不亏的底线即可</li>
- <li>✓ 资金规模与仓位：随着交易能力的不断稳定，仓位大小逐步提升</li>
- <li>✓ 小额实盘：20 美金仓位，配资 100 美金</li>
- <li>✓ 大额实盘：依据小额实盘的表现进行设定</li>
- <li>✓ 仓位增长：随着盈利曲线的上升，逐步增加仓位规模，逐步增加分润比例</li>
+ <li> 拥有完全自由的工作时间，每天不限制交易量，保证每日不亏的底线即可</li>
+ <li> 资金规模与仓位：随着交易能力的不断稳定，仓位大小逐步提升</li>
+ <li> 小额实盘：20 美金仓位，配资 100 美金</li>
+ <li> 大额实盘：依据小额实盘的表现进行设定</li>
+ <li> 仓位增长：随着盈利曲线的上升，逐步增加仓位规模，逐步增加分润比例</li>
  </ul>
  </div>
 </div>
@@ -387,11 +387,11 @@ export const blogPosts: BlogPost[] = [
  <p class="font-bold text-xl mb-2">Professional Trader Phase | Large-Amount Matrix</p>
  <p class="mb-3">After 20 working days of small-amount live trading consolidation without errors, enter large-amount matrix</p>
  <ul class="text-sm space-y-1">
- <li>✓ Complete freedom in working hours, no daily trading volume limits, just maintain the baseline of no daily losses</li>
- <li>✓ Capital Scale & Position: As trading ability stabilizes, position size gradually increases</li>
- <li>✓ Small-amount live: $20 position, $100 capital allocation</li>
- <li>✓ Large-amount live: Determined based on small-amount live performance</li>
- <li>✓ Position growth: As profit curve rises, gradually increase position scale and profit share ratio</li>
+ <li> Complete freedom in working hours, no daily trading volume limits, just maintain the baseline of no daily losses</li>
+ <li> Capital Scale & Position: As trading ability stabilizes, position size gradually increases</li>
+ <li> Small-amount live: $20 position, $100 capital allocation</li>
+ <li> Large-amount live: Determined based on small-amount live performance</li>
+ <li> Position growth: As profit curve rises, gradually increase position scale and profit share ratio</li>
  </ul>
  </div>
 </div>
@@ -562,7 +562,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
- <div class="text-3xl mb-3">🕐</div>
+ <div class="text-3xl mb-3"></div>
  <h4 class="text-lg font-bold mb-3 text-gray-900 dark:text-gray-200">24小时连续交易</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
  <li class="flex items-start"><span class="mr-2 text-gray-600">▸</span><span>周一至周五全天候运作</span></li>
@@ -572,7 +572,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
- <div class="text-3xl mb-3">⬆️⬇️</div>
+ <div class="text-3xl mb-3"></div>
  <h4 class="text-lg font-bold mb-3 text-gray-900 dark:text-gray-200">双向交易机会</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
  <li class="flex items-start"><span class="mr-2 text-gray-600">▸</span><span>做多（买涨）获利</span></li>
@@ -593,7 +593,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border border-gray-300 dark:border-gray-700">
- <p class="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2">🌍 全球去中心化市场</p>
+ <p class="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2"> 全球去中心化市场</p>
  <p class="text-gray-800 dark:text-gray-200">外汇市场没有中央交易所，而是由全球各地的银行、金融机构、企业和个人交易者组成的网络。这确保了市场的透明度和公平性。</p>
  </div>
 </div>
@@ -662,7 +662,7 @@ export const blogPosts: BlogPost[] = [
  </div>
  </div>
 
- <h4 class="text-2xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200">🔄 交叉货币对（Crosses）</h4>
+ <h4 class="text-2xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200"> 交叉货币对（Crosses）</h4>
  <p class="mb-4 text-gray-700 dark:text-gray-300">不涉及美元的货币对，波动性通常较大</p>
 
  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -686,9 +686,9 @@ export const blogPosts: BlogPost[] = [
  </div>
  </div>
 
- <h4 class="text-2xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200">🌍 异国货币对（Exotics）</h4>
+ <h4 class="text-2xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200"> 异国货币对（Exotics）</h4>
  <div class="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-gray-900">
- <p class="font-bold text-gray-900 dark:text-gray-900 mb-3">⛔ 新手应避免</p>
+ <p class="font-bold text-gray-900 dark:text-gray-900 mb-3"> 新手应避免</p>
  <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
  <p class="text-gray-700 dark:text-gray-300"><strong>USD/TRY</strong> - 美元/土耳其里拉</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>USD/ZAR</strong> - 美元/南非兰特</p>
@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 
 <div class="relative bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-8 border-l-8 border-gray-600 hover: mb-10">
- <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-200">手（Lot）📦</h3>
+ <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-200">手（Lot）</h3>
  <p class="text-lg mb-6 leading-relaxed text-gray-800 dark:text-gray-200">手是外汇交易的标准化交易单位，决定了你交易的规模大小。</p>
 
  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -791,19 +791,19 @@ export const blogPosts: BlogPost[] = [
  <div class="space-y-3">
  <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-950 p-3">
  <span class="font-mono text-lg">1:50</span>
- <span class="text-sm text-gray-700 dark:text-gray-300">✓ 保守安全</span>
+ <span class="text-sm text-gray-700 dark:text-gray-300"> 保守安全</span>
  </div>
  <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-950 p-3">
  <span class="font-mono text-lg">1:100</span>
- <span class="text-sm text-gray-700 dark:text-gray-300">✓ 标准推荐</span>
+ <span class="text-sm text-gray-700 dark:text-gray-300"> 标准推荐</span>
  </div>
  <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-950 p-3">
  <span class="font-mono text-lg">1:200</span>
- <span class="text-sm text-gray-700 dark:text-gray-300">⚠ 较激进</span>
+ <span class="text-sm text-gray-700 dark:text-gray-300"> 较激进</span>
  </div>
  <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-900 p-3">
  <span class="font-mono text-lg">1:500</span>
- <span class="text-sm text-gray-900 dark:text-gray-900">⛔ 高风险</span>
+ <span class="text-sm text-gray-900 dark:text-gray-900"> 高风险</span>
  </div>
  </div>
  </div>
@@ -825,10 +825,10 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-gray-100 dark:bg-gray-900 p-6 border-l-4 border-gray-900">
  <p class="text-lg font-bold text-gray-900 dark:text-gray-900 mb-3"> 杠杆风险警告</p>
  <ul class="space-y-2 text-gray-900 dark:text-gray-900">
- <li class="flex items-start"><span class="mr-2">❗</span><span>杠杆放大盈利的同时，<strong>也会等比例放大亏损</strong></span></li>
- <li class="flex items-start"><span class="mr-2">❗</span><span>过高杠杆容易导致爆仓</span></li>
- <li class="flex items-start"><span class="mr-2">❗</span><span>新手建议使用 <strong>1:50 或 1:100</strong> 杠杆</span></li>
- <li class="flex items-start"><span class="mr-2">❗</span><span>必须配合严格的风险管理</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>杠杆放大盈利的同时，<strong>也会等比例放大亏损</strong></span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>过高杠杆容易导致爆仓</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>新手建议使用 <strong>1:50 或 1:100</strong> 杠杆</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>必须配合严格的风险管理</span></li>
  </ul>
  </div>
 </div>
@@ -862,18 +862,18 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
  <p class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-4">固定点差</p>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>点差大小不变</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>成本可预测</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">×</span><span>通常比浮动点差大</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>点差大小不变</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>成本可预测</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>通常比浮动点差大</span></li>
  </ul>
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
  <p class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-4">浮动点差</p>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>根据市场流动性变化</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>平均点差较小</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">×</span><span>新闻时段可能剧增</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>根据市场流动性变化</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>平均点差较小</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>新闻时段可能剧增</span></li>
  </ul>
  </div>
  </div>
@@ -1623,7 +1623,7 @@ export const blogPosts: BlogPost[] = [
 <p class="mb-6 leading-relaxed">Margin is the minimum capital required to open a position.</p>
 
 <strong>Formula:</strong>
-<p class="mb-6 leading-relaxed">Margin = (Contract Size × Lots) ÷ Leverage</p>
+<p class="mb-6 leading-relaxed">Margin = (Contract Size  Lots) ÷ Leverage</p>
 
 <strong>Example:</strong>
 <ul class="list-disc list-inside mb-6 space-y-2">
@@ -2311,7 +2311,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-blue-300 dark:via-blue-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">二、核心风险管理原则 📋</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">二、核心风险管理原则 </h2>
 
 <div class="relative bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-8 border-l-8 border-gray-600 hover: mb-10">
  <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-200">2% 风险规则 </h3>
@@ -2422,12 +2422,12 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2">盈亏比 1:2 + 胜率 40%</p>
  <p class="text-sm text-gray-700 dark:text-gray-300">10次交易：4赢6亏</p>
- <p class="text-sm text-gray-700 dark:text-gray-300 font-mono mt-2">(4×100点) - (6×50点) = +100点 ✓</p>
+ <p class="text-sm text-gray-700 dark:text-gray-300 font-mono mt-2">(4100点) - (650点) = +100点 </p>
  </div>
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2">盈亏比 1:1 + 胜率 50%</p>
  <p class="text-sm text-gray-700 dark:text-gray-300">10次交易：5赢5亏</p>
- <p class="text-sm text-gray-500 dark:text-gray-500 font-mono mt-2">(5×50点) - (5×50点) = 0点 ×</p>
+ <p class="text-sm text-gray-500 dark:text-gray-500 font-mono mt-2">(550点) - (550点) = 0点 </p>
  </div>
  </div>
  <p class="text-sm text-gray-700 dark:text-gray-300 mt-4 text-center">盈亏比越高，对胜率的要求越低！</p>
@@ -2478,10 +2478,10 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-gray-50 dark:bg-gray-950 p-6 border-l-4 border-gray-600">
  <p class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-4"> 情绪管理方法</p>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2">✓</span><span>连续亏损2-3次，停止交易休息</span></li>
- <li class="flex items-start"><span class="mr-2">✓</span><span>大盈利后也要休息，避免飘飘然</span></li>
- <li class="flex items-start"><span class="mr-2">✓</span><span>严格按照交易计划执行</span></li>
- <li class="flex items-start"><span class="mr-2">✓</span><span>记录交易日志，定期复盘</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>连续亏损2-3次，停止交易休息</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>大盈利后也要休息，避免飘飘然</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>严格按照交易计划执行</span></li>
+ <li class="flex items-start"><span class="mr-2"></span><span>记录交易日志，定期复盘</span></li>
  </ul>
  </div>
  </div>
@@ -2657,7 +2657,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-300 dark:via-yellow-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">二、全球黄金交易时段详解 🌍</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">二、全球黄金交易时段详解 </h2>
 
 <p class="text-xl mb-8 leading-relaxed">黄金市场随着地球自转，在不同大洲依次开市。了解各时段特点，是制定交易计划的基础：</p>
 
@@ -2676,7 +2676,7 @@ export const blogPosts: BlogPost[] = [
  <p class="text-gray-700 dark:text-gray-300 text-sm">平均日波幅的20-30%，日内波动通常在 $5-15 范围</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-5 border border-gray-300 dark:border-gray-700">
- <p class="font-bold text-gray-900 dark:text-gray-200 mb-2">💧 流动性：中等</p>
+ <p class="font-bold text-gray-900 dark:text-gray-200 mb-2"> 流动性：中等</p>
  <p class="text-gray-700 dark:text-gray-300 text-sm">约占全球交易量的15-20%，点差略宽于欧美时段</p>
  </div>
  </div>
@@ -2787,7 +2787,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">三、每日最佳交易时间窗口 🕐</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">三、每日最佳交易时间窗口 </h2>
 
 <div class="bg-white dark:bg-gray-900 p-8 border-2 border-gray-200 dark:border-gray-800 mb-10">
  <h3 class="text-2xl font-bold mb-6 text-gray-700 dark:text-gray-300">黄金交易时间表（北京时间）</h3>
@@ -2844,7 +2844,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-300 dark:via-yellow-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">四、黄金价格的季节性规律 📅</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">四、黄金价格的季节性规律 </h2>
 
 <p class="text-xl mb-8 leading-relaxed">除了日内时段，黄金价格还存在明显的季节性规律。了解这些规律，能帮你在更宏观的时间维度上把握机会：</p>
 
@@ -2857,7 +2857,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-300 dark:border-gray-700">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">☀️ 夏季（6-8月）</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 夏季（6-8月）</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>特点：</strong>传统淡季，需求减少</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>表现：</strong>震荡偏弱，7-8月常见底部</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>策略：</strong>观望为主，寻找低位机会</p>
@@ -2871,7 +2871,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-400 dark:border-gray-600">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">❄️ 冬季（12-2月）</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 冬季（12-2月）</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>特点：</strong>年底流动性收紧，避险需求</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>表现：</strong>波动加大，1月通常强劲</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>策略：</strong>灵活应对，关注年初效应</p>
@@ -2905,7 +2905,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
  <div class="flex justify-between items-start mb-3">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200">💵 美联储利率决议（FOMC）</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200"> 美联储利率决议（FOMC）</h4>
  <span class="bg-gray-600 text-white px-3 py-1 text-sm font-bold">超重要</span>
  </div>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>时间：</strong>每年8次，通常次日 02:00</p>
@@ -2935,7 +2935,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-400">
  <div class="flex justify-between items-start mb-3">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200">🗣️ 美联储主席讲话</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200"> 美联储主席讲话</h4>
  <span class="bg-gray-400 text-gray-800 px-3 py-1 text-sm font-bold">中等</span>
  </div>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>时间：</strong>不定期，通常在国会作证或经济论坛</p>
@@ -2945,7 +2945,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-400">
  <div class="flex justify-between items-start mb-3">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200">🌍 地缘政治事件</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200"> 地缘政治事件</h4>
  <span class="bg-gray-400 text-gray-800 px-3 py-1 text-sm font-bold">不定</span>
  </div>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>时间：</strong>突发性，无固定时间</p>
@@ -2955,7 +2955,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="mt-6 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-5">
- <p class="font-bold text-gray-900 dark:text-gray-200 mb-2">📅 实用工具：</p>
+ <p class="font-bold text-gray-900 dark:text-gray-200 mb-2"> 实用工具：</p>
  <p class="text-gray-800 dark:text-gray-200">建议使用<strong>经济日历</strong>（如Forex Factory、Investing.com）追踪这些事件。设置手机提醒，确保不错过重要时刻。</p>
  </div>
 </div>
@@ -3069,42 +3069,42 @@ export const blogPosts: BlogPost[] = [
 
  <div class="space-y-6">
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">1️⃣ 日内交易者（短线）</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 日内交易者（短线）</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>最佳时段：</strong>20:30-02:00（欧美重叠）</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>关注数据：</strong>非农、CPI、FOMC</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>技术工具：</strong>5分钟K线 + RSI + 布林带</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>止损：</strong>$5-10，目标 $10-20</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>最佳时段：</strong>20:30-02:00（欧美重叠）</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>关注数据：</strong>非农、CPI、FOMC</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>技术工具：</strong>5分钟K线 + RSI + 布林带</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>止损：</strong>$5-10，目标 $10-20</span></li>
  </ul>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">2️⃣ 波段交易者（中线）</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 波段交易者（中线）</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>最佳时段：</strong>15:00-23:30（欧洲+美国前半场）</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>关注周期：</strong>3-10天，持有过夜</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>技术工具：</strong>日线K线 + MA + MACD</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>止损：</strong>$15-30，目标 $30-80</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>最佳时段：</strong>15:00-23:30（欧洲+美国前半场）</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>关注周期：</strong>3-10天，持有过夜</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>技术工具：</strong>日线K线 + MA + MACD</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>止损：</strong>$15-30，目标 $30-80</span></li>
  </ul>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">3️⃣ 趋势交易者（长线）</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 趋势交易者（长线）</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>最佳时段：</strong>不限，关注大趋势</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>入场时机：</strong>趋势回调至关键支撑/阻力</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>技术工具：</strong>周线K线 + 200日MA + 趋势线</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>止损：</strong>$50-100，目标 $150-300+</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>最佳时段：</strong>不限，关注大趋势</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>入场时机：</strong>趋势回调至关键支撑/阻力</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>技术工具：</strong>周线K线 + 200日MA + 趋势线</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>止损：</strong>$50-100，目标 $150-300+</span></li>
  </ul>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">4️⃣ 新闻交易者（事件驱动）</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 新闻交易者（事件驱动）</h4>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>最佳时段：</strong>重大数据发布前后（20:30前后）</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>关注事件：</strong>非农、FOMC、地缘危机</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>策略：</strong>数据前平仓，数据后顺势入场</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span><strong>风险：</strong>极高，需经验丰富者操作</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>最佳时段：</strong>重大数据发布前后（20:30前后）</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>关注事件：</strong>非农、FOMC、地缘危机</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>策略：</strong>数据前平仓，数据后顺势入场</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span><strong>风险：</strong>极高，需经验丰富者操作</span></li>
  </ul>
  </div>
  </div>
@@ -3113,11 +3113,11 @@ export const blogPosts: BlogPost[] = [
 <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-orange-950 p-8 border-l-8 border-gray-900 mb-10">
  <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-900"> 应该避免的交易时机</h3>
  <ul class="space-y-3 text-gray-800 dark:text-gray-200">
- <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl">✗</span><span><strong>周末跳空：</strong>周一开盘可能出现跳空缺口，周五尾盘减仓</span></li>
- <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl">✗</span><span><strong>假期前后：</strong>圣诞节、感恩节、春节期间流动性极差</span></li>
- <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl">✗</span><span><strong>亚洲清淡时段：</strong>早上6-8点波动小，假突破多</span></li>
- <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl">✗</span><span><strong>数据前5分钟：</strong>价格剧烈波动，点差扩大，容易被套</span></li>
- <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl">✗</span><span><strong>月初月末：</strong>机构结算日，价格可能异常波动</span></li>
+ <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl"></span><span><strong>周末跳空：</strong>周一开盘可能出现跳空缺口，周五尾盘减仓</span></li>
+ <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl"></span><span><strong>假期前后：</strong>圣诞节、感恩节、春节期间流动性极差</span></li>
+ <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl"></span><span><strong>亚洲清淡时段：</strong>早上6-8点波动小，假突破多</span></li>
+ <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl"></span><span><strong>数据前5分钟：</strong>价格剧烈波动，点差扩大，容易被套</span></li>
+ <li class="flex items-start"><span class="mr-3 text-gray-900 text-xl"></span><span><strong>月初月末：</strong>机构结算日，价格可能异常波动</span></li>
  </ul>
 </div>
 
@@ -3175,22 +3175,22 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
  <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 应该做的</h3>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>制定明确的交易计划，写明入场时机</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>使用经济日历，提前知晓重要事件</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>在最活跃时段（20:30-02:00）集中交易</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>耐心等待最佳时机，不强行交易</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-600">✓</span><span>记录每次交易的时间和原因，复盘优化</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>制定明确的交易计划，写明入场时机</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>使用经济日历，提前知晓重要事件</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>在最活跃时段（20:30-02:00）集中交易</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>耐心等待最佳时机，不强行交易</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-600"></span><span>记录每次交易的时间和原因，复盘优化</span></li>
  </ul>
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-900">
  <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-900"> 不应该做的</h3>
  <ul class="space-y-2 text-gray-700 dark:text-gray-300">
- <li class="flex items-start"><span class="mr-2 text-gray-900">✗</span><span>在清淡时段频繁交易，增加成本</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-900">✗</span><span>重大数据前不平仓，承受不必要风险</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-900">✗</span><span>盲目追涨杀跌，不考虑时机因素</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-900">✗</span><span>假期前重仓持有，流动性风险大</span></li>
- <li class="flex items-start"><span class="mr-2 text-gray-900">✗</span><span>疲劳交易，凌晨3点后状态差</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-900"></span><span>在清淡时段频繁交易，增加成本</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-900"></span><span>重大数据前不平仓，承受不必要风险</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-900"></span><span>盲目追涨杀跌，不考虑时机因素</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-900"></span><span>假期前重仓持有，流动性风险大</span></li>
+ <li class="flex items-start"><span class="mr-2 text-gray-900"></span><span>疲劳交易，凌晨3点后状态差</span></li>
  </ul>
  </div>
 </div>
@@ -3251,7 +3251,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-300 dark:via-yellow-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">II. Global Gold Trading Sessions Explained 🌍</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">II. Global Gold Trading Sessions Explained </h2>
 
 <p class="text-xl mb-8 leading-relaxed">The gold market follows the sun, opening sequentially across continents. Understanding each session's characteristics is fundamental to planning your trades:</p>
 
@@ -3270,7 +3270,7 @@ export const blogPosts: BlogPost[] = [
  <p class="text-gray-700 dark:text-gray-300 text-sm">20-30% of daily range, typically $5-15 intraday movement</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-5 border border-gray-300 dark:border-gray-700">
- <p class="font-bold text-gray-900 dark:text-gray-200 mb-2">💧 Liquidity: Moderate</p>
+ <p class="font-bold text-gray-900 dark:text-gray-200 mb-2"> Liquidity: Moderate</p>
  <p class="text-gray-700 dark:text-gray-300 text-sm">15-20% of global volume, slightly wider spreads than European/US sessions</p>
  </div>
  </div>
@@ -3381,7 +3381,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">III. Seasonal Patterns in Gold Prices 📅</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">III. Seasonal Patterns in Gold Prices </h2>
 
 <p class="text-xl mb-8 leading-relaxed">Beyond daily sessions, gold exhibits clear seasonal patterns. Understanding these helps you capitalize on broader time horizons:</p>
 
@@ -3394,7 +3394,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-300 dark:border-gray-700">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">☀️ Summer (Jun-Aug)</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> Summer (Jun-Aug)</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>Feature:</strong> Traditional low season, reduced demand</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>Performance:</strong> Consolidation with weakness, Jul-Aug often bottoms</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>Strategy:</strong> Watch and wait, look for low entry opportunities</p>
@@ -3408,7 +3408,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-400 dark:border-gray-600">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">❄️ Winter (Dec-Feb)</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> Winter (Dec-Feb)</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>Feature:</strong> Year-end liquidity tightening, safe-haven demand</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>Performance:</strong> Increased volatility, January typically strong</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>Strategy:</strong> Stay flexible, watch for January effect</p>
@@ -3476,7 +3476,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-l-4 border-gray-600">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">💵 美元强弱</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 美元强弱</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>关系：</strong>强负相关（相关系数-0.8）</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3">黄金以美元计价，DXY（美元指数）上涨，金价下跌；DXY下跌，金价上涨。</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>交易策略：</strong>关注DXY走势图，美元走弱时做多黄金</p>
@@ -3625,7 +3625,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">三、利用市场关联性获利 🔗</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">三、利用市场关联性获利 </h2>
 
 <p class="text-xl mb-8 leading-relaxed">专业交易员不只看黄金本身，更关注相关市场的联动：</p>
 
@@ -3678,7 +3678,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="my-12 h-px bg-gradient-to-r from-transparent via-yellow-300 dark:via-yellow-700 to-transparent"></div>
 
-<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">四、黄金专属技术指标 📐</h2>
+<h2 class="text-4xl font-bold mt-16 mb-8 bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 bg-clip-text text-transparent">四、黄金专属技术指标 </h2>
 
 <p class="text-xl mb-8 leading-relaxed">除了通用指标，这些指标对黄金特别有效：</p>
 
@@ -3691,7 +3691,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-300 dark:border-gray-700">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">🔮 黄金/白银比率</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 黄金/白银比率</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>计算方法：</strong>黄金价格 ÷ 白银价格</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>历史区间：</strong>50-80，平均约65</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>交易信号：</strong>比率>80（黄金超买）考虑做空；比率<50（黄金超卖）考虑做多</p>
@@ -3705,7 +3705,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-6 border-2 border-gray-400 dark:border-gray-600">
- <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">📅 持仓兴趣(OI)</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 持仓兴趣(OI)</h3>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>指标含义：</strong>黄金期货未平仓合约数量</p>
  <p class="text-gray-700 dark:text-gray-300 mb-3"><strong>判断方法：</strong>OI上升+价格上涨=真上涨；OI下降+价格上涨=假上涨</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>最佳信号：</strong>OI和价格同向大幅增加</p>
@@ -3721,31 +3721,31 @@ export const blogPosts: BlogPost[] = [
 
  <div class="space-y-6">
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">1️⃣ 单笔风险不超过2%</h4>
- <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>计算公式：</strong>仓位大小 = (账户资金 × 2%) ÷ 止损点数</p>
- <p class="text-gray-700 dark:text-gray-300"><strong>例子：</strong>$10,000账户，止损$20，仓位 = ($10,000×2%) ÷ $20 = 10盎司</p>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 单笔风险不超过2%</h4>
+ <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>计算公式：</strong>仓位大小 = (账户资金  2%) ÷ 止损点数</p>
+ <p class="text-gray-700 dark:text-gray-300"><strong>例子：</strong>$10,000账户，止损$20，仓位 = ($10,0002%) ÷ $20 = 10盎司</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">2️⃣ 盈亏比至少1:2</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 盈亏比至少1:2</h4>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>含义：</strong>止损$10，止盈至少$20</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>优势：</strong>即使胜率只有40%，长期仍然盈利</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">3️⃣ 连续亏损3次立即停止</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 连续亏损3次立即停止</h4>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>原因：</strong>可能策略失效或状态不佳</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>行动：</strong>休息1-3天，重新评估市场和策略</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">4️⃣ 盈利后加仓，而非亏损后加仓</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 盈利后加仓，而非亏损后加仓</h4>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>正确：</strong>第一笔盈利$10，再加0.5倍仓位</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>错误：</strong>亏损$10后加倍仓位"摊平成本"（最容易爆仓！）</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-6">
- <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3">5️⃣ 每月最大回撤不超过10%</h4>
+ <h4 class="text-xl font-bold text-gray-900 dark:text-gray-200 mb-3"> 每月最大回撤不超过10%</h4>
  <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>监控方式：</strong>月初记录资金峰值，跌破10%停止交易</p>
  <p class="text-gray-700 dark:text-gray-300"><strong>保护作用：</strong>避免情绪化交易导致更大亏损</p>
  </div>
@@ -3863,7 +3863,7 @@ export const blogPosts: BlogPost[] = [
 <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-950 p-8 border-l-8 border-gray-600 mb-10">
  <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200"> 持续获利的终极公式</h3>
  <div class="text-center my-6">
- <p class="text-3xl font-bold text-gray-700 dark:text-gray-300">胜率 × 盈亏比 × 频率 × 资金管理 = 长期盈利</p>
+ <p class="text-3xl font-bold text-gray-700 dark:text-gray-300">胜率  盈亏比  频率  资金管理 = 长期盈利</p>
  </div>
  <p class="text-xl text-gray-800 dark:text-gray-200 leading-relaxed">
  你不需要每个因素都做到极致。<strong>60%胜率 + 1:2盈亏比 + 每周2次交易 + 2%风险控制</strong> = 每月10-15%稳定收益
@@ -4059,17 +4059,17 @@ export const blogPosts: BlogPost[] = [
  </ul>
  </div>
 
- <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300">🔗 区块链技术（Blockchain）</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300"> 区块链技术（Blockchain）</h3>
  <p class="mb-4 leading-relaxed text-lg">区块链是加密货币的底层技术，是一种分布式数据库或账本，记录了所有交易历史。可以把它想象成一个不断增长的账本，每一页（区块）都包含多笔交易记录，并通过密码学方式链接到前一页。</p>
 
  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4 border border-gray-200 dark:border-gray-700">
- <div class="text-2xl mb-2">📦</div>
+ <div class="text-2xl mb-2"></div>
  <h4 class="font-bold mb-2 text-gray-700 dark:text-gray-300">区块（Block）</h4>
  <p class="text-sm">包含多笔交易数据的数据包</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4 border border-gray-200 dark:border-gray-700">
- <div class="text-2xl mb-2">⛓️</div>
+ <div class="text-2xl mb-2"></div>
  <h4 class="font-bold mb-2 text-gray-700 dark:text-gray-300">链（Chain）</h4>
  <p class="text-sm">区块按时间顺序连接形成链条</p>
  </div>
@@ -4089,7 +4089,7 @@ export const blogPosts: BlogPost[] = [
 <div class="space-y-6">
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-orange-900/20 dark:to-gray-950/20 p-8 border-2 border-gray-300 dark:border-gray-700">
  <div class="flex items-center gap-4 mb-4">
- <div class="text-5xl">₿</div>
+ <div class="text-5xl"></div>
  <div>
  <h3 class="text-3xl font-bold text-gray-600 dark:text-gray-400">Bitcoin (BTC) - 比特币</h3>
  <p class="text-gray-700 dark:text-gray-300">数字黄金 | 市值第一</p>
@@ -4122,7 +4122,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/20 dark:to-gray-950/20 p-8 border-2 border-gray-300 dark:border-gray-700">
  <div class="flex items-center gap-4 mb-4">
- <div class="text-5xl">◆</div>
+ <div class="text-5xl"></div>
  <div>
  <h3 class="text-3xl font-bold text-gray-600 dark:text-gray-400">Ethereum (ETH) - 以太坊</h3>
  <p class="text-gray-700 dark:text-gray-300">智能合约之王 | DeFi基石</p>
@@ -4370,10 +4370,10 @@ export const blogPosts: BlogPost[] = [
  <p class="text-sm mb-2">由公司运营，用户体验好</p>
  <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">例如：Binance、Coinbase、OKX、Kraken</p>
  <div class="text-xs space-y-1">
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>流动性高、交易快速</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>支持法币出入金</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>需要信任平台</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>有倒闭风险</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>流动性高、交易快速</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>支持法币出入金</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>需要信任平台</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>有倒闭风险</span></div>
  </div>
  </div>
 
@@ -4382,10 +4382,10 @@ export const blogPosts: BlogPost[] = [
  <p class="text-sm mb-2">基于智能合约，无需注册</p>
  <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">例如：Uniswap、PancakeSwap、dYdX</p>
  <div class="text-xs space-y-1">
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>完全掌控资产</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>无需KYC验证</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>用户体验稍差</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>Gas费可能较高</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>完全掌控资产</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>无需KYC验证</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>用户体验稍差</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>Gas费可能较高</span></div>
  </div>
  </div>
  </div>
@@ -4447,7 +4447,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/50 dark:to-gray-950/50 p-6 border-2 border-gray-200 dark:border-gray-700">
- <div class="text-3xl mb-3">❄️</div>
+ <div class="text-3xl mb-3"></div>
  <h4 class="font-bold text-lg mb-3 text-gray-700 dark:text-gray-300">冷存储策略</h4>
  <p class="text-sm mb-3">长期持有应离线存储</p>
  <ul class="text-xs space-y-2">
@@ -4617,7 +4617,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/30 dark:to-pink-900/30 p-5 border border-gray-200 dark:border-gray-700">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-2">⛏️ Mining</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-2"> Mining</h4>
  <p class="text-sm">挖矿，通过计算验证交易并获得加密货币奖励</p>
  </div>
 
@@ -4713,37 +4713,37 @@ export const blogPosts: BlogPost[] = [
 
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 不要高杠杆交易</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> 不要高杠杆交易</h4>
  <p class="text-sm mb-2">新手使用10倍以上杠杆几乎必定爆仓。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：现货交易开始，完全理解风险后再考虑低杠杆合约</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 不要投资超过承受能力</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> 不要投资超过承受能力</h4>
  <p class="text-sm mb-2">只用"亏得起"的钱投资，不要借钱炒币。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：投资金额应控制在总资产的5-10%以内</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 不要盲目跟风</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> 不要盲目跟风</h4>
  <p class="text-sm mb-2">别人说好就买，往往成为"接盘侠"。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：DYOR（自己做研究），理解项目后再投资</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 不要把所有资金放一起</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> 不要把所有资金放一起</h4>
  <p class="text-sm mb-2">分散投资降低风险，不要All in单一币种。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：主流币70%，潜力币30%，永远保留现金储备</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 不要忽视安全</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> 不要忽视安全</h4>
  <p class="text-sm mb-2">私钥丢失或被盗=永久失去资产。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：使用2FA，大额用硬件钱包，永远不分享私钥</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 不要情绪化交易</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> 不要情绪化交易</h4>
  <p class="text-sm mb-2">看到涨就追、跌就恐慌，必然亏损。</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">建议：制定计划并严格执行，设置止损止盈</p>
  </div>
@@ -4848,17 +4848,17 @@ export const blogPosts: BlogPost[] = [
  </ul>
  </div>
 
- <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300">🔗 Blockchain Technology</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300"> Blockchain Technology</h3>
  <p class="mb-4 leading-relaxed text-lg">Blockchain is the underlying technology of cryptocurrency - a distributed database or ledger that records all transaction history. Think of it as a continuously growing ledger where each page (block) contains multiple transaction records and is cryptographically linked to the previous page.</p>
 
  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4 border border-gray-200 dark:border-gray-700">
- <div class="text-2xl mb-2">📦</div>
+ <div class="text-2xl mb-2"></div>
  <h4 class="font-bold mb-2 text-gray-700 dark:text-gray-300">Block</h4>
  <p class="text-sm">Data package containing multiple transactions</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4 border border-gray-200 dark:border-gray-700">
- <div class="text-2xl mb-2">⛓️</div>
+ <div class="text-2xl mb-2"></div>
  <h4 class="font-bold mb-2 text-gray-700 dark:text-gray-300">Chain</h4>
  <p class="text-sm">Blocks connected chronologically forming a chain</p>
  </div>
@@ -4878,7 +4878,7 @@ export const blogPosts: BlogPost[] = [
 <div class="space-y-6">
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-orange-900/20 dark:to-gray-950/20 p-8 border-2 border-gray-300 dark:border-gray-700">
  <div class="flex items-center gap-4 mb-4">
- <div class="text-5xl">₿</div>
+ <div class="text-5xl"></div>
  <div>
  <h3 class="text-3xl font-bold text-gray-600 dark:text-gray-400">Bitcoin (BTC)</h3>
  <p class="text-gray-700 dark:text-gray-300">Digital Gold | Market Cap Leader</p>
@@ -4911,7 +4911,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/20 dark:to-gray-950/20 p-8 border-2 border-gray-300 dark:border-gray-700">
  <div class="flex items-center gap-4 mb-4">
- <div class="text-5xl">◆</div>
+ <div class="text-5xl"></div>
  <div>
  <h3 class="text-3xl font-bold text-gray-600 dark:text-gray-400">Ethereum (ETH)</h3>
  <p class="text-gray-700 dark:text-gray-300">Smart Contract King | DeFi Foundation</p>
@@ -5159,10 +5159,10 @@ export const blogPosts: BlogPost[] = [
  <p class="text-sm mb-2">Company-operated, user-friendly</p>
  <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Examples: Binance, Coinbase, OKX, Kraken</p>
  <div class="text-xs space-y-1">
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>High liquidity, fast trading</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>Fiat on/off ramps</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>Must trust the platform</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>Bankruptcy risk</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>High liquidity, fast trading</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>Fiat on/off ramps</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>Must trust the platform</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>Bankruptcy risk</span></div>
  </div>
  </div>
 
@@ -5171,10 +5171,10 @@ export const blogPosts: BlogPost[] = [
  <p class="text-sm mb-2">Smart contract-based, no registration</p>
  <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Examples: Uniswap, PancakeSwap, dYdX</p>
  <div class="text-xs space-y-1">
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>Full control of assets</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-600">✓</span><span>No KYC required</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>Less user-friendly</span></div>
- <div class="flex items-start gap-2"><span class="text-gray-900">✗</span><span>Potentially high gas fees</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>Full control of assets</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-600"></span><span>No KYC required</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>Less user-friendly</span></div>
+ <div class="flex items-start gap-2"><span class="text-gray-900"></span><span>Potentially high gas fees</span></div>
  </div>
  </div>
  </div>
@@ -5236,7 +5236,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/50 dark:to-gray-950/50 p-6 border-2 border-gray-200 dark:border-gray-700">
- <div class="text-3xl mb-3">❄️</div>
+ <div class="text-3xl mb-3"></div>
  <h4 class="font-bold text-lg mb-3 text-gray-700 dark:text-gray-300">Cold Storage Strategy</h4>
  <p class="text-sm mb-3">Long-term holdings offline</p>
  <ul class="text-xs space-y-2">
@@ -5406,7 +5406,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/30 dark:to-pink-900/30 p-5 border border-gray-200 dark:border-gray-700">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-2">⛏️ Mining</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-2"> Mining</h4>
  <p class="text-sm">Validating transactions computationally to earn crypto rewards</p>
  </div>
 
@@ -5502,37 +5502,37 @@ export const blogPosts: BlogPost[] = [
 
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 No High Leverage</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> No High Leverage</h4>
  <p class="text-sm mb-2">Beginners using 10x+ leverage almost guaranteed to get liquidated.</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: Start with spot trading, only consider low leverage after full understanding</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 Don't Overinvest</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> Don't Overinvest</h4>
  <p class="text-sm mb-2">Only invest what you can afford to lose, never borrow to trade.</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: Limit crypto to 5-10% of total assets</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 Don't Blindly Follow</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> Don't Blindly Follow</h4>
  <p class="text-sm mb-2">Buying because others say so often makes you a"bag holder."</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: DYOR (Do Your Own Research) before investing</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 Don't Put All Eggs in One Basket</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> Don't Put All Eggs in One Basket</h4>
  <p class="text-sm mb-2">Diversify to reduce risk, don't go all-in on single coin.</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: 70% major coins, 30% potential coins, always keep cash reserve</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-900">
- <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3">🚫 Don't Ignore Security</h4>
+ <h4 class="font-bold text-gray-900 dark:text-gray-900 mb-3"> Don't Ignore Security</h4>
  <p class="text-sm mb-2">Lost or stolen private key = permanently lost assets.</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: Use 2FA, hardware wallet for large amounts, never share keys</p>
  </div>
 
  <div class="bg-white dark:bg-gray-800 p-5 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3">🚫 Don't Trade Emotionally</h4>
+ <h4 class="font-bold text-gray-600 dark:text-gray-400 mb-3"> Don't Trade Emotionally</h4>
  <p class="text-sm mb-2">Chasing pumps and panic selling guarantees losses.</p>
  <p class="text-xs text-gray-600 dark:text-gray-400">Advice: Make plan and stick to it, set stop-loss/take-profit</p>
  </div>
@@ -5659,7 +5659,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/20 dark:to-gray-950/20 p-6 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-700 dark:text-gray-300 mb-4">🌍 24/7不间断交易</h4>
+ <h4 class="font-bold text-gray-700 dark:text-gray-300 mb-4"> 24/7不间断交易</h4>
  <ul class="space-y-3 text-sm">
  <li class="leading-relaxed">• <strong>无法休息：</strong>市场永不关闭，错过行情的焦虑</li>
  <li class="leading-relaxed">• <strong>睡眠影响：</strong>夜间可能错过重大波动</li>
@@ -5669,7 +5669,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/20 dark:to-gray-950/20 p-6 border-l-4 border-gray-500">
- <h4 class="font-bold text-gray-700 dark:text-gray-300 mb-4">📱 社交媒体影响</h4>
+ <h4 class="font-bold text-gray-700 dark:text-gray-300 mb-4"> 社交媒体影响</h4>
  <ul class="space-y-3 text-sm">
  <li class="leading-relaxed">• <strong>信息过载：</strong>Twitter、Discord、Telegram充斥着各种观点</li>
  <li class="leading-relaxed">• <strong>FUD传播：</strong>负面消息快速扩散</li>
@@ -5720,19 +5720,19 @@ export const blogPosts: BlogPost[] = [
  <h4 class="font-bold text-lg mb-4 text-gray-900 dark:text-gray-900">应对策略：</h4>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">✓ 提前设置止损</p>
+ <p class="font-bold mb-2"> 提前设置止损</p>
  <p class="text-sm">自动止损避免情绪化决策</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">✓ 认识市场规律</p>
+ <p class="font-bold mb-2"> 认识市场规律</p>
  <p class="text-sm">闪崩后通常会有反弹</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">✓ 降低仓位</p>
+ <p class="font-bold mb-2"> 降低仓位</p>
  <p class="text-sm">只投入能承受损失的资金</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">✓ 深呼吸技巧</p>
+ <p class="font-bold mb-2"> 深呼吸技巧</p>
  <p class="text-sm">4-7-8呼吸法稳定情绪</p>
  </div>
  </div>
@@ -5786,19 +5786,19 @@ export const blogPosts: BlogPost[] = [
  <h4 class="font-bold text-lg mb-4 text-gray-700 dark:text-gray-300">克服FOMO的方法：</h4>
  <div class="space-y-3">
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">1️⃣ 接受错过是常态</p>
+ <p class="font-bold mb-2"> 接受错过是常态</p>
  <p class="text-sm">市场机会无穷无尽，错过一次不代表错过所有。重要的是保住本金，等待下一次真正的机会。</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">2️⃣ 设立入场规则</p>
+ <p class="font-bold mb-2"> 设立入场规则</p>
  <p class="text-sm">只在价格回调到支撑位时买入，绝不追高。涨了50%以上的币种，原则上不再考虑。</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">3️⃣ 远离社交媒体</p>
+ <p class="font-bold mb-2"> 远离社交媒体</p>
  <p class="text-sm">在交易时段关闭Twitter、Telegram等，避免被他人影响。</p>
  </div>
  <div class="bg-gray-50 dark:bg-gray-900/30 p-4">
- <p class="font-bold mb-2">4️⃣ 记录冲动时刻</p>
+ <p class="font-bold mb-2"> 记录冲动时刻</p>
  <p class="text-sm">每次想追高时写下原因，24小时后复盘，你会发现大多数冲动都是错误的。</p>
  </div>
  </div>
@@ -5816,7 +5816,7 @@ export const blogPosts: BlogPost[] = [
 
  <div class="space-y-8">
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-green-900/20 dark:to-emerald-900/20 p-6 border-l-4 border-gray-500">
- <h4 class="text-xl font-bold mb-4 text-gray-700 dark:text-gray-300">🐂 牛市心理周期</h4>
+ <h4 class="text-xl font-bold mb-4 text-gray-700 dark:text-gray-300"> 牛市心理周期</h4>
  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold text-gray-600 mb-2">1. 怀疑期</p>
@@ -5845,7 +5845,7 @@ export const blogPosts: BlogPost[] = [
  </div>
 
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/20 dark:to-orange-900/20 p-6 border-l-4 border-gray-900">
- <h4 class="text-xl font-bold mb-4 text-gray-900 dark:text-gray-900">🐻 熊市心理周期</h4>
+ <h4 class="text-xl font-bold mb-4 text-gray-900 dark:text-gray-900"> 熊市心理周期</h4>
  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold text-gray-900 mb-2">1. 否认期</p>
@@ -5860,7 +5860,7 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold text-gray-900 mb-2">3. 投降期</p>
  <p class="text-xs">"我再也不碰加密货币了"</p>
- <p class="text-xs text-gray-600 mt-2">💔 散户离场</p>
+ <p class="text-xs text-gray-600 mt-2"> 散户离场</p>
  </div>
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold text-gray-600 mb-2">4. 积累期</p>
@@ -5882,26 +5882,26 @@ export const blogPosts: BlogPost[] = [
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
  <div class="bg-gray-50 dark:bg-gray-900 dark:from-gray-900/30 dark:to-gray-950/30 p-6 border-2 border-gray-200 dark:border-gray-700">
- <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300">🚫 FOMO陷阱识别</h3>
+ <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-300"> FOMO陷阱识别</h3>
  <div class="space-y-4">
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold mb-2 text-gray-900">危险信号：</p>
  <ul class="text-sm space-y-2">
- <li>✗"所有人都在买，我也要买"</li>
- <li>✗"现在不买就来不及了"</li>
- <li>✗"看到朋友赚钱了，我也要赚"</li>
- <li>✗"价格已经涨了很多，但还会继续涨"</li>
- <li>✗"没时间研究，先买了再说"</li>
+ <li>"所有人都在买，我也要买"</li>
+ <li>"现在不买就来不及了"</li>
+ <li>"看到朋友赚钱了，我也要赚"</li>
+ <li>"价格已经涨了很多，但还会继续涨"</li>
+ <li>"没时间研究，先买了再说"</li>
  </ul>
  </div>
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold mb-2 text-gray-600">理性检查清单：</p>
  <ul class="text-sm space-y-2">
- <li>✓ 我是否研究过这个项目？</li>
- <li>✓ 是否符合我的交易计划？</li>
- <li>✓ 24小时后我还会做同样的决定吗？</li>
- <li>✓ 如果亏损50%我能接受吗？</li>
- <li>✓ 我的止损位在哪里？</li>
+ <li> 我是否研究过这个项目？</li>
+ <li> 是否符合我的交易计划？</li>
+ <li> 24小时后我还会做同样的决定吗？</li>
+ <li> 如果亏损50%我能接受吗？</li>
+ <li> 我的止损位在哪里？</li>
  </ul>
  </div>
  </div>
@@ -5913,21 +5913,21 @@ export const blogPosts: BlogPost[] = [
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold mb-2 text-gray-900">危险信号：</p>
  <ul class="text-sm space-y-2">
- <li>✗"快跌没了，赶紧割肉！"</li>
- <li>✗"新闻说要归零了"</li>
- <li>✗"大家都在卖，我也要卖"</li>
- <li>✗"受不了了，先止损再说"</li>
- <li>✗ 夜里睡不着，一直盯盘</li>
+ <li>"快跌没了，赶紧割肉！"</li>
+ <li>"新闻说要归零了"</li>
+ <li>"大家都在卖，我也要卖"</li>
+ <li>"受不了了，先止损再说"</li>
+ <li> 夜里睡不着，一直盯盘</li>
  </ul>
  </div>
  <div class="bg-white dark:bg-gray-800 p-4">
  <p class="font-bold mb-2 text-gray-600">冷静应对策略：</p>
  <ul class="text-sm space-y-2">
- <li>✓ 暂时关闭交易软件30分钟</li>
- <li>✓ 查看是否触及止损位</li>
- <li>✓ 回顾最初的投资逻辑是否改变</li>
- <li>✓ 查看历史数据，这种跌幅是否常见</li>
- <li>✓ 咨询理性的朋友或导师</li>
+ <li> 暂时关闭交易软件30分钟</li>
+ <li> 查看是否触及止损位</li>
+ <li> 回顾最初的投资逻辑是否改变</li>
+ <li> 查看历史数据，这种跌幅是否常见</li>
+ <li> 咨询理性的朋友或导师</li>
  </ul>
  </div>
  </div>
@@ -6968,478 +6968,6 @@ export const blogPosts: BlogPost[] = [
 
  {
  id: '9',
- slug: 'overcoming-fear-and-greed',
- title: {
- zh: '如何克服交易中的恐惧与贪婪：交易心理实战',
- en: 'Overcoming Fear and Greed in Trading: Practical Psychology'
- },
- excerpt: {
- zh: '恐惧和贪婪是交易者最大的敌人。学会识别和控制这两种情绪，是迈向成功的关键一步。',
- en: 'Fear and greed are traders\' biggest enemies. Learning to identify and control these emotions is key to success.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">如何克服交易中的恐惧与贪婪</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">恐惧的表现</h2>
-
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">不敢入场</li>
- <li class="leading-relaxed">过早止盈</li>
- <li class="leading-relaxed">拒绝止损</li>
- <li class="leading-relaxed">错过机会</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">贪婪的表现</h2>
-
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">过度交易</li>
- <li class="leading-relaxed">重仓操作</li>
- <li class="leading-relaxed">不设止盈</li>
- <li class="leading-relaxed">追涨杀跌</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">克服方法</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">制定规则</h3>
-<p class="mb-6 leading-relaxed">明确的交易规则能减少情绪干扰。</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">风险管理</h3>
-<p class="mb-6 leading-relaxed">严格的风险控制能降低恐惧。</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">记录情绪</h3>
-<p class="mb-6 leading-relaxed">了解自己的情绪模式。</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">接受现实</h3>
-<p class="mb-6 leading-relaxed">市场不完美，接受不确定性。</p>
-
-<p class="mb-6 leading-relaxed">*控制情绪，才能控制交易。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">Overcoming Fear and Greed in Trading</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Fear Manifestations</h2>
-
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Afraid to enter</li>
- <li class="leading-relaxed">Premature profit-taking</li>
- <li class="leading-relaxed">Refusing stop-loss</li>
- <li class="leading-relaxed">Missing opportunities</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Greed Manifestations</h2>
-
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Overtrading</li>
- <li class="leading-relaxed">Heavy positions</li>
- <li class="leading-relaxed">No take-profit</li>
- <li class="leading-relaxed">Chasing trends</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Overcoming Methods</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Establish Rules</h3>
-<p class="mb-6 leading-relaxed">Clear trading rules reduce emotional interference.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Risk Management</h3>
-<p class="mb-6 leading-relaxed">Strict risk control reduces fear.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Record Emotions</h3>
-<p class="mb-6 leading-relaxed">Understand your emotional patterns.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Accept Reality</h3>
-<p class="mb-6 leading-relaxed">Markets are imperfect, accept uncertainty.</p>
-
-<p class="mb-6 leading-relaxed">*Control emotions to control trading.*</p>`
- },
- category: 'psychology',
- tags: ['psychology', 'emotions', 'mental-game'],
- author: 'FX Killer Team',
- date: '2025-01-23',
- readTime: 10,
- featured: false
- },
-
- // Continue with remaining articles (10-15)...
- {
- id: '10',
- slug: 'ten-essential-qualities',
- title: {
- zh: '职业交易员必备的十大素养：成功者的共同特质',
- en: 'Ten Essential Qualities of Professional Traders: Common Traits of Success'
- },
- excerpt: {
- zh: '成功的职业交易员都具备哪些素养？本文总结顶尖交易员的十大共同特质。',
- en: 'What qualities do successful professional traders possess? Ten common traits of top traders revealed.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">职业交易员必备的十大素养</h1>
-
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed"><strong>纪律性</strong> - 严格执行交易计划</li>
- <li class="leading-relaxed"><strong>耐心</strong> - 等待最佳入场时机</li>
- <li class="leading-relaxed"><strong>风险意识</strong> - 保护本金第一</li>
- <li class="leading-relaxed"><strong>学习能力</strong> - 持续改进策略</li>
- <li class="leading-relaxed"><strong>情绪管理</strong> - 控制贪婪与恐惧</li>
- <li class="leading-relaxed"><strong>专注力</strong> - 集中精力分析市场</li>
- <li class="leading-relaxed"><strong>适应能力</strong> - 随市场变化调整</li>
- <li class="leading-relaxed"><strong>自律</strong> - 抵制诱惑和冲动</li>
- <li class="leading-relaxed"><strong>韧性</strong> - 从失败中恢复</li>
- <li class="leading-relaxed"><strong>诚实</strong> - 客观面对自己</li>
-</ol>
-
-<p class="mb-6 leading-relaxed">*这十大素养需要长期培养和实践。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">Ten Essential Qualities of Professional Traders</h1>
-
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed"><strong>Discipline</strong> - Strictly execute trading plan</li>
- <li class="leading-relaxed"><strong>Patience</strong> - Wait for best entry timing</li>
- <li class="leading-relaxed"><strong>Risk Awareness</strong> - Capital protection first</li>
- <li class="leading-relaxed"><strong>Learning Ability</strong> - Continuously improve strategy</li>
- <li class="leading-relaxed"><strong>Emotional Management</strong> - Control greed and fear</li>
- <li class="leading-relaxed"><strong>Focus</strong> - Concentrate on market analysis</li>
- <li class="leading-relaxed"><strong>Adaptability</strong> - Adjust with market changes</li>
- <li class="leading-relaxed"><strong>Self-discipline</strong> - Resist temptation and impulse</li>
- <li class="leading-relaxed"><strong>Resilience</strong> - Recover from failures</li>
- <li class="leading-relaxed"><strong>Honesty</strong> - Objectively face yourself</li>
-</ol>
-
-<p class="mb-6 leading-relaxed">*These ten qualities require long-term cultivation.*</p>`
- },
- category: 'professional',
- tags: ['professional', 'qualities', 'success'],
- author: 'FX Killer Team',
- date: '2025-01-24',
- readTime: 9,
- featured: false
- },
-
- {
- id: '11',
- slug: 'key-qualities-of-top-traders',
- title: {
- zh: '成为顶尖交易员的关键品质：精英交易员的秘密',
- en: 'Key Qualities of Top Traders: Secrets of Elite Traders'
- },
- excerpt: {
- zh: '顶尖交易员与普通交易员的差距在哪里？深入剖析精英交易员的核心品质。',
- en: 'What separates top traders from average ones? In-depth analysis of elite traders\' core qualities.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">成为顶尖交易员的关键品质</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">系统化思维</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">完整的交易系统</li>
- <li class="leading-relaxed">明确的入场出场规则</li>
- <li class="leading-relaxed">严格的风险管理</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">长期视角</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">关注年化收益</li>
- <li class="leading-relaxed">不追求暴利</li>
- <li class="leading-relaxed">稳定复利增长</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">持续学习</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">市场永远在变化</li>
- <li class="leading-relaxed">策略需要优化</li>
- <li class="leading-relaxed">不断自我提升</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">情绪稳定</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">不因得失情绪波动</li>
- <li class="leading-relaxed">保持平常心</li>
- <li class="leading-relaxed">专注过程</li>
-</ul>
-
-<p class="mb-6 leading-relaxed">*顶尖交易员的成功不是偶然，而是长期积累的结果。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">Key Qualities of Top Traders</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Systematic Thinking</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Complete trading system</li>
- <li class="leading-relaxed">Clear entry/exit rules</li>
- <li class="leading-relaxed">Strict risk management</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Long-term Perspective</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Focus on annualized returns</li>
- <li class="leading-relaxed">Don't chase windfall profits</li>
- <li class="leading-relaxed">Stable compound growth</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Continuous Learning</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Markets always change</li>
- <li class="leading-relaxed">Strategies need optimization</li>
- <li class="leading-relaxed">Constant self-improvement</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Emotional Stability</h2>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">No mood swings from wins/losses</li>
- <li class="leading-relaxed">Maintain equanimity</li>
- <li class="leading-relaxed">Focus on process</li>
-</ul>
-
-<p class="mb-6 leading-relaxed">*Top traders' success isn't accidental, but result of long-term accumulation.*</p>`
- },
- category: 'professional',
- tags: ['professional', 'elite', 'mindset'],
- author: 'FX Killer Team',
- date: '2025-01-25',
- readTime: 10,
- featured: false
- },
-
- {
- id: '12',
- slug: 'ultimate-realization-discipline-patience',
- title: {
- zh: '一个交易员的终极感悟：纪律与耐心的力量',
- en: 'A Trader\'s Ultimate Realization: The Power of Discipline and Patience'
- },
- excerpt: {
- zh: '十年交易生涯的深刻感悟：真正的交易高手，拼的不是技术，而是纪律与耐心。',
- en: 'Deep insights from ten years of trading: True trading masters compete not on technique, but discipline and patience.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">交易员的终极感悟</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">纪律的力量</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">为什么纪律如此重要？</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">市场充满诱惑</li>
- <li class="leading-relaxed">情绪会欺骗你</li>
- <li class="leading-relaxed">只有纪律能保护你</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">如何培养纪律？</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">制定明确的规则</li>
- <li class="leading-relaxed">记录每笔交易</li>
- <li class="leading-relaxed">复盘总结</li>
- <li class="leading-relaxed">持续改进</li>
-</ol>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">耐心的价值</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">等待是交易的一部分</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">不是每天都有机会</li>
- <li class="leading-relaxed">最好的交易需要等待</li>
- <li class="leading-relaxed">强求只会亏损</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">如何培养耐心？</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">明确交易信号</li>
- <li class="leading-relaxed">不符合条件绝不入场</li>
- <li class="leading-relaxed">记录错过的机会</li>
- <li class="leading-relaxed">总结等待的价值</li>
-</ol>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">终极感悟</h2>
-
-<strong>简单的事情重复做，重复的事情用心做。</strong>
-
-<p class="mb-6 leading-relaxed">交易的真谛不在于复杂的技术，而在于简单策略的持续执行。</p>
-
-<p class="mb-6 leading-relaxed">*十年磨一剑，成功需要时间。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">A Trader's Ultimate Realization</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Power of Discipline</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Why is Discipline So Important?</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Markets full of temptations</li>
- <li class="leading-relaxed">Emotions deceive you</li>
- <li class="leading-relaxed">Only discipline protects you</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">How to Cultivate Discipline?</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Establish clear rules</li>
- <li class="leading-relaxed">Record every trade</li>
- <li class="leading-relaxed">Review and summarize</li>
- <li class="leading-relaxed">Continuous improvement</li>
-</ol>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Value of Patience</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Waiting is Part of Trading</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Not every day has opportunities</li>
- <li class="leading-relaxed">Best trades require waiting</li>
- <li class="leading-relaxed">Forcing leads to losses</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">How to Cultivate Patience?</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Define clear trading signals</li>
- <li class="leading-relaxed">Never enter without conditions met</li>
- <li class="leading-relaxed">Record missed opportunities</li>
- <li class="leading-relaxed">Summarize waiting's value</li>
-</ol>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Ultimate Realization</h2>
-
-<strong>Do simple things repeatedly, do repeated things carefully.</strong>
-
-<p class="mb-6 leading-relaxed">Trading truth isn't in complex techniques, but consistent execution of simple strategies.</p>
-
-<p class="mb-6 leading-relaxed">*Ten years to forge a sword, success takes time.*</p>`
- },
- category: 'wisdom',
- tags: ['wisdom', 'discipline', 'patience', 'philosophy'],
- author: 'FX Killer Team',
- date: '2025-01-26',
- readTime: 12,
- featured: true
- },
-
- {
- id: '13',
- slug: 'trading-philosophy-simplicity',
- title: {
- zh: '交易之道：简单即是力量',
- en: 'The Way of Trading: Simplicity is Power'
- },
- excerpt: {
- zh: '复杂的指标和策略并不能带来成功，真正的交易高手都在追求简单有效的方法。',
- en: 'Complex indicators and strategies don\'t bring success. True masters pursue simple, effective methods.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">交易之道：简单即是力量</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">为什么简单更有效？</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">复杂的问题</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">太多指标导致混乱</li>
- <li class="leading-relaxed">分析麻痹行动</li>
- <li class="leading-relaxed">错过最佳时机</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">简单的优势</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">快速决策</li>
- <li class="leading-relaxed">清晰明确</li>
- <li class="leading-relaxed">易于执行</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">如何实现简单交易？</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1. 减少指标</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">选择2-3个核心指标</li>
- <li class="leading-relaxed">深入理解其含义</li>
- <li class="leading-relaxed">熟练运用</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">2. 明确规则</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">清晰的入场条件</li>
- <li class="leading-relaxed">明确的出场策略</li>
- <li class="leading-relaxed">简单的资金管理</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">3. 专注核心</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">不追求完美</li>
- <li class="leading-relaxed">接受不确定性</li>
- <li class="leading-relaxed">专注可控部分</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">简单交易系统示例</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">入场条件</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">趋势明确</li>
- <li class="leading-relaxed">价格回调到支撑</li>
- <li class="leading-relaxed">出现反转信号</li>
-</ol>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">出场条件</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">触及止损</li>
- <li class="leading-relaxed">达到目标价位</li>
- <li class="leading-relaxed">趋势反转</li>
-</ol>
-
-<p class="mb-6 leading-relaxed">*大道至简，复杂的往往是人心。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">The Way of Trading: Simplicity is Power</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Why is Simplicity More Effective?</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Problems with Complexity</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Too many indicators cause confusion</li>
- <li class="leading-relaxed">Analysis paralysis</li>
- <li class="leading-relaxed">Miss optimal timing</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Advantages of Simplicity</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Quick decisions</li>
- <li class="leading-relaxed">Clear and definite</li>
- <li class="leading-relaxed">Easy to execute</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">How to Achieve Simple Trading?</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1. Reduce Indicators</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Choose 2-3 core indicators</li>
- <li class="leading-relaxed">Deeply understand their meaning</li>
- <li class="leading-relaxed">Master their use</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">2. Clear Rules</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Clear entry conditions</li>
- <li class="leading-relaxed">Definite exit strategy</li>
- <li class="leading-relaxed">Simple money management</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">3. Focus on Core</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Don't pursue perfection</li>
- <li class="leading-relaxed">Accept uncertainty</li>
- <li class="leading-relaxed">Focus on controllable parts</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Simple Trading System Example</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Entry Conditions</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Clear trend</li>
- <li class="leading-relaxed">Price pullback to support</li>
- <li class="leading-relaxed">Reversal signal appears</li>
-</ol>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Exit Conditions</h3>
-<ol class="list-decimal list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Hit stop-loss</li>
- <li class="leading-relaxed">Reach target price</li>
- <li class="leading-relaxed">Trend reversal</li>
-</ol>
-
-<p class="mb-6 leading-relaxed">*The great way is simple, complexity lies in the human mind.*</p>`
- },
- category: 'wisdom',
- tags: ['wisdom', 'philosophy', 'simplicity', 'strategy'],
- author: 'FX Killer Team',
- date: '2025-01-27',
- readTime: 9,
- featured: false
- },
-
- {
- id: '14',
  slug: 'daily-routine-of-professional-trader',
  title: {
  zh: '职业交易员的一天：日常工作流程详解',
@@ -7663,326 +7191,4 @@ export const blogPosts: BlogPost[] = [
  featured: true
  },
 
- {
- id: '15',
- slug: 'professional-trader-schedule-habits',
- title: {
- zh: '专业交易员的作息时间表与工作习惯',
- en: 'Professional Trader\'s Schedule and Work Habits'
- },
- excerpt: {
- zh: '成功的交易员都有良好的作息习惯和工作纪律。了解如何安排时间，提高交易效率。',
- en: 'Successful traders have good routines and work discipline. Learn how to schedule time and improve trading efficiency.'
- },
- content: {
- zh: `<h1 class="text-4xl font-bold mb-8">专业交易员的作息时间表与工作习惯</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">黄金作息时间表</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">6:00 起床</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">晨练30分钟</li>
- <li class="leading-relaxed">提高精力和专注力</li>
- <li class="leading-relaxed">为一天做好准备</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">7:00 早餐 + 市场分析</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">健康早餐</li>
- <li class="leading-relaxed">浏览市场新闻</li>
- <li class="leading-relaxed">检查隔夜市场</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">8:00-12:00 上午交易时段</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">最佳工作状态</li>
- <li class="leading-relaxed">专注市场分析</li>
- <li class="leading-relaxed">执行交易计划</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">12:00-14:00 午休</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">健康午餐</li>
- <li class="leading-relaxed">短暂午睡（20-30分钟）</li>
- <li class="leading-relaxed">远离电脑</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">14:00-18:00 下午交易时段</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">继续监控市场</li>
- <li class="leading-relaxed">调整持仓</li>
- <li class="leading-relaxed">准备晚间交易</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">18:00-19:00 晚餐 + 休息</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">健康晚餐</li>
- <li class="leading-relaxed">短暂休息</li>
- <li class="leading-relaxed">准备美国盘</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">19:00-24:00 晚间交易时段</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">美国市场最活跃</li>
- <li class="leading-relaxed">重要数据发布</li>
- <li class="leading-relaxed">严格执行计划</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">24:00-1:00 复盘总结</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">记录交易日志</li>
- <li class="leading-relaxed">分析得失</li>
- <li class="leading-relaxed">准备明日计划</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1:00-6:00 睡眠</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">保证充足睡眠</li>
- <li class="leading-relaxed">7-8小时为宜</li>
- <li class="leading-relaxed">保持规律</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">工作习惯</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1. 固定交易时间</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">选择最活跃时段</li>
- <li class="leading-relaxed">避免疲劳交易</li>
- <li class="leading-relaxed">保持规律</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">2. 定期休息</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">每2小时休息10分钟</li>
- <li class="leading-relaxed">远离屏幕</li>
- <li class="leading-relaxed">活动身体</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">3. 健康饮食</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">规律三餐</li>
- <li class="leading-relaxed">少食多餐</li>
- <li class="leading-relaxed">避免咖啡因过量</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">4. 运动锻炼</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">每天30分钟</li>
- <li class="leading-relaxed">瑜伽、跑步、游泳</li>
- <li class="leading-relaxed">释放压力</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">5. 充足睡眠</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">7-8小时</li>
- <li class="leading-relaxed">固定时间</li>
- <li class="leading-relaxed">保证质量</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">周末安排</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">学习提升</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">阅读交易书籍</li>
- <li class="leading-relaxed">观看教学视频</li>
- <li class="leading-relaxed">参加在线课程</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">策略优化</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">回测历史数据</li>
- <li class="leading-relaxed">优化参数</li>
- <li class="leading-relaxed">测试新想法</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">休息娱乐</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">陪伴家人</li>
- <li class="leading-relaxed">兴趣爱好</li>
- <li class="leading-relaxed">完全放松</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">长期习惯</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">持续学习</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">每天阅读1小时</li>
- <li class="leading-relaxed">每周总结</li>
- <li class="leading-relaxed">每月复盘</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">身心健康</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">定期体检</li>
- <li class="leading-relaxed">心理咨询</li>
- <li class="leading-relaxed">压力管理</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">社交平衡</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">家庭时间</li>
- <li class="leading-relaxed">朋友聚会</li>
- <li class="leading-relaxed">社交活动</li>
-</ul>
-
-<p class="mb-6 leading-relaxed">*规律的作息和良好的习惯是长期成功的基础。*</p>`,
- en: `<h1 class="text-4xl font-bold mb-8">Professional Trader's Schedule and Work Habits</h1>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Golden Schedule</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">6:00 Wake Up</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">30 minutes morning exercise</li>
- <li class="leading-relaxed">Boost energy and focus</li>
- <li class="leading-relaxed">Prepare for the day</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">7:00 Breakfast + Market Analysis</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Healthy breakfast</li>
- <li class="leading-relaxed">Browse market news</li>
- <li class="leading-relaxed">Check overnight markets</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">8:00-12:00 Morning Trading Session</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Peak work condition</li>
- <li class="leading-relaxed">Focus on market analysis</li>
- <li class="leading-relaxed">Execute trading plan</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">12:00-14:00 Lunch Break</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Healthy lunch</li>
- <li class="leading-relaxed">Short nap (20-30 minutes)</li>
- <li class="leading-relaxed">Away from computer</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">14:00-18:00 Afternoon Trading Session</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Continue market monitoring</li>
- <li class="leading-relaxed">Adjust positions</li>
- <li class="leading-relaxed">Prepare for evening trading</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">18:00-19:00 Dinner + Rest</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Healthy dinner</li>
- <li class="leading-relaxed">Short break</li>
- <li class="leading-relaxed">Prepare for US session</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">19:00-24:00 Evening Trading Session</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">US market most active</li>
- <li class="leading-relaxed">Important data releases</li>
- <li class="leading-relaxed">Strictly execute plan</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">24:00-1:00 Review and Summary</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Record trading journal</li>
- <li class="leading-relaxed">Analyze gains/losses</li>
- <li class="leading-relaxed">Prepare tomorrow's plan</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1:00-6:00 Sleep</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Ensure adequate sleep</li>
- <li class="leading-relaxed">7-8 hours ideal</li>
- <li class="leading-relaxed">Maintain regularity</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Work Habits</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">1. Fixed Trading Hours</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Choose most active periods</li>
- <li class="leading-relaxed">Avoid fatigue trading</li>
- <li class="leading-relaxed">Maintain regularity</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">2. Regular Breaks</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">10-minute break every 2 hours</li>
- <li class="leading-relaxed">Away from screen</li>
- <li class="leading-relaxed">Move body</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">3. Healthy Diet</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Regular three meals</li>
- <li class="leading-relaxed">Eat small frequent meals</li>
- <li class="leading-relaxed">Avoid excessive caffeine</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">4. Exercise</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">30 minutes daily</li>
- <li class="leading-relaxed">Yoga, running, swimming</li>
- <li class="leading-relaxed">Release stress</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">5. Adequate Sleep</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">7-8 hours</li>
- <li class="leading-relaxed">Fixed schedule</li>
- <li class="leading-relaxed">Ensure quality</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Weekend Schedule</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Learning & Improvement</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Read trading books</li>
- <li class="leading-relaxed">Watch educational videos</li>
- <li class="leading-relaxed">Attend online courses</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Strategy Optimization</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Backtest historical data</li>
- <li class="leading-relaxed">Optimize parameters</li>
- <li class="leading-relaxed">Test new ideas</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Rest & Recreation</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Family time</li>
- <li class="leading-relaxed">Hobbies</li>
- <li class="leading-relaxed">Complete relaxation</li>
-</ul>
-
-<h2 class="text-3xl font-bold mt-12 mb-6">Long-term Habits</h2>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Continuous Learning</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Read 1 hour daily</li>
- <li class="leading-relaxed">Weekly summaries</li>
- <li class="leading-relaxed">Monthly reviews</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Physical & Mental Health</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Regular checkups</li>
- <li class="leading-relaxed">Psychological counseling</li>
- <li class="leading-relaxed">Stress management</li>
-</ul>
-
-<h3 class="text-2xl font-bold mt-8 mb-4">Social Balance</h3>
-<ul class="list-disc list-inside mb-6 space-y-2">
- <li class="leading-relaxed">Family time</li>
- <li class="leading-relaxed">Friends gatherings</li>
- <li class="leading-relaxed">Social activities</li>
-</ul>
-
-<p class="mb-6 leading-relaxed">*Regular routine and good habits are foundation for long-term success.*</p>`
- },
- category: 'professional',
- tags: ['professional', 'habits', 'schedule', 'lifestyle'],
- author: 'FX Killer Team',
- date: '2025-01-29',
- readTime: 10,
- featured: false
- }
 ];
