@@ -69,12 +69,13 @@ async function quickTest() {
   console.log(`亏损交易: ${result.losingTrades || 0}`);
   console.log(`胜率: ${((result.winningTrades || 0) / result.totalTrades * 100).toFixed(2)}%`);
   console.log(`盈亏比: ${result.profitFactor.toFixed(2)}`);
-  console.log(`平均盈利: $${(result.avgWin || 0).toFixed(2)}`);
-  console.log(`平均亏损: $${(result.avgLoss || 0).toFixed(2)}`);
+  console.log(`平均盈利: $${(result.averageWin || 0).toFixed(2)}`);
+  console.log(`平均亏损: $${Math.abs(result.averageLoss || 0).toFixed(2)}`);
+  console.log(`最大单笔盈利: $${(result.largestWin || 0).toFixed(2)}`);
+  console.log(`最大单笔亏损: $${Math.abs(result.largestLoss || 0).toFixed(2)}`);
   console.log(`总收益: ${(result.totalPnlPercent || 0).toFixed(2)}%`);
-  console.log(`总盈利: $${(result.totalProfit || 0).toFixed(2)}`);
-  console.log(`总亏损: $${(result.totalLoss || 0).toFixed(2)}`);
-  console.log(`最终资金: $${(result.finalCapital || initialCapital).toFixed(2)}`);
+  console.log(`净盈亏: $${(result.totalPnl || 0).toFixed(2)}`);
+  console.log(`最终资金: $${(result.endCapital || initialCapital).toFixed(2)}`);
   console.log(`最大回撤: ${(result.maxDrawdownPercent || 0).toFixed(2)}%`);
   console.log('=' .repeat(80));
 
