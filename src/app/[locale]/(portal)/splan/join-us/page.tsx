@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import EmailContactModal from '@/components/custom/EmailContactModal';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ShineButton from '@/components/custom/ShineButton';
+import LocaleLink from '@/components/navigation/LocaleLink';
 
 export default function JoinUsPage() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
@@ -438,12 +439,12 @@ export default function JoinUsPage() {
             {t('joinus.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
+            <LocaleLink
               href="/splan/psychology-test"
               className="px-10 py-4 bg-white dark:bg-gray-900 border-2 border-black dark:border-white text-black dark:text-white font-bold text-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:shadow-lg"
             >
               {t('joinus.cta.psychology')}
-            </a>
+            </LocaleLink>
             <ShineButton
               onClick={handleApply}
               className="px-10 py-4 bg-black dark:bg-white text-white dark:text-black font-bold text-lg border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all hover:shadow-lg animate-shake"

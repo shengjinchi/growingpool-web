@@ -18,7 +18,7 @@ import ShineButton from '@/components/custom/ShineButton';
 
 const DummyContent = () => {
   const router = useRouter();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -99,14 +99,14 @@ const DummyContent = () => {
               <div className="flex flex-col sm:flex-row gap-6">
                 <PulseButton>
                   <ShineButton
-                    onClick={() => router.push('/splan/join-us')}
+                    onClick={() => router.push(`/${language}/splan/join-us`)}
                     className="px-12 py-6 bg-black dark:bg-white text-white dark:text-black text-xl font-black border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all shadow-lg"
                   >
                     {t('hero.cta.learn')}
                   </ShineButton>
                 </PulseButton>
                 <button
-                  onClick={() => router.push('/dashboard')}
+                  onClick={() => router.push(`/${language}/dashboard`)}
                   className="px-12 py-6 bg-white dark:bg-black text-black dark:text-white text-xl font-black border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
                 >
                   {t('hero.cta.dashboard')}

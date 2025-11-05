@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import EmailContactModal from '@/components/custom/EmailContactModal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import LocaleLink from '@/components/navigation/LocaleLink';
 
 export default function DonatePage() {
   const [donationAmount, setDonationAmount] = useState(0);
@@ -298,12 +299,12 @@ export default function DonatePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
+              <LocaleLink
                 href="/splan/psychology-test"
                 className="px-10 py-5 bg-black dark:bg-white text-white dark:text-black font-bold text-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-all border-2 border-black dark:border-white text-center hover:shadow-lg"
               >
                 {t('donate.how.cta.test')}
-              </a>
+              </LocaleLink>
               <button
                 onClick={() => setIsEmailModalOpen(true)}
                 className="px-10 py-5 bg-white dark:bg-black text-black dark:text-white font-bold text-lg border-2 border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-all text-center hover:shadow-lg animate-shake"
