@@ -91,13 +91,38 @@ export default function SplanFooter() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Navigation */}
           <div>
             <h4 className="font-bold mb-4">{t('footer.nav.title')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                  {t('nav.home')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/splan/join-us" className="text-gray-400 hover:text-white transition-colors">
                   {t('nav.training')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/education" className="text-gray-400 hover:text-white transition-colors">
+                  {language === 'zh' ? '教育中心' : 'Education'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/splan/blog" className="text-gray-400 hover:text-white transition-colors">
+                  {t('nav.blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/splan/psychology-test" className="text-gray-400 hover:text-white transition-colors">
+                  {t('nav.psychology')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">
+                  {t('nav.dashboard')}
                 </Link>
               </li>
               <li>
@@ -106,22 +131,36 @@ export default function SplanFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/splan/psychology-test" className="text-gray-400 hover:text-white transition-colors">
-                  {t('nav.psychology')}
+                <Link href="/splan/donate" className="text-gray-400 hover:text-white transition-colors">
+                  {t('nav.membership')}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Tools & Resources */}
           <div>
-            <h4 className="font-bold mb-4">{t('footer.resources.title')}</h4>
+            <h4 className="font-bold mb-4">{language === 'zh' ? '交易工具' : 'Trading Tools'}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">
-                  {t('nav.dashboard')}
+                <Link href="/tools/position-calculator" className="text-gray-400 hover:text-white transition-colors">
+                  {language === 'zh' ? '仓位计算器' : 'Position Calculator'}
                 </Link>
               </li>
+              <li>
+                <Link href="/tools/risk-reward-calculator" className="text-gray-400 hover:text-white transition-colors">
+                  {language === 'zh' ? '风险回报计算器' : 'Risk/Reward Calculator'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/pip-calculator" className="text-gray-400 hover:text-white transition-colors">
+                  {language === 'zh' ? '点值计算器' : 'Pip Calculator'}
+                </Link>
+              </li>
+            </ul>
+
+            <h4 className="font-bold mb-4 mt-6">{language === 'zh' ? '其他资源' : 'Resources'}</h4>
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                   {language === 'zh' ? '隐私政策' : 'Privacy Policy'}
