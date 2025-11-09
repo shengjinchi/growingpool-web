@@ -113,14 +113,12 @@ async function main() {
     // 获取服务账号密钥
     const key = getServiceAccountKey();
 
-    // 创建 JWT 客户端
-    const jwtClient = new google.auth.JWT(
-      key.client_email,
-      null,
-      key.private_key,
-      ['https://www.googleapis.com/auth/indexing'],
-      null
-    );
+    // 创建 JWT 客户端 - 使用完整的 credentials 对象
+    const jwtClient = new google.auth.JWT({
+      email: key.client_email,
+      key: key.private_key,
+      scopes: ['https://www.googleapis.com/auth/indexing'],
+    });
 
     // 授权
     await jwtClient.authorize();
