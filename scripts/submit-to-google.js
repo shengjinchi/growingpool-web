@@ -13,7 +13,15 @@ function getServiceAccountKey() {
       const keyString = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
       // 尝试解析 JSON
       const key = JSON.parse(keyString);
+
+      // 处理 private_key 中的 \n 转义字符
+      if (key.private_key && typeof key.private_key === 'string') {
+        key.private_key = key.private_key.replace(/\\n/g, '\n');
+      }
+
       console.log('✅ 从环境变量加载密钥成功');
+      console.log(`   Client Email: ${key.client_email}`);
+      console.log(`   Private Key: ${key.private_key ? '已设置' : '未设置'}`);
       return key;
     } catch (error) {
       console.error('❌ 解析环境变量失败:', error.message);

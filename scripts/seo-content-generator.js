@@ -117,7 +117,8 @@ function cleanContent(content) {
 // 使用OpenAI API改写（中文版本）
 async function rewriteWithGroqZh(content) {
   if (!OPENAI_API_KEY) {
-    return simpleRewriteZh(content);
+    console.error('❌ 缺少 OPENAI API KEY，跳过此文章');
+    throw new Error('No OPENAI_API_KEY configured');
   }
 
   try {
@@ -160,15 +161,16 @@ ${content}
 
     return response.data.choices[0].message.content.trim();
   } catch (error) {
-    console.error('OpenAI API错误（中文）:', error.message);
-    return simpleRewriteZh(content);
+    console.error('❌ OpenAI API错误（中文）:', error.message);
+    throw error;
   }
 }
 
 // 使用OpenAI API改写（英文版本）
 async function rewriteWithGroqEn(content) {
   if (!OPENAI_API_KEY) {
-    return simpleRewriteEn(content);
+    console.error('❌ 缺少 OPENAI API KEY，跳过此文章');
+    throw new Error('No OPENAI_API_KEY configured');
   }
 
   try {
@@ -210,72 +212,9 @@ Begin:`
 
     return response.data.choices[0].message.content.trim();
   } catch (error) {
-    console.error('OpenAI API错误（英文）:', error.message);
-    return simpleRewriteEn(content);
+    console.error('❌ OpenAI API错误（英文）:', error.message);
+    throw error;
   }
-}
-
-// 简单改写（中文备用）
-function simpleRewriteZh(content) {
-  const parts = content.split('\n').filter(p => p.trim());
-  const englishTitle = parts[0].trim();
-  const bodyText = parts.slice(1).join(' ').substring(0, 200);
-
-  // 翻译标题中的常见术语
-  let chineseTitle = englishTitle
-    .replace(/USD\/JPY/gi, '美元/日元')
-    .replace(/EUR\/USD/gi, '欧元/美元')
-    .replace(/GBP\/USD/gi, '英镑/美元')
-    .replace(/AUD\/USD/gi, '澳元/美元')
-    .replace(/USD\/CAD/gi, '美元/加元')
-    .replace(/NZD\/USD/gi, '纽元/美元')
-    .replace(/USD\/CHF/gi, '美元/瑞郎')
-    .replace(/XAU\/USD|Gold/gi, '黄金')
-    .replace(/XAG\/USD|Silver/gi, '白银')
-    .replace(/Price Forecast/gi, '价格预测')
-    .replace(/Technical Analysis/gi, '技术分析')
-    .replace(/Market Update/gi, '市场更新')
-    .replace(/rebounds?/gi, '反弹')
-    .replace(/rises?/gi, '上涨')
-    .replace(/falls?/gi, '下跌')
-    .replace(/steady/gi, '稳定')
-    .replace(/tops?/gi, '突破')
-    .replace(/struggles?/gi, '承压')
-    .replace(/advances?/gi, '走高')
-    .replace(/extends?/gi, '延续')
-    .replace(/nears?/gi, '接近')
-    .replace(/drops?/gi, '下滑')
-    .replace(/gains?/gi, '上涨')
-    .replace(/weakens?/gi, '走弱')
-    .replace(/strengthens?/gi, '走强');
-
-  // 提取数字和百分比
-  const numbers = bodyText.match(/\d+\.?\d*%?/g) || [];
-  const numberInfo = numbers.length > 0 ? `，目前报价${numbers[0]}附近` : '';
-
-  return `${chineseTitle}
-
-周五外汇市场显示，该货币对持续波动${numberInfo}。市场交易员密切关注美联储政策动向以及主要经济数据发布，这些因素继续影响市场走势和投资者情绪。
-
-技术分析显示，该货币对当前处于关键位置，上方阻力和下方支撑均需重点关注。交易者建议结合基本面因素，制定合理的交易策略，严格控制风险。
-
-分析师指出，短期内市场波动可能加剧，投资者应保持谨慎态度。建议密切关注重要经济数据和央行官员讲话，这些都可能对汇率走势产生重要影响。`;
-}
-
-// 简单改写（英文备用）
-function simpleRewriteEn(content) {
-  const parts = content.split('\n').filter(p => p.trim());
-  const bodyText = parts.slice(1).join(' ').substring(0, 200);
-
-  // 提取数字和百分比
-  const numbers = bodyText.match(/\d+\.?\d*%?/g) || [];
-  const priceInfo = numbers.length > 0 ? ` trading near ${numbers[0]}` : '';
-
-  return `The currency pair shows continued volatility on Friday${priceInfo}. Market participants are closely monitoring Federal Reserve policy signals and key economic data releases, which continue to influence market sentiment and trading dynamics.
-
-Technical analysis indicates the pair is positioned at a crucial level, with both upside resistance and downside support warranting close attention. Traders recommend combining fundamental factors with technical setups to develop sound trading strategies while maintaining strict risk management.
-
-Analysts note that near-term volatility could intensify, urging investors to exercise caution. Key economic data releases and central bank commentary should be monitored closely, as these factors may significantly impact exchange rate movements in the coming sessions.`;
 }
 
 // 生成slug
@@ -342,25 +281,26 @@ async function generateContent() {
         // 创建目录
         fs.mkdirSync(newsPath, { recursive: true });
 
-        // AI改写中英文版本
-        const [contentZh, contentEn] = await Promise.all([
-          rewriteWithGroqZh(`${cleanTitle}\n\n${cleanDesc}`),
-          rewriteWithGroqEn(`${cleanTitle}\n\n${cleanDesc}`)
-        ]);
+        try {
+          // AI改写中英文版本
+          const [contentZh, contentEn] = await Promise.all([
+            rewriteWithGroqZh(`${cleanTitle}\n\n${cleanDesc}`),
+            rewriteWithGroqEn(`${cleanTitle}\n\n${cleanDesc}`)
+          ]);
 
-        // 从中文内容中提取标题（第一行）和正文
-        const zhLines = contentZh.split('\n');
-        const zhTitle = zhLines[0].trim();
-        const zhBody = zhLines.slice(1).filter(line => line.trim()).join('\n\n');
+          // 从中文内容中提取标题（第一行）和正文
+          const zhLines = contentZh.split('\n');
+          const zhTitle = zhLines[0].trim();
+          const zhBody = zhLines.slice(1).filter(line => line.trim()).join('\n\n');
 
-        // 从中文正文中提取前150字作为描述，添加 SEO 关键词
-        const zhDescription = zhBody.replace(/\n/g, ' ').substring(0, 120) + '。FX Killer 提供免费外汇交易培训。';
+          // 从中文正文中提取前150字作为描述，添加 SEO 关键词
+          const zhDescription = zhBody.replace(/\n/g, ' ').substring(0, 120) + '。FX Killer 提供免费外汇交易培训。';
 
-        // 生成中文 SEO 关键词
-        const zhKeywords = ["外汇", "交易", "市场分析", "外汇新闻", "外汇培训", "交易员孵化", "FX Killer"];
+          // 生成中文 SEO 关键词
+          const zhKeywords = ["外汇", "交易", "市场分析", "外汇新闻", "外汇培训", "交易员孵化", "FX Killer"];
 
-        // 生成中文Markdown
-        const markdownZh = `---
+          // 生成中文Markdown
+          const markdownZh = `---
 title: "${zhTitle.replace(/"/g, '\\"')}"
 date: "${dayjs().format('YYYY-MM-DD HH:mm:ss')}"
 description: "${zhDescription.replace(/"/g, '\\"')}"
@@ -388,12 +328,12 @@ ${zhBody}
 **免责声明**: 本文仅供参考，不构成投资建议。外汇交易存在风险，请谨慎决策。
 `;
 
-        // 英文描述和关键词
-        const enDescription = cleanDesc.substring(0, 120) + '. Free forex trading training by FX Killer.';
-        const enKeywords = ["forex", "trading", "market analysis", "forex news", "forex training", "trader incubation", "FX Killer"];
+          // 英文描述和关键词
+          const enDescription = cleanDesc.substring(0, 120) + '. Free forex trading training by FX Killer.';
+          const enKeywords = ["forex", "trading", "market analysis", "forex news", "forex training", "trader incubation", "FX Killer"];
 
-        // 生成英文Markdown
-        const markdownEn = `---
+          // 生成英文Markdown
+          const markdownEn = `---
 title: "${cleanTitle.replace(/"/g, '\\"')}"
 date: "${dayjs().format('YYYY-MM-DD HH:mm:ss')}"
 description: "${enDescription.replace(/"/g, '\\"')}"
@@ -421,12 +361,22 @@ Want to become a professional trader? FX Killer offers a **completely free** pro
 **Disclaimer**: This article is for reference only and does not constitute investment advice. Forex trading involves risks; please make decisions carefully.
 `;
 
-        // 写入文件
-        fs.writeFileSync(path.join(newsPath, 'zh.md'), markdownZh, 'utf8');
-        fs.writeFileSync(path.join(newsPath, 'en.md'), markdownEn, 'utf8');
+          // 写入文件
+          fs.writeFileSync(path.join(newsPath, 'zh.md'), markdownZh, 'utf8');
+          fs.writeFileSync(path.join(newsPath, 'en.md'), markdownEn, 'utf8');
 
-        console.log(`✅ 生成: ${dirName} (中英双语)`);
-        totalGenerated++;
+          console.log(`✅ 生成: ${dirName} (中英双语)`);
+          totalGenerated++;
+
+        } catch (error) {
+          console.error(`❌ AI生成失败，跳过此文章: ${error.message}`);
+          // 删除已创建的目录
+          if (fs.existsSync(newsPath)) {
+            fs.rmSync(newsPath, { recursive: true });
+          }
+          totalFiltered++;
+          continue;
+        }
 
         // 控制速度，避免触发限制
         // 每分钟限制：70K token, 30次请求
