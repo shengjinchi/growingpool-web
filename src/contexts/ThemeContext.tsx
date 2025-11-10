@@ -19,7 +19,8 @@ function getInitialTheme(): Theme {
   const savedTheme = localStorage.getItem('theme') as Theme;
   if (savedTheme) return savedTheme;
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // 总是返回浅色主题作为默认
+  return 'light';
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
