@@ -8,11 +8,13 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import LocaleLink from '@/components/navigation/LocaleLink';
+import ContactModal from '@/components/custom/ContactModal';
 
 export default function UnifiedNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const pathname = usePathname();
   const { theme, toggleTheme, mounted } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
@@ -23,7 +25,7 @@ export default function UnifiedNavbar() {
       link: "/splan/join-us",
     },
     {
-      name: language === 'zh' ? '教育' : 'Education',
+      name: language === 'zh' ? '教育中心' : 'Education',
       link: "/education",
       hasDropdown: true,
       dropdownItems: [
@@ -49,11 +51,7 @@ export default function UnifiedNavbar() {
       name: language === 'zh' ? '日历' : 'Calendar',
       link: "/economic-calendar",
     },
-    {
-      name: language === 'zh' ? '天梯' : 'Leaderboard',
-      link: "/top-traders",
-    },
-    {
+      {
       name: t('nav.tradingTools'),
       link: "/tools/position-calculator",
       hasDropdown: true,
@@ -100,7 +98,8 @@ export default function UnifiedNavbar() {
   };
 
   return (
-    <motion.nav
+    <>
+      <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -133,8 +132,8 @@ export default function UnifiedNavbar() {
                   <span
                     className={`relative z-10 ${
                       isActive(item.link)
-                        ? 'text-black dark:text-white font-bold'
-                        : 'text-gray-600 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white'
+                        ? 'text-yellow-600 dark:text-yellow-400 font-bold'
+                        : 'text-gray-600 dark:text-gray-400 group-hover:text-yellow-600 dark:group-hover:text-yellow-400'
                     }`}
                   >
                     {item.name}
@@ -145,8 +144,8 @@ export default function UnifiedNavbar() {
                         openDropdown === item.name ? 'rotate-180' : ''
                       } ${
                         isActive(item.link)
-                          ? 'text-black dark:text-white'
-                          : 'text-gray-600 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white'
+                          ? 'text-yellow-600 dark:text-yellow-400'
+                          : 'text-gray-600 dark:text-gray-400 group-hover:text-yellow-600 dark:group-hover:text-yellow-400'
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -158,7 +157,7 @@ export default function UnifiedNavbar() {
                   {isActive(item.link) && !item.hasDropdown && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-black dark:bg-white"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 dark:bg-yellow-400"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -195,34 +194,42 @@ export default function UnifiedNavbar() {
 
           {/* Right Side Actions (Desktop) - 靠右 */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              title={theme === 'light' ? (language === 'zh' ? '切换到深色模式' : 'Switch to Dark Mode') : (language === 'zh' ? '切换到浅色模式' : 'Switch to Light Mode')}
-              aria-label={theme === 'light' ? 'Dark mode' : 'Light mode'}
+            {/* Contact Us Button */}
+            <motion.button
+              onClick={() => setIsContactModalOpen(true)}
+              className="px-3 py-2 bg-black text-white text-sm font-bold border-2 border-black relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                // Bouncing animation
+                y: [0, -3, 0]
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                y: {
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
+                }
+              }}
             >
-              {theme === 'light' ? (
-                // Moon icon
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              ) : (
-                // Sun icon
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              )}
-            </button>
+              {/* Hover effect background */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-medium"
-              title={language === 'zh' ? 'Switch to English' : '切换到中文'}
-            >
-              {language === 'zh' ? 'EN' : '中文'}
-            </button>
+              {/* Button text */}
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                {language === 'zh' ? '联系我们' : 'Contact Us'}
+              </span>
+
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-40 transition-transform duration-700 ease-out" />
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -276,7 +283,7 @@ export default function UnifiedNavbar() {
                         onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                         className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium transition-colors ${
                           isActive(item.link)
-                            ? 'bg-gray-100 dark:bg-gray-800 text-black dark:text-white font-bold'
+                            ? 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 font-bold border-l-4 border-yellow-500'
                             : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                         }`}
                       >
@@ -311,7 +318,7 @@ export default function UnifiedNavbar() {
                       href={item.link}
                       className={`block px-4 py-3 text-sm font-medium transition-colors ${
                         isActive(item.link)
-                          ? 'bg-gray-100 dark:bg-gray-800 text-black dark:text-white font-bold'
+                          ? 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 font-bold border-l-4 border-yellow-500'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
                     >
@@ -321,43 +328,56 @@ export default function UnifiedNavbar() {
                 </div>
               ))}
 
-              {/* Mobile Theme and Language Toggle */}
-              <div className="px-4 pt-2 space-y-2">
-                {/* Theme Toggle */}
-                <button
-                  onClick={toggleTheme}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-medium flex items-center justify-center gap-2"
-                  aria-label={theme === 'light' ? 'Dark mode' : 'Light mode'}
+              {/* Mobile Contact Button */}
+              <div className="px-4 pt-2">
+                <motion.button
+                  onClick={() => setIsContactModalOpen(true)}
+                  className="w-full px-4 py-3 bg-black text-white text-sm font-bold border-2 border-black relative overflow-hidden group"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    // Bouncing animation
+                    y: [0, -3, 0]
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 25,
+                    delay: 0.1,
+                    y: {
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut"
+                    }
+                  }}
                 >
-                  {theme === 'light' ? (
-                    <>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                      </svg>
-                      <span>{language === 'zh' ? '深色模式' : 'Dark Mode'}</span>
-                    </>
-                  ) : (
-                    <>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
-                      <span>{language === 'zh' ? '浅色模式' : 'Light Mode'}</span>
-                    </>
-                  )}
-                </button>
+                  {/* Hover effect background */}
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Language Toggle */}
-                <button
-                  onClick={toggleLanguage}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-medium"
-                >
-                  {language === 'zh' ? 'EN' : '中文'}
-                </button>
+                  {/* Button text */}
+                  <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                    {language === 'zh' ? '联系我们' : 'Contact Us'}
+                  </span>
+
+                  {/* Shine effect on hover */}
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-40 transition-transform duration-700 ease-out" />
+                </motion.button>
               </div>
-            </div>
+              </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+        </motion.nav>
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
+    </>
   );
 }

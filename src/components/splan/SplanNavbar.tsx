@@ -10,8 +10,9 @@ export default function SplanNavbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-black text-black dark:text-white">FX</span>
-            <span className="text-2xl font-normal text-gray-600 dark:text-gray-400 ml-1">Killer</span>
+            <span className="text-2xl font-black text-yellow-500 dark:text-yellow-400">Grow</span>
+            <span className="text-2xl font-black text-yellow-600 dark:text-yellow-500 ml-1">ing</span>
+            <span className="text-2xl font-normal text-yellow-700 dark:text-yellow-600 ml-1">Pool</span>
           </Link>
 
           {/* Navigation Links */}

@@ -29,7 +29,17 @@ export default function JoinUsPage() {
             <span className="text-sm font-semibold tracking-wider">{t('joinus.hero.badge')}</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="font-black">{t('joinus.hero.title1')}</span>
+            <span className="font-black">
+              {t('joinus.hero.title1').split('').map((char, index) => {
+                // Three different gold shades for each character of 生金池
+                const goldColor = index === 0 ? 'text-yellow-400 dark:text-yellow-300' :
+                                 index === 1 ? 'text-yellow-500 dark:text-yellow-400' :
+                                 'text-yellow-600 dark:text-yellow-500';
+                return (
+                  <span key={index} className={goldColor}>{char}</span>
+                );
+              })}
+            </span>
             <br />
             <span className="text-3xl md:text-4xl font-normal text-gray-300">{t('joinus.hero.title2')}</span>
           </h1>

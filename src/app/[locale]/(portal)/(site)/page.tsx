@@ -8,9 +8,6 @@ import EmailContactModal from '@/components/custom/EmailContactModal';
 import BrandName from '@/components/custom/BrandName';
 import BrandSlogans from '@/components/custom/BrandSlogans';
 import { FadeInSlide, ScaleFadeIn, HoverCard, PulseButton, FloatingBadge, StaggeredFadeIn } from '@/components/custom/AnimatedSection';
-import Testimonials from '@/components/custom/Testimonials';
-import StatsSection from '@/components/custom/StatsSection';
-import InterviewCTA from '@/components/custom/InterviewCTA';
 import CandlestickChart from '@/components/custom/CandlestickChart';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -720,15 +717,9 @@ const DummyContent = () => {
       </div>
 
       {/* Email Contact Modal */}
-      {/* Stats Section */}
-      <StatsSection />
 
-      {/* Testimonials */}
-      <Testimonials />
-
-      {/* Interview CTA */}
-      <InterviewCTA />
-
+  
+    
       <EmailContactModal
         isOpen={isEmailModalOpen}
         onClose={() => setIsEmailModalOpen(false)}

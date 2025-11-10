@@ -38,7 +38,7 @@ export default function ParticleTestPage() {
           <AnimatedText key={key} loop={false} />
         </div>
         <div className="mt-4 text-center text-gray-600 dark:text-gray-400">
-          <p>✨ "汇"字整体翻转，"刃"字拆分为点+刀</p>
+          <p>✨ "生"字整体翻转，"金"字拆分为人+王</p>
           <p>✨ "X"为两条斜线交叉，"Killer"逐字弹入</p>
           <p>✨ 3D 效果，流畅自然，性能优秀</p>
         </div>

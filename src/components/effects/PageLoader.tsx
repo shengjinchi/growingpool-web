@@ -32,9 +32,31 @@ export default function PageLoader() {
     };
   }, []);
 
-  const text = "GrowingPool";
+  const text = "生金池GrowingPool";
   const chars = text.split("");
-  const textColor = isDark ? "#ffffff" : "#000000";
+
+  // Three different gold shades for each character
+  const getCharColor = (char: string, index: number) => {
+    const isChinese = /[\u4e00-\u9fff]/.test(char);
+    if (isChinese) {
+      // For 生金池: 生=lightest, 金=medium, 池=darkest
+      if (isDark) {
+        return index === 0 ? "#fde047" :   // yellow-300 (lightest)
+               index === 1 ? "#fbbf24" :   // yellow-400 (medium)
+               "#f59e0b";                   // yellow-600 (darkest)
+      } else {
+        return index === 0 ? "#facc15" :   // yellow-400 (lightest)
+               index === 1 ? "#eab308" :   // yellow-500 (medium)
+               "#ca8a04";                   // yellow-700 (darkest)
+      }
+    } else {
+      // For GrowingPool: cycle through three gold shades
+      const goldShades = isDark ?
+        ["#fde047", "#fbbf24", "#f59e0b"] :  // dark mode: yellow-300, yellow-400, yellow-600
+        ["#facc15", "#eab308", "#ca8a04"];   // light mode: yellow-400, yellow-500, yellow-700
+      return goldShades[index % goldShades.length];
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -53,7 +75,7 @@ export default function PageLoader() {
                 <motion.span
                   key={index}
                   style={{
-                    color: textColor,
+                    color: getCharColor(char, index),
                     fontFamily: "'Noto Sans SC', 'Inter', sans-serif"
                   }}
                   initial={{
@@ -85,7 +107,7 @@ export default function PageLoader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="w-64 h-1 bg-gray-200 dark:bg-gray-800 overflow-hidden"
+              className="w-64 h-1 bg-yellow-200 dark:bg-yellow-900 overflow-hidden"
             >
               <motion.div
                 initial={{ x: "-100%" }}
@@ -96,7 +118,7 @@ export default function PageLoader() {
                   ease: "linear",
                   delay: 0.8,
                 }}
-                className="h-full w-1/2 bg-black dark:bg-white"
+                className="h-full w-1/2 bg-yellow-500 dark:bg-yellow-400"
               />
             </motion.div>
           </div>

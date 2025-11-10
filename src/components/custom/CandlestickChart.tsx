@@ -158,22 +158,22 @@ export default function CandlestickChart() {
       return cciData;
     };
 
-    // Get candle color based on CCI (NS Indicator logic)
+    // Get candle color based on CCI (NS Indicator logic) - Gold Theme
     const getCandleColor = (cci1: number, cci2: number, isBullish: boolean): { body: string; wick: string; hollow: boolean } => {
       // Sensitivity = 1 (default): CCI1 period = 7, CCI2 period = 49
 
       if (cci1 >= 0 && cci2 >= 0) {
-        // Strong uptrend - Black border, hollow
-        return { body: 'rgba(0, 0, 0, 1)', wick: 'rgba(0, 0, 0, 1)', hollow: true };
+        // Strong uptrend - Gold border, hollow
+        return { body: 'rgba(217, 119, 6, 1)', wick: 'rgba(217, 119, 6, 1)', hollow: true };
       } else if (cci1 < 0 && cci2 >= 0) {
-        // Weak/warning - Light gray, bullish candles hollow
-        return { body: 'rgba(180, 180, 180, 1)', wick: 'rgba(180, 180, 180, 1)', hollow: isBullish };
+        // Weak/warning - Light gold, bullish candles hollow
+        return { body: 'rgba(251, 191, 36, 1)', wick: 'rgba(251, 191, 36, 1)', hollow: isBullish };
       } else if (cci1 < 0 && cci2 < 0) {
-        // Strong downtrend - Black, filled
-        return { body: 'rgba(0, 0, 0, 1)', wick: 'rgba(0, 0, 0, 1)', hollow: false };
+        // Strong downtrend - Dark gold, filled
+        return { body: 'rgba(180, 83, 9, 1)', wick: 'rgba(180, 83, 9, 1)', hollow: false };
       } else { // cci1 > 0 && cci2 < 0
-        // Bounce/weak - Light gray, bullish candles hollow
-        return { body: 'rgba(180, 180, 180, 1)', wick: 'rgba(180, 180, 180, 1)', hollow: isBullish };
+        // Bounce/weak - Light gold, bullish candles hollow
+        return { body: 'rgba(251, 191, 36, 1)', wick: 'rgba(251, 191, 36, 1)', hollow: isBullish };
       }
     };
 
@@ -365,8 +365,8 @@ export default function CandlestickChart() {
 
       // ===== MAIN CHART (2/3 top) =====
 
-      // Draw vertical grid lines (main chart)
-      ctx.strokeStyle = 'rgba(200, 200, 200, 0.3)';
+      // Draw vertical grid lines (main chart) - Gold theme
+      ctx.strokeStyle = 'rgba(217, 119, 6, 0.2)';
       ctx.lineWidth = 1;
       for (let i = 0; i < candles.length; i += 10) {
         const x = i * candleSpacing + candleWidth / 2;
@@ -376,7 +376,7 @@ export default function CandlestickChart() {
         ctx.stroke();
       }
 
-      // Draw horizontal grid lines (main chart)
+      // Draw horizontal grid lines (main chart) - Gold theme
       for (let i = 0; i <= 6; i++) {
         const y = padding.top + (mainChartHeight / 6) * i;
         ctx.beginPath();
@@ -430,9 +430,9 @@ export default function CandlestickChart() {
         }
       });
 
-      // Draw ask price line (卖价 - red, higher price)
+      // Draw ask price line (卖价 - dark gold, higher price)
       const askY = padding.top + ((maxPrice - currentAskPrice) / priceRange) * mainChartHeight;
-      ctx.strokeStyle = 'rgba(239, 68, 68, 0.6)'; // Red - Ask (higher)
+      ctx.strokeStyle = 'rgba(180, 83, 9, 0.7)'; // Dark gold - Ask (higher)
       ctx.lineWidth = 2;
       ctx.setLineDash([10, 5]);
       ctx.beginPath();
@@ -441,9 +441,9 @@ export default function CandlestickChart() {
       ctx.stroke();
       ctx.setLineDash([]);
 
-      // Draw bid price line (买价 - green, lower price)
+      // Draw bid price line (买价 - bright gold, lower price)
       const bidY = padding.top + ((maxPrice - currentBidPrice) / priceRange) * mainChartHeight;
-      ctx.strokeStyle = 'rgba(34, 197, 94, 0.6)'; // Green - Bid (lower)
+      ctx.strokeStyle = 'rgba(251, 191, 36, 0.7)'; // Bright gold - Bid (lower)
       ctx.lineWidth = 2;
       ctx.setLineDash([10, 5]);
       ctx.beginPath();
@@ -452,12 +452,12 @@ export default function CandlestickChart() {
       ctx.stroke();
       ctx.setLineDash([]);
 
-      // Draw EMA20 line (light gray 4px)
+      // Draw EMA20 line (gold 4px)
       if (candles.length >= 20) {
         const closes = candles.map(c => c.close);
         const ema20 = calculateEMA(closes, 20);
 
-        ctx.strokeStyle = 'rgba(180, 180, 180, 1)'; // Light gray
+        ctx.strokeStyle = 'rgba(217, 119, 6, 1)'; // Gold
         ctx.lineWidth = 4;
         ctx.beginPath();
         ema20.forEach((value, index) => {
@@ -476,8 +476,8 @@ export default function CandlestickChart() {
 
       // ===== SUB CHART (1/3 bottom) - Golden/Death Cross =====
 
-      // Draw separator line (lighter and thinner)
-      ctx.strokeStyle = 'rgba(200, 200, 200, 0.6)';
+      // Draw separator line (gold theme)
+      ctx.strokeStyle = 'rgba(217, 119, 6, 0.6)';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(0, subChartTop);
@@ -485,11 +485,11 @@ export default function CandlestickChart() {
       ctx.stroke();
 
       // Draw sub chart background
-      ctx.fillStyle = 'rgba(245, 245, 245, 0.3)';
+      ctx.fillStyle = 'rgba(254, 240, 138, 0.2)'; // Light gold background
       ctx.fillRect(0, subChartTop, rect.width, subChartHeight);
 
       // Draw sub chart grid lines
-      ctx.strokeStyle = 'rgba(200, 200, 200, 0.3)';
+      ctx.strokeStyle = 'rgba(217, 119, 6, 0.2)';
       ctx.lineWidth = 1;
       for (let i = 0; i <= 3; i++) {
         const y = subChartTop + (subChartHeight / 3) * i;
@@ -512,7 +512,7 @@ export default function CandlestickChart() {
 
         // Draw zero axis line (horizontal dashed line)
         const zeroLineY = subChartTop + subChartHeight / 2; // Middle of sub chart
-        ctx.strokeStyle = 'rgba(180, 180, 180, 0.6)'; // Light gray
+        ctx.strokeStyle = 'rgba(217, 119, 6, 0.6)'; // Gold
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]); // Dashed line
         ctx.beginPath();
@@ -521,8 +521,8 @@ export default function CandlestickChart() {
         ctx.stroke();
         ctx.setLineDash([]); // Reset dash
 
-        // Draw EMA12 line (fast line - black 1px)
-        ctx.strokeStyle = 'rgba(0, 0, 0, 1)'; // Black
+        // Draw EMA12 line (fast line - bright gold 1px)
+        ctx.strokeStyle = 'rgba(251, 191, 36, 1)'; // Bright gold
         ctx.lineWidth = 1;
         ctx.beginPath();
         ema12.forEach((value, index) => {
@@ -538,8 +538,8 @@ export default function CandlestickChart() {
         });
         ctx.stroke();
 
-        // Draw EMA26 line (slow line - dark gray 4px)
-        ctx.strokeStyle = 'rgba(80, 80, 80, 1)'; // Dark gray
+        // Draw EMA26 line (slow line - dark gold 4px)
+        ctx.strokeStyle = 'rgba(180, 83, 9, 1)'; // Dark gold
         ctx.lineWidth = 4;
         ctx.beginPath();
         ema26.forEach((value, index) => {
@@ -562,17 +562,17 @@ export default function CandlestickChart() {
           const y = subChartTop + ((maxEma - ema12Value) / emaValueRange) * subChartHeight;
 
           if (cross.type === 'golden') {
-            // Golden Cross (做多) - hollow white circle with black border + black up arrow
-            ctx.fillStyle = 'rgba(255, 255, 255, 1)'; // White fill
+            // Golden Cross (做多) - hollow light gold circle with gold border + gold up arrow
+            ctx.fillStyle = 'rgba(254, 240, 138, 1)'; // Light gold fill
             ctx.beginPath();
             ctx.arc(x, y, 6, 0, Math.PI * 2);
             ctx.fill();
-            ctx.strokeStyle = 'rgba(0, 0, 0, 1)'; // Black border
+            ctx.strokeStyle = 'rgba(217, 119, 6, 1)'; // Gold border
             ctx.lineWidth = 2;
             ctx.stroke();
 
-            // Black up arrow
-            ctx.strokeStyle = 'rgba(0, 0, 0, 1)';
+            // Gold up arrow
+            ctx.strokeStyle = 'rgba(217, 119, 6, 1)';
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(x, y - 15);
@@ -583,14 +583,14 @@ export default function CandlestickChart() {
             ctx.lineTo(x + 3, y - 12);
             ctx.stroke();
           } else {
-            // Death Cross (做空) - solid black circle + black down arrow
-            ctx.fillStyle = 'rgba(0, 0, 0, 1)'; // Black fill
+            // Death Cross (做空) - solid dark gold circle + dark gold down arrow
+            ctx.fillStyle = 'rgba(180, 83, 9, 1)'; // Dark gold fill
             ctx.beginPath();
             ctx.arc(x, y, 6, 0, Math.PI * 2);
             ctx.fill();
 
-            // Black down arrow
-            ctx.strokeStyle = 'rgba(0, 0, 0, 1)';
+            // Dark gold down arrow
+            ctx.strokeStyle = 'rgba(180, 83, 9, 1)';
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(x, y + 15);

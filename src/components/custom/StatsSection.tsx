@@ -178,12 +178,7 @@ export default function StatsSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white dark:text-black">
             {language === 'zh' ? '平台数据' : 'Platform Statistics'}
           </h2>
-          <p className="text-gray-400 dark:text-gray-600 max-w-2xl mx-auto">
-            {language === 'zh'
-              ? '真实数据展示我们的培训成果和合作网络'
-              : 'Real data showcasing our training results and partnership network'}
-          </p>
-        </motion.div>
+                  </motion.div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
