@@ -7,7 +7,6 @@ import SplanFooter from "@/components/splan/SplanFooter";
 import SubscriptionNotification from "@/components/custom/SubscriptionNotification";
 import FloatingContactForm from "@/components/custom/FloatingContactForm";
 import WelcomeModalWrapper from "@/components/custom/WelcomeModalWrapper";
-import CalendlyWidget from "@/components/custom/CalendlyWidget";
 import StructuredData from "@/components/seo/StructuredData";
 import Providers from "@/components/providers/Providers";
 import MouseFollower from "@/components/effects/MouseFollower";
@@ -23,15 +22,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fxkiller.com'),
+  metadataBase: new URL('https://growingpool.com'),
   title: {
-    default: "FX Killer - Professional FX Trader Training Platform | 汇刃·外汇交易职业交易员培训",
-    template: "%s | FX Killer"
+    default: "GrowingPool - Professional FX Trader Training Platform | 生金池·外汇交易职业交易员培训",
+    template: "%s | GrowingPool"
   },
-  description: "FX Killer (汇刃) - 专注于外汇交易的职业交易员培训平台。提供系统化外汇交易培训、实战训练和资金支持。通过专业考核即可获得资金管理权限，分润比例高达90%。培养真正适合外汇市场的专业交易员。",
+  description: "GrowingPool (生金池) - 专注于外汇交易的职业交易员培训平台。提供系统化外汇交易培训、实战训练和资金支持。通过专业考核即可获得资金管理权限，分润比例高达90%。培养真正适合外汇市场的专业交易员。",
   keywords: [
-    "FX Killer",
-    "汇刃",
+    "GrowingPool",
+    "生金池",
     "外汇交易",
     "外汇培训",
     "职业交易员",
@@ -54,44 +53,44 @@ export const metadata: Metadata = {
     "资金管理",
     "技术分析",
   ],
-  authors: [{ name: "FX Killer Team" }],
-  creator: "FX Killer",
-  publisher: "FX Killer",
+  authors: [{ name: "GrowingPool Team" }],
+  creator: "GrowingPool",
+  publisher: "GrowingPool",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: "https://fxkiller.com",
+    canonical: "https://growingpool.com",
     languages: {
-      'zh-CN': 'https://fxkiller.com/zh',
-      'en-US': 'https://fxkiller.com/en',
+      'zh-CN': 'https://growingpool.com/zh',
+      'en-US': 'https://growingpool.com/en',
     },
   },
   openGraph: {
     type: "website",
     locale: "zh_CN",
     alternateLocale: ["en_US"],
-    url: "https://fxkiller.com",
-    siteName: "FX Killer | 汇刃",
-    title: "FX Killer - Professional FX Trader Training Platform | 汇刃·职业交易员培训",
+    url: "https://growingpool.com",
+    siteName: "GrowingPool | 生金池",
+    title: "GrowingPool - Professional FX Trader Training Platform | 生金池·职业交易员培训",
     description: "专注于外汇交易的职业交易员培训平台。提供系统化外汇交易培训、实战训练和资金支持。通过专业考核即可获得资金管理权限，分润比例高达90%。",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "FX Killer - Professional FX Trader Training Platform",
+        alt: "GrowingPool - Professional FX Trader Training Platform",
         type: "image/jpeg",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@fxkiller",
-    creator: "@fxkiller",
-    title: "FX Killer - Professional FX Trader Training Platform",
+    site: "@growingpool",
+    creator: "@growingpool",
+    title: "GrowingPool - Professional FX Trader Training Platform",
     description: "专注于外汇交易的职业交易员培训平台。提供系统化外汇交易培训、实战训练和资金支持。",
     images: ["/og-image.jpg"],
   },
@@ -168,7 +167,6 @@ export default async function PortalLayout({
           <BackToTop />
           <FloatingContactForm />
           <WelcomeModalWrapper />
-          <CalendlyWidget />
           <SubscriptionNotification />
           <Analytics />
           <SpeedInsights />

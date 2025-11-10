@@ -11,22 +11,22 @@ export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": language === 'zh' ? "汇刃 FX Killer" : "FX Killer",
-    "alternateName": language === 'zh' ? "FX Killer" : "汇刃",
-    "url": "https://fxkiller.com",
-    "logo": "https://fxkiller.com/logo.png",
+    "name": language === 'zh' ? "生金池 GrowingPool" : "GrowingPool",
+    "alternateName": language === 'zh' ? "GrowingPool" : "生金池",
+    "url": "https://growingpool.com",
+    "logo": "https://growingpool.com/logo.png",
     "description": language === 'zh'
       ? "专注于外汇交易的职业交易员培训平台。提供系统化外汇交易培训、实战训练和资金支持。通过专业考核即可获得资金管理权限，分润比例高达90%。"
       : "Professional FX trader training platform. Systematic forex trading education, practical training, and funded trading accounts. Pass professional assessment to get fund management privileges with up to 90% profit split.",
     "sameAs": [
-      "https://twitter.com/fxkiller",
-      "https://www.linkedin.com/company/fxkiller",
-      "https://www.youtube.com/@fxkiller"
+      "https://twitter.com/growingpool",
+      "https://www.linkedin.com/company/growingpool",
+      "https://www.youtube.com/@growingpool"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
-      "email": "contact@fxkiller.com"
+      "email": "contact@growingpool.com"
     }
   };
 
@@ -34,13 +34,13 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "FX Killer",
-    "url": "https://fxkiller.com",
+    "name": "GrowingPool",
+    "url": "https://growingpool.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://fxkiller.com/search?q={search_term_string}"
+        "urlTemplate": "https://growingpool.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -50,13 +50,13 @@ export default function StructuredData() {
   const courseSchema = pathname.includes('/splan/courses') ? {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": language === 'zh' ? "FX Killer 职业交易员培训课程" : "FX Killer Professional Trader Training Course",
+    "name": language === 'zh' ? "GrowingPool 职业交易员培训课程" : "GrowingPool Professional Trader Training Course",
     "description": language === 'zh'
       ? "全面系统的外汇交易培训课程，涵盖基础知识、技术分析、风险管理、交易心理等"
       : "Comprehensive forex trading training course covering fundamentals, technical analysis, risk management, and trading psychology",
     "provider": {
       "@type": "Organization",
-      "name": "FX Killer"
+      "name": "GrowingPool"
     },
     "courseMode": "online",
     "educationalLevel": "Beginner to Advanced"

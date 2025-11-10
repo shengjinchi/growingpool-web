@@ -16,7 +16,7 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'Life@1949..';
+    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'noah@growingpool';
 
     if (password === adminPassword) {
       // Store authentication in localStorage for persistent login

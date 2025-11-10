@@ -68,14 +68,14 @@ export default function ParticleTestPage() {
           方案3：粒子动画
         </h2>
 
-        {/* 汇刃动画 */}
+        {/* 生金池动画 */}
         <div className="mb-8">
           <h3 className="text-xl font-bold text-center mb-4 text-black dark:text-white">
-            汇刃
+            生金池
           </h3>
           <div className="w-full h-40 border-2 border-black dark:border-white bg-gray-50 dark:bg-gray-900">
             <ParticleText
-              text="汇刃"
+              text="生金池"
               fontSize={100}
               color="#000000"
               particleCount={3000}
@@ -84,14 +84,14 @@ export default function ParticleTestPage() {
           </div>
         </div>
 
-        {/* FxKiller 动画 */}
+        {/* GrowingPool 动画 */}
         <div className="mb-8">
           <h3 className="text-xl font-bold text-center mb-4 text-black dark:text-white">
-            FxKiller
+            GrowingPool
           </h3>
           <div className="w-full h-40 border-2 border-black dark:border-white bg-gray-50 dark:bg-gray-900">
             <ParticleText
-              text="FxKiller"
+              text="GrowingPool"
               fontSize={80}
               color="#000000"
               particleCount={3000}
