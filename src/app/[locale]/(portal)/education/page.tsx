@@ -1,5 +1,6 @@
 import { getLanguageFromLocale, generateBilingualMetadata } from '@/lib/getServerLanguage';
 import LocaleLink from '@/components/navigation/LocaleLink';
+import EducationPasswordProtectionWrapper from '@/components/custom/EducationPasswordProtectionWrapper';
 
 // Generate SEO Metadata
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -98,7 +99,8 @@ export default async function EducationPage({ params }: { params: Promise<{ loca
   const isZh = lang === 'zh';
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <EducationPasswordProtectionWrapper locale={locale}>
+      <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section - 增强版 */}
       <div className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white border-b-2 border-gray-800 overflow-hidden">
         {/* 装饰性背景 */}
@@ -267,5 +269,6 @@ export default async function EducationPage({ params }: { params: Promise<{ loca
         </div>
       </div>
     </div>
+    </EducationPasswordProtectionWrapper>
   );
 }
