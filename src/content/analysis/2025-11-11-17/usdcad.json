@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-11T17:43:07.364Z",
+  "price": {
+    "close": "1.40064",
+    "high": "1.40106",
+    "low": "1.39990",
+    "open": "1.40088",
+    "change": "-0.02",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 35.091459,
+    "macd": -0.00061593998,
+    "macd_signal": -0.00041625206,
+    "sma20": 1.40246
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：短期承压但整体震荡",
+      "content": "当前汇价1.40064略低于20日均线1.40246，显示短期存在下行压力。日线波动区间仅11.6点，市场处于极度收敛状态。MACD柱状线为负值但未提供信号线参考，暗示下行动能有限。\n\n从价格位置看，1.40106构成近期阻力，1.39990提供初步支撑。若跌破1.399关口，可能进一步下探1.395区域。20日均线成为多空分水岭，持续运行其下方将强化看空信号。\n\n鉴于波动率收缩和MACD负值收敛，建议采取区间交易策略。激进交易者可在1.3995-1.4015区间高抛低吸，突破任何一侧边界后顺势跟进，注意控制仓位风险。\n\n整体而言，汇价正酝酿方向性突破。美联储与加央行政策差异仍是主导因素，建议重点关注北美时段数据和油市波动对汇率的影响。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "USD/CAD is trading marginally lower around 1.4006, sitting just below the key 20-day Simple Moving Average at 1.40246. This proximity to the SMA suggests a near-term equilibrium, though the pair's failure to hold above it indicates a slight bearish tilt. The daily range has been exceptionally tight, signaling a period of consolidation as the market digests recent moves. The broader trend remains subject to the prevailing momentum in oil markets and broader USD sentiment, which has been mixed.\n\nThe MACD indicator is printing a negative value of -0.000615, confirming the current short-term bearish momentum. While the signal line data is unavailable, the negative histogram typically suggests selling pressure is present. The absence of RSI data limits the view on potential overbought or oversold conditions, placing greater emphasis on price action around the identified moving average. This technical picture points towards a fragile market that lacks strong directional conviction.\n\nKey resistance is clearly defined at the 20-day SMA of 1.40246. A decisive break above this level could open a path towards the 1.4050 handle. On the downside, immediate support is found at the day’s low of 1.39990. A breach below this point would likely target the 1.3980 zone. Given the tight range and weak momentum, a breakout from this consolidation is needed for a clearer directional signal.\n\nTrading suggestions should favor a cautious approach due to the low volatility and lack of strong momentum. A short-term bearish bias could be considered on a break below 1.39990, targeting 1.3980 with a stop above the SMA. Conversely, aggressive buyers might look for a close above 1.4025 to signal a potential test of higher resistance. Risk management is crucial as a false breakout from this tight range is highly probable."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-11T17:40:51.973Z",
+  "price": {
+    "close": "1.31700",
+    "high": "1.31784",
+    "low": "1.31699",
+    "open": "1.31723",
+    "change": "-0.02",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 54.76133,
+    "macd": 0.00023808633,
+    "macd_signal": -0.000035911962,
+    "sma20": 1.31591
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：震荡整理待突破",
+      "content": "当前汇价1.31700紧贴20日均线1.31591，显示多空力量处于均衡状态。日线波动仅8.5点，日内振幅异常收窄，表明市场正在酝酿方向性选择。价格持续在1.31784-1.31699极窄区间内运行，形成典型的收敛整理形态。\n\nMACD指标显示微弱正值0.000238，但信号线数据缺失难以确认动量方向。RSI指标暂不可得，需结合其他工具判断超买超卖状况。短期均线走平暗示趋势动能减弱，市场需要新的催化因素打破僵局。\n\n关键阻力位于日内高点1.31784附近，突破后可能测试1.3200心理关口。下方支撑首先关注20日均线1.31591，失守后或下探1.31500整数位。当前窄幅震荡使得传统支撑阻力参考意义有限。\n\n建议采取区间突破策略，有效突破1.3180可轻仓做多，目标看向1.3220。若跌破1.3150则考虑短线空单，止损设置于1.3175上方。在明确突破前宜保持观望，等待波动率扩大后的趋势信号。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "GBP/USD is exhibiting minimal movement, trading near 1.31700 with a slight 24-hour decline. The price is consolidating just above the 20-period Simple Moving Average at 1.31591, suggesting a tentative neutral to slightly bullish near-term bias. This positioning, coupled with the tight daily range between 1.31699 and 1.31784, indicates a period of indecision and low volatility as the market awaits a fresh catalyst to determine the next directional move.\n\nThe available indicators present a mixed but cautiously optimistic picture. The MACD histogram is positive at 0.000238, indicating that the momentum may be beginning to turn upward, though the lack of a signal line reading makes a definitive crossover call difficult. The proximity of the price to the SMA(20) acts as a dynamic support level. A sustained hold above this average would be necessary to confirm any budding bullish momentum and encourage further buying interest.\n\nKey technical levels to monitor are clearly defined by the session's high and low. Immediate resistance is found at the daily high of 1.31784, with a break above potentially targeting the 1.3200 psychological handle. On the downside, initial support rests at the SMA around 1.31591, followed by the session low at 1.31699. A decisive break below this confluence could see a test of deeper support zones.\n\nTrading suggestions should account for the current low-volatility environment. A conservative approach would be to wait for a confirmed break outside the 1.31699-1.31784 range before committing to a position. A push above resistance could signal a move toward 1.3200, while a break below the SMA support might indicate a retest of lower levels. Given the thin momentum, tight risk management is essential on any new entries."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-11T17:45:23.450Z",
+  "price": {
+    "close": "4113.7159",
+    "high": "4117.44094",
+    "low": "4110.28629",
+    "open": "4113.90476",
+    "change": "-0.01",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 51.30018,
+    "macd": 9.66388,
+    "macd_signal": 14.74052,
+    "sma20": 4124.38246
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：短期承压调整",
+      "content": "当前金价位于4113.7附近，略低于20日均线4124.4水平，显示短期存在技术性压力。日内波动区间仅7点，市场呈现明显的盘整特征。MACD柱状线为9.66虽未提供信号线参考，但正值表明多头动能尚未完全消退。\n\n从均线系统看，价格连续在4110-4117狭窄区间震荡，4110低点构成初步支撑。若跌破该位置，可能进一步测试4100心理关口。上方阻力首先关注4125区域，突破后有望挑战日内高点4117.4。\n\n虽然RSI指标暂缺，但结合窄幅波动和MACD正向动能，市场处于多空平衡状态。建议采取区间交易策略，在4110支撑附近轻仓试多，止损设于4105下方。若突破4125阻力可追多，目标看向4135区域。\n\n整体而言黄金处于技术修正阶段，长期牛市格局未改。交易者需关注晚间美国CPI数据对美元走势的影响，这将成为突破当前震荡区间的关键催化剂。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading near 4113.72, positioned just below the critical 20-period Simple Moving Average of 4124.38. This placement below the short-term SMA suggests a potential weakening of the immediate bullish momentum, indicating the market may be entering a phase of consolidation or a minor pullback. The day's trading range has been exceptionally tight, with price action confined between 4117.44 and 4110.29, reflecting a notable lack of decisive directional conviction among traders in the near term.\n\nThe provided MACD reading of 9.66 is positive, indicating that the short-term momentum remains above the longer-term average. However, the absence of the signal line and histogram data makes it difficult to fully assess the strength and sustainability of this bullish crossover. The minimal 24-hour change of -0.01% further underscores the current equilibrium between buying and selling pressure, leading to a state of indecision in the market that requires a catalyst to break.\n\nKey resistance is clearly defined by the 20-SMA at 4124.38, with the daily high at 4117.44 acting as a secondary barrier. A decisive break above this confluence could signal a resumption of the broader uptrend. Immediate support rests at the session low of 4110.29. A break below this level may open a path toward deeper support zones, potentially targeting the 4100 psychological handle.\n\nGiven the proximity to the SMA resistance and the tight range, a cautious approach is advised. Traders might consider waiting for a confirmed breakout above 4124 or a breakdown below 4110 before committing to new positions. A range-bound strategy, selling near resistance and buying near support, could be applicable until a clear directional move materializes, with tight stop-loss orders to manage risk in this low-volatility environment."
+    }
+  }
+}

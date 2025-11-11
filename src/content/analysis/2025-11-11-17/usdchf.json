@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-11T17:44:36.970Z",
+  "price": {
+    "close": "0.79966998",
+    "high": "0.80000001",
+    "low": "0.79949999",
+    "open": "0.79961002",
+    "change": "0.01",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 26.096092,
+    "macd": -0.0015189047,
+    "macd_signal": -0.0011296182,
+    "sma20": 0.802932
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：短期震荡偏弱",
+      "content": "当前汇价0.7997位于20日均线0.8029下方，显示短期空头格局。日内波动仅0.5点，市场处于极度收敛状态，需警惕突破行情酝酿。MACD柱状线为负值-0.0015，确认下行动能占优。\n\n关键阻力位于0.8030（20日均线）及日内高点0.8000。下方支撑关注0.7995（日内低点），若跌破可能测试0.7980心理关口。当前窄幅整理表明多空双方暂陷僵持。\n\n建议采取突破交易策略：上破0.8010轻仓试多，目标0.8030；下破0.7990则跟进空单，目标0.7970。由于波动率收缩，需严格控制仓位并设置20点止损。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "USD/CHF is exhibiting a bearish trend, trading notably below its 20-period Simple Moving Average of 0.80293. The current price action near 0.79967 suggests the pair remains under selling pressure, with the day's high failing to breach the 0.8000 psychological level significantly. This positioning below a key medium-term moving average indicates a continued downside bias. The immediate focus is on whether the pair can hold above the session low of 0.7995, a break of which could accelerate further declines.\n\nThe available indicator data reinforces the bearish momentum. The MACD histogram reading of -0.0015189, while lacking its signal line for full context, is in negative territory. This suggests that the short-term momentum is weaker than the longer-term trend, typically a sign of ongoing downward pressure. The absence of RSI data limits the view of potential oversold conditions, placing greater emphasis on price action around key technical levels for gauging market sentiment and potential reversals.\n\nKey support is identified at the current session low of 0.7995, with a break potentially targeting lower levels towards 0.7980. On the upside, immediate resistance is at the 0.8000 psychological handle, followed by the more significant barrier of the 20-period SMA at 0.80293. A sustained move above the SMA would be required to signal a potential trend reversal and challenge the bearish outlook.\n\nTrading suggestions lean towards a cautious bearish bias. Any rebounds towards the 0.8029 SMA resistance could present short opportunities, targeting a retest of the 0.7995 support. A decisive break below this level would confirm further downside. Long positions are not favored in the current technical setup unless the pair reclaims ground above the 20-period SMA, which would then require a reassessment of the bearish momentum."
+    }
+  }
+}

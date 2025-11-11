@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-11T17:43:51.504Z",
+  "price": {
+    "close": "0.56593096",
+    "high": "0.56609112",
+    "low": "0.56564283",
+    "open": "0.56580287",
+    "change": "0.04",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 59.70076,
+    "macd": 0.00051932328,
+    "macd_signal": 0.00038821333,
+    "sma20": 0.56480724
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：窄幅震荡待突破",
+      "content": "当前汇价交投于0.5659附近，较前日微涨0.04%。价格持续在20日均线0.5648上方运行，显示短期仍维持温和偏多格局。日内波动区间仅4.5点，反映市场正处于方向选择的关键阶段。\n\n技术指标显示多空力量均衡。MACD柱状线为正值0.00052，但信号线数据缺失限制判断效力。需关注能否突破日内高点0.5661以确认动能增强。窄幅震荡预示即将出现方向性突破。\n\n关键支撑位于20日均线0.5648，跌破则下看日内低点0.5656。上行阻力先关注0.5661，突破后可能测试0.5680区域。当前价格处于近期区间中轨，需警惕假突破风险。\n\n建议采取区间交易策略，在0.5648-0.5661区间内高抛低吸。有效突破任一方向后可顺势跟进，注意控制仓位以应对可能的波动率放大。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair is showing a cautiously optimistic tone in the near term. The current price is trading marginally above the 20-period Simple Moving Average, suggesting a tentative hold above short-term support. The extremely tight 24-hour range, with a minimal positive change, indicates a period of consolidation following recent moves. This positioning just below the session's high points to a market that is testing for a potential breakout, though conviction remains low without a stronger catalyst.\n\nIndicator interpretation reveals a mixed but slightly positive momentum picture. The MACD line is in positive territory, which generally suggests bullish momentum is present. However, without the corresponding signal line value, it is challenging to gauge the strength and potential for a crossover. The proximity of the price to the SMA(20) reinforces the view of a market in balance, awaiting a fundamental driver to establish a more definitive directional bias.\n\nKey support and resistance levels are clearly defined by the day's range and the moving average. Immediate resistance is found at the session high of 0.56609, while support rests at the SMA(20) near 0.56480 and the daily low of 0.56564. A decisive break above resistance could open a path toward higher levels, whereas a failure to hold above the SMA may see a retest of deeper support zones.\n\nTrading suggestions lean towards a neutral to cautiously bullish stance for scalpers and short-term traders. Entry near the SMA support with a tight stop below the daily low offers a favorable risk/reward ratio for a bounce towards the session high. Given the low volatility and lack of strong momentum, position sizing should be conservative, awaiting a clearer breakout from the current consolidation range for more significant directional plays."
+    }
+  }
+}

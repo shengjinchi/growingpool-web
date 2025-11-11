@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-11T17:40:07.120Z",
+  "price": {
+    "close": "1.15956",
+    "high": "1.15983",
+    "low": "1.15909",
+    "open": "1.15936",
+    "change": "0.02",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 66.19956,
+    "macd": 0.00098749028,
+    "macd_signal": 0.0006139905,
+    "sma20": 1.15693
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期震荡偏多格局",
+      "content": "当前汇价持稳于1.1595附近，略高于20日均线1.1569，显示短期多头占优。MACD柱状线转正且持续扩张，暗示上涨动能正在积累。虽然日内波动仅0.02%，但价格维持在日内区间中上部运行，市场情绪偏谨慎乐观。\n\n关键技术位方面，日内高点1.1598构成初步阻力，突破后可能测试1.1620心理关口。下方支撑首先关注20日均线1.1569，若失守则可能下探1.1540区域。当前窄幅震荡格局需等待方向性突破。\n\n交易策略建议采取逢低做多思路，在1.1570-1.1580区间分批建仓，止损设于1.1550下方。目标位看向1.1620附近，风险回报比控制在1:1.5以上。需密切关注晚间美国数据对汇市的冲击。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is currently trading slightly above its 20-period Simple Moving Average at 1.15693, suggesting a fragile short-term bullish bias. The pair's recent price action, confined within a very tight 74-pip range between the daily high and low, points towards significant market indecision and consolidation. The negligible 24-hour change of 0.02% further underscores this period of equilibrium as the market awaits a fresh directional catalyst to break out of this narrow band.\n\nFrom an indicator perspective, the MACD histogram reading of 0.000987 is positive but extremely weak, indicating minimal bullish momentum. The lack of a definitive signal line value makes a full interpretation difficult, but the small positive value aligns with the price holding above the SMA. The absence of an RSI reading is a notable gap, preventing a clear view of whether the pair is in overbought or oversold territory, which would be crucial for timing any potential breakout from the current congestion.\n\nKey intraday support is evident at the session low of 1.15909, with a more significant support floor likely at the 20-SMA level of 1.15693. A break below this could trigger a deeper retracement. Immediate resistance sits at the daily high of 1.15983. A sustained move above this level is needed to encourage further bullish momentum towards more significant resistance zones.\n\nGiven the current low volatility and indecisive technical picture, a neutral to cautious approach is prudent. Traders might consider waiting for a confirmed breakout above 1.15983 or a breakdown below the 20-SMA before committing to a directional bias. Until then, range-bound strategies within the defined high and low could be applicable, though the extremely tight range limits potential reward."
+    }
+  }
+}

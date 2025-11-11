@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-11T17:41:38.097Z",
+  "price": {
+    "close": "154.084000",
+    "high": "154.12199",
+    "low": "153.99400",
+    "open": "153.99600",
+    "change": "0.05",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 50.079551,
+    "macd": 0.0053240795,
+    "macd_signal": 0.048210935,
+    "sma20": 154.17225
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：震荡整理待突破",
+      "content": "最新价格154.084紧贴20日均线154.172，显示多空力量暂时平衡。日内波幅仅0.13点，价格在154.12高点与153.99低点间窄幅震荡，市场处于典型的整理态势。MACD柱状线微幅正值为0.0053，但信号线数据缺失限制指标有效性。\n\n当前价格围绕20日均线波动，显示短期趋势中性。154.12日内高点构成近期阻力，若突破可能测试154.50心理关口。下方153.99提供初步支撑，关键支撑位见于153.80斐波那契回撤位。需警惕日本央行干预风险引发的突然波动。\n\n建议采取区间交易策略，在153.99-154.12区间内高抛低吸。突破区间边界后可顺势跟进，向上突破看154.50，向下破位看153.80。由于波动率较低，需严格控制仓位并设置止损。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair is exhibiting a period of consolidation after its recent strong uptrend. The current price is trading just below the 20-period Simple Moving Average at 154.172, suggesting a slight near-term bearish pressure as the market digests recent gains. The narrow 24-hour trading range, with a high of 154.121 and a low of 153.994, indicates a clear lack of directional conviction among traders. This pause is likely a healthy breather within the broader bullish structure that has dominated for months.\n\nFrom an indicator perspective, the provided MACD reading of 0.0053 shows a marginal positive value, hinting that the short-term momentum may still be fractionally above its longer-term average. However, the lack of a signal line value makes a definitive crossover call difficult. The minimal 0.05% 24-hour change further underscores the current equilibrium between buyers and sellers. This technical picture suggests the market is in a wait-and-see mode, potentially awaiting a fresh fundamental catalyst to determine the next significant directional move.\n\nKey technical levels to monitor are the daily high at 154.12, which now acts as immediate resistance. A decisive break above this level could see a retest of recent multi-decade highs. On the downside, initial support resides near the 154.00 psychological handle, with a more significant floor around the 153.99 daily low. A break below this support could trigger a deeper pullback towards the 153.50 area.\n\nTrading suggestions would involve a cautious approach given the tight range. Aggressive traders might consider short-term range-bound strategies, selling near 154.10 and buying near 154.00. A more conservative stance would be to wait for a break above 154.20 or below 153.90 with increasing volume to confirm the next directional leg. Risk management remains paramount, as a breakout from this consolidation could be powerful."
+    }
+  }
+}

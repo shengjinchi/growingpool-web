@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-11T17:42:23.767Z",
+  "price": {
+    "close": "0.65291",
+    "high": "0.65309",
+    "low": "0.65252",
+    "open": "0.65259",
+    "change": "0.05",
+    "datetime": "2025-11-12 04:00:00"
+  },
+  "indicators": {
+    "rsi": 52.13866,
+    "macd": 0.000087543593,
+    "macd_signal": 0.00012553185,
+    "sma20": 0.65279672
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅震荡待突破",
+      "content": "当前汇价围绕0.6529一线窄幅波动，日内振幅不足6个点，显示市场处于观望状态。价格紧贴20日均线0.6528运行，表明短期处于均线平衡区域，多空力量暂时均衡。日内0.05%的微幅变动反映市场缺乏明确方向性驱动。\n\nMACD指标显示微弱正值0.000087，但信号线数据缺失难以形成完整判断。需关注能否持续站在20日均线上方以确认短期动能。当前价格处于日内区间中轨，需突破0.6531高点或下破0.6525低点来明确方向。\n\n关键阻力位于日内高点0.6531区域，突破后可能测试0.6540心理关口。下方支撑先看0.6525日内低点，失守则可能下探0.6515附近。当前窄幅整理格局建议保持观望，等待区间突破后再择机跟进。\n\n建议短线交易者暂观望向，突破0.6531可轻仓做多，目标0.6540。若下破0.6525则考虑短空，止损设于0.6535上方。中线投资者宜等待更明确趋势信号。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "The Australian Dollar is trading in a very tight range against the US Dollar, showing minimal directional bias in the immediate short term. The current price is hovering just above the 20-period Simple Moving Average, suggesting a tentative and fragile consolidation phase. The extremely narrow daily range, with a high of 0.65309 and low of 0.65252, indicates a period of low volatility and indecision among traders, likely awaiting a significant catalyst to determine the next directional move.\n\nIndicator readings offer a mixed but cautious outlook. The MACD histogram shows a marginal positive value of 0.000087, which, while technically bullish, is negligible in practical terms and points to a complete lack of momentum. Without the RSI or MACD signal line for context, the overall technical picture remains unclear. The proximity of the price to the SMA(20) at 0.6528 acts as a pivotal level; a sustained break above or below it will be critical for establishing a clearer short-term trend.\n\nKey support and resistance levels are forming around the day’s observed extremes. Immediate resistance is clearly defined at the session high of 0.65310, while initial support rests at the daily low of 0.65250. A break above resistance could target the 0.6540 handle, whereas a drop below support may see a test towards 0.6515. Given the current compression, these near-term levels are crucial for gauging the next breakout.\n\nTrading suggestions should prioritize caution due to the lack of clear momentum. A breakout strategy is advisable, waiting for a decisive move above 0.65310 or below 0.65250 with a follow-through before entering a position. Given the minuscule daily change and weak MACD reading, range-bound strategies within these levels could be employed by short-term scalpers, but position sizing should be managed carefully to account for the low volatility environment."
+    }
+  }
+}
