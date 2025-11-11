@@ -25,22 +25,22 @@ export const blogPosts: BlogPost[] = [
  // 1. 网站介绍 - 扩展版本
  {
  id: '1',
- slug: 'about-fx-killer',
+ slug: 'about-growingpool',
  title: {
- zh: '关于生金池 (GrowingPool) - 军事化外汇交易员训练营',
+ zh: '关于生金池 (GrowingPool) - 多资产管理与交易人才培养专家',
  en: 'About GrowingPool - Military-Style Forex Trader Training Camp'
  },
  excerpt: {
- zh: '生金池 (GrowingPool) 是一个专注于筛选和培养外汇交易员的训练营。我们的理念：培养真正适合的人，留下极少数，劝返大多数。通过率10%-15%，30个工作日完整培训，盈利分成60%-90%。',
+ zh: '生金池 (GrowingPool) 是一个专注于筛选和培养顶级交易员的训练营。我们的理念：寻找同频的少数人。通过率10%-15%，30个交易日完整培训，获得50%+奖学金。',
  en: 'GrowingPool is a training camp focused on selecting and cultivating forex traders. Our philosophy: cultivating those truly suited, retaining the few, advising the majority. Pass rate 10%-15%, 30 working days complete training, 60%-90% profit share.'
  },
  content: {
  zh: `<h1 class="text-4xl font-bold text-center mb-8 text-black dark:text-white">关于生金池 (GrowingPool)</h1>
 
-<p class="text-base leading-relaxed mb-8 text-center text-gray-700 dark:text-gray-300">生金池是一个专注于筛选和培养顶尖外汇交易员的军事化训练营。我们不追求数量，只培养真正适合的人。这是一个严格、高强度、高淘汰率的专业训练项目。</p>
+<p class="text-base leading-relaxed mb-8 text-center text-gray-700 dark:text-gray-300">是一个专注于筛选和培养顶级交易员的训练营。我们不追求数量，只培养真正适合的人。这是一个严格、高强度、高淘汰率的专业训练项目。</p>
 
 <div class="bg-black dark:bg-white text-white dark:text-black p-8 mb-8 border-2 border-black dark:border-white">
-<p class="text-3xl font-bold mb-4 text-white dark:text-black text-center">培养真正适合的人，留下极少数，劝返大多数</p>
+<p class="text-3xl font-bold mb-4 text-white dark:text-black text-center">寻找同频的少数人</p>
 <p class="text-lg text-center text-white dark:text-black">我们的使命不是让每个人都成为交易员，而是找到那些真正具有交易天赋和心理素质的人</p>
 </div>
 
@@ -332,7 +332,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700">
-<p class="text-xl font-bold mb-4 text-black dark:text-white">💰 初级阶段（配资100-500美金）</p>
+<p class="text-xl font-bold mb-4 text-black dark:text-white">💰 初级阶段（100-500美金）</p>
 <ul class="space-y-3">
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">小额实盘：</strong>20美金/手</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">配资额度：</strong>100美金起</span></li>
@@ -343,7 +343,7 @@ export const blogPosts: BlogPost[] = [
 </div>
 
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700">
-<p class="text-xl font-bold mb-4 text-black dark:text-white">💎 高级阶段（配资2000+美金）</p>
+<p class="text-xl font-bold mb-4 text-black dark:text-white">💎 高级阶段（2000+美金）</p>
 <ul class="space-y-3">
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">大额矩阵：</strong>100美金+/手</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">配资额度：</strong>根据能力动态调整</span></li>

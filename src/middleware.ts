@@ -23,6 +23,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Handle specific redirects
+  if (pathname.includes('/about-fx-killer')) {
+    const newPath = pathname.replace('/about-fx-killer', '/about-growingpool');
+    const newUrl = new URL(newPath, request.url);
+    newUrl.search = request.nextUrl.search;
+    return NextResponse.redirect(newUrl, 301);
+  }
+
   // Check if pathname already has a locale
   const pathnameHasLocale = locales.some(
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`

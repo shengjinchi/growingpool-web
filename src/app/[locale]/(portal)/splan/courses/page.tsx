@@ -50,7 +50,7 @@ export default function CoursesPage() {
               我们不提供录播课程、不售卖教学视频、不搞付费培训。我们是<strong className="text-white dark:text-black">外汇交易员专业训练营</strong>，用专业化管理方式将你训练成正规军。
             </p>
             <p className="text-gray-200 dark:text-gray-800 leading-relaxed">
-              在这里，你要么通过考核成为战士，要么被劝退离开。<strong className="text-white dark:text-black">培养真正适合的人，留下极少数，劝返大多数。</strong>
+              在这里，你要么通过考核成为战士，要么被劝退离开。<strong className="text-white dark:text-black">寻找同频的少数人。</strong>
             </p>
           </div>
         </section>
