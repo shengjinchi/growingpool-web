@@ -103,7 +103,7 @@ async function generateAnalysisZh(pairInfo, marketData) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'ZhipuAI/GLM-4.6',
+        model: 'deepseek-ai/DeepSeek-V3.1',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7,
         max_tokens: 600
@@ -156,7 +156,7 @@ Begin:`;
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'ZhipuAI/GLM-4.6',
+        model: 'deepseek-ai/DeepSeek-V3.1',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7,
         max_tokens: 600
