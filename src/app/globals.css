@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* 告诉浏览器我们已经处理了暗色模式，不要自动转换颜色 */
+  /* Always use light theme - dark mode disabled */
   :root {
     color-scheme: light;
-  }
-
-  :root.dark {
-    color-scheme: dark;
   }
 
   * {

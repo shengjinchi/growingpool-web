@@ -131,21 +131,18 @@ export default async function PortalLayout({
   const lang = locale === 'en' ? 'en-US' : 'zh-CN';
 
   return (
-    <html lang={lang} className={inter.variable} suppressHydrationWarning style={{ colorScheme: 'light dark' }}>
+    <html lang={lang} className={inter.variable} suppressHydrationWarning style={{ colorScheme: 'light' }}>
       <head>
         <meta name="baidu-site-verification" content="codeva-kDRjETSiUu" />
-        <meta name="color-scheme" content="light dark" />
+        <meta name="color-scheme" content="light" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Always use light theme - dark mode disabled
               try {
-                const theme = localStorage.getItem('theme');
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                  document.documentElement.style.colorScheme = 'dark';
-                } else {
-                  document.documentElement.style.colorScheme = 'light';
-                }
+                document.documentElement.style.colorScheme = 'light';
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
               } catch (e) {}
             `,
           }}

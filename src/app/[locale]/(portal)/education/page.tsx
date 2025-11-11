@@ -111,7 +111,7 @@ export default async function EducationPage({ params }: { params: Promise<{ loca
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 text-center">
           <div className="inline-block px-6 py-2 bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
-            <span className="text-sm font-semibold tracking-wider">{isZh ? '专业交易教育' : 'Professional Trading Education'}</span>
+            <span className="text-sm font-semibold tracking-wider">{isZh ? '交易入门课程' : 'Professional Trading Education'}</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="font-black">{isZh ? '外汇交易教育中心' : 'Forex Trading Education Center'}</span>
@@ -119,8 +119,9 @@ export default async function EducationPage({ params }: { params: Promise<{ loca
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {isZh ? (
               <>
-                系统化学习外汇交易知识，从零基础到职业交易员<br />
-                专业、实战、高效的学习路径
+                从全球最大、流动性最强的金融市场——外汇市场<br />
+                开始系统化学习交易知识<br />
+                专业、实战、高效的学习路径，从零基础到职业交易员
               </>
             ) : (
               <>
@@ -241,8 +242,9 @@ export default async function EducationPage({ params }: { params: Promise<{ loca
             <p className="text-xl mb-8 text-gray-300 dark:text-gray-700">
               {isZh ? (
                 <>
-                  完成教育中心的学习后，加入 GrowingPool 30天系统化培训<br />
-                  通过考核，获得真实资金进行交易
+                  很抱歉地告诉你，我们的交易员，并不使用上述公开的技术分析及交易策略<br />
+                  完成教育中心的“基础知识”学习后，加入30天系统化培训，<br />
+                  学习使用我们独家的交易系统，通过考核，获得真实资金进行交易
                 </>
               ) : (
                 <>

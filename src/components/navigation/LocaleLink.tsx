@@ -17,9 +17,8 @@ type LocaleLinkProps = Omit<ComponentProps<typeof Link>, 'href'> & {
 export default function LocaleLink({ href, locale, ...props }: LocaleLinkProps) {
   const pathname = usePathname();
 
-  // Get current locale from URL pathname
-  const currentLocale = pathname.split('/')[1] || 'zh';
-  const effectiveLocale = locale || (currentLocale === 'en' ? 'en' : 'zh');
+  // Always default to Chinese locale unless explicitly specified
+  const effectiveLocale = locale || 'zh';
 
   // Don't prefix if href is external or already has locale
   const isExternal = href.startsWith('http') || href.startsWith('//');

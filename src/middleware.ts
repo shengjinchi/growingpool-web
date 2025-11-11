@@ -32,10 +32,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Get locale from Accept-Language header or use default
-  const acceptLanguage = request.headers.get('accept-language') || '';
-  const browserLocale = acceptLanguage.toLowerCase().includes('en') ? 'en' : defaultLocale;
-  const locale = locales.includes(browserLocale) ? browserLocale : defaultLocale;
+  // Always use default locale (Chinese) for consistent experience
+  const locale = defaultLocale;
 
   // Redirect to locale-prefixed URL
   const newUrl = new URL(`/${locale}${pathname}`, request.url);
