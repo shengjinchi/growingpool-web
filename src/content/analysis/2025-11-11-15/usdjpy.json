@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-11T15:55:15.404Z",
+  "price": {
+    "close": "153.99001",
+    "high": "154.13300",
+    "low": "153.91701",
+    "open": "153.99800",
+    "change": "-0.00",
+    "datetime": "2025-11-12 02:00:00"
+  },
+  "indicators": {
+    "rsi": 46.11835,
+    "macd": 0.017931298,
+    "macd_signal": 0.072414255,
+    "sma20": 154.1776
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：高位震荡偏弱",
+      "content": "最新价格153.99略低于20日均线154.18，显示短期动能有所减弱。汇价在154.13高点与153.92低点间窄幅波动，日内跌幅近乎持平，表明多空双方处于胶着状态。\n\nMACD柱状线显示微弱正值0.0179，但信号线数据缺失限制了指标有效性。价格未能站稳20日均线上方，结合近期日本当局干预预期，上行空间可能受限。\n\n关键阻力位于日内高点154.13附近，突破后或测试154.50心理关口。下方支撑首先关注153.92日内低点，失守后可能下探153.50斐波那契回撤位。\n\n建议采取谨慎看空策略，在154.10上方设置止损，目标看向153.70区域。密切关注日本财务省口头干预风险，短线交易者宜轻仓操作。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair is currently trading just below the 20-period Simple Moving Average at 154.178, indicating a potential pause in the recent bullish momentum. The price action has been confined to a tight range between the daily high of 154.133 and low of 153.917, reflecting a period of consolidation. The minimal 24-hour change suggests a lack of strong directional conviction from traders at this level. The failure to sustain a break above the SMA points to some near-term weakness, though the overall broader uptrend from lower levels remains technically intact.\n\nWhile the MACD line is positive at 0.0179, the absence of the signal line data makes a full crossover interpretation incomplete. A positive MACD suggests underlying momentum may still favor the upside, but the inability to decisively overcome the nearby moving average resistance is a cautionary signal. The lack of RSI data limits the ability to assess whether the pair is in overbought or oversold territory. This consolidation near a key technical level often precedes a more significant breakout, and traders will be watching for a clear move outside the current session's range for the next directional cue.\n\nKey immediate resistance is clearly defined by the session high and the 20-SMA cluster around 154.13-154.18. A decisive break above this zone could open a path towards the 154.50 level. On the downside, initial support rests at the daily low of 153.92, with a more significant support area likely near 153.50. A break below this consolidation range could signal a deeper pullback.\n\nTrading suggestions would advise caution until a clear breakout from the current tight range is established. A conservative approach would be to wait for a daily close above the 20-SMA to consider long positions targeting a move towards 154.50. Conversely, a break below 153.90 could be used for short-term shorts with a tight stop, targeting the 153.50 support. Risk management is crucial due to the potential for sudden, volatile moves."
+    }
+  }
+}

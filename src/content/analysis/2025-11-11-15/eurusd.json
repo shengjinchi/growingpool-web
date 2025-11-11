@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-11T15:53:44.626Z",
+  "price": {
+    "close": "1.15949",
+    "high": "1.16030",
+    "low": "1.15931",
+    "open": "1.16003",
+    "change": "-0.05",
+    "datetime": "2025-11-12 02:00:00"
+  },
+  "indicators": {
+    "rsi": 66.47376,
+    "macd": 0.00086597935,
+    "macd_signal": 0.00041832836,
+    "sma20": 1.15659
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期震荡偏多格局",
+      "content": "当前汇价交投于1.1595附近，略高于20日均线1.1566，显示短期存在多头优势。日内波动仅9个点，市场处于极度收敛状态，需警惕突破行情的到来。MACD柱状线呈现正值但动能微弱，暗示当前买盘力量有限。\n\n从均线系统看，价格站稳20日均线之上，但尚未突破昨日高点1.1603阻力。若有效突破该位置，可能测试1.1620区间上轨。下方支撑关注1.1580和1.1566双重防线，这些位置将决定短期多空格局。\n\n虽然MACD保持金叉状态，但动能指标显示市场参与度不足。建议等待明确方向信号，若放量突破1.1603可轻仓追多，目标看向1.1620。下行破位1.1566则需警惕回调至1.1540区域。\n\n当前适合采取区间交易策略，在1.1580-1.1603区间内高抛低吸。严格设置止损不超过30点，鉴于波动率较低，建议降低仓位规模控制风险。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD pair is currently exhibiting a minor retracement within a broader context of consolidation. The price is trading just below the daily high of 1.16030, suggesting a tentative approach to a near-term resistance zone. With the current price sitting above the 20-period Simple Moving Average of 1.15659, there is an underlying suggestion of a mildly positive short-term bias. The immediate market sentiment appears cautious as it tests the upper boundaries of its recent range, awaiting a more decisive catalyst for directional momentum.\n\nFrom an indicator perspective, the MACD histogram reading of 0.00086597935 indicates a slight positive momentum, though the absence of the signal line data limits a full crossover interpretation. This minimal positive reading suggests buying pressure is present but remains weak. The lack of RSI data prevents an assessment of overbought or oversold conditions, placing greater emphasis on price action around key levels. The proximity to the SMA(20) provides a dynamic support level that traders are likely monitoring closely for a potential bounce or breakdown.\n\nKey support is firmly established at the 20-period SMA around 1.15659. A break below this level could see the pair target the next significant support near the 1.15400 handle. On the upside, immediate resistance is found at the day’s high of 1.16030, with a more substantial barrier likely around the 1.16200 level. A sustained move above this higher resistance would be needed to signal a stronger bullish phase and attract further buying interest.\n\nTrading suggestions involve a wait-and-see approach for a clearer breakout. A conservative strategy would be to wait for a confirmed break above 1.16030 with a target towards 1.16200, using a stop below the SMA. Alternatively, a break below the 1.15659 support could open a short position targeting 1.15400. Given the thin momentum readings, position sizing should be modest to account for the ongoing consolidation and limited volatility."
+    }
+  }
+}

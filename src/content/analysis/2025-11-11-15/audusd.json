@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-11T15:56:02.610Z",
+  "price": {
+    "close": "0.6523",
+    "high": "0.65372",
+    "low": "0.6523",
+    "open": "0.65371",
+    "change": "-0.22",
+    "datetime": "2025-11-12 02:00:00"
+  },
+  "indicators": {
+    "rsi": 46.49712,
+    "macd": 0.00010331038,
+    "macd_signal": 0.00014886579,
+    "sma20": 0.65291803
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：短期承压偏空",
+      "content": "当前汇价略低于20日均线0.6529，显示短期动能偏弱。日线级别价格在0.6523-0.6537窄幅区间震荡，多头未能有效突破均线压制。MACD柱状线虽为正值但接近零轴，表明上升动能逐渐衰竭。\n\n从均线系统看，价格持续在20日均线下方运行，暗示短期趋势转向空头。若跌破日内低点0.6523，可能进一步下探0.6500心理关口。上方阻力首先关注0.6540，其次是0.6560前高区域。\n\nRSI指标暂缺，但价格与均线的背离现象值得警惕。建议密切关注0.6520支撑有效性，若失守则空头力量可能加强。当前市场缺乏明确方向指引，需等待突破确认。\n\n操作上建议采取谨慎偏空策略，有效下破0.6520可轻仓追空，目标0.6500。多头需等待价格重新站上20日均线并突破0.6540阻力后再考虑入场。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "AUD/USD is trading slightly below its 20-day Simple Moving Average at 0.6529, suggesting a very near-term bearish bias as the price action is currently weak. The pair has retreated from its 24-hour high of 0.65372 to trade near its session low, reinforcing this immediate downward pressure. The broader trend, however, remains contingent on a decisive break from this consolidation zone around the 0.6520-0.6540 area. A sustained move below the current level would signal a stronger bearish intent, potentially targeting lower supports.\n\nThe MACD histogram shows a marginal positive reading of 0.000103, indicating that the very short-term momentum might be attempting to turn positive, though the signal line data is unavailable for full confirmation. Without RSI data, gauging overbought or oversold conditions is challenging, placing greater emphasis on price action around key levels. The proximity to the SMA will be a critical focal point; a reclaim of this average could see a test of the daily high, while failure could accelerate the decline.\n\nKey support is firmly established at the current 24-hour low of 0.6523. A breach below this point would likely target the next significant support zone around the 0.6500 psychological handle. On the upside, immediate resistance is found at the 20-day SMA (0.6529), with a more substantial barrier at the daily high of 0.65372. A break above this high is necessary to shift the short-term sentiment to neutral or bullish, opening a path toward 0.6550.\n\nTrading suggestions would advocate for caution given the tight range. A conservative approach would be to wait for a break outside the 0.6523-0.6537 range before committing to a direction. A break below support could see a short position targeting 0.6505, while a break above resistance could justify a long trade toward 0.6550, with a stop placed just below the entry level. Risk management is paramount in this subdued volatility environment."
+    }
+  }
+}
