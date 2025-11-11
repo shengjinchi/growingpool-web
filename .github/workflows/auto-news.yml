@@ -37,8 +37,8 @@ jobs:
 
       - name: Commit and push if changes
         run: |
-          git config --global user.name 'C-L-STARK'
-          git config --global user.email 'x.stark.dylan@gmail.com'
+          git config --global user.name 'shengjinchi'
+          git config --global user.email 'z308690705@gmail.com'
           git add src/content/news/
           git add .news-history.json
           git add .google-submitted-urls.json
