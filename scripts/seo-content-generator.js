@@ -10,7 +10,7 @@ const RSS_SOURCES = [
 ];
 
 const OPENAI_API_KEY = process.env.SKEY;
-const OPENAI_BASE_URL = 'https://api.oneabc.org';
+const OPENAI_BASE_URL = 'https://api-inference.modelscope.cn';
 const NEWS_DIR = path.join(__dirname, '../src/content/news');
 const HISTORY_FILE = path.join(__dirname, '../.news-history.json');
 
@@ -125,7 +125,7 @@ async function rewriteWithGroqZh(content) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'gpt-4o-mini',
+        model: 'ZhipuAI/GLM-4.6',
         messages: [
           {
             role: 'user',
@@ -177,7 +177,7 @@ async function rewriteWithGroqEn(content) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'gpt-4o-mini',
+        model: 'ZhipuAI/GLM-4.6',
         messages: [
           {
             role: 'user',

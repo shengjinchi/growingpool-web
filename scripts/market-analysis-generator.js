@@ -6,7 +6,7 @@ const dayjs = require('dayjs');
 const TD_API_KEY = process.env.TD_KEY;
 const TD_BASE_URL = 'https://api.twelvedata.com';
 const OPENAI_API_KEY = process.env.SKEY;
-const OPENAI_BASE_URL = 'https://api.oneabc.org';
+const OPENAI_BASE_URL = 'https://api-inference.modelscope.cn';
 const ANALYSIS_DIR = path.join(__dirname, '../src/content/analysis');
 
 // 主要外汇品种配置
@@ -103,7 +103,7 @@ async function generateAnalysisZh(pairInfo, marketData) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'gpt-4o-mini',
+        model: 'ZhipuAI/GLM-4.6',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7,
         max_tokens: 600
@@ -156,7 +156,7 @@ Begin:`;
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'gpt-4o-mini',
+        model: 'ZhipuAI/GLM-4.6',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7,
         max_tokens: 600
