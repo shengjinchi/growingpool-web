@@ -27,11 +27,11 @@ export const blogPosts: BlogPost[] = [
  id: '1',
  slug: 'about-growingpool',
  title: {
- zh: '关于生金池 (GrowingPool) - 多资产管理与交易人才培养专家',
+ zh: '关于生金池 (GrowingPool) - 面向数字游民的交易人才培养专家',
  en: 'About GrowingPool - Military-Style Forex Trader Training Camp'
  },
  excerpt: {
- zh: '生金池 (GrowingPool) 是一个专注于筛选和培养顶级交易员的训练营。我们的理念：寻找同频的少数人。通过率10%-15%，30个交易日完整培训，获得50%+奖学金。',
+ zh: '生金池 (GrowingPool) 是一个专注于筛选和培养顶级交易员的训练营。我们的理念：寻找同频的少数人。通过率10%-15%，30个交易日完整培训，获得60%+奖学金。',
  en: 'GrowingPool is a training camp focused on selecting and cultivating forex traders. Our philosophy: cultivating those truly suited, retaining the few, advising the majority. Pass rate 10%-15%, 30 working days complete training, 60%-90% profit share.'
  },
  content: {
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700"><div class="mb-4 w-12 h-12 bg-black dark:bg-white flex items-center justify-center"><span class="text-2xl text-white dark:text-black font-bold">30</span></div>
-<p class="text-xl font-bold mb-2 text-black dark:text-white">工作日</p>
+<p class="text-xl font-bold mb-2 text-black dark:text-white">交易日</p>
 <p class="text-gray-600 dark:text-gray-400 leading-relaxed">完整培训周期</p>
 </div>
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700"><div class="mb-4 w-12 h-12 bg-black dark:bg-white flex items-center justify-center"><span class="text-2xl text-white dark:text-black font-bold">10</span></div>
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
 <p class="text-gray-600 dark:text-gray-400 leading-relaxed">10%-15%</p>
 </div>
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700"><div class="mb-4 w-12 h-12 bg-black dark:bg-white flex items-center justify-center"><span class="text-2xl text-white dark:text-black font-bold">90</span></div>
-<p class="text-xl font-bold mb-2 text-black dark:text-white">最高分润</p>
+<p class="text-xl font-bold mb-2 text-black dark:text-white">最高奖励</p>
 <p class="text-gray-600 dark:text-gray-400 leading-relaxed">60%-90%</p>
 </div>
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700"><div class="mb-4 w-12 h-12 bg-black dark:bg-white flex items-center justify-center"><span class="text-2xl text-white dark:text-black font-bold">0</span></div>
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 class="text-3xl font-bold text-center mb-4 text-black dark:text-white border-b-4 border-black dark:border-white inline-block pb-2 w-full">我们的培训理念</h2>
 
-<p class="text-base leading-relaxed mb-6 text-gray-700 dark:text-gray-300">生金池采用军事化管理模式，因为我们深知：交易是一场心理战争，需要极强的纪律性、执行力和心理素质。我们的培训不是教你如何快速致富，而是培养你成为一名专业的、可持续盈利的交易员。</p>
+<p class="text-base leading-relaxed mb-6 text-gray-700 dark:text-gray-300">生金池采用机构化专业管理模式，因为我们深知：交易是一场心理战争，需要极强的纪律性、执行力和心理素质。我们的培训不是教你如何快速致富，而是培养你成为一名专业的、可持续盈利的交易员。</p>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700">
@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
 <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>每日复盘会议</span></li>
 <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>导师一对一指导</span></li>
 <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>团队知识共享</span></li>
-<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>配资额度提升</span></li>
+<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>账户管理额度提升</span></li>
 </ul>
 </div>
 </div>
@@ -245,8 +245,8 @@ export const blogPosts: BlogPost[] = [
 <div>
 <p class="font-bold text-black dark:text-white mb-2">实盘条件：</p>
 <ul class="space-y-1">
-<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>初始配资：100美金</span></li>
-<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>每手大小：20美金</span></li>
+<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>初始资金：100美金</span></li>
+<li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>每手大小：0.1标准份数</span></li>
 <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>分润比例：60%</span></li>
 <li class="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span>考核周期：20个工作日</span></li>
 </ul>
@@ -279,9 +279,9 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">学历年龄</strong></td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">大专以上，35岁以下</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">大学专科以上，35岁以下</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">学习能力强，接受新知识快</td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">学历证明、身份证</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">学历证明、身份证明</td>
 </tr>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">性格特质</strong></td>
@@ -291,7 +291,7 @@ export const blogPosts: BlogPost[] = [
 </tr>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">时间投入</strong></td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">连续30个工作日，每天8小时</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">连续30个交易日，每天8小时</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">全身心投入，无其他工作</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">时间保证承诺书</td>
 </tr>
@@ -307,7 +307,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 class="text-3xl font-bold text-center mb-4 text-black dark:text-white border-b-4 border-black dark:border-white inline-block pb-2 w-full">收入体系</h2>
 
-<p class="text-base leading-relaxed mb-6 text-gray-700 dark:text-gray-300">生金池采用分润制度，你的收入完全取决于你的交易盈利。我们不收取任何培训费用，也不要求你投入自己的资金。公司提供配资，你只需专注于交易。</p>
+<p class="text-base leading-relaxed mb-6 text-gray-700 dark:text-gray-300">生金池采用合作奖励制度，你的所获奖励完全取决于你的交易盈利。我们不收取任何培训费用，也不要求你投入自己的资金。公司提供账户，你只需专注于交易。</p>
 
 <div class="bg-black dark:bg-white text-white dark:text-black p-8 mb-8 border-2 border-black dark:border-white">
 <p class="text-2xl font-bold mb-6 text-white dark:text-black text-center">分润比例：60% - 90%</p>
@@ -315,17 +315,17 @@ export const blogPosts: BlogPost[] = [
 <div class="text-center">
 <p class="text-4xl font-bold mb-2 text-white dark:text-black">60%</p>
 <p class="text-white dark:text-black">初级交易员</p>
-<p class="text-sm text-white dark:text-black mt-2">配资 100-500 美金</p>
+<p class="text-sm text-white dark:text-black mt-2">账户规模 100-500 美金</p>
 </div>
 <div class="text-center">
 <p class="text-4xl font-bold mb-2 text-white dark:text-black">75%</p>
 <p class="text-white dark:text-black">中级交易员</p>
-<p class="text-sm text-white dark:text-black mt-2">配资 500-2000 美金</p>
+<p class="text-sm text-white dark:text-black mt-2">账户规模 10K~100K 美金</p>
 </div>
 <div class="text-center">
 <p class="text-4xl font-bold mb-2 text-white dark:text-black">90%</p>
 <p class="text-white dark:text-black">高级交易员</p>
-<p class="text-sm text-white dark:text-black mt-2">配资 2000+ 美金</p>
+<p class="text-sm text-white dark:text-black mt-2">账户规模 200K 美金</p>
 </div>
 </div>
 </div>
@@ -334,7 +334,7 @@ export const blogPosts: BlogPost[] = [
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700">
 <p class="text-xl font-bold mb-4 text-black dark:text-white">💰 初级阶段（100-500美金）</p>
 <ul class="space-y-3">
-<li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">小额实盘：</strong>20美金/手</span></li>
+<li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">小额实盘：</strong>0.1标准份手数起步</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">配资额度：</strong>100美金起</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">分润比例：</strong>60%</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">月收入预估：</strong>¥10,000-30,000</span></li>
@@ -343,9 +343,9 @@ export const blogPosts: BlogPost[] = [
 </div>
 
 <div class="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700">
-<p class="text-xl font-bold mb-4 text-black dark:text-white">💎 高级阶段（2000+美金）</p>
+<p class="text-xl font-bold mb-4 text-black dark:text-white">💎 高级阶段（10K+美金）</p>
 <ul class="space-y-3">
-<li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">大额矩阵：</strong>100美金+/手</span></li>
+<li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">大额矩阵：</strong>1标准份手数起步</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">配资额度：</strong>根据能力动态调整</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">分润比例：</strong>75%-90%</span></li>
 <li class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-start gap-2"><span class="text-black dark:text-white font-bold">•</span><span><strong class="font-bold text-black dark:text-white">月收入预估：</strong>¥60,000-100,000+</span></li>
@@ -361,9 +361,9 @@ export const blogPosts: BlogPost[] = [
 <thead>
 <tr>
 <th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">级别</th>
-<th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">配资额度</th>
+<th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">账户规模</th>
 <th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">分润比例</th>
-<th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">月收入范围</th>
+<th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">参考月收入范围</th>
 <th class="bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 text-left">晋升条件</th>
 </tr>
 </thead>
@@ -377,21 +377,21 @@ export const blogPosts: BlogPost[] = [
 </tr>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">中级</strong></td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">500-2000美金</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">10K-100K美金</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">75%</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">¥30,000-60,000</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">6个月盈利，月回报>15%</td>
 </tr>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">高级</strong></td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">2000-5000美金</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">200K美金</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">85%</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">¥60,000-100,000</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">1年盈利，月回报>12%</td>
 </tr>
 <tr>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"><strong class="font-bold text-black dark:text-white">顶级</strong></td>
-<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">5000+美金</td>
+<td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">400K+美金</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">90%+</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">¥100,000-200,000+</td>
 <td class="px-6 py-3 border-b border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">2年盈利，团队贡献优秀</td>

@@ -1,10 +1,10 @@
 ---
 title: "EUR/GBP Price Forecast: Technical outlook remains constructive as pair eyes breakout above 0.8830"
 date: "2025-11-11 16:52:51"
-description: "The Euro (EUR) trades on the front foot against the British Pound (GBP) on Tuesday as the Pound comes under pressure fol. Free forex trading training by FX Killer."
-keywords: ["forex","trading","market analysis","forex news","forex training","trader incubation","FX Killer"]
+description: "The Euro (EUR) trades on the front foot against the British Pound (GBP) on Tuesday as the Pound comes under pressure fol. Free forex trading training by GrowingPool."
+keywords: ["forex","trading","market analysis","forex news","forex training","trader incubation","GrowingPool"]
 category: "Forex News"
-source: "FX Killer Analysis Team"
+source: "GrowingPool Analysis Team"
 language: "en"
 ---
 
@@ -14,15 +14,15 @@ From a technical perspective, the outlook for the currency pair remains construc
 
 ---
 
-#### About FX Killer Trader Incubation Program
+#### About GrowingPool Trader Incubation Program
 
-Want to become a professional trader? FX Killer offers a **completely free** professional trader training program. We provide systematic courses, practical training, and professional mentorship to help you grow from beginner to full-time trader.
+Want to become a professional trader? GrowingPool offers a **completely free** professional trader training program. We provide systematic courses, practical training, and professional mentorship to help you grow from beginner to full-time trader.
 
 👉 [Join Free Training Program](/splan/join-us) | [Trading Psychology Assessment](/splan/psychology-test)
 
 ---
 
-**Data Source**: FX Killer Analysis Team
+**Data Source**: GrowingPool Analysis Team
 **Updated**: 2025-11-11 16:52
 
 **Disclaimer**: This article is for reference only and does not constitute investment advice. Forex trading involves risks; please make decisions carefully.

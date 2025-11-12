@@ -1,10 +1,10 @@
 ---
 title: "USD/JPY steadies near 154.00 as markets weigh weak US jobs data and cautious BoJ stance"
 date: "2025-11-11 18:53:38"
-description: "The Japanese Yen (JPY) trades little changed against the US Dollar (USD) on Tuesday, with USD/JPY showing limited direct. Free forex trading training by FX Killer."
-keywords: ["forex","trading","market analysis","forex news","forex training","trader incubation","FX Killer"]
+description: "The Japanese Yen (JPY) trades little changed against the US Dollar (USD) on Tuesday, with USD/JPY showing limited direct. Free forex trading training by GrowingPool."
+keywords: ["forex","trading","market analysis","forex news","forex training","trader incubation","GrowingPool"]
 category: "Forex News"
-source: "FX Killer Analysis Team"
+source: "GrowingPool Analysis Team"
 language: "en"
 ---
 
@@ -14,15 +14,15 @@ This cautious sentiment stems from uncertainty over the BoJ's future policy move
 
 ---
 
-#### About FX Killer Trader Incubation Program
+#### About GrowingPool Trader Incubation Program
 
-Want to become a professional trader? FX Killer offers a **completely free** professional trader training program. We provide systematic courses, practical training, and professional mentorship to help you grow from beginner to full-time trader.
+Want to become a professional trader? GrowingPool offers a **completely free** professional trader training program. We provide systematic courses, practical training, and professional mentorship to help you grow from beginner to full-time trader.
 
 👉 [Join Free Training Program](/splan/join-us) | [Trading Psychology Assessment](/splan/psychology-test)
 
 ---
 
-**Data Source**: FX Killer Analysis Team
+**Data Source**: GrowingPool Analysis Team
 **Updated**: 2025-11-11 18:53
 
 **Disclaimer**: This article is for reference only and does not constitute investment advice. Forex trading involves risks; please make decisions carefully.
