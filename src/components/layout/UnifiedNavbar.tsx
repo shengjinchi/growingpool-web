@@ -56,6 +56,10 @@ export default function UnifiedNavbar() {
       link: "/dashboard",
     },
     {
+      name: language === 'zh' ? '直播交易' : 'Live Trading',
+      link: "/live-trading",
+    },
+    {
       name: language === 'zh' ? '日历' : 'Calendar',
       link: "/economic-calendar",
     },
