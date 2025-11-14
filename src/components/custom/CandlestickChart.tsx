@@ -11,6 +11,7 @@ interface Candle {
   volume: number;
 }
 
+
 export default function CandlestickChart() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -106,6 +107,7 @@ export default function CandlestickChart() {
       return { time, open, high, low, close, volume };
     };
 
+  
     // Calculate EMA
     const calculateEMA = (data: number[], period: number): number[] => {
       const k = 2 / (period + 1);
@@ -282,6 +284,7 @@ export default function CandlestickChart() {
     const candleWidth = 10;
     const candleSpacing = 14;
 
+  
     // Trend state management
     let currentTrend: 'up' | 'down' | 'sideways' = 'up';
     let trendDuration = 0;
@@ -334,35 +337,14 @@ export default function CandlestickChart() {
       const priceRange = maxPrice - minPrice;
       const padding = { top: 0, bottom: 0, left: 0, right: 0 };
 
-      // Split canvas: main chart (3/4), sub chart (1/4)
-      const mainChartHeight = (rect.height * 3) / 4;
-      const subChartHeight = rect.height / 4;
-      const subChartTop = mainChartHeight;
+      // Full height for main chart only
+      const mainChartHeight = rect.height;
 
       // Calculate CCI for NS indicator (Sensitivity = 1)
       const cci1 = candles.length >= 7 ? calculateCCI(candles, 7) : [];
       const cci2 = candles.length >= 49 ? calculateCCI(candles, 49) : [];
 
-      // Calculate EMA for sub chart (Golden/Death Cross)
-      const closes = candles.map(c => c.close);
-      const ema12 = candles.length >= 12 ? calculateEMA(closes, 12) : [];
-      const ema26 = candles.length >= 26 ? calculateEMA(closes, 26) : [];
-
-      // Detect Golden Cross and Death Cross
-      const crosses: Array<{ index: number; type: 'golden' | 'death' }> = [];
-      for (let i = 1; i < candles.length; i++) {
-        if (ema12[i] && ema26[i] && ema12[i - 1] && ema26[i - 1]) {
-          // Golden Cross: EMA12 crosses above EMA26
-          if (ema12[i - 1] <= ema26[i - 1] && ema12[i] > ema26[i]) {
-            crosses.push({ index: i, type: 'golden' });
-          }
-          // Death Cross: EMA12 crosses below EMA26
-          if (ema12[i - 1] >= ema26[i - 1] && ema12[i] < ema26[i]) {
-            crosses.push({ index: i, type: 'death' });
-          }
-        }
-      }
-
+      
       // ===== MAIN CHART (2/3 top) =====
 
       // Draw vertical grid lines (main chart) - Gold theme
@@ -473,142 +455,6 @@ export default function CandlestickChart() {
       }
 
       // Keltner Channel removed per user request
-
-      // ===== SUB CHART (1/3 bottom) - Golden/Death Cross =====
-
-      // Draw separator line (gold theme)
-      ctx.strokeStyle = 'rgba(217, 119, 6, 0.6)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(0, subChartTop);
-      ctx.lineTo(rect.width, subChartTop);
-      ctx.stroke();
-
-      // Draw sub chart background
-      ctx.fillStyle = 'rgba(254, 240, 138, 0.2)'; // Light gold background
-      ctx.fillRect(0, subChartTop, rect.width, subChartHeight);
-
-      // Draw sub chart grid lines
-      ctx.strokeStyle = 'rgba(217, 119, 6, 0.2)';
-      ctx.lineWidth = 1;
-      for (let i = 0; i <= 3; i++) {
-        const y = subChartTop + (subChartHeight / 3) * i;
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(rect.width, y);
-        ctx.stroke();
-      }
-
-      // Calculate EMA value range for sub chart
-      if (ema12.length > 0 && ema26.length > 0) {
-        const allEmaValues = [...ema12, ...ema26].filter(v => v > 0);
-        let minEma = Math.min(...allEmaValues);
-        let maxEma = Math.max(...allEmaValues);
-        const emaRange = maxEma - minEma;
-        const emaPadding = emaRange * 0.1; // 10% padding
-        minEma -= emaPadding;
-        maxEma += emaPadding;
-        const emaValueRange = maxEma - minEma;
-
-        // Draw zero axis line (horizontal dashed line)
-        const zeroLineY = subChartTop + subChartHeight / 2; // Middle of sub chart
-        ctx.strokeStyle = 'rgba(217, 119, 6, 0.6)'; // Gold
-        ctx.lineWidth = 1;
-        ctx.setLineDash([5, 5]); // Dashed line
-        ctx.beginPath();
-        ctx.moveTo(0, zeroLineY);
-        ctx.lineTo(rect.width, zeroLineY);
-        ctx.stroke();
-        ctx.setLineDash([]); // Reset dash
-
-        // Draw EMA12 line (fast line - bright gold 1px)
-        ctx.strokeStyle = 'rgba(251, 191, 36, 1)'; // Bright gold
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ema12.forEach((value, index) => {
-          if (value > 0) {
-            const x = index * candleSpacing + candleWidth / 2;
-            const y = subChartTop + ((maxEma - value) / emaValueRange) * subChartHeight;
-            if (index === 0 || ema12[index - 1] <= 0) {
-              ctx.moveTo(x, y);
-            } else {
-              ctx.lineTo(x, y);
-            }
-          }
-        });
-        ctx.stroke();
-
-        // Draw EMA26 line (slow line - dark gold 4px)
-        ctx.strokeStyle = 'rgba(180, 83, 9, 1)'; // Dark gold
-        ctx.lineWidth = 4;
-        ctx.beginPath();
-        ema26.forEach((value, index) => {
-          if (value > 0) {
-            const x = index * candleSpacing + candleWidth / 2;
-            const y = subChartTop + ((maxEma - value) / emaValueRange) * subChartHeight;
-            if (index === 0 || ema26[index - 1] <= 0) {
-              ctx.moveTo(x, y);
-            } else {
-              ctx.lineTo(x, y);
-            }
-          }
-        });
-        ctx.stroke();
-
-        // Mark Golden Cross and Death Cross
-        crosses.forEach(cross => {
-          const x = cross.index * candleSpacing + candleWidth / 2;
-          const ema12Value = ema12[cross.index];
-          const y = subChartTop + ((maxEma - ema12Value) / emaValueRange) * subChartHeight;
-
-          if (cross.type === 'golden') {
-            // Golden Cross (做多) - hollow light gold circle with gold border + gold up arrow
-            ctx.fillStyle = 'rgba(254, 240, 138, 1)'; // Light gold fill
-            ctx.beginPath();
-            ctx.arc(x, y, 6, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.strokeStyle = 'rgba(217, 119, 6, 1)'; // Gold border
-            ctx.lineWidth = 2;
-            ctx.stroke();
-
-            // Gold up arrow
-            ctx.strokeStyle = 'rgba(217, 119, 6, 1)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(x, y - 15);
-            ctx.lineTo(x, y - 8);
-            ctx.moveTo(x, y - 15);
-            ctx.lineTo(x - 3, y - 12);
-            ctx.moveTo(x, y - 15);
-            ctx.lineTo(x + 3, y - 12);
-            ctx.stroke();
-          } else {
-            // Death Cross (做空) - solid dark gold circle + dark gold down arrow
-            ctx.fillStyle = 'rgba(180, 83, 9, 1)'; // Dark gold fill
-            ctx.beginPath();
-            ctx.arc(x, y, 6, 0, Math.PI * 2);
-            ctx.fill();
-
-            // Dark gold down arrow
-            ctx.strokeStyle = 'rgba(180, 83, 9, 1)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(x, y + 15);
-            ctx.lineTo(x, y + 8);
-            ctx.moveTo(x, y + 15);
-            ctx.lineTo(x - 3, y + 12);
-            ctx.moveTo(x, y + 15);
-            ctx.lineTo(x + 3, y + 12);
-            ctx.stroke();
-          }
-        });
-
-        // Draw labels
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
-        ctx.font = '11px Arial';
-        ctx.fillText('EMA12/26', 10, subChartTop + 15);
-      }
-
       // ZigZag indicator removed per user request
 
       animationId = requestAnimationFrame(draw);
@@ -623,10 +469,10 @@ export default function CandlestickChart() {
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full relative">
       {/* K-line chart with 3D tilt and floating animation */}
       <div
-        className="w-full h-full animate-float-3d"
+        className="flex-1 h-full animate-float-3d"
         style={{
           transform: 'perspective(800px) rotateX(5deg) rotateY(-3deg)',
           transformStyle: 'preserve-3d'

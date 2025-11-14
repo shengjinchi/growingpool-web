@@ -56,7 +56,7 @@ export default function UnifiedNavbar() {
       link: "/dashboard",
     },
     {
-      name: language === 'zh' ? '直播交易' : 'Live Trading',
+      name: language === 'zh' ? '交易直播' : 'Live Trading',
       link: "/live-trading",
     },
     {

@@ -7,19 +7,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // 检测暗黑模式
+    // 检测暗黑模式和移动设备
     const checkDarkMode = () => {
       setIsDark(document.documentElement.classList.contains('dark'));
     };
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
     checkDarkMode();
+    checkMobile();
 
     const observer = new MutationObserver(checkDarkMode);
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['class'],
     });
+
+    const handleResize = () => {
+      checkMobile();
+    };
+
+    window.addEventListener('resize', handleResize);
 
     // 页面加载完成后隐藏加载动画
     const timer = setTimeout(() => {
@@ -29,6 +42,7 @@ export default function PageLoader() {
     return () => {
       clearTimeout(timer);
       observer.disconnect();
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -65,24 +79,25 @@ export default function PageLoader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed inset-0 z-[100] bg-white dark:bg-black flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-white dark:bg-black flex items-center justify-center px-4"
         >
           {/* Logo 文字分裂重组动画 */}
-          <div className="flex flex-col items-center gap-8">
-            {/* 分裂重组文字 */}
-            <div className="text-7xl font-bold flex">
+          <div className="flex flex-col items-center gap-4 sm:gap-8 w-full max-w-md">
+            {/* 分裂重组文字 - Mobile: wrap to prevent overflow */}
+            <div className={`${isMobile ? 'flex flex-wrap justify-center gap-2' : 'flex'} text-center`}>
               {chars.map((char, index) => (
                 <motion.span
                   key={index}
                   style={{
                     color: getCharColor(char, index),
-                    fontFamily: "'Noto Sans SC', 'Inter', sans-serif"
+                    fontFamily: "'Noto Sans SC', 'Inter', sans-serif",
+                    fontSize: isMobile ? '1.5rem' : 'inherit'
                   }}
                   initial={{
-                    x: (index % 2 === 0 ? -1 : 1) * 100,
-                    y: (index % 3 === 0 ? -1 : 1) * 50,
+                    x: (index % 2 === 0 ? -1 : 1) * (isMobile ? 40 : 80),
+                    y: (index % 3 === 0 ? -1 : 1) * (isMobile ? 15 : 30),
                     opacity: 0,
-                    rotate: (index % 2 === 0 ? -1 : 1) * 45,
+                    rotate: (index % 2 === 0 ? -1 : 1) * (isMobile ? 15 : 30),
                   }}
                   animate={{
                     x: 0,
@@ -96,6 +111,7 @@ export default function PageLoader() {
                     damping: 15,
                     delay: index * 0.05,
                   }}
+                  className={`${isMobile ? 'text-3xl' : 'text-7xl sm:text-8xl md:text-9xl lg:text-10xl'} font-bold`}
                 >
                   {char}
                 </motion.span>
@@ -107,7 +123,7 @@ export default function PageLoader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="w-64 h-1 bg-yellow-200 dark:bg-yellow-900 overflow-hidden"
+              className="w-32 sm:w-48 md:w-64 h-1 bg-yellow-200 dark:bg-yellow-900 overflow-hidden"
             >
               <motion.div
                 initial={{ x: "-100%" }}

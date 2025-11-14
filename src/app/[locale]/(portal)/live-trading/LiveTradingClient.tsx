@@ -32,6 +32,7 @@ export default function LiveTradingClient() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const mainVideoRef = useRef<HTMLIFrameElement>(null);
   const mainStreamRef = useRef<HTMLDivElement>(null);
+  const sideStreamRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { t } = useLanguage();
 
   // 获取全球交易所开盘状态
@@ -60,7 +61,6 @@ export default function LiveTradingClient() {
 
       // 大洋洲
       { name: '悉尼证券交易所', timezone: 'Australia/Sydney', open: 10, close: 16 },
-      { name: '新西兰证券交易所', timezone: 'Pacific/Auckland', open: 10, close: 17 },
     ];
 
     return exchanges.map(exchange => {
@@ -120,19 +120,12 @@ export default function LiveTradingClient() {
   const sideStreams = [
     {
       id: 0,
-      name: "分支频道1",
-      title: "分支频道1",
-      streamId: null, // 暂时移除频道ID
+      name: "分支直播间",
+      title: "分支直播间",
+      streamId: "BV1GJ411x7h7", // Bilibili video ID
       viewers: 456,
-      isActive: false
-    },
-    {
-      id: 1,
-      name: "分支频道2",
-      title: "分支频道2",
-      streamId: null, // 暂时移除频道ID
-      viewers: 234,
-      isActive: false
+      isActive: false,
+      platform: "bilibili" // 标识平台类型
     }
   ];
 
@@ -142,10 +135,22 @@ export default function LiveTradingClient() {
     setSideStreamsMuted(newMuted);
   };
 
-  const toggleFullscreen = () => {
+  const toggleMainFullscreen = () => {
     if (!document.fullscreenElement) {
       if (mainStreamRef.current) {
         mainStreamRef.current.requestFullscreen().catch((err) => {
+          console.error('Error attempting to enable fullscreen:', err);
+        });
+      }
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
+  const toggleSideFullscreen = (index: number) => {
+    if (!document.fullscreenElement) {
+      if (sideStreamRefs.current[index]) {
+        sideStreamRefs.current[index]?.requestFullscreen().catch((err) => {
           console.error('Error attempting to enable fullscreen:', err);
         });
       }
@@ -179,7 +184,7 @@ export default function LiveTradingClient() {
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-black mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-600 bg-clip-text text-transparent drop-shadow-2xl">
-              多屏直播交易室
+              实盘交易实况
             </span>
           </h1>
 
@@ -196,7 +201,7 @@ export default function LiveTradingClient() {
             </div>
             <div className="flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-lg backdrop-blur-sm">
               <Wifi className="w-5 h-5 text-green-400" />
-              <span className="font-bold text-white">{onlineStreamers + 2}</span>
+              <span className="font-bold text-white">{onlineStreamers + 1}</span>
               <span className="text-gray-300">频道在线</span>
             </div>
             </div>
@@ -280,10 +285,6 @@ export default function LiveTradingClient() {
                 <div className={`w-2 h-2 rounded-full flex-shrink-0 ${exchangeStatus[14]?.isOpen ? 'bg-green-400 animate-pulse shadow-green-400/50 shadow-lg' : 'bg-red-400'}`}></div>
                 <span className="text-xs font-medium text-blue-100 whitespace-nowrap">{exchangeStatus[14]?.name}</span>
               </div>
-              <div className="flex items-center gap-2 justify-center bg-teal-800/20 rounded-lg px-2 py-2 border border-teal-600/20 col-span-2">
-                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${exchangeStatus[15]?.isOpen ? 'bg-green-400 animate-pulse shadow-green-400/50 shadow-lg' : 'bg-red-400'}`}></div>
-                <span className="text-xs font-medium text-blue-100 whitespace-nowrap">{exchangeStatus[15]?.name}</span>
-              </div>
             </div>
           ) : (
             <div className="text-center">
@@ -294,16 +295,16 @@ export default function LiveTradingClient() {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 xl:h-[600px]">
-          {/* Main Stream - 9 columns on XL */}
-          <div className="xl:col-span-9 h-full">
+      <div className="w-full px-6 py-8">
+        <div className="flex flex-col lg:flex-row gap-6 h-auto">
+          {/* Main Stream */}
+          <div className="flex-1 h-[600px]">
             <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl relative h-full flex flex-col group hover:shadow-blue-500/10 hover:shadow-3xl transition-all duration-500" ref={mainStreamRef} style={{zIndex: 1}}>
               {/* Main Stream Header */}
               <div className="bg-gradient-to-r from-black/70 via-gray-900/80 to-black/70 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-gray-700/30">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-pulse shadow-lg"></div>
                     <span className="font-bold text-white">主直播间</span>
                     <span className="text-sm text-gray-400">• 99+ 矩阵成员</span>
                   </div>
@@ -323,7 +324,7 @@ export default function LiveTradingClient() {
                     )}
                   </button>
                   <button
-                    onClick={toggleFullscreen}
+                    onClick={toggleMainFullscreen}
                     className="p-2.5 hover:bg-white/10 rounded-lg transition-all duration-200 group/btn"
                     title={isFullscreen ? "退出全屏" : "全屏"}
                   >
@@ -337,7 +338,7 @@ export default function LiveTradingClient() {
               </div>
 
               {/* Main Stream Player */}
-              <div className="flex-1 relative bg-black min-h-0 overflow-hidden rounded-b-2xl">
+              <div className="flex-1 relative bg-black min-h-0 overflow-hidden">
                 <iframe
                   src={`https://www.youtube.com/embed/${mainStreamId}?autoplay=1&mute=${mainStreamMuted ? 1 : 0}&controls=1&rel=0&modestbranding=1`}
                   title="GrowingPool 主直播"
@@ -353,77 +354,100 @@ export default function LiveTradingClient() {
             </div>
           </div>
 
-          {/* Side Streams - 3 columns on XL */}
-          <div className="xl:col-span-3 flex flex-col h-full gap-4">
+          {/* Side Stream */}
+          <div className="flex-1 h-[600px]">
             {sideStreams.map((stream, index) => (
               <div
                 key={stream.id}
-                className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-xl overflow-hidden border border-gray-700/50 transition-all cursor-pointer flex-1 group hover:scale-[1.02] hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-400/10"
+                ref={el => sideStreamRefs.current[index] = el}
+                className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-700/50 transition-all h-full group hover:scale-[1.02] hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-400/10"
               >
                 {/* Side Stream Header */}
-                <div className="bg-gradient-to-r from-black/70 via-gray-900/60 to-black/70 backdrop-blur-md px-3 py-2.5 flex items-center justify-between border-b border-gray-700/30">
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 rounded-full ${stream.streamId ? 'bg-green-400 animate-pulse shadow-lg' : 'bg-gray-400'}`}></div>
-                    <span className="text-xs font-semibold truncate text-gray-300 group-hover:text-white transition-colors">{stream.name}</span>
+                <div className="bg-gradient-to-r from-black/70 via-gray-900/60 to-black/70 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-gray-700/30">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-3 h-3 rounded-full ${stream.streamId ? 'bg-green-400 animate-pulse shadow-lg' : 'bg-gray-400'}`}></div>
+                    <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">{stream.name}</span>
                   </div>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleSideStreamMute(index);
-                    }}
-                    className="p-1.5 hover:bg-white/10 rounded-lg transition-all duration-200 group/btn"
-                    title={sideStreamsMuted[index] ? "取消静音" : "静音"}
-                  >
-                    {sideStreamsMuted[index] ? (
-                      <VolumeX className="w-3.5 h-3.5 text-gray-400 group-hover/btn:text-white" />
-                    ) : (
-                      <Volume2 className="w-3.5 h-3.5 text-gray-400 group-hover/btn:text-white" />
-                    )}
-                  </button>
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleSideStreamMute(index);
+                      }}
+                      className="p-2.5 hover:bg-white/10 rounded-lg transition-all duration-200 group/btn"
+                      title={sideStreamsMuted[index] ? "取消静音" : "静音"}
+                    >
+                      {sideStreamsMuted[index] ? (
+                        <VolumeX className="w-4 h-4 text-gray-400 group-hover/btn:text-white" />
+                      ) : (
+                        <Volume2 className="w-4 h-4 text-gray-400 group-hover/btn:text-white" />
+                      )}
+                    </button>
+                    <button
+                      onClick={() => toggleSideFullscreen(index)}
+                      className="p-2.5 hover:bg-white/10 rounded-lg transition-all duration-200 group/btn"
+                      title={isFullscreen ? "退出全屏" : "全屏"}
+                    >
+                      {isFullscreen ? (
+                        <Minimize2 className="w-4 h-4 text-gray-400 group-hover/btn:text-white" />
+                      ) : (
+                        <Maximize2 className="w-4 h-4 text-gray-400 group-hover/btn:text-white" />
+                      )}
+                    </button>
+                  </div>
                 </div>
 
                 {/* Side Stream Player */}
-                <div className="h-full relative bg-black min-h-0 overflow-hidden">
+                <div className="flex-1 relative bg-black min-h-[520px]">
                   {stream.streamId ? (
                     <>
-                      <iframe
-                        src={`https://www.youtube.com/embed/${stream.streamId}?autoplay=1&mute=${sideStreamsMuted[index] ? 1 : 0}&controls=0&rel=0&modestbranding=1`}
-                        title={stream.title}
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      />
+                      {stream.platform === "bilibili" ? (
+                        // Bilibili Player
+                        <iframe
+                          src={`//player.bilibili.com/player.html?bvid=${stream.streamId}&page=1&high_quality=1&danmaku=0&autoplay=false&as_wide=1`}
+                          title={stream.title}
+                          className="w-full h-full absolute inset-0"
+                          style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0}}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          scrolling="no"
+                          border="0"
+                          frameborder="no"
+                          framespacing="0"
+                        />
+                      ) : (
+                        // YouTube Player (default)
+                        <iframe
+                          src={`https://www.youtube.com/embed/${stream.streamId}?autoplay=1&mute=${sideStreamsMuted[index] ? 1 : 0}&controls=1&rel=0&modestbranding=1`}
+                          title={stream.title}
+                          className="w-full h-full"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      )}
                       {/* Subtle overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </>
                   ) : (
                     /* 离线状态显示 */
-                    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black">
-                      <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-4 animate-pulse">
-                        <div className="w-8 h-8 bg-red-500 rounded-full"></div>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-red-400 font-bold text-lg mb-2">离线</p>
-                        <p className="text-gray-500 text-sm">暂无直播信号</p>
+                    <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black">
+                      <div className="flex flex-col items-center justify-center space-y-6">
+                        <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center animate-pulse shadow-2xl">
+                          <div className="w-10 h-10 bg-red-500 rounded-full shadow-lg"></div>
+                        </div>
+                        <div className="text-center space-y-3">
+                          <p className="text-red-400 font-bold text-2xl mb-1">离线</p>
+                          <p className="text-gray-400 text-base font-light">暂无直播信号</p>
+                        </div>
                       </div>
                     </div>
                   )}
                 </div>
-
-                {/* Stream Info */}
-                <div className="bg-gradient-to-r from-black/60 via-gray-900/50 to-black/60 backdrop-blur-sm px-3 py-2.5 border-t border-gray-700/30">
-                  <div className="flex items-center justify-between">
-                    <p className="text-xs font-medium text-gray-300 group-hover:text-white transition-colors">{stream.title}</p>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3 text-gray-400" />
-                      <span className="text-xs text-gray-400">{stream.viewers}</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))}
-
-            </div>
+          </div>
         </div>
       </div>
 

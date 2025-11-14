@@ -294,6 +294,22 @@ export default function SplanFooter() {
           </div>
         </div>
 
+        {/* FTMO Affiliate Link */}
+        <div className="border-t border-gray-800 pt-8 text-center">
+          <a
+            href="https://trader.ftmo.com/?affiliates=VYNFNBgLsulOXujdoJoM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <img
+              src="https://cdn.ftmo.com/ed1811ad91444ae687a19020a9997a86"
+              alt="FTMO.com - For serious traders"
+              className="h-14 w-auto hover:opacity-80 transition-opacity duration-300"
+            />
+          </a>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
           <p>2024-2025 {t('footer.copyright')}</p>
