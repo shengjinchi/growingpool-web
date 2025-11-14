@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Play,
   Users,
@@ -414,9 +414,6 @@ export default function LiveTradingClient() {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                           scrolling="no"
-                          border="0"
-                          frameborder="no"
-                          framespacing="0"
                         />
                       ) : (
                         // YouTube Player (default)
