@@ -359,7 +359,9 @@ export default function LiveTradingClient() {
             {sideStreams.map((stream, index) => (
               <div
                 key={stream.id}
-                ref={el => sideStreamRefs.current[index] = el}
+                ref={(el) => {
+          sideStreamRefs.current[index] = el;
+        }}
                 className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-700/50 transition-all h-full group hover:scale-[1.02] hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-400/10"
               >
                 {/* Side Stream Header */}
