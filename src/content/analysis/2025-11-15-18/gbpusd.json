@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-15T18:46:47.853Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多格局",
+      "content": "当前汇价1.31747略高于20周期均线1.31561，显示短期存在微弱多头优势。日线波动仅9个基点，市场处于极度收敛状态，0.04%的日内涨幅表明多空双方暂时达成平衡。\n\nMACD柱状线呈现正值0.000244，虽未提供信号线参考，但正向动量暗示买盘力量略有优势。需关注能否持续放大以确认上涨动能。由于RSI数据缺失，需结合其他指标综合判断超买超卖状况。\n\n关键技术位方面，日内高点1.31749构成即时阻力，突破后或测试1.3180区域。下方1.31660为日内支撑，更重要支撑位于20日均线1.31561附近，该位置将成为多空分水岭。\n\n建议采取谨慎看多策略，有效突破1.3180后可轻仓追多，目标看向1.3200心理关口。若跌破1.315支撑则应反手做空，严格设置15点止损控制风险。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting minimal movement, trading within an exceptionally tight range of just 9 pips. The current price of 1.31747 is trading marginally above the 20-period Simple Moving Average at 1.31561, suggesting a very slight short-term bullish bias. The market is currently in a state of consolidation, lacking a clear directional impulse as it hovers near the midpoint of the day's high and low. This price action indicates a period of indecision among traders, awaiting a significant catalyst to break the current equilibrium.\n\nWhile the MACD line is positive at 0.000244, the absence of a signal line reading makes a full interpretation difficult. However, the positive histogram suggests that underlying momentum may be weakly bullish. The extremely narrow daily range and minimal 0.04% change highlight a notable lack of volatility. This environment often precedes a significant breakout, making it crucial to monitor for a decisive close above the daily high or below the 20 SMA for a clearer directional signal.\n\nKey intraday resistance is clearly defined by the session high at 1.31749. A sustained break above this level could open a path towards higher resistance zones. Immediate support rests at the day's low of 1.31660, with a more significant support confluence provided by the 20 SMA at 1.31561. A break below this moving average would likely shift the short-term bias to bearish.\n\nGiven the compressed nature of the pair, a breakout strategy is prudent. Traders should await a confirmed move outside the 1.31660-1.31749 range with increasing volume. A long position could be considered on a break above 1.31750, targeting a move towards 1.3185. Conversely, a break below the 20 SMA support could offer a short opportunity, targeting a test of the 1.3140 area. Risk management is essential due to the potential for a false breakout."
+    }
+  }
+}

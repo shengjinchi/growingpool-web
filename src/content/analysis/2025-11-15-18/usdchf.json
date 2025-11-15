@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-15T18:50:34.060Z",
+  "price": {
+    "close": "0.79374999",
+    "high": "0.79438001",
+    "low": "0.79321003",
+    "open": "0.79395002",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 54.10161,
+    "macd": -8.3951137e-7,
+    "macd_signal": -0.00045605797,
+    "sma20": 0.792283
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：窄幅盘整待突破",
+      "content": "最新价格0.7937维持20日均线0.7923上方，显示短期多头格局。日内波幅仅11.7点，价格在0.7932-0.7944区间极度收敛，反映市场处于方向选择前夕。24小时微跌0.02%表明多空力量暂时平衡。\n\n均线系统显示20日SMA构成动态支撑，若跌破该位置可能下探0.7900心理关口。上方阻力需关注日内高点0.7944及0.7950整数位。MACD柱状图负值收窄暗示下行动能减弱，但需信号线确认转势。\n\n当前价格处于近期交易区间中轨，建议等待突破确认。若有效突破0.7945可轻仓试多，目标0.7970；若下破0.7920则看向0.7890支撑。由于波动率收缩，需严格控制仓位并设置30点止损。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "The USD/CHF pair is trading marginally lower, exhibiting minimal volatility within a very tight 24-hour range. The current price sits just above the 20-period Simple Moving Average at 0.79228, suggesting a tentative neutral to slightly positive short-term bias. This proximity to the SMA indicates a potential inflection point where the market is seeking a clearer directional catalyst. The lack of a decisive move away from this average underscores a period of consolidation as traders assess the next fundamental driver for the pair.\n\nKey technical indicators offer a mixed but subdued picture. The MACD histogram is printing a negligible negative value, pointing to extremely weak bearish momentum that is not particularly significant. The absence of RSI data limits the view on potential overbought or oversold conditions, but the tight trading range implies a lack of strong directional conviction from market participants. The primary takeaway is a market in equilibrium, awaiting a fresh impulse to break out of its current confines.\n\nCritical support is identified at the recent low of 0.79321, with a more significant floor at the 20-SMA level of 0.79228. A break below this could target lower supports. Immediate resistance is seen at the session high of 0.79438. A sustained move above this level would be necessary to encourage a test towards higher resistance zones, potentially around the 0.7960 area.\n\nTrading suggestions should account for this low-volatility environment. A breakout strategy is prudent, waiting for a decisive close above 0.79440 or below 0.79220 before committing to a directional position. Given the weak momentum signals, range-bound strategies near the support and resistance levels could be considered, but with tight stop-loss orders due to the pair's potential for sudden, sharp movements."
+    }
+  }
+}

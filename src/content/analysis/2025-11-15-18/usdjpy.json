@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-15T18:47:33.060Z",
+  "price": {
+    "close": "154.49300",
+    "high": "154.59801",
+    "low": "154.45900",
+    "open": "154.53000",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.52351,
+    "macd": -0.005667208,
+    "macd_signal": -0.019554233,
+    "sma20": 154.4924
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：窄幅震荡待突破",
+      "content": "当前汇价紧贴20日均线154.492附近，显示多空力量处于微妙平衡。日内波动仅14个基点，表明市场正在积蓄能量。价格持续在154.459-154.598极窄区间内整理，需警惕突破行情的突然启动。\n\nMACD柱状图呈现负值但幅度有限，暗示短期下行动能减弱。虽然RSI数据缺失，但结合价格与均线的贴合程度，市场暂时缺乏明确方向性指引。这种技术形态通常预示着重大行情正在酝酿。\n\n关键支撑位于日内低点154.459，跌破可能测试154.300心理关口。上行阻力先看154.598日内高点，突破后有望挑战155.000整数大关。当前窄幅震荡格局建议以区间思路对待。\n\n建议短线交易者在154.450-154.600区间内高抛低吸，严格设置15点止损。中长线投资者宜等待明确突破方向后再顺势操作，重点关注日本央行政策动向对汇率的潜在影响。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The pair is trading in a very tight range, with the current price of 154.493 sitting almost exactly on the pivotal 20-period Simple Moving Average of 154.4924. This precise alignment indicates a critical moment of equilibrium and indecision in the market. The minimal 24-hour change of -0.02% and narrow high/low range further underscore this consolidation phase. The lack of a clear directional bias suggests traders are awaiting a fundamental catalyst to break the current stalemate and define the next meaningful trend.\n\nThe MACD histogram is marginally negative at -0.0056, pointing to slight underlying bearish momentum, though the absence of the signal line value makes a full crossover interpretation difficult. The price action being virtually on top of the SMA(20) reinforces the neutral-to-slightly-bearish short-term signal from the MACD. In the absence of an RSI reading, focus shifts entirely to price levels and other indicators, which collectively paint a picture of a market in a state of pause, lacking strong directional conviction from either bulls or bears.\n\nKey intraday resistance is clearly defined by the session high at 154.598, while immediate support rests at the daily low of 154.459. A decisive break above resistance could target the 155.00 psychological level, whereas a drop below support may see a test towards 154.00. Given the current equilibrium, the market is poised for a breakout. Trading suggestions would favor waiting for a clear move outside this tight 154.45-154.60 range before committing to a directional position."
+    }
+  }
+}

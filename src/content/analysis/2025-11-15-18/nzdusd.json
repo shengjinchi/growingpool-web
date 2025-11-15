@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-15T18:49:48.576Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：横盘整理待突破",
+      "content": "当前汇价位于0.5682附近，略低于20日均线0.5682，显示市场处于平衡状态。日内波动仅0.08%且高低点差距极小，表明多空双方暂时达成均衡。整体格局呈现窄幅震荡特征，缺乏明确方向性指引。\n\nMACD指标显示微弱正值0.00031，但信号线数据缺失难以确认动能方向。价格紧贴均线运行，反映市场处于关键抉择节点。需关注能否有效突破近期0.5678-0.5684的极窄波动区间以确认后续走势。\n\n关键支撑位于日内低点0.5678，跌破可能下探0.5670区域。阻力位在近期高点0.5684附近，突破后或测试0.5690心理关口。当前价格处于关键技术位附近，需警惕假突破风险。\n\n建议采取区间交易策略，在0.5675-0.5690范围内高抛低吸。突破区间后可顺势跟进，但需配合成交量验证。保守投资者宜等待明确方向信号后再行入场。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair is currently trading marginally below its 20-period Simple Moving Average, suggesting a tentative and nearly neutral short-term trend. The minimal 24-hour change of 0.08% and the narrow daily range between the high and low indicate a pronounced period of consolidation. Price action is essentially flat, reflecting a market in a state of indecision as it awaits a fresh fundamental catalyst. The lack of decisive movement above or below the SMA highlights a market that is effectively treading water.\n\nIndicator interpretation is somewhat limited due to incomplete data, but the available MACD reading shows a positive histogram value of 0.00031084264. This suggests a slight underlying bullish momentum may be present, though its weakness is confirmed by the price's failure to break meaningfully higher. The absence of an RSI reading makes gauging overbought or oversold conditions difficult. The primary takeaway from the indicators is one of very subdued momentum, aligning with the observed tight consolidation pattern.\n\nKey support and resistance levels are currently being defined by the day's range. Immediate resistance is found at the session high of 0.56821412, while support rests at the daily low of 0.56785917. A more significant technical level is the 20-period SMA at 0.56824182, acting as a dynamic resistance point. A sustained break above this level could target the next psychological resistance near 0.5700, while a break below the day's low would expose the 0.5650 handle.\n\nTrading suggestions should favor a cautious approach due to the low volatility and lack of clear directional bias. Aggressive positioning is not advised until a break of the defined consolidation range occurs. A conservative strategy would be to wait for a confirmed break above the SMA before considering small long positions, targeting 0.5700. Alternatively, a break below the daily low could signal a retest of lower supports, though risk management with tight stop-loss orders is essential given the current market compression."
+    }
+  }
+}

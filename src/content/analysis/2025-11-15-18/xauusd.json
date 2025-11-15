@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-15T18:51:21.159Z",
+  "price": {
+    "close": "4080.42743",
+    "high": "4080.64181",
+    "low": "4080.39587",
+    "open": "4080.45682",
+    "change": "-0.00",
+    "datetime": "2025-11-15 23:00:00"
+  },
+  "indicators": {
+    "rsi": 32.27506,
+    "macd": -14.35388,
+    "macd_signal": -17.98936,
+    "sma20": 4083.16397
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：窄幅震荡待突破",
+      "content": "金价目前陷入极端窄幅整理，最新价格略低于20日均线，显示短期动能偏弱。价格波动区间不足0.25美元，反映市场正处于方向选择的关键节点。这种收敛走势通常预示着即将出现突破行情。\n\n从技术指标看，MACD柱状线显示负值-14.35，表明短期下行动能存在。虽然RSI数据缺失，但价格持续在日均线下方运行，暗示空头暂时占据优势。需要关注MACD是否形成底背离信号。\n\n关键支撑位于日内低点4080.39附近，阻力位则看20日均线4083.16区域。若突破该均线阻力，可能打开上行空间；反之若跌破4080支撑，恐下探4075心理关口。\n\n建议采取突破交易策略，有效突破4083后轻仓做多，目标4090。若下破4080则考虑短空，严格设置3-5美元止损。当前窄幅震荡行情需保持耐心，等待明确方向信号。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading in a tight range just below its 20-period Simple Moving Average at 4083.16. The price action between the recent high of 4080.64 and low of 4080.40 indicates a period of significant consolidation and indecision. This positioning beneath the SMA suggests a slight bearish near-term bias, though the extremely narrow range shows a lack of strong directional momentum from either bulls or bears. The market appears to be pausing, potentially awaiting a fundamental catalyst to determine its next significant move.\n\nThe MACD indicator reading of -14.35 confirms the current bearish momentum, indicating that the short-term trend is below its longer-term average. The absence of an RSI reading makes it challenging to gauge whether the asset is in overbought or oversold territory, placing greater emphasis on price action and the MACD for signals. The convergence of price near the SMA, coupled with the negative MACD, points towards a market that is cautiously leaning lower but lacks the conviction for a strong breakout.\n\nKey resistance is clearly defined at the 20-period SMA of 4083.16, with the session high of 4080.64 acting as immediate overhead supply. A break above the SMA would be necessary to shift the short-term bias to neutral or bullish. Support is established at the day’s low of 4080.40. A decisive break below this level could trigger further selling, targeting lower support zones.\n\nTrading suggestions would favor a cautious approach due to the minimal volatility and lack of clear directional signals. A breakout above the SMA resistance could be used for a long entry, targeting a move towards 4085. Conversely, a break below the daily low support might offer a short opportunity. Given the tight range, position sizing should be conservative, and stops should be placed just beyond the opposite side of the current consolidation band to manage risk effectively."
+    }
+  }
+}

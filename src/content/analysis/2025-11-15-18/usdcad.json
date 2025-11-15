@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-15T18:49:03.043Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：窄幅震荡待突破",
+      "content": "当前价格1.40213紧贴20日均线1.40281，显示多空力量处于均衡状态。日内波动仅15.6点，价格在1.40120-1.40276极窄区间内整理，市场缺乏明确方向性驱动。24小时微跌0.03%反映市场观望情绪浓厚。\n\nMACD柱状线仅0.000088，几乎接近零轴，表明短期动能极度衰竭。虽然缺少RSI参考，但价格持续在20日均线附近徘徊，暗示市场正在酝酿新突破。需关注动量指标的后续发散方向。\n\n关键支撑位于日内低点1.40120，跌破后可能测试1.400心理关口。上方阻力首先关注1.40276日内高点，突破后或将挑战1.4050区域。当前窄幅区间需要基本面因素推动突破。\n\n建议采取区间交易策略，在1.4010-1.4030范围内高抛低吸。若有效突破区间边界，可顺势跟进，但需严格控制仓位。目前市场波动率较低，需等待明确信号再加大仓位配置。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is currently trading marginally lower at 1.40213, exhibiting a consolidation phase around the critical 1.4028 level. The price is hovering just below the 20-period Simple Moving Average at 1.40281, suggesting a potential inflection point for near-term direction. The recent 24-hour range has been exceptionally tight, indicating a period of indecision and a lack of strong directional conviction from either bulls or bears. This compression often precedes a more decisive breakout.\n\nFrom an indicator perspective, the minimal negative MACD histogram reading of 0.000088 suggests extremely weak downward momentum, essentially pointing to market equilibrium. While the RSI is unavailable, the MACD's proximity to its signal line confirms the current neutral to slightly bearish bias is very fragile. The primary takeaway is a market in a state of balance, with oscillators failing to provide a strong signal in either direction, awaiting a fresh catalyst.\n\nKey technical levels are clearly defined by the day's high and low. Immediate resistance is established at 1.40276, with a more significant barrier at the 20-SMA. A break above this confluence could target the 1.4040 area. On the downside, firm support rests at the 1.40120 low. A sustained break below this level could initiate a deeper retracement towards the 1.4000 psychological handle.\n\nGiven the current technical setup, a neutral to cautiously bearish stance is prudent. Traders might consider awaiting a break outside the 1.40120-1.40276 range for confirmation of the next directional move. A short position could be viable on a confirmed break below 1.40120, targeting 1.4000, with a stop above the SMA. Conversely, a push above the 20-SMA would negate the immediate bearish outlook, suggesting a retest of higher resistance."
+    }
+  }
+}
