@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-15T20:34:00.751Z",
+  "price": {
+    "close": "1.16154",
+    "high": "1.16239",
+    "low": "1.16154",
+    "open": "1.16211",
+    "change": "-0.05",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 45.36101,
+    "macd": -0.00020076625,
+    "macd_signal": 0.000024967323,
+    "sma20": 1.16275
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：震荡偏弱格局",
+      "content": "当前汇价略低于20日均线1.16275，显示短期存在下行压力。最新价格1.16154接近当日低点，表明空头暂时占据主导。日线波动仅0.85点，市场处于低波动整理阶段。\n\n从动能指标看，MACD柱状图为负值-0.0002，暗示下跌动能仍在延续。虽然缺乏RSI具体数值，但价格持续在日内低位运行，反映市场情绪偏谨慎。需关注能否重新站稳均线上方。\n\n关键支撑位于日内低点1.16154，跌破后可能测试1.1600心理关口。上方阻力首先关注日内高点1.16239，更强阻力在20日均线1.16275区域。突破该位置将缓解当前下行压力。\n\n建议采取谨慎偏空的交易策略。短线交易者可考虑在1.1625附近逢高做空，目标看向1.1600支撑区域。中长期投资者应等待更明确方向信号，重点关注美国通胀数据对美元走势的影响。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is trading with a slight bearish bias at 1.16154, positioned just below the key 20-period Simple Moving Average of 1.16275. This placement below the SMA suggests near-term selling pressure is dominant. The pair's current range is exceptionally tight, with the price hovering near the daily low of 1.16154, indicating a lack of strong directional conviction in the immediate session. The minor 24-hour decline of -0.05% reinforces this cautious, range-bound sentiment as the market seeks a clearer catalyst.\n\nIndicator readings provide a mixed but cautious outlook. The MACD histogram is marginally negative at -0.0002, signaling a potential, though very weak, bearish momentum shift. The absence of an RSI reading limits the ability to gauge overbought or oversold conditions, but the proximity to the daily low suggests there is little bullish energy present. The primary takeaway from the indicators is one of consolidation, with a slight edge given to the downside given the price's failure to hold above the SMA.\n\nKey support is clearly established at the current level and daily low of 1.16154. A decisive break below this point could open a path toward the 1.1600 psychological handle. Immediate resistance is found at the 20-period SMA (1.16275), with a more significant barrier at the daily high of 1.16239. A sustained move above this high would be needed to signal a shift in short-term sentiment and challenge further resistance levels.\n\nTrading suggestions favor a cautious approach due to the low volatility and tight range. A break below the 1.16154 support could present a short opportunity targeting 1.1600, with a stop placed above the SMA. Conversely, aggressive buyers might look for a rebound from this support level, but a more prudent long entry would require a confirmed break above 1.16275 to signal a stronger recovery. Risk management is paramount in this compressed environment."
+    }
+  }
+}
