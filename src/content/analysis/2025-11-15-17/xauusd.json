@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-15T17:35:36.385Z",
+  "price": {
+    "close": "4080.42743",
+    "high": "4080.64181",
+    "low": "4080.39587",
+    "open": "4080.45682",
+    "change": "-0.00",
+    "datetime": "2025-11-15 23:00:00"
+  },
+  "indicators": {
+    "rsi": 32.27506,
+    "macd": -14.35388,
+    "macd_signal": -17.98936,
+    "sma20": 4083.16397
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：窄幅盘整待突破",
+      "content": "当前金价围绕4080关口窄幅震荡，日内波幅不足0.25美元，显示市场处于极度收敛状态。价格持续运行于20周期均线下方，短期结构呈现弱势整理格局，需警惕方向性突破的可能。\n\n技术指标显示MACD柱状线为-14.35，处于零轴下方运行，表明空头动能略有优势。但鉴于RSI数据缺失，需结合价格实际突破情况判断动能强度。均线系统呈空头排列，短期阻力关注4083附近。\n\n关键支撑位于日内低点4080.39，跌破后将测试4075心理关口。上方阻力首先关注4080.64日内高点，突破后有望挑战4090区域。当前窄幅区间需要成交量配合才能实现有效突破。\n\n建议交易者保持观望，等待价格突破4080-4083区间后再顺势操作。向上突破可轻仓追多，目标4090；向下跌破则关注4075支撑表现。严格控制仓位，注意数据面带来的波动风险。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading marginally below its 20-period Simple Moving Average, suggesting a slight bearish bias in the immediate short-term. The price action is consolidating within an extremely tight range, as evidenced by the narrow high-low spread. This indicates a period of indecision and low volatility, with the market pausing to find its next directional catalyst. The prevailing trend context needs to be considered from a higher timeframe to gauge whether this is a brief consolidation within a larger bullish or bearish structure.\n\nThe MACD histogram reading of -14.35 is notably negative, signaling that bearish momentum is present despite the minimal net price change. This divergence suggests underlying selling pressure that has not yet resulted in a significant price decline. The lack of RSI data prevents a full assessment of momentum conditions, but the MACD's bearish crossover and negative value point towards a potential for further downside if selling pressure intensifies. The market appears to be in a delicate equilibrium.\n\nKey support is clearly defined by the session low at 4080.39, with a break below this level potentially triggering a move towards lower supports. Immediate resistance sits at the day's high of 4080.64. A more significant resistance level is the 20-SMA at 4083.16; a decisive break above this average would be needed to shift the short-term momentum back in favor of the bulls and could open a path for a retest of higher levels.\n\nGiven the tight range and bearish momentum signals, a cautious approach is advised. Traders might consider short positions on a confirmed break below the 4080.39 support, targeting a move towards the next support level, with a tight stop above the daily high. Alternatively, a wait-and-see approach is prudent until the price exits this consolidation zone with conviction. Long positions would only be attractive upon a sustained break above the 20-SMA."
+    }
+  }
+}

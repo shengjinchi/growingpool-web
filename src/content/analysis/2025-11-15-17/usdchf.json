@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-15T17:34:49.322Z",
+  "price": {
+    "close": "0.79374999",
+    "high": "0.79438001",
+    "low": "0.79321003",
+    "open": "0.79395002",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 54.10161,
+    "macd": -8.3951137e-7,
+    "macd_signal": -0.00045605797,
+    "sma20": 0.792283
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：窄幅震荡待突破",
+      "content": "当前价格0.7937处于20日均线0.7923上方，显示短期存在微弱支撑。日内波幅仅11.7点，价格在0.7944高点和0.7932低点间极窄幅震荡，市场交投清淡缺乏方向性指引。\n\nMACD柱状图显示负值-0.00000084，但信号线数据缺失难以确认动能方向。RSI指标暂缺使得超买超卖判断受限，需结合价格与均线关系评估当前多空力量平衡状态。\n\n关键阻力位于日内高点0.7944区域，突破后可能测试0.7950心理关口。支撑方面，20日均线0.7923构成初步防线，若跌破可能下探0.7900整数位。\n\n建议采取区间交易策略，在0.7920-0.7945区间内高抛低吸。突破区间边界后可顺势跟进，但需注意日内波动率较低特征，建议轻仓操作并设置15点止损保护。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "USD/CHF is trading marginally lower at 0.7937, exhibiting a narrow 24-hour range. The price is positioned just above the 20-day Simple Moving Average at 0.7923, suggesting the short-term trend is attempting to stabilize after recent weakness. The pair appears to be consolidating near the middle of its recent trading band, lacking a strong directional impulse for a decisive breakout in either direction. This indicates a period of equilibrium between buyers and sellers as the market searches for its next catalyst.\n\nThe provided MACD histogram reading of -0.00000084 is extremely marginal, essentially hovering around the zero line. This signifies very weak bearish momentum and a potential state of equilibrium between short and long-term forces. Without the MACD signal line or RSI values, momentum analysis is limited, but the negligible MACD value aligns with the observed price consolidation. The market is in a state of indecision, with neither bulls nor bears able to gain significant control.\n\nKey support is identified at the 20-day SMA of 0.7923, with a more significant floor likely near the daily low of 0.7932. A break below this level could see a test of the 0.7900 psychological handle. Immediate resistance sits at the session high of 0.7944, with a break above potentially opening a move towards the 0.7970-0.7980 zone. The tight range suggests a breakout from these levels is needed for a clearer directional bias.\n\nGiven the consolidation and lack of strong momentum, a range-bound strategy is appropriate. Traders might consider buying near the 0.7923 SMA support with a tight stop below 0.7930, targeting a move back towards the 0.7944 resistance. Alternatively, a break below the daily low could be sold for a move towards 0.7900. Position sizing should be conservative until a clearer trend emerges from the current equilibrium."
+    }
+  }
+}

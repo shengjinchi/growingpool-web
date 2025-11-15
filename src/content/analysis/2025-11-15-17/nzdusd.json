@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-15T17:34:02.171Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：震荡偏空格局",
+      "content": "价格略低于20日均线0.56824，显示短期动能偏弱。日内波动仅0.08%且高低点差距极小，表明市场处于典型的整理态势。MACD柱状线虽为正值但信号线缺失，暗示多头动能有限。\n\n当前价格在0.56786-0.56821区间窄幅整理，需突破该区域选择方向。若失守日内低点，下方支撑关注0.56750关口。上方阻力首先看20日均线0.56824，突破后可能测试0.56900心理位。\n\n建议采取谨慎观望策略，突破0.56825可轻仓试多，目标0.56900。若下破0.56780则考虑逢高做空，止损设于0.56850上方。当前低波动环境下需严格控制仓位。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "NZD/USD is currently trading marginally below its 20-period SMA, indicating a tentative pause in the immediate short-term trend. The pair is consolidating within an extremely tight 24-hour range, suggesting a period of indecision and a lack of strong directional conviction from market participants. This price action near the moving average often acts as a precursor to a more decisive breakout. The broader trend context remains crucial, as the currency pair continues to operate within a larger, established range, awaiting a fundamental catalyst for its next significant move.\n\nThe available MACD histogram reading is positive, though minimal at 0.00031084, hinting at very slight underlying bullish momentum. However, without the corresponding signal line and histogram data, a full interpretation is limited. The absence of the RSI(14) value prevents a clear assessment of whether the pair is in overbought or oversold territory. This lack of key oscillator data makes it challenging to gauge the strength behind any potential move, placing greater emphasis on pure price action and key support and resistance levels for analysis.\n\nKey intraday resistance is clearly defined by the session high at 0.56821. A sustained break above this level could trigger a test towards the more significant 20-period SMA overhead. Immediate support is found at the daily low of 0.56786. A breach below this point would likely target deeper support zones, potentially around the 0.5660 handle. The exceptionally narrow range highlights the critical nature of these immediate technical levels for short-term directional bias.\n\nTrading suggestions should favor a cautious approach due to the pronounced lack of volatility. Aggressive positioning is not advised until a clear breakout from the current tight consolidation occurs. A conservative strategy would involve waiting for a daily close above the 20-period SMA to consider minor long positions, targeting a move towards 0.5700. Conversely, a break below the 0.56786 support could open the door for a short trade, targeting a move down to the next significant support level. Risk management is paramount in such a quiet market."
+    }
+  }
+}

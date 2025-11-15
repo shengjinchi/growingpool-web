@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-15T17:31:43.079Z",
+  "price": {
+    "close": "154.49300",
+    "high": "154.59801",
+    "low": "154.45900",
+    "open": "154.53000",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.52351,
+    "macd": -0.005667208,
+    "macd_signal": -0.019554233,
+    "sma20": 154.4924
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：震荡整理待突破",
+      "content": "当前价格紧贴20日均线154.492，显示多空力量处于微妙平衡。日内波动仅14点，表明市场正在积蓄能量。虽暂未形成明确方向，但需警惕日本央行潜在干预风险，这可能引发突然变盘。\n\nMACD柱状线微负-0.0057，暗示短期动能偏弱。虽未提供信号线数据，但负值格局反映买盘动力不足。结合极窄的日内区间，市场显然在等待新的催化剂推动方向选择。\n\n关键支撑见于日内低点154.459，跌破后可能测试154.20关口。上方阻力位在154.598日内高点，若突破则看向155.00心理关口。当前价格正处于这两个关键水平的中间地带。\n\n建议采取区间交易策略，在154.45-154.60区间内高抛低吸。若有效突破任一方向，可顺势跟进。由于波动率极低，需严格控制仓位并设置窄幅止损。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "USD/JPY exhibits a state of extreme consolidation, trading virtually flat on the day. The current price is positioned directly on top of the critical 20-period Simple Moving Average at 154.492, indicating a precise equilibrium between buying and selling pressure. The market is confined within an exceptionally tight 24-hour range of barely 14 pips, suggesting a period of intense indecision and compression. This coiling action often precedes a significant breakout, though the direction remains ambiguous without a stronger catalyst to drive momentum in either direction.\n\nThe MACD indicator, showing a value of -0.00566, is marginally in negative territory, hinting at a slight bearish short-term momentum bias. However, the extremely small magnitude of this reading underscores the lack of any decisive directional thrust. The absence of a clear signal line for comparison limits a full interpretation, but the overall picture is one of a market lacking strong conviction. This aligns with the price action hovering around the SMA, reinforcing the narrative of a market in a temporary stalemate.\n\nKey technical levels are clearly defined by the session’s high and low. Immediate resistance is established at the 24-hour peak of 154.598, while solid support rests at the 154.459 low. A decisive break above resistance could target the recent multi-decade highs near 155.00 and beyond. Conversely, a breakdown below the daily support could initiate a deeper pullback towards the 154.00 psychological handle. The proximity to the SMA makes it a pivotal level for intraday sentiment.\n\nTrading suggestions should account for this low-volatility environment. A breakout strategy is prudent, awaiting a sustained move above 154.60 or below 154.45 with increased volume for confirmation before entering a position. Until such a breakout occurs, range-bound strategies within the defined boundaries could be employed, though the tight range limits profit potential. Risk management is paramount, given the potential for a sharp, volatile move following this period of compression."
+    }
+  }
+}

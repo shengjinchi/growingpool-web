@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-15T17:30:56.179Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：窄幅震荡待突破",
+      "content": "当前英镑/美元交投于1.3175附近，日内波动仅9个点，呈现极度收敛态势。价格紧贴20日均线1.3156上方运行，表明短期处于多空平衡状态。需关注区间突破方向以确认后续趋势。\n\n技术指标显示MACD柱状线为0.00024，虽未提供信号线数据，但正值表明存在微弱多头动能。RSI数据暂缺限制了超买超卖判断，建议结合其他震荡指标综合评估市场动量。\n\n关键支撑位于日内低点1.3166，跌破后将测试20日均线支撑。上方阻力聚焦日内高点1.3175，突破后可能挑战1.3200心理关口。当前窄幅区间亟待突破确认方向。\n\n建议采取突破交易策略，有效站稳1.3180后轻仓做多，目标看向1.3220。若下破1.3150支撑则考虑短空操作，由于波动率较低需严格控制仓位。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting a consolidative tone just above the 20-period Simple Moving Average at 1.31561. The price is virtually unchanged on the day, trading within a notably tight 9-pip range between 1.31660 and 1.31749. This immediate price action suggests a period of indecision and equilibrium between buyers and sellers, with the market pausing to absorb recent moves. The proximity to the SMA indicates a near-term balance, though the slight positive MACD hints at underlying, albeit minimal, bullish momentum.\n\nFrom a technical perspective, the positive MACD reading of 0.000244, while marginal, suggests a slight near-term bullish bias. Without the RSI and full MACD signal data, focus shifts to price action and key levels. The immediate resistance is clearly defined by the session high at 1.31749. A decisive break above this level could open a path towards more significant resistance zones. The SMA at 1.31561 now serves as the primary intraday support, guarding a deeper test of the daily low at 1.31660.\n\nGiven the tight consolidation, a breakout from this range is likely needed to dictate the next directional move. A sustained move above 1.31750 could trigger a test of higher resistance near 1.31900. Conversely, a break below the SMA and the 1.31660 low would signal a shift in sentiment, potentially targeting support around 1.31400. Trading volume appears light, typical of a market awaiting a catalyst, so position sizing should account for potential volatility expansion."
+    }
+  }
+}

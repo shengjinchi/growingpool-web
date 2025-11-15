@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-15T17:30:10.505Z",
+  "price": {
+    "close": "1.16154",
+    "high": "1.16239",
+    "low": "1.16154",
+    "open": "1.16211",
+    "change": "-0.05",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 45.36101,
+    "macd": -0.00020076625,
+    "macd_signal": 0.000024967323,
+    "sma20": 1.16275
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期承压但整体震荡",
+      "content": "最新价格1.16154略低于20日均线1.16275，显示短期存在下行压力。24小时内波动仅0.05%，市场处于低波动整理阶段。当前价格接近日内低点1.16154，暗示空头暂居主导。\n\n技术指标显示多空力量平衡。MACD柱状图呈现负值-0.0002，但缺乏信号线参考难以确认动能方向。RSI数据缺失导致超买超卖判断受限，需结合价格与均线关系综合研判。\n\n关键支撑位于日内低点1.16154，跌破后可能下探1.1600心理关口。阻力位首先关注20日均线1.16275，突破后或将测试日内高点1.16239区域。\n\n建议采取区间交易策略，在1.1600-1.1630区间内高抛低吸。若有效跌破1.1610可轻仓试空，目标看向1.1580。稳健投资者建议等待突破方向明确后再顺势操作。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is currently trading slightly below the 20-period SMA at 1.16275, indicating a minor short-term bearish bias. The pair's 24-hour range has been exceptionally tight, with price action confined to less than 10 pips, suggesting a period of consolidation and indecision. The latest price of 1.16154 is near the session low, showing a lack of upward momentum. This tight trading range often precedes a more significant directional move as the market awaits a fundamental catalyst to break the current equilibrium.\n\nIndicator interpretation is limited by the available data, but the provided MACD reading of -0.00020076625 shows the indicator is in negative territory, albeit by a very small margin. This suggests that short-term momentum may be slightly bearish, though the signal line data would be needed for full confirmation. The absence of RSI data makes it difficult to gauge whether the pair is in overbought or oversold territory. Price trading below the SMA(20) typically acts as initial resistance, reinforcing the near-term bearish pressure on the currency pair.\n\nKey support is clearly established at the current 24-hour low of 1.16154, with a break below potentially targeting the 1.1600 psychological level. Immediate resistance sits at the session high of 1.16239, with a more significant barrier at the 20-period SMA of 1.16275. A sustained move above this SMA would be needed to shift the short-term outlook to neutral or bullish. The market appears to be coiling within this narrow range, awaiting a breakout.\n\nTrading suggestions would favor a cautious approach given the extremely limited range. A break below the 1.16154 support could present a short opportunity targeting 1.1600, with a stop above 1.16275. Conversely, a move above the SMA and session high would suggest a test of higher resistance levels. Given the low volatility and tight range, position sizing should be conservative until a clearer directional bias emerges with increased volume."
+    }
+  }
+}

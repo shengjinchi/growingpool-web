@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-15T17:33:14.479Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：窄幅盘整待突破",
+      "content": "当前汇价围绕1.4020附近窄幅震荡，日内波幅仅15.6点。价格略低于20日均线1.40281，显示短期存在轻微下行压力。市场缺乏明确方向性动能，整体处于高位整理格局。\n\n从技术指标看，MACD柱状图呈现微弱正值0.000088，但信号线数据缺失难以确认动能方向。RSI指标暂不可得，使得短期超买超卖状态难以判断。需要更多指标确认当前市场动量。\n\n关键支撑位于日内低点1.40120，跌破后可能测试1.4000心理关口。阻力位在日内高点1.40276，突破后或挑战1.4050区域。20日均线1.40281构成近期重要多空分水岭。\n\n建议采取区间交易策略，在1.4010-1.4030区间内高抛低吸。若有效突破1.4030可轻仓追多，目标看向1.4050。下行突破1.4010则考虑短空操作，需严格设置止损控制风险。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "USD/CAD is trading marginally lower at 1.40213, sitting just below the critical 20-day Simple Moving Average of 1.40281. This proximity to the SMA suggests the pair is at a pivotal juncture, with the broader trend showing signs of potential consolidation. The narrow 24-hour range between 1.40276 and 1.40120 indicates subdued volatility and a lack of strong directional conviction in the market at the moment, reflecting a cautious equilibrium between buyers and sellers.\n\nThe available technical indicators present a mixed but finely balanced picture. The MACD histogram is positive at 0.000088, indicating a slight underlying bullish momentum, though the lack of a signal line value makes a definitive crossover call difficult. The minimal 24-hour change of -0.03% reinforces the narrative of a market in a tight, sideways grind. This indecision often precedes a more significant breakout once a catalyst emerges to disrupt the current balance.\n\nKey support and resistance levels are clearly defined by the day’s range. Immediate resistance is found at the session high of 1.40276, which aligns closely with the 20-day SMA. A break above this level could target a move toward 1.40400. On the downside, initial support rests at the daily low of 1.40120, with a breach potentially opening a path toward the 1.40000 psychological handle.\n\nTrading suggestions should favor a cautious approach given the current compression. A breakout strategy is prudent, waiting for a decisive close above the 20-day SMA for long entries or a break below the daily support for short positions. Given the tight range, risk management is paramount; positioning should be minimal until the pair establishes a clear directional bias beyond this immediate consolidation zone."
+    }
+  }
+}
