@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-15T16:42:36.062Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多",
+      "content": "当前英镑/美元交投于1.3175附近，略高于20日均线1.3156，显示短期存在轻微多头优势。价格在1.3166-1.3175区间窄幅波动，24小时波动仅0.04%，表明市场处于整理阶段。整体趋势结构需突破近期高低点才能明确方向。\n\n技术指标方面，MACD柱状线为0.00024，虽未提供信号线参考，但正值表明短期动能偏多。RSI数据暂缺限制了超买超卖判断。价格持续运行于均线上方，暗示买盘力量仍占主导地位。\n\n关键支撑位于20日均线1.3156区间，跌破后可能下探昨日低点1.3166。上方阻力关注日内高点1.3175，突破后或将测试1.3180心理关口。窄幅震荡格局需等待基本面催化剂。\n\n建议采取谨慎看多策略，现有仓位可设置1.3150下方止损。突破1.3180后可轻仓追多，短期目标看向1.3200整数关口。震荡行情中需严格控制仓位风险。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting a cautiously bullish tone, trading just above the key 20-period Simple Moving Average at 1.31561. This positioning above the SMA, coupled with the pair making a new 24-hour high at 1.31749, suggests a near-term positive bias. The market appears to be testing the upper boundaries of its recent range, with the minimal positive change indicating a tentative but present buying interest that is supporting the currency pair above a crucial short-term average.\n\nIndicator interpretation remains somewhat limited with the RSI and MACD signal line unavailable. However, the MACD histogram reading of 0.000244 is positive, albeit marginally, hinting at potential underlying upward momentum that has not yet fully materialized. The primary takeaway is that bullish momentum is present but extremely weak, requiring confirmation from other factors. The price action relative to the SMA is currently the most reliable technical signal for a slight bullish inclination.\n\nKey support is clearly defined at the 20-period SMA of 1.31561. A break below this level could open a test towards the 24-hour low of 1.31660 and potentially lower. Immediate resistance is found at the session high of 1.31749. A sustained move above this point would be necessary to confirm a stronger bullish breakout and target the next psychological resistance level around the 1.3200 handle.\n\nTrading suggestions involve a watchful approach. Bulls might consider long positions with a tight stop below the 1.3156 SMA, targeting a break above 1.3175. A more conservative strategy would be to wait for a clear daily close above the 1.3175 resistance before entering. Bears should remain sidelined unless the price convincingly breaks and closes below the 1.3156 support, which would signal a failure of the current bullish structure."
+    }
+  }
+}

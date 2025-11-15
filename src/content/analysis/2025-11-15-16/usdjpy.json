@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-15T16:43:22.756Z",
+  "price": {
+    "close": "154.49300",
+    "high": "154.59801",
+    "low": "154.45900",
+    "open": "154.53000",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.52351,
+    "macd": -0.005667208,
+    "macd_signal": -0.019554233,
+    "sma20": 154.4924
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：横盘整理待突破",
+      "content": "当前汇价紧贴20周期均线154.492，呈现典型的多空平衡格局。日内波动仅13点，显示市场处于观望状态。价格在154.46-154.60极窄区间内震荡，缺乏明确方向性驱动。\n\nMACD柱状图微幅负值-0.0057，但信号线数据缺失限制了指标有效性。需关注是否形成底背离结构。RSI指标暂不可得，建议补充14期数值以确认动量状态。\n\n即时支撑位于日内低点154.459，跌破后可能测试154.30心理关口。上行阻力聚焦154.598前高，突破后将打开测试155.00的空间。均线簇呈水平运行，强化区间整理特征。\n\n建议采取区间交易策略，在154.45-154.60边界高抛低吸。若有效突破任一方向，可顺势跟进20点止损。当前低波动环境需严格控制仓位，等待数据或事件驱动打破僵局。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair is exhibiting a state of equilibrium, trading almost perfectly at its 20-period Simple Moving Average. The price action is confined within an extremely tight range, as evidenced by the narrow 24-hour high and low. This immediate consolidation suggests a temporary pause in directional momentum. The market is awaiting a significant catalyst to break out from this current stalemate, with the price essentially flat over the past session, indicating a balance between buying and selling pressure.\n\nIndicator analysis reveals a market in a neutral to slightly bearish short-term stance. The MACD histogram is printing a negative value of -0.005667, signaling that the short-term momentum is currently weaker than the longer-term trend. While the RSI is not provided, the price's position directly on the SMA(20) of 154.49240 acts as a pivotal level. A sustained break below this average would likely confirm a shift towards a more negative near-term outlook and could accelerate the bearish momentum indicated by the MACD.\n\nKey support and resistance levels are clearly defined by the recent trading range. Immediate resistance is found at the session high of 154.598, while firm support rests at the daily low of 154.459. A decisive break above resistance could target the recent multi-decade highs near 160.00, whereas a breakdown below support would open a path toward the 154.00 psychological handle. The market's next major move will be determined by which of these technical boundaries is breached first.\n\nGiven the current technical configuration, a cautious approach is advised. Traders might consider waiting for a clear breakout from the 154.45-154.60 consolidation zone before initiating new positions. A close below the SMA(20) could present a short opportunity with a tight stop above the range high, targeting a move toward 154.00. Conversely, a bullish breakout would require a strong close above 154.60 to confirm a resumption of the broader uptrend."
+    }
+  }
+}

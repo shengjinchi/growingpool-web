@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-15T16:44:55.443Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：横盘整理待突破",
+      "content": "当前价格1.40213略低于20周期均线1.40281，显示短期存在轻微压力。日内波动仅15.6点，价格在1.40120-1.40276极窄区间震荡，市场处于典型的盘整格局。\n\nMACD柱状线微幅正值0.000088，但信号线数据缺失难以确认动能方向。RSI指标暂不可得，需结合其他工具判断超买超卖状态。整体技术指标呈现中性偏弱特征。\n\n关键支撑位于日内低点1.40120，跌破后可能下探1.40000心理关口。上方阻力首先关注均线1.40281，突破后或将测试日内高点1.40276区域。\n\n建议采取区间交易策略，在1.40150-1.40250区间高抛低吸。若有效突破1.40300可轻仓追多，下破1.40100则考虑逢高做空，需严格控制仓位并设置止损。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is currently trading just below its 20-period Simple Moving Average at 1.40281, indicating a slight near-term bearish bias within a very tight range. The price action has been confined within a narrow band of approximately 15 pips, as evidenced by the day's high and low, suggesting a period of consolidation and indecision. The minor 24-hour decline of 0.03% further underscores this lack of strong directional momentum. The market appears to be pausing, potentially awaiting a fresh fundamental catalyst to determine its next significant move.\n\nInterpreting the available indicators, the MACD histogram is marginally positive at 0.000088, which typically suggests a very weak bullish momentum. However, without the corresponding signal line value, it is challenging to fully assess the strength of this reading. The proximity of the current price to the SMA(20) often acts as a dynamic support or resistance level. In this case, the price trading below it could be interpreted as a minor bearish signal, but the extremely tight trading range makes any strong conviction difficult.\n\nKey intraday support is identified at the session low of 1.40120. A break below this level could see the pair test lower towards the 1.4000 psychological handle. On the upside, immediate resistance is found at the day’s high of 1.40276, with a more significant barrier at the SMA(20) level of 1.40281. A convincing break above this confluence zone would be needed to signal a resumption of any upward momentum.\n\nGiven the current compression and lack of volatility, a neutral to cautiously bearish stance is prudent. Traders might consider waiting for a breakout from the defined 1.40120-1.40276 range before committing to a directional trade. A move below support could target a quick decline towards 1.4000, while a break above resistance would aim for a retest of recent highs. Risk management is crucial in such a quiet market."
+    }
+  }
+}

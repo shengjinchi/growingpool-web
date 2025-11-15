@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-15T16:46:28.062Z",
+  "price": {
+    "close": "0.79374999",
+    "high": "0.79438001",
+    "low": "0.79321003",
+    "open": "0.79395002",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 54.10161,
+    "macd": -8.3951137e-7,
+    "macd_signal": -0.00045605797,
+    "sma20": 0.792283
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：窄幅震荡偏弱",
+      "content": "最新价格0.7937在20日均线0.7923上方获得初步支撑，但日内下跌0.02%显示多头动能不足。汇价全日波动仅11.7点，呈现典型的区间整理特征，市场方向性信号尚不明确。\n\nMACD柱状图维持负值-0.00000084，虽然绝对值微小但表明短期仍存下行压力。配合价格未能有效突破昨日高点0.7944，说明当前买盘力量有限，空头仍占据一定优势。\n\n关键支撑位于20日均线0.7923区间，跌破后可能下探日内低点0.7932。上方阻力首先关注0.7944日内高点，更强阻力位于0.7950心理关口，该位置也是近期多次测试未破的技术位。\n\n建议采取谨慎看空策略，若价格跌破0.7923支撑可轻仓跟进，目标看向0.7900整数关口。多头需等待价格站稳0.7950上方再考虑入场，当前宜保持观望。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "The USD/CHF pair is exhibiting minimal movement, trading near 0.7937 with a slight 24-hour decline. Price action is currently positioned just above the 20-period Simple Moving Average at 0.7923, suggesting a very near-term neutral to slightly bullish bias. The pair is confined within an exceptionally tight daily range between 0.7932 and 0.7944, indicating a pronounced period of consolidation and indecision in the market as it awaits a fresh catalyst for a more decisive directional move.\n\nIndicator interpretation is limited with the RSI and MACD signal line unavailable. The provided MACD histogram value is negligible at -0.00000084, effectively hovering around the zero line. This aligns with the observed price action, pointing to a complete lack of momentum in either direction. The proximity to the 20-period SMA acts as a dynamic support, but the inability to break meaningfully higher suggests bulls lack the conviction to drive a sustained upward trend at this juncture.\n\nKey technical levels are tightly clustered. The immediate resistance is clearly defined by the session high at 0.7944. A break above this level could target a move towards the 0.7950 handle. On the downside, the daily low of 0.7932 provides initial support, with a more significant test at the 20-period SMA of 0.7923. A decisive break below this moving average could signal a shift in short-term sentiment, potentially opening a path toward the 0.7900 psychological level.\n\nTrading suggestions should favor a cautious approach given the current lack of volatility. Range-bound strategies between 0.7932 and 0.7944 could be considered by short-term scalpers. For a more meaningful position, traders should await a breakout from this tight consolidation with volume confirmation. A close above 0.7945 could signal a buy opportunity, while a break below the 0.7920 support would suggest a short bias targeting lower supports."
+    }
+  }
+}

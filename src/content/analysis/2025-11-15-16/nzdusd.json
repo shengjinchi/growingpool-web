@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-15T16:45:42.096Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：区间震荡偏弱",
+      "content": "最新价格略低于20周期均线0.56824，显示短期存在轻微下行压力。汇价日内波动仅35点，呈现典型的窄幅整理特征，多空双方在当前水平陷入僵持。\n\nMACD柱状线呈现微小正值0.00031，但信号线数据缺失使得指标参考性受限。价格持续在日内高低点区间内运行，缺乏明确方向性突破动能。\n\n近期支撑关注日内低点0.56786，若跌破可能下探0.56750。上方阻力位于均线位置0.56824，突破后或测试0.56850心理关口。\n\n建议采取谨慎观望策略，等待区间突破确认。短线交易者可尝试在0.56780-0.56830区间内高抛低吸，需严格设置止损控制风险。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "NZD/USD is currently trading in a tight range just below the 20-period Simple Moving Average at 0.56824, suggesting a near-term consolidation phase. The pair is effectively trapped between the daily high and low, indicating a distinct lack of directional conviction in the market. This price action reflects a pause as traders await a more significant fundamental catalyst. The immediate trend lacks clear momentum, presenting a neutral to slightly bearish bias given the price's position beneath the key SMA.\n\nThe available MACD histogram reading of 0.00031 is a minimal positive value, hinting at nascent bullish momentum. However, without the corresponding signal line and histogram data, its full implication is limited. The absence of the RSI(14) reading is a notable gap in the analysis, as it would typically help gauge whether the pair is in overbought or oversold territory. The primary takeaway from the indicators is one of market indecision, with any bullish signals from the MACD being extremely weak.\n\nKey support is clearly established at the session low of 0.56786. A break below this level could open a path toward lower supports. Immediate resistance coincides with the 20-SMA at 0.56824, with a sustained move above needed to challenge the day's high of 0.56821. The exceptionally narrow range highlights these two levels as the critical thresholds for the next directional move.\n\nGiven the confined range and lack of strong momentum signals, a breakout strategy is most appropriate. Traders might consider waiting for a confirmed break above the SMA resistance or below the session support with a closing candle before entering a position. Risk management is paramount in such a low-volatility environment; tight stop-loss orders are advised to protect against false breakouts. A cautious approach is warranted until clearer momentum emerges."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-15T16:44:08.947Z",
+  "price": {
+    "close": "0.65359",
+    "high": "0.65386",
+    "low": "0.65342",
+    "open": "0.65351",
+    "change": "0.01",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.90043,
+    "macd": -0.0000534858,
+    "macd_signal": -0.00020182608,
+    "sma20": 0.6533045
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅整理待突破",
+      "content": "当前汇价在0.6536附近窄幅波动，24小时振幅不足5个点。价格紧贴20日均线0.6533运行，显示市场处于极度平衡状态。多空双方均未展现明显方向性偏好，整体呈现待突破的整理格局。\n\n技术指标方面，MACD柱状线微幅负值但信号线缺失，暗示短期动能偏弱但未形成明确趋势。RSI数据缺失导致超买超卖判断受限，需结合价格行为分析。均线系统呈粘合状态，符合当前横盘特征。\n\n关键支撑位于日内低点0.6534，跌破后可能测试0.6520心理关口。上方阻力聚焦日内高点0.6539，突破后或上看0.6550区域。当前极窄波动区间意味着任何方向的突破都可能引发加速行情。\n\n建议采取突破交易策略，有效突破0.6540可轻仓追多，下破0.6530则考虑短线空单。由于波动率极低，需严格控制仓位并设置窄幅止损，等待波动率扩张后的趋势机会。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "AUD/USD is exhibiting minimal movement, trading within an extremely narrow range around 0.6536. The current price hovering just above the 20-period SMA suggests a precarious short-term equilibrium. The pair appears to be consolidating after recent moves, with the tight high/low range indicating a clear lack of directional conviction in the market. This compression often precedes a more decisive breakout, though the immediate bias remains neutral as neither bulls nor bears demonstrate control.\n\nThe technical indicators reflect this indecisive environment. The MACD histogram is marginally negative but negligible in magnitude, signaling extremely weak bearish momentum that is not a strong sell signal. The proximity of the price to the SMA further confirms a lack of clear trend strength. Without RSI readings, momentum is harder to gauge, but the flat price action itself suggests a market awaiting a fundamental catalyst to determine its next directional move.\n\nKey support is now established at the 20-period SMA level of 0.6533. A sustained break below this level could open a test towards the recent swing low near 0.6520. On the upside, immediate resistance sits at the session high of 0.65386. A break above this level would target more significant resistance near 0.6550. The extremely tight range makes definitive levels difficult to pinpoint beyond these immediate barriers.\n\nGiven the current consolidation, traders should adopt a cautious approach. The minimal volatility and lack of momentum favor range-bound strategies, selling near 0.6538 and buying near 0.6534, albeit with very tight stop-loss orders due to the narrow range. A more conservative approach is to wait for a confirmed breakout from this congestion zone with increasing volume before committing to a directional position, targeting a move of 20-30 pips initially."
+    }
+  }
+}

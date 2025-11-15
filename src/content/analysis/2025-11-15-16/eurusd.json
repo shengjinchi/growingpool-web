@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-15T16:41:49.565Z",
+  "price": {
+    "close": "1.16154",
+    "high": "1.16239",
+    "low": "1.16154",
+    "open": "1.16211",
+    "change": "-0.05",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 45.36101,
+    "macd": -0.00020076625,
+    "macd_signal": 0.000024967323,
+    "sma20": 1.16275
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期承压偏弱",
+      "content": "当前欧元兑美元交投于1.1615附近，略低于20日均线1.1628，显示短期存在下行压力。价格日内波动区间收窄，高低点差距不足9点，表明市场处于整理态势。整体趋势偏弱势，需关注下方关键支撑表现。\n\n从技术指标看，MACD柱状线为负值（-0.0002），暗示动能偏弱。虽然RSI数据暂缺，但价格持续在日均线下方运行，确认空头占优格局。若跌破日内低点1.1615，可能引发进一步技术性抛售。\n\n关键支撑位于1.1615（日内低点），跌破后看向1.1600心理关口。上方阻力首先关注20日均线1.1628，若突破则可能测试日内高点1.1624区域。更强阻力位于1.1650附近前期高点。\n\n建议采取谨慎偏空的交易策略，有效下破1.1615后可轻仓跟进，目标看向1.1600下方。多头需等待价格重新站稳20日均线后再考虑入场，并严格设置止损。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is trading with a slight bearish bias at 1.16154, positioned just below the key 20-period Simple Moving Average of 1.16275. This placement below the SMA suggests the short-term momentum remains negative. The pair has failed to sustain upward movements, with the current price also acting as the daily low, indicating a lack of buyer conviction. The immediate trend appears to be consolidating with a downside inclination, as the market struggles to find a catalyst for a meaningful rebound. The proximity to the SMA will be a critical level to watch for a potential breakout or further rejection.\n\nIndicator analysis reveals a mixed but cautious picture. The MACD histogram is marginally negative at -0.0002, signaling weak bearish momentum, though the lack of a provided signal line makes a full crossover assessment difficult. The absence of RSI data limits the view on potential overbought or oversold conditions. The primary guiding technical level is the 20-SMA, which is currently acting as immediate resistance. A sustained break above this average would be necessary to shift the short-term sentiment from neutral-bearish to a more constructive outlook for the euro.\n\nKey support is clearly established at the current session low of 1.16154. A breach below this level could open a path toward lower supports, potentially targeting the 1.1600 psychological handle. On the upside, resistance is initially found at the 20-SMA (1.16275), with stronger resistance at the day’s high of 1.16239. Trading suggestions lean towards a cautious approach; a break below the session low could signal a continuation of the downtrend for short-term positions, while a close above the SMA would be needed to consider long entries."
+    }
+  }
+}

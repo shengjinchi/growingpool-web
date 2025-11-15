@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-15T16:47:14.978Z",
+  "price": {
+    "close": "4080.42743",
+    "high": "4080.64181",
+    "low": "4080.39587",
+    "open": "4080.45682",
+    "change": "-0.00",
+    "datetime": "2025-11-15 23:00:00"
+  },
+  "indicators": {
+    "rsi": 32.27506,
+    "macd": -14.35388,
+    "macd_signal": -17.98936,
+    "sma20": 4083.16397
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：短期承压于关键均线下方",
+      "content": "金价目前围绕4080附近窄幅震荡，日内波动不足0.25美元，市场交投清淡。当前价格略低于20周期均线4083.16，显示短期存在轻微卖压。MACD柱状线维持负值区间-14.35，暗示动量偏空但未形成强烈趋势信号。\n\n从关键技术位看，日内高点4080.64构成近期阻力，若突破则可能测试4085区域。下方支撑位于4080.39日内低点，更关键支撑在4075心理关口。由于价格与均线高度收敛，市场亟待方向性突破。\n\n尽管RSI数据缺失，但结合窄幅震荡特征，市场暂处于多空平衡状态。建议等待价格有效突破4080.64阻力或跌破4080.39支撑后顺势操作，当前宜保持观望。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is trading marginally lower at 4080.43, showing minimal volatility within an extremely tight 24-hour range. The price is positioned just below the key 20-period Simple Moving Average at 4083.16, suggesting a slight bearish bias in the very short term. This proximity to the SMA indicates a potential inflection point; a break above it could signal a resumption of upward momentum, while a rejection could see a test of lower support levels. The market appears to be in a state of consolidation, awaiting a catalyst for its next directional move.\n\nThe provided MACD reading of -14.35 indicates that the momentum is currently bearish, as the MACD line is below its centerline. This negative histogram reading suggests that the short-term trend is weaker than the longer-term trend, supporting the view of near-term selling pressure. However, the lack of a signal line and RSI data limits a fuller momentum assessment. Traders should watch for a potential convergence or crossover in the MACD for signs of weakening bearish momentum and a possible trend reversal.\n\nKey intraday resistance is clearly defined by the session high at 4080.64. A break above this level could target the more significant resistance near the 20-SMA at 4083.16. On the downside, immediate support is found at the daily low of 4080.40. A breach below this point could open a path toward lower support zones. Given the extremely narrow range, these levels are critical for determining the next short-term price trajectory.\n\nTrading suggestions should account for the current low volatility and tight consolidation. A cautious approach is prudent, waiting for a confirmed break above the SMA resistance or below the daily low support before committing to a direction. Given the bearish MACD and price trading below the SMA, the near-term risk appears tilted to the downside. Any trades should employ tight risk management due to the minimal range, with stop-losses placed just beyond the identified support or resistance levels."
+    }
+  }
+}
