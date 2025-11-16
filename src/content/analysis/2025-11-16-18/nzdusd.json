@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-16T18:51:09.257Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：震荡偏弱格局",
+      "content": "最新价格0.5682略低于20周期均线0.5682，显示短期存在轻微下行压力。汇价日内波动仅35点，处于0.5678-0.5682的极窄区间内运行，市场流动性偏低导致交投清淡。\n\nMACD柱状线微幅正值0.00031，但信号线数据缺失难以确认动能方向。价格紧贴布林带中轨运行，多空力量暂时平衡。需关注能否有效突破日内高点0.5682以打开上行空间。\n\n近期支撑位于日内低点0.5678，跌破后可能下探0.5660关口。上方阻力首先关注20日均线0.5682，进一步阻力看向0.5700心理关口。建议等待明确突破信号后再行操作。\n\n当前建议保持观望，激进交易者可尝试在0.5678-0.5682区间内轻仓高抛低吸。若有效跌破0.5678支撑，可考虑小仓位跟进空单，目标看向0.5660水平。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair shows minimal movement in the current session, trading almost flat with a marginal 0.08% gain. The price is hovering just below the key 20-period Simple Moving Average at 0.56824, suggesting a near-term equilibrium between buyers and sellers. The very tight 24-hour range indicates a period of consolidation and low volatility, with the market lacking a clear directional catalyst. This tight compression often precedes a more decisive breakout, though the immediate trend lacks conviction.\n\nIndicator analysis is somewhat limited with the absence of a full MACD signal line and RSI data. However, the provided MACD histogram reading of 0.0003108 is positive, albeit very slight, hinting at a potential, albeit weak, underlying bullish momentum. The primary takeaway from the available indicators is a market in a state of indecision. The proximity to the SMA(20) reinforces this neutral stance, acting as a pivotal level that will determine the next short-term directional bias.\n\nKey support is immediately identified at the session low of 0.56786. A break below this level could open a path toward lower support zones. On the upside, the SMA(20) at 0.56824 provides initial resistance, with a sustained move above needed to target higher levels. The lack of a defined range makes pinpointing further levels difficult, emphasizing the need to watch for a break from the current tight consolidation.\n\nGiven the current market structure, a neutral to cautiously bearish stance is prudent. The price's inability to reclaim the SMA(20) suggests slight selling pressure. Traders might consider short positions on a confirmed break below 0.56786, targeting a extension of the downtrend. A move above the SMA with conviction would invalidate this view, suggesting a retest of recent highs. Risk management is crucial due to the low volatility which can quickly expand."
+    }
+  }
+}

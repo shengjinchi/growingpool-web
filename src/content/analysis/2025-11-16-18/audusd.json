@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-16T18:49:38.993Z",
+  "price": {
+    "close": "0.65359",
+    "high": "0.65386",
+    "low": "0.65342",
+    "open": "0.65351",
+    "change": "0.01",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.90043,
+    "macd": -0.0000534858,
+    "macd_signal": -0.00020182608,
+    "sma20": 0.6533045
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅震荡待突破",
+      "content": "当前汇价围绕0.6536附近窄幅波动，24小时内振幅不足5个点，显示市场处于极度收敛状态。价格略高于20日均线0.6533，但整体波动空间受限，表明多空双方暂时达成平衡，市场等待新的方向性突破。\n\n技术指标显示MACD柱状线微幅负值-0.000053，虽未提供信号线数据，但负值柱状线表明短期仍存在轻微下行压力。由于RSI数据缺失，需结合价格行为判断动能变化，当前窄幅整理格局暗示市场动能不足。\n\n关键支撑位于日内低点0.6534附近，若跌破可能测试0.6520区域。上方阻力关注日内高点0.6539，突破后或上探0.6550心理关口。20日均线0.6533构成近期重要参考水平。\n\n建议短线交易者保持观望，等待区间突破后再顺势操作。中长线投资者可关注0.6520-0.6550区间的突破方向，有效突破任一边界后可跟进操作，需严格控制风险。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "AUD/USD is currently trading in an extremely tight range, exhibiting minimal directional movement. The price is consolidating just above the 20-period Simple Moving Average, which acts as a near-term pivot point. The exceptionally narrow 24-hour high/low range suggests a period of low volatility and indecision in the market. This consolidation often precedes a more decisive breakout, making the current environment one of cautious equilibrium as traders await a catalyst.\n\nIndicator analysis reveals a market lacking strong momentum. The MACD histogram is marginally negative but negligible in size, indicating very weak bearish momentum that is essentially neutral. Without RSI readings, the focus remains on price action and the MACD, which collectively signal a stalled market. The proximity to the SMA(20) further confirms this equilibrium, with the pair caught between competing forces without a clear short-term bias.\n\nKey support and resistance levels are tightly clustered given the recent range. Immediate resistance is at the session high of 0.65386, while support rests at the daily low of 0.65342. A more significant break above 0.6540 would be needed to signal a bullish shift, while a drop below 0.6530 could open a path toward lower supports. The SMA at 0.6533 provides immediate, minor support.\n\nTrading suggestions involve waiting for a confirmed breakout from this tight consolidation. Given the lack of momentum, entering a position now carries high risk. A long position could be considered on a sustained break above 0.6540, targeting a move toward 0.6550. Conversely, a break below 0.6530 could signal a retest of lower supports, offering a short opportunity. Until then, remaining on the sidelines is the most prudent approach."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-16T18:51:55.303Z",
+  "price": {
+    "close": "0.79374999",
+    "high": "0.79438001",
+    "low": "0.79321003",
+    "open": "0.79395002",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 54.10161,
+    "macd": -8.3951137e-7,
+    "macd_signal": -0.00045605797,
+    "sma20": 0.792283
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：短期震荡整理中",
+      "content": "当前汇价围绕0.7937窄幅波动，日内振幅仅11.7点，显示市场处于观望状态。价格略高于20日均线0.7923，表明短期存在微弱支撑，但整体仍处于多空平衡格局。日内跌幅0.02%反映市场缺乏明确方向性驱动。\n\nMACD指标显示微弱负值-0.00000084，虽然信号线数据缺失，但负值柱状体暗示短期动能偏空。由于RSI数据缺失，需结合价格行为判断，当前窄幅震荡表明市场等待新的催化因素。\n\n关键支撑位于日内低点0.7932，若跌破可能测试20日均线0.7923。上方阻力关注日内高点0.7944，突破后可能测试心理关口0.7950。当前价格处于近期波动区间中轨，方向选择需要成交量配合。\n\n建议采取区间交易策略，在0.7932-0.7944范围内高抛低吸，有效突破区间边界后可顺势跟进。由于波动率较低，需严格控制仓位规模，等待更明确的基本面信号指引方向。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "The USD/CHF pair is exhibiting a consolidative tone near the 0.7937 level, trading within a notably tight 24-hour range of just over 10 pips. The current price is positioned just above the 20-day Simple Moving Average at 0.79228, suggesting a fragile short-term equilibrium. This price action, following a period of recent weakness, indicates a potential pause as the market digests its next directional cue. The minimal 0.02% daily decline further underscores a lack of strong conviction from either bulls or bears at this juncture, creating a neutral to slightly bearish near-term environment.\n\nInterpreting the available indicators, the proximity to the 20-day SMA provides a key reference. The price holding above this level could be construed as a tentative sign of underlying support, preventing a deeper retracement for now. However, the MACD histogram reading is marginally negative, albeit by a minuscule amount, hinting at very slight underlying bearish momentum. Without the full MACD signal line or RSI data, the technical picture remains somewhat incomplete, placing greater emphasis on pure price action and the established SMA for gauging sentiment.\n\nCritical support is now identified at the 20-day SMA around 0.7923. A sustained break below this level could open a path toward testing the daily low at 0.79321 and potentially lower. Immediate resistance is clearly defined by the session high at 0.79438. A decisive break above this level would be needed to signal a stronger recovery attempt, potentially targeting the 0.7950 handle. The exceptionally narrow range suggests a breakout in either direction is increasingly probable.\n\nTrading suggestions should account for this low-volatility compression. A conservative approach would be to wait for a clear break and close above 0.7944 or below 0.7923 before entering a position, targeting a move of 15-20 pips in the direction of the breakout. Given the minimal momentum readings, aggressive range-trading within the defined high/low boundaries could be considered, though the tight range offers limited profit potential and requires very precise execution."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-16T18:48:11.419Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多",
+      "content": "当前价格1.31747略高于20日均线1.31561，显示短期存在轻微上行动能。日内在1.31660-1.31749极窄区间波动，配合0.04%的微小涨幅，表明市场正处于方向选择前的整理阶段。\n\nMACD柱状线值为0.000244显示多头动能微弱，但信号线数据缺失需保持警惕。价格紧贴日内高点运行，若突破1.31750阻力可能测试1.318心理关口，下方1.3156均线构成初步支撑。\n\n关键支撑位于1.3150（均线重合区），跌破则下看1.312。上行需持续站稳1.318上方才能确认涨势延续。当前波动率收缩提示即将出现方向性突破。\n\n建议采取区间交易策略，在1.3150-1.3180区间高抛低吸。突破区间边界后可顺势跟进，但需严格设置30点止损控制风险，重点关注晚间美国数据带来的波动机会。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting a mildly positive tone, trading just above the 20-period Simple Moving Average at 1.31561. This positioning suggests a tentative short-term bullish bias, as the price action holds above this key average. The very tight 24-hour range, with a high of 1.31749 and a low of 1.31660, indicates a period of consolidation and indecision in the market. The overall trend context appears neutral to slightly constructive, awaiting a more decisive catalyst for a directional move.\n\nIndicator analysis shows the MACD histogram is in positive territory at 0.000244, suggesting a slight build-up of underlying bullish momentum. However, without the corresponding signal line value, it is difficult to fully assess the strength of this signal. The lack of available RSI data prevents a clear view of whether the pair is in overbought or oversold conditions. The primary takeaway is that momentum indicators are not flashing any strong signals, aligning with the tight consolidation seen on the price chart.\n\nKey support is clearly established at the 20-SMA level of 1.31561. A break below this point would likely target the recent low of 1.31660 and potentially lower. Immediate resistance sits at the session high of 1.31749, with a decisive break above needed to encourage further bullish momentum towards the 1.3200 psychological level. These tight parameters define the current trading range.\n\nGiven the consolidation, a range-bound strategy is appropriate. Traders might consider buying near the 20-SMA support with a tight stop below, targeting a retest of the daily high. Alternatively, a break above 1.31750 could be used as a signal for a continuation towards 1.3200. Risk management is crucial due to the low volatility; position sizes should be adjusted accordingly until a clearer directional breakout occurs."
+    }
+  }
+}

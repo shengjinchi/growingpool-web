@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-16T18:48:54.906Z",
+  "price": {
+    "close": "154.49300",
+    "high": "154.59801",
+    "low": "154.45900",
+    "open": "154.53000",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.52351,
+    "macd": -0.005667208,
+    "macd_signal": -0.019554233,
+    "sma20": 154.4924
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：震荡整理待突破",
+      "content": "当前汇价围绕154.493关键位窄幅波动，日线微跌0.02%显示多空拉锯。价格紧贴20日均线154.492运行，表明短期处于方向选择节点。日内波动区间仅15点，反映市场在重要关口前的谨慎情绪。\n\n技术形态呈现典型整理特征。MACD柱状图微负但信号线缺失，暗示下行动能有限。价格持续在154.46-154.60极窄区间内运行，需关注波动率扩张信号。均线系统呈水平走向，短期趋势中性。\n\n关键支撑见于154.46日内低点，跌破后可能测试154.30心理关口。上方阻力聚焦154.60前高，突破后将打开通向155.00的通道。154.50整数位构成中枢枢轴点。\n\n建议采取区间交易策略，154.46-154.60内高抛低吸。有效突破任一边界可顺势跟进，需配合4小时图K线确认。保守投资者宜等待周五PCE数据指引方向。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair is currently exhibiting a state of near-perfect equilibrium, trading almost exactly at its 20-period Simple Moving Average. The price is consolidating within an exceptionally tight range, bounded by the session high of 154.598 and low of 154.459. This indicates a pronounced period of indecision and a lack of strong directional momentum in the immediate term. The market is essentially pausing, awaiting a fresh catalyst to determine the next significant directional move, making the current SMA a critical focal point for traders.\n\nIndicator interpretation reveals a market in balance. The MACD histogram is marginally negative at -0.005667, suggesting a very slight bearish bias, but the absence of a signal line reading prevents a full crossover assessment. The minimal 24-hour change of -0.02% further confirms the prevailing stagnation. Without an RSI reading, gauging overbought or oversold conditions is challenging, placing greater emphasis on pure price action and the established support and resistance levels to gauge potential breakout directions.\n\nKey technical levels are clearly defined by the day's range. Immediate resistance is firmly established at 154.598, while solid support rests at 154.459. A decisive break above resistance would target the recent multi-decade highs around 160.00, whereas a breakdown below support could see a test towards the 153.50 zone. The 20-period SMA at 154.492 acts as the immediate pivot; a sustained close on either side will likely dictate the next short-term trajectory.\n\nGiven the tight consolidation, a breakout strategy is prudent. Traders should await a clear move beyond the 154.460-154.600 range with increasing volume before committing to a position. A long entry on a break above 154.600, targeting 155.00, is viable, with a stop below the session low. Conversely, a short position could be considered on a break below 154.460, targeting 154.00, with a stop above the daily high. Risk management is paramount due to the pair's notorious volatility."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-16T18:50:24.051Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：短期盘整待突破",
+      "content": "当前汇价1.40213略低于20日均线1.40281，显示短期承压态势。24小时内波动仅0.03%，高低点差距15.6点，表明市场处于典型盘整格局。多空双方在当前价位形成短暂平衡，需关注突破方向选择。\n\n从技术指标看，MACD柱状线微幅正值0.000088，但信号线数据缺失限制判断效力。价格在狭窄区间内反复测试均线阻力，若持续无法站稳1.40281上方，可能引发技术性回调。日内波动率收缩预示即将出现方向性突破。\n\n关键支撑位于日内低点1.40120，跌破后可能下探1.400心理关口。阻力位首先关注日内高点1.40276，突破后有望测试1.4050区域。当前窄幅震荡使得传统技术指标参考价值有限。\n\n建议采取区间交易策略，在1.4010-1.4030区间内高抛低吸，有效突破任一方向后顺势跟进。严格设置15点止损，风险回报比不低于1:2。重点关注北美时段油价波动对加元的影响。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is showing signs of consolidation around the 1.4020 level, trading just fractionally below the 20-day Simple Moving Average at 1.40281. This proximity to the SMA suggests a critical juncture where the near-term trend is being tested. The 24-hour price action has been exceptionally tight, with a very narrow range between the high and low, indicating a period of indecision and a potential buildup of energy for the next directional move. The broader trend context will be determined by a sustained break above or below this key average.\n\nIndicator interpretation is somewhat limited without the full RSI and MACD signal line data. However, the positive MACD histogram value of 0.000088553031, though minimal, suggests a slight underlying bullish momentum bias. The extremely tight trading range has likely resulted in oscillators like the RSI being in neutral territory, offering little conviction. Traders should await a clearer signal from these indicators, such as an RSI moving decisively away from the 50 level or a stronger MACD crossover, to confirm the next leg of the move.\n\nKey support is now established at the session low of 1.40120, with a more significant floor likely near the 1.4000 major psychological handle. On the upside, immediate resistance is found at the daily high of 1.40276, closely aligned with the 20-day SMA. A break above this level could target a move towards 1.4050. The convergence of price with the SMA and the tight range highlights these levels as pivotal for determining the next short-term trajectory.\n\nGiven the current market equilibrium, a neutral to cautiously bearish stance is prudent until a clear breakout occurs. Traders might consider short positions on a confirmed break below 1.4010, targeting the 1.3990 area, with stops above the daily high. Conversely, a decisive move above the 20-day SMA could open a path for long entries towards 1.4050. Risk management is paramount in such a compressed environment, as a breakout could gather momentum quickly."
+    }
+  }
+}
