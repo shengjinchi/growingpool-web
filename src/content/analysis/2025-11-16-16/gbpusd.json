@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-16T16:43:25.612Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多",
+      "content": "当前汇价交投于1.3175附近，略高于20日均线1.3156，显示短期多头略占优势。日內波动区间仅9个基点，市场处于典型盘整格局，需关注突破方向选择。\n\nMACD柱状线呈现微弱正值0.00024，暗示动量虽弱但偏向积极。不过由于信号线数据缺失，需结合其他指标确认趋势强度。价格持续在1.3166-1.3175极窄区间运行，反映市场观望情绪浓厚。\n\n关键支撑位于20日均线1.3156，跌破则下看昨日低点1.3160。上方阻力关注日内高点1.3175，突破后可能测试1.3200心理关口。当前窄幅整理预示即将出现方向性突破。\n\n建议采取突破交易策略，有效站稳1.3180后可轻仓做多，目标1.3200。若下破1.3150支撑则应反手做空，日内交易需严格设置15点止损控制风险。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting a cautiously positive stance, trading just above the critical 20-period Simple Moving Average at 1.31561. This positioning suggests the near-term trend retains a slight bullish bias, though the minimal 24-hour change of 0.04% indicates a distinct lack of strong directional conviction. The price action is confined within an extremely tight range, as evidenced by the narrow high/low spread, pointing to a period of consolidation and equilibrium between buyers and sellers as the market searches for its next catalyst.\n\nFrom an indicator perspective, the MACD histogram reading of 0.000244 is positive but negligible, signaling extremely weak underlying bullish momentum. The lack of a provided signal line and RSI data limits a fuller oscillatory analysis, but the minuscule MACD value itself aligns with the price action, confirming a market in a state of indecision. The proximity to the SMA(20) acts as a dynamic support level, and a sustained hold above it would be necessary for bulls to gather strength for another leg higher.\n\nKey technical levels are clearly defined by recent price action. Immediate resistance is found at the session high of 1.31749, with a break above potentially targeting the 1.3200 psychological handle. On the downside, initial support resides at the daily low of 1.31660, followed by the more significant confluence of support at the 20-SMA near 1.31561. A decisive break below this moving average could trigger a deeper retracement towards the 1.3120 zone.\n\nTrading suggestions should account for this low-volatility environment. A range-bound strategy between 1.31560 and 1.31750 could be employed by aggressive traders, buying near the SMA support and selling into resistance. For a more decisive directional move, one should wait for a confirmed break outside this tight range with accompanying volume, with a break above 1.3180 offering a long signal and a break below 1.3155 suggesting a short opportunity."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-16T16:47:49.619Z",
+  "price": {
+    "close": "4080.53122",
+    "high": "4080.63679",
+    "low": "4080.3925",
+    "open": "4080.45349",
+    "change": "0.00",
+    "datetime": "2025-11-17 03:00:00"
+  },
+  "indicators": {
+    "rsi": 32.45379,
+    "macd": -11.0068676,
+    "macd_signal": -14.44526,
+    "sma20": 4080.51019
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：横盘整理格局",
+      "content": "金价目前围绕4080.53水平窄幅震荡，日内波幅不足0.3点，呈现典型横盘整理特征。价格紧贴20周期均线4080.51运行，显示多空力量暂时均衡。高低点区间仅0.24点，表明市场缺乏明确方向性驱动。\n\n技术指标方面，MACD柱状线显示-11.006的负值，但信号线数据缺失限制指标有效性。RSI(14)当前无读数，难以判断超买超卖状况。均线系统呈走平状态，符合区间震荡特征。\n\n关键支撑见于日内低点4080.39，阻力位在4080.64附近。若突破区间上沿，可能测试4085心理关口；下破则关注4075支撑区域。当前极窄波动区间需警惕突破行情的突然启动。\n\n建议采取区间交易策略，在4080.40-4080.60内高抛低吸。突破区间后顺势跟进，上行突破可轻仓做多，目标4085；下破则看向4075。窄幅震荡中需严格控制仓位，注意数据面冲击风险。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading in a tight consolidation range with a neutral short-term bias. The latest price of $4080.53 is hovering just above the 20-period SMA at $4080.51, suggesting a precarious balance between buyers and sellers. The extremely narrow daily range, with a high of $4080.64 and a low of $4080.39, indicates a period of low volatility and indecision in the market. This coiling action often precedes a significant breakout, though the direction remains ambiguous without a clear catalyst.\n\nThe MACD histogram reading of -11.00 suggests a slight bearish momentum is present beneath the surface, though the lack of a signal line value makes a full crossover analysis difficult. The absence of RSI data limits the ability to gauge whether the asset is overbought or oversold within its recent range. The proximity of price to the SMA acts as a dynamic equilibrium point; a sustained break above or below this level will be critical for determining the next directional move.\n\nKey support and resistance levels are tightly clustered given the minimal range. Immediate resistance is at the session high of $4080.64, while support rests at the daily low of $4080.39. A break above resistance could target a test of higher levels, whereas a break below support may see a decline towards the next significant floor. Given the compression, these initial breaks are likely to be shallow before more meaningful momentum develops.\n\nTrading suggestions should prioritize caution due to the lack of volatility and clear signal. Traders might consider waiting for a confirmed breakout from the defined range with accompanying volume before initiating positions. A conservative approach would be to set buy stops above the high and sell stops below the low, anticipating a momentum move. Risk management is paramount, as false breakouts are common in such compressed trading environments."
+    }
+  }
+}

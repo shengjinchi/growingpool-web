@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-16T16:46:19.408Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：横盘整理待突破",
+      "content": "最新价格略低于20周期均线0.56824，显示短期处于均衡状态。日内波幅仅35点，价格在0.56786-0.56821窄幅区间震荡，市场缺乏明确方向性动能。MACD柱状线微幅正值0.00031，但信号线数据缺失难以确认动量转换。\n\n当前价格紧贴均线运行，需关注0.5685近期高点的突破情况。下方支撑重点关注日内低点0.56786，若失守可能下探0.5670关口。上方阻力首先关注均线聚集区域0.5685-0.5690区间。\n\n虽然MACD显示微弱多头动能，但价格未能站稳均线上方，建议采取谨慎观望策略。激进交易者可沿0.5678-0.5685区间进行高抛低吸，突破区间边界后可顺势跟进。\n\n整体而言，汇价需突破当前狭窄交易区间才能打开新的运行空间。在明确突破前，建议控制仓位并等待更多技术信号确认趋势方向。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair is currently trading at 0.56821, marginally below the 20-period SMA of 0.56824, suggesting a neutral to slightly bearish short-term bias. The price action has been confined within an extremely tight 24-hour range between 0.56786 and 0.56821, indicating a period of significant consolidation and indecision in the market. This lack of directional movement often precedes a more decisive breakout. The minor 0.08% positive change reflects a market that is essentially treading water, awaiting a fundamental catalyst to provide a clearer directional impetus for the next leg.\n\nFrom an indicator perspective, the MACD line is positive at 0.00031, which is a bullish signal, though the lack of a provided signal line and histogram data limits a full interpretation. The extremely narrow trading range has likely compressed volatility-based indicators. The absence of RSI data further complicates momentum assessment. The primary takeaway is that the market is in a state of equilibrium, with the positive but minimal MACD hinting at a very slight underlying bullish inclination that has yet to manifest in price.\n\nKey short-term support is clearly defined at the session low of 0.56786. A break below this level could open a path toward the recent swing lows. Immediate resistance sits at the session high of 0.56821, with a more significant hurdle likely at the psychological 0.5700 level. The proximity of the current price to the SMA suggests this moving average is acting as a pivotal point; a sustained move above it would be needed to confirm any shift toward a more bullish near-term outlook.\n\nGiven the current compressed volatility and lack of clear directional momentum, a cautious approach is warranted. Traders might consider waiting for a confirmed breakout above the 0.56821 resistance or a breakdown below the 0.56786 support before initiating new positions. A range-bound strategy could be employed by more active traders, buying near support and selling near resistance, with tight stop-loss orders due to the minimal range. The overall environment suggests patience is key until the market commits to a direction."
+    }
+  }
+}

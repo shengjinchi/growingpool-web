@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-16T16:45:33.150Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：短期震荡偏弱格局",
+      "content": "最新价格1.40213略低于20周期均线1.40281，显示短期存在轻微下行压力。日内波动区间仅15.6点，市场处于极度收敛状态，-0.03%的日跌幅表明多空力量暂时平衡。\n\n均线系统显示价格运行于短期均线附近，MACD柱状线0.000088呈现微弱正值，但信号线数据缺失限制了指标参考价值。需关注动量指标能否确认方向性突破。\n\n关键支撑位于日内低点1.40120，跌破后可能测试1.400心理关口。上行阻力首先关注日内高点1.40276，突破后或上探1.4050区域。\n\n建议采取区间交易策略，在1.4010-1.4030区间内高抛低吸。若有效突破区间边界，可顺势跟进但需严格控制仓位，当前窄幅波动更适合短线操作。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is currently trading marginally below its 20-period Simple Moving Average of 1.40281, suggesting a tentative pause in the prevailing short-term bullish momentum. The extremely narrow 24-hour range of just 15.6 pips, coupled with a minimal decline of -0.03%, points to a pronounced period of consolidation and indecision near this key technical level. This price action indicates the market is in a state of equilibrium, awaiting a fresh catalyst to determine the next directional move, with the SMA acting as a pivotal focal point for traders.\n\nIndicator analysis reveals a nuanced picture. The MACD histogram reading of 0.000088 is positive but negligible, signaling extremely weak bullish momentum that is essentially at a standstill. The lack of a clear signal line value makes a definitive crossover call difficult, but the minuscule reading aligns with the observed price consolidation. The absence of RSI data limits the full assessment of momentum, but the current price behavior suggests the pair is neither overbought nor oversold, merely trapped in a very tight range.\n\nCritical support is now being tested at the session low of 1.40120. A decisive break below this level could open a path toward the 1.40000 psychological handle. On the upside, immediate resistance is clearly defined by the day’s high at 1.40276, with a more significant barrier residing at the 20-SMA. A sustained move above the SMA would be required to reinvigorate the bullish case and target a retest of recent higher time frame highs.\n\nGiven the current compression and lack of momentum, a range-bound strategy is most prudent. Traders might consider selling near the 1.40280 resistance or buying on a bounce from the 1.40120 support, with tight stops due to the confined range. A more conservative approach is to wait for a confirmed breakout above 1.4030 or a breakdown below 1.4000 before committing to a directional position, which would signal the end of this consolidation phase."
+    }
+  }
+}

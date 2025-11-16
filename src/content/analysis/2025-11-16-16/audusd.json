@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-16T16:44:47.971Z",
+  "price": {
+    "close": "0.65359",
+    "high": "0.65386",
+    "low": "0.65342",
+    "open": "0.65351",
+    "change": "0.01",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.90043,
+    "macd": -0.0000534858,
+    "macd_signal": -0.00020182608,
+    "sma20": 0.6533045
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅震荡待突破",
+      "content": "澳元兑美元当前交投于0.6536附近，日内波动不足5个点，呈现极度收敛的盘整格局。价格持续在20周期均线0.6533上方运行，但未能突破日内高点0.6538阻力，市场多空力量暂时平衡。\n\nMACD指标显示微弱负值-0.000053，虽未形成明确死叉但动能偏弱。由于缺少RSI等振荡器参考，需结合价格行为判断。当前价格紧贴布林带中轨运行，显示市场正处于方向选择的关键节点。\n\n近期支撑位于日内低点0.6534及20日均线0.6533区域，跌破后将测试0.6520心理关口。上行阻力首先关注0.6540整数位，有效突破后可能打开向0.6560运行的通道。\n\n建议采取突破交易策略，在0.6530-0.6545区间内保持观望。若放量跌破0.6530可轻仓做空，目标看向0.6515；反之突破0.6545则跟进多单，短期目标0.6560。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "The AUD/USD pair is exhibiting minimal movement, trading near 0.6536 with a narrow 24-hour range. Price action is consolidating just above the 20-period Simple Moving Average at 0.6533, indicating a tentative short-term balance between buyers and sellers. The market is lacking clear directional momentum, suggesting a period of indecision as it awaits a fundamental catalyst to break out of this tight trading band. This consolidation often precedes a more significant move.\n\nFrom an indicator perspective, the MACD line is marginally negative at -0.000053, though the absence of a signal line and histogram data limits its interpretative value. The price's proximity to the SMA(20) reinforces the neutral near-term bias. The lack of RSI data further underscores the current absence of strong overbought or oversold conditions. Traders should monitor for a decisive break above the daily high or below the SMA for clearer directional signals.\n\nKey intraday support is identified at the session low of 0.65342, with a more significant floor likely at the 20-SMA level of 0.6533. A breach below this could target lower supports. Immediate resistance sits at the day's high of 0.65386. A sustained move above this level would be necessary to encourage bullish momentum towards higher resistance zones.\n\nGiven the tight range and lack of volatility, a breakout strategy is prudent. Traders might consider waiting for a confirmed break above 0.6539 or below 0.6533 before initiating positions. Risk management is crucial in this low-volatility environment; tight stop-loss orders are recommended to protect capital from a sudden, sharp move against the position."
+    }
+  }
+}
