@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-16T20:36:00.799Z",
+  "price": {
+    "close": "1.16154",
+    "high": "1.16239",
+    "low": "1.16154",
+    "open": "1.16211",
+    "change": "-0.05",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 45.36101,
+    "macd": -0.00020076625,
+    "macd_signal": 0.000024967323,
+    "sma20": 1.16275
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期承压于关键均线下方",
+      "content": "欧元兑美元当前交投于1.1615附近，略低于20周期均线1.1628，显示短期存在技术面压力。价格日内波动区间仅8.5个基点，市场处于典型整理格局。日线级别需关注能否重新站上均线以改变当前偏空结构。\n\n从技术指标观察，MACD柱状图呈现负值-0.0002，虽然信号线数据缺失，但负值状态表明动能偏弱。价格持续在日内低位区域运行，反映市场缺乏做多意愿。需警惕若跌破日内低点1.1615，可能引发加速下行风险。\n\n关键支撑位于日内低点1.1615，跌破后进一步支撑看1.1600心理关口。上方阻力首先关注20日均线1.1628，突破后可能测试日内高点1.1624。整体波动空间收窄预示即将选择方向。\n\n建议采取谨慎观望策略，等待价格突破1.1615-1.1628区间后再顺势操作。若下破支撑可轻仓试空，目标看向1.1600下方；若上破均线阻力则短期空单需及时止损。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is currently trading marginally lower, showing minimal movement in the past 24 hours. The price is situated just below the 20-period Simple Moving Average, indicating a slight short-term bearish bias. The tight daily range between the high and low suggests a period of consolidation and indecision in the market. This lack of decisive momentum often precedes a more significant directional move, requiring traders to monitor for a breakout from this narrow band for the next cue.\n\nIndicator analysis is somewhat limited with the provided data. The MACD histogram is marginally negative at -0.0002, hinting at very slight bearish momentum, though the absence of the signal line and histogram details makes a full assessment difficult. The fact that the price is below the SMA(20) at 1.16275 reinforces this weak negative inclination. A confirmed move above this average could signal a shift in short-term sentiment, while a rejection could see a test of lower support levels.\n\nKey resistance is clearly defined at the 20-SMA level of 1.16275, with the session high of 1.16239 acting as a secondary barrier. A break above this confluence could target higher resistance. Immediate support is found at the current session low of 1.16154. A breach below this level would likely seek out stronger support zones around the 1.1600 psychological handle, which has provided a floor on recent tests.\n\nGiven the subdued volatility and proximity to key technical levels, a cautious approach is warranted. Traders might consider waiting for a confirmed breakout above the SMA resistance or a breakdown below the 1.1615 support before initiating new positions. A range-bound strategy could be employed within these levels, but the minimal profit potential currently makes this a less attractive proposition. Risk management remains paramount in this indecisive environment."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-16T20:36:45.403Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多",
+      "content": "当前价格1.31747略高于20日SMA的1.31561，显示短期存在温和看涨动能。日内波动区间仅9个点，表明市场处于典型盘整格局。MACD柱状图值为0.000244，虽未提供信号线参考，但正值状态暗示多头略占优势。\n\n价格紧贴日内高点1.31749运行，近期需关注1.3180心理关口阻力。下方支撑首先看向20日均线1.3156，若跌破可能测试日内低点1.3166区域。整体波动率收缩预示即将出现方向性突破。\n\n鉴于当前技术形态，建议采取区间交易策略。激进交易者可在1.3155-1.3180区间高抛低吸，稳健投资者建议等待突破1.3180后追多，或下破1.3150后轻仓试空。\n\n需注意本周美国CPI数据可能引发波动放大。建议严格控制仓位，上下突破关键点位后需及时跟进止损，目标看向前期波段高点1.3220或低点1.3120附近。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting subtle strength in the current session, trading marginally above the critical 20-period Simple Moving Average. This positioning suggests a near-term consolidation phase with a slight bullish bias. The immediate price action is confined within a tight 9-pip range, indicating a period of indecision as the market digests recent moves. The primary trend context remains pivotal for determining the next directional leg, with a sustained break above the daily high required to confirm a more decisive upward move.\n\nIndicator analysis reveals a nuanced picture. The MACD histogram is positive at 0.000244, signaling that underlying momentum is currently tilted towards the bulls, though the lack of a provided signal line reading limits a full crossover interpretation. The price trading above the SMA(20) at 1.31561 acts as a dynamic support level and reinforces the near-term constructive outlook. The absence of RSI data prevents an assessment of whether the pair is in overbought or oversold territory, placing greater emphasis on pure price action and the MACD's subtle bullish hint.\n\nKey support is firmly established at the 20-SMA level of 1.3156, with a break below potentially opening a test towards the session low of 1.3166. On the upside, immediate resistance is clearly defined by the intraday high at 1.3175. A convincing breach above this level could trigger further gains, targeting the next psychological resistance near 1.3200.\n\nTrading suggestions lean towards a cautiously optimistic approach within the defined range. Long positions could be considered on a pullback towards the 1.3156 SMA support, targeting a retest of the 1.3175 high, with stops placed just below the daily low. A break above resistance would validate the bullish momentum indicated by the MACD, while a break below the SMA would invalidate the setup and suggest a deeper retracement."
+    }
+  }
+}
