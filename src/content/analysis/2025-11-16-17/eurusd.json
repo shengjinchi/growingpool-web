@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-16T17:32:00.382Z",
+  "price": {
+    "close": "1.16154",
+    "high": "1.16239",
+    "low": "1.16154",
+    "open": "1.16211",
+    "change": "-0.05",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 45.36101,
+    "macd": -0.00020076625,
+    "macd_signal": 0.000024967323,
+    "sma20": 1.16275
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期承压偏空",
+      "content": "最新价格1.16154略低于20日均线1.16275，显示短期动能偏弱。日内波动区间仅8.5点，市场处于极度收敛状态，缺乏明确方向性驱动。当前价格接近日内低点，需警惕向下突破风险。\n\nMACD柱状线为负值-0.0002，虽未提供信号线参考，但负值格局暗示空头动能占优。均线系统呈空头排列雏形，若持续承压于1.16275下方，可能进一步下探周线级别支撑。\n\n关键阻力位于日内高点1.16239及20日均线重合区域。下方支撑需关注1.1600心理关口，若失守可能测试1.1580前低。当前窄幅整理格局建议等待突破方向。\n\n建议采取谨慎观望策略，突破1.1625可轻仓试多，目标1.1650。若下破1.1610则跟进空单，止损设于均线上方20点。窄幅震荡中需严格控制仓位。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "EUR/USD is currently trading at 1.16154, exhibiting a slight negative momentum with a 24-hour change of -0.05%. The price is positioned just below the 20-period Simple Moving Average of 1.16275, indicating a potential bearish bias in the short term. The recent trading range has been exceptionally narrow, with the high of 1.16239 and low of 1.16154 forming a tight band, suggesting a period of consolidation and indecision in the market as it awaits a fresh catalyst for directional movement.\n\nFrom an indicator perspective, the MACD histogram is showing a marginal negative value of -0.00020076625, signaling that short-term momentum is slightly bearish. While the RSI reading is unavailable, the MACD's subtle bearish crossover suggests weakening buying pressure. The proximity of the current price to the SMA(20) acts as a dynamic resistance level, reinforcing the notion that the path of least resistance may be to the downside in the immediate term, barring any fundamental shifts.\n\nKey support is now being tested at the session low of 1.16154. A decisive break below this level could open the door for a move toward the next significant support zone around 1.1600. On the upside, immediate resistance is clearly defined at the day's high of 1.16239, with a more substantial barrier at the SMA(20) level of 1.16275. A sustained move above this confluence of resistance would be needed to shift the short-term sentiment to neutral or bullish.\n\nGiven the current technical setup, a cautious approach is warranted. Traders might consider short positions on a break below 1.16150 with a tight stop above 1.16280, targeting a move toward 1.1600. Alternatively, a conservative strategy would be to wait for a clear breakout from this tight consolidation range with increased volume before committing to a directional trade, as the narrow range suggests an imminent expansion in volatility."
+    }
+  }
+}

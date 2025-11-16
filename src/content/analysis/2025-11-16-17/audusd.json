@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-16T17:34:15.032Z",
+  "price": {
+    "close": "0.65359",
+    "high": "0.65386",
+    "low": "0.65342",
+    "open": "0.65351",
+    "change": "0.01",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.90043,
+    "macd": -0.0000534858,
+    "macd_signal": -0.00020182608,
+    "sma20": 0.6533045
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅盘整待突破",
+      "content": "当前汇价交投于0.6536附近，日内波动仅4个点，呈现极度收敛的横盘格局。价格紧贴20日均线0.6533运行，多空双方处于僵持状态，整体趋势暂不明朗。需关注区间突破方向以确认后续走势。\n\n技术指标显示MACD柱状线微幅负值-0.000053，但信号线数据缺失难以形成完整判断。RSI指标暂不可得，使得动量分析受限。现价位处于日内波幅中轴，短期缺乏明确的技术指引。\n\n关键支撑位于日内低点0.6534，跌破后可能测试0.6520心理关口。上行阻力聚焦日内高点0.6539，突破后或上探0.6550区域。当前窄幅区间需等待基本面催化剂打破平衡。\n\n建议采取观望策略，突破0.6540可轻仓追多，下破0.6530则考虑短空操作。鉴于波动率极低，需严格控制仓位并设置窄幅止损，等待趋势明朗后再加大头寸暴露。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "AUD/USD is exhibiting a state of extreme consolidation near the 0.6535 level. The pair's minimal 24-hour change of 0.01% and the tight high-low range indicate a clear lack of directional conviction in the market. This price action is occurring just above the 20-day Simple Moving Average at 0.6533, suggesting the short-term trend is essentially flat. The market appears to be pausing and gathering energy, waiting for a fresh fundamental catalyst to determine its next significant directional move.\n\nThe available technical indicators reinforce this neutral picture. The MACD histogram is marginally negative at -0.000053, but the absence of a signal line reading makes it difficult to derive a strong bearish signal from this alone. It primarily points to very weak underlying momentum. Without the RSI(14) value, gauging potential overbought or oversold conditions is challenging. The proximity of the price to the SMA(20) acts as a dynamic equilibrium point, confirming the current indecision between buyers and sellers.\n\nKey support is now established at the 20-day SMA of 0.6533. A decisive break below this level could open a path toward the recent swing lows near the 0.6500 psychological handle. Immediate resistance sits at the session high of 0.65386; a sustained move above this point is necessary to signal any potential upward momentum, with further resistance likely around the 0.6550 zone.\n\nGiven the current technical setup, a neutral to slightly cautious stance is prudent. Traders should await a breakout from this tight consolidation range before committing to new positions. A confirmed break below the SMA(20) support could present a short opportunity targeting 0.6510, while a close above 0.6540 might justify a small long trade. Risk management is crucial, as a breakout could gain momentum quickly once this period of compression concludes."
+    }
+  }
+}

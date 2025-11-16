@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-16T17:34:59.269Z",
+  "price": {
+    "close": "1.40213",
+    "high": "1.40276",
+    "low": "1.40120",
+    "open": "1.40258",
+    "change": "-0.03",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 46.62505,
+    "macd": 0.000088553031,
+    "macd_signal": 0.00024427299,
+    "sma20": 1.40281
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：窄幅整理待突破",
+      "content": "当前汇价1.40213紧贴20日均线1.40281，显示多空力量处于微妙平衡。24小时内仅0.03%的波幅配合不足3点的震荡区间，表明市场正酝酿方向性选择。日线结构呈现典型整理形态，需关注基本面催化剂打破僵局。\n\n技术指标方面，MACD柱状线微幅正转但信号线缺失，暗示短期动能偏多但可靠性有限。价格持续在日内高点1.40276与低点1.40120之间震荡，形成明显的箱体结构。RSI数据缺失降低分析维度，需结合其他指标综合判断。\n\n关键支撑位于1.40120（日内低点），跌破后可能测试1.4000心理关口。阻力位聚焦1.40276前高，突破后或上探1.4050区域。20日均线构成动态平衡线，将成为多空争夺焦点。\n\n建议采取区间交易策略，在1.4010-1.4030范围内高抛低吸。有效突破任一边界可顺势跟进，需设置15点止损控制风险。重点关注北美时段油价波动及美元指数动向。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is currently trading near 1.40213, showing minimal change over the past 24 hours. The price is hovering just below the 20-period Simple Moving Average at 1.40281, suggesting a potential inflection point. The very narrow daily range, confined between 1.40276 and 1.40120, indicates a period of significant consolidation and indecision. This tight compression often precedes a more decisive directional breakout, making the immediate price action critical for determining the next short-term trend.\n\nFrom an indicator perspective, the MACD line is marginally positive at 0.000088, hinting at a faint underlying bullish momentum. However, without the corresponding signal line and histogram data, it is difficult to confirm the strength of this signal. The lack of RSI data limits the ability to gauge whether the pair is in overbought or oversold territory. The proximity to the SMA(20) reinforces its role as a key dynamic resistance level that needs to be overcome for a bullish resumption.\n\nKey support is clearly established at the session low of 1.40120. A break below this level could trigger a move towards the psychological 1.4000 handle. On the upside, immediate resistance resides at the day’s high of 1.40276, with a decisive breach above the 20-SMA required to target higher grounds. The market is effectively boxed in between these two technical levels, awaiting a catalyst for the next meaningful move.\n\nTrading suggestions involve waiting for a confirmed breakout from this tight consolidation range. A sustained move above the 1.40281 SMA level could signal a buy opportunity targeting a push towards 1.4040. Conversely, a break below 1.40120 support would open the door for a short position targeting the 1.4000 figure. Given the low volatility and lack of clear momentum, a cautious approach with tight risk management is prudent until a clearer directional bias emerges."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-16T17:35:42.999Z",
+  "price": {
+    "close": "0.56821412",
+    "high": "0.56821412",
+    "low": "0.56785917",
+    "open": "0.56785917",
+    "change": "0.08",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 53.81125,
+    "macd": 0.00031084264,
+    "macd_signal": 0.00039834938,
+    "sma20": 0.56824182
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：窄幅盘整待突破",
+      "content": "最新报价0.5682略低于20日均线0.5682，显示多空力量暂时平衡。汇率在不足4点的极窄区间内波动，0.5679日内低点形成初步支撑，市场整体处于蓄势阶段。这种横盘整理形态通常预示着即将出现方向性突破。\n\nMACD柱状线微幅正值0.00031，表明短期动能略有偏多，但信号线数据缺失使得指标参考性受限。均线系统呈水平延伸状态，反映市场缺乏明确趋势导向。波动率收缩至异常水平，需警惕突发性行情波动。\n\n关键阻力位于近期高点0.5685区域，突破后可能测试0.5700心理关口。下方坚固支撑在0.5670附近，该位置同时包含前期多个价格低点。若跌破该支撑，可能向下测试0.5650技术位。\n\n建议采取区间交易策略，在0.5670-0.5685范围内高抛低吸。突破任一方向后可顺势跟进，止损设置在区间外侧20点。当前低波动环境下需严格控制仓位，等待明确趋势信号。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair is currently trading marginally below its 20-period SMA at 0.56824, suggesting a very short-term neutral to slightly bearish bias. The extremely tight 24-hour range between 0.56786 and 0.56821 indicates a pronounced period of consolidation and a lack of strong directional conviction in the market. This pause often occurs as traders await a significant fundamental catalyst to provide the next directional impetus. The minimal 0.08% change further underscores this phase of indecision.\n\nWhile the MACD line is positive at 0.00031, the absence of a provided signal line and histogram makes a full crossover interpretation difficult. However, a positive MACD line itself can hint at some underlying, albeit weak, bullish momentum building beneath the surface. The lack of RSI data prevents a clear view of whether the pair is in overbought or oversold territory. Price action is essentially caught in a very narrow band, with the SMA acting as an immediate pivot point.\n\nKey support is clearly defined by the session low at 0.56786. A decisive break below this level could trigger a move toward lower support zones. Immediate resistance aligns with the session high of 0.56821, with a stronger ceiling likely forming around the 20-period SMA. A convincing break above this confluence of resistance would be needed to signal a potential shift toward a more bullish short-term outlook.\n\nTrading suggestions should favor a cautious approach given the compressed range. Aggressive positioning is not advised until a clear breakout occurs. A conservative strategy would be to wait for a break above 0.56850 or below 0.56750 before considering new entries, which would signal a continuation of momentum in either direction. Until then, the pair is best suited for range-bound strategies with very tight stop-loss orders."
+    }
+  }
+}

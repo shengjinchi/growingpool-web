@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-16T17:33:30.471Z",
+  "price": {
+    "close": "154.49300",
+    "high": "154.59801",
+    "low": "154.45900",
+    "open": "154.53000",
+    "change": "-0.02",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 49.52351,
+    "macd": -0.005667208,
+    "macd_signal": -0.019554233,
+    "sma20": 154.4924
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：震荡盘整中等待方向突破",
+      "content": "当前价格紧贴20日均线154.492，显示多空力量处于微妙平衡。日内波动仅13.9点，呈现典型区间整理特征。汇价在154.46-154.60形成窄幅箱体，需警惕突破后产生的趋势加速。\n\nMACD柱状线微负但信号缺失，暗示短期动能偏弱但未形成明确趋势。配合极窄的日内波幅，市场暂缺方向性指引。需关注基本面催化剂打破当前僵局。\n\n即时支撑位于日内低点154.459，关键支撑看前期整理平台154.30。上方阻力首先关注154.60心理关口，突破后可能测试155.00整数大关。\n\n建议采取区间交易策略，154.50下方轻仓试多，154.60上方考虑短空。有效突破箱体后可顺势跟进，注意严格控制仓位防范日本央行干预风险。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "USD/JPY is currently trading in a state of equilibrium, hovering almost exactly at its 20-period Simple Moving Average of 154.492. This price action suggests a critical juncture where the market is consolidating after a significant prior uptrend. The pair's tight daily range, with a high of 154.598 and a low of 154.459, indicates a period of indecision as traders await a fresh catalyst. The dominant longer-term trend remains bullish, but this pause reflects a battle between buyers taking profits and new entrants seeking further gains.\n\nThe MACD indicator is printing a slight negative value of -0.00566, hinting at a minor loss of near-term bullish momentum. However, without the corresponding signal line, it is difficult to fully gauge the strength of this potential shift. The price's intimate proximity to the SMA(20) reinforces its role as immediate dynamic support. A decisive break below this level could accelerate a short-term pullback, while holding above it would reaffirm the underlying bullish structure.\n\nKey technical levels provide a clear framework. Immediate resistance is established at the session high of 154.598, with a break above potentially targeting the 155.00 psychological handle. On the downside, the daily low of 154.459 serves as initial support. A violation below this point would likely target a deeper retracement towards the 154.00 zone, which represents a more significant support area based on prior price action.\n\nTrading suggestions should err on the side of caution given the current consolidation. A bullish bias is maintained above the 20-SMA, with long entries preferred on a confirmed bounce from this level targeting a retest of 154.80. Conversely, a daily close below the SMA would signal a stronger corrective move, opening opportunities for short-term shorts with a target towards 154.20. Awaiting a clear break outside the defined 154.45-154.60 range is prudent before committing to a new directional position."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-16T17:37:28.921Z",
+  "price": {
+    "close": "4080.52757",
+    "high": "4080.63709",
+    "low": "4080.3925",
+    "open": "4080.45349",
+    "change": "0.00",
+    "datetime": "2025-11-17 04:00:00"
+  },
+  "indicators": {
+    "rsi": 32.45795,
+    "macd": -10.26843,
+    "macd_signal": -13.60993,
+    "sma20": 4080.48621
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：窄幅盘整态势",
+      "content": "当前金价围绕4080.50关键水平呈现极窄幅波动，24小时内高低点差距不足0.25美元。价格与20周期SMA几乎重合，显示市场处于典型平衡状态。这种极度收敛的走势通常预示着即将出现方向性突破。\n\n技术指标方面，MACD柱状线显示-10.27的负值，但信号线数据缺失限制了其参考价值。RSI指标暂不可得，使得动量判断缺乏关键依据。需等待更多指标数据确认当前动能状态。\n\n近期支撑位于日内低点4080.39附近，阻力则见于4080.64高点区域。由于波动区间极其有限，有效突破任一方向都将触发短期趋势行情。更宽幅的支撑阻力需参考更大周期图表。\n\n建议采取观望策略，等待价格突破当前微幅震荡区间后再行介入。突破4080.64可轻仓做多，下破4080.39则考虑短空操作。务必设置窄幅止损控制风险。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is trading in an extremely tight consolidation range, virtually unchanged on the day. The current price is positioned just above the 20-period Simple Moving Average, suggesting a very slight near-term bullish bias within a broader context of indecision. The extremely narrow daily range, with the high and low separated by less than 0.25 points, indicates a period of significant equilibrium and compression. This often precedes a breakout, though the direction remains unclear from pure price action alone.\n\nThe available indicators present a mixed and incomplete picture. The MACD histogram is deeply negative at -10.268, which would typically signal strong underlying bearish momentum. However, without the corresponding MACD line and signal line values, this reading is difficult to contextualize fully. The absence of RSI data further limits momentum analysis. The proximity of price to the SMA(20) acts as a dynamic support level, but the market lacks a clear directional catalyst based on the presented oscillator data.\n\nKey support and resistance levels are tightly clustered due to the minimal range. Immediate support is found at the SMA(20) around 4080.49, with a more significant floor at the day’s low of 4080.39. Resistance is directly overhead at the session high of 4080.64. A sustained break above this level could trigger a move towards higher resistance, while a break below the SMA could see a test of the low.\n\nTrading suggestions should prioritize caution due to the lack of volatility and clear signals. Aggressive positions are not advisable until a decisive breakout from the current 0.25-point range occurs. Traders might consider preparing for a volatility expansion, setting buy stops above the high and sell stops below the low. Risk management is paramount, as a breakout from such a tight range could be sharp, but false breakouts are also common in such conditions."
+    }
+  }
+}

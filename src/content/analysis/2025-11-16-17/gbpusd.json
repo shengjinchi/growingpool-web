@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-16T17:32:45.786Z",
+  "price": {
+    "close": "1.31747",
+    "high": "1.31749",
+    "low": "1.31660",
+    "open": "1.31688",
+    "change": "0.04",
+    "datetime": "2025-11-15 08:00:00"
+  },
+  "indicators": {
+    "rsi": 56.053543,
+    "macd": 0.00024417619,
+    "macd_signal": 0.000054046077,
+    "sma20": 1.31561
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏多",
+      "content": "当前汇价紧贴日内高点1.31749，略高于20日均线1.31561，显示短期多头占优。MACD柱状线转正且持续扩张，暗示上涨动能正在积累，但需关注信号线确认突破。\n\n关键阻力位于1.3180（前高区域），突破后或测试1.3200心理关口。下方支撑先看20日均线1.3156，失守则可能回探日内低点1.3166区域。\n\n建议现有空头谨慎持有，新开仓可待回调至1.3160附近轻仓试多，止损设于1.3150下方。若有效突破1.3180可追加多头仓位，目标看向1.3220区域。\n\n需注意当前波动幅度收窄，需警惕假突破风险。建议配合基本面事件灵活调整仓位，明日英国通胀数据可能引发方向性突破。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is trading with a slight positive bias around 1.3175, marginally above its 20-period Simple Moving Average at 1.3156. This proximity to the SMA suggests a near-term consolidation phase is underway. The current price action, hovering just below the 24-hour high, indicates a tentative attempt by buyers to push higher, though momentum remains subdued. The broader trend context will be key for determining if this is a pause within a larger move or the beginning of a more significant directional shift.\n\nIndicator interpretation is somewhat limited by incomplete data. The MACD histogram is positive at 0.00024, which typically suggests some underlying bullish momentum. However, without the signal line and histogram details, a full crossover confirmation is unavailable. The lack of an RSI reading makes assessing overbought or oversold conditions difficult. The price holding above the SMA provides a modest bullish tilt, but the market requires a more decisive break above the recent high for confirmation.\n\nKey support is now established at the 20-period SMA level of 1.3156. A break below this could see the pair test the session low of 1.3166 and potentially extend losses towards the 1.3140 area. Immediate resistance is clearly defined at the daily high of 1.3175. A sustained move above this level would open a path towards the 1.3200 psychological handle, which represents the next significant technical barrier.\n\nTrading suggestions lean towards a cautious approach given the thin momentum signals. Bulls might consider long positions on a confirmed break above 1.3175, targeting 1.3200, with a stop placed below the SMA support. Conversely, a break below 1.3156 could offer a short-term selling opportunity targeting the 1.3140 zone. The minimal 24-hour change of 0.04% advises against aggressive positioning until a clearer directional catalyst emerges."
+    }
+  }
+}
