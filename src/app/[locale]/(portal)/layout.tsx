@@ -152,8 +152,7 @@ export default async function PortalLayout({
         <Providers>
           <StructuredData />
           <PageLoader />
-          {/* <MouseFollower /> */}
-          <ScrollProgress />
+                    <ScrollProgress />
           <UnifiedNavbar />
           <main className="pt-16">
             <Theme accentColor="gray" scaling="90%" grayColor="slate" appearance="inherit" radius="none">
