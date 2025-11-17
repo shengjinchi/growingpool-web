@@ -36,17 +36,15 @@ export function middleware(request: NextRequest) {
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  // Always redirect to Chinese version, regardless of current locale
   if (pathnameHasLocale) {
-    const currentLocale = pathname.split('/')[1];
-    if (currentLocale !== 'zh') {
-      // Redirect English (or other non-Chinese) URLs to Chinese
-      const newPath = pathname.replace(/^\/[^\/]+/, '/zh');
-      const newUrl = new URL(newPath, request.url);
+    // If it's English locale, redirect to Chinese
+    if (pathname.startsWith('/en')) {
+      const chinesePath = pathname.replace('/en', '/zh');
+      const newUrl = new URL(chinesePath, request.url);
       newUrl.search = request.nextUrl.search;
       return NextResponse.redirect(newUrl, 301);
     }
-    // If already Chinese, continue
+    // If it's already Chinese, allow it
     return NextResponse.next();
   }
 
