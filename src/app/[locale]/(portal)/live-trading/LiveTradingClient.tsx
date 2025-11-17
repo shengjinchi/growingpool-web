@@ -115,17 +115,17 @@ export default function LiveTradingClient() {
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
-  const mainStreamId = "hsHO39PnC1s";
+  const mainStreamId = "HqGSJRorgjM";
 
   const sideStreams = [
     {
       id: 0,
       name: "分支直播间",
       title: "分支直播间",
-      streamId: "BV1GJ411x7h7", // Bilibili video ID
-      viewers: 456,
+      streamId: "", // 暂时没有直播链接
+      viewers: 0,
       isActive: false,
-      platform: "bilibili" // 标识平台类型
+      platform: "" // 暂时没有平台
     }
   ];
 
