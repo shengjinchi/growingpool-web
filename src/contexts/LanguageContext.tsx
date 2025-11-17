@@ -512,22 +512,22 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.join': 'Join Now',
 
     // Hero Section
-    'hero.title': 'Professional FX Trader Training Platform',
-    'hero.subtitle': 'Precise, Professional, Efficient - Cultivating True Forex Trading Experts',
-    'hero.cta.learn': 'Learn About Forex Training',
-    'hero.cta.dashboard': 'Enter Trading System',
+    'hero.title': 'Professional Trader Training Platform',
+    'hero.subtitle': 'Digital Nomad Trader Training Expert - Professionally screening and cultivating truly suitable trading talent',
+    'hero.cta.learn': 'Free Trading Training',
+    'hero.cta.dashboard': 'Fund Manager Console',
 
     // Why Choose Section
-    'why.title': 'Why Choose GrowingPool',
-    'why.subtitle': 'Focused on selecting and cultivating elite forex traders, nurturing those truly suited, retaining the few, and advising the majority to pursue other paths',
+    'why.title': 'Why Choose Sheng Jin Chi (GrowingPool)',
+    'why.subtitle': 'Professional screening and cultivating top trading talent, managing funds together with us from any corner of the world',
 
     // Advantages
-    'advantage.selection.title': 'Precise Selection',
-    'advantage.selection.desc': 'Within 30 working days, determine if forex trading is your calling. If not suited, we\'ll be honest; if suited, we\'ll invest fully in your development.',
+    'advantage.selection.title': 'Precise Screening',
+    'advantage.selection.desc': 'Determine if you are suitable to become a trader within 30 trading days. We will honestly inform you if not suitable, and fully cultivate if suitable.',
     'advantage.growth.title': 'Rapid Growth',
-    'advantage.growth.desc': 'Scientifically avoid common pitfalls, allowing suited individuals to achieve in 30 working days what experts take 10-20 years to accomplish.',
-    'advantage.commission.title': 'High Commission Structure',
-    'advantage.commission.desc': 'At least 60% of profits belong to you; as your ability grows, this can reach 90% and beyond. Shared success, mutual victory.',
+    'advantage.growth.desc': 'Professional standardized training program allows suitable candidates to reach expert-level trading ability in 30 trading days, which typically takes 10-20 years for individual learners.',
+    'advantage.commission.title': 'Joint Management',
+    'advantage.commission.desc': 'Excellent traders will manage funds with us, with multi-stage generous scholarships provided as the management scale changes.',
 
     // Comparison
     'comparison.vs': 'VS Traditional Forex Training',
@@ -636,14 +636,14 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.button.note': 'Please apply only after fully understanding and confirming you meet all requirements',
 
     // Footer
-    'footer.about': 'Professional forex trader training platform focused on selecting and cultivating truly suited trading talent for forex markets using professional methods.',
+    'footer.about': 'Digital nomad trader training expert - professionally screening truly suitable trading talent and cultivating top traders.',
     'footer.nav.title': 'Quick Navigation',
     'footer.resources.title': 'Resources',
     'footer.contact.title': 'Contact Us',
-    'footer.contact.focus': 'Focused on forex training',
-    'footer.contact.cultivate': 'Cultivating professional forex traders',
+    'footer.contact.focus': 'Focus on trader training',
+    'footer.contact.cultivate': 'Cultivate professional traders',
     'footer.contact.apply': 'Apply Now',
-    'footer.copyright': '© GrowingPool · Professional Forex Trader Training Platform · growingpool.com',
+    'footer.copyright': '© Sheng Jin Chi · Digital Nomad Trader Training Expert · growingpool.com',
     'footer.disclaimer': ' Forex trading carries risk, investment requires caution · Site content for learning reference only, not investment advice',
     'footer.partners.title': 'Partners',
     'footer.partners.brokers': 'Partner Brokers',

@@ -9,7 +9,7 @@ import FloatingContactForm from "@/components/custom/FloatingContactForm";
 import WelcomeModalWrapper from "@/components/custom/WelcomeModalWrapper";
 import StructuredData from "@/components/seo/StructuredData";
 import Providers from "@/components/providers/Providers";
-import MouseFollower from "@/components/effects/MouseFollower";
+// import MouseFollower from "@/components/effects/MouseFollower";
 import ScrollProgress, { BackToTop } from "@/components/effects/ScrollProgress";
 import PageLoader from "@/components/effects/PageLoader";
 import { Analytics } from "@vercel/analytics/next";
@@ -152,7 +152,7 @@ export default async function PortalLayout({
         <Providers>
           <StructuredData />
           <PageLoader />
-          <MouseFollower />
+          {/* <MouseFollower /> */}
           <ScrollProgress />
           <UnifiedNavbar />
           <main className="pt-16">
