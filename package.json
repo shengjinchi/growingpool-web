@@ -7,7 +7,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "baidu-sitemap": "node scripts/baidu-sitemap-submit.js",
+    "baidu-submit": "node scripts/baidu-submit.js",
+    "baidu-all": "npm run generate-sitemap && npm run baidu-sitemap && npm run baidu-submit"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

@@ -1,0 +1,55 @@
+name: Baidu SEO Submission
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'src/app/**/page.tsx'
+      - 'src/app/**/layout.tsx'
+      - 'package.json'
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+    # 每天北京时间上午9点 (UTC+8 = UTC+1)
+    - cron: '0 1 * * *'
+  # 每周一和周四推送
+  - cron: '0 1 * * 1,4'
+
+jobs:
+  baidu-submit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Generate sitemap.xml
+      run: |
+        # 生成sitemap.xml
+        node scripts/generate-sitemap.js
+
+    - name: Submit to Baidu
+      run: |
+        # 提交sitemap到百度
+        node scripts/baidu-sitemap-submit.js
+
+    - name: Submit important pages to Baidu
+      run: |
+        # 提交重要页面到百度
+        node scripts/baidu-submit.js
+
+    - name: Submit notification
+      if: success()
+      run: |
+        echo "🎉 百度SEO推送完成！"
+        echo "📊 请访问 https://ziyuan.baidu.com/linksubmit/index?site=https://www.shengjinchi.com/ 查看推送结果"
