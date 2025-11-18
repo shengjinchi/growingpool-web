@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-18T17:44:18.130Z",
+  "price": {
+    "close": "0.79957998",
+    "high": "0.80006999",
+    "low": "0.79918998",
+    "open": "0.79958999",
+    "change": "-0.00",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 71.82181,
+    "macd": 0.00092038078,
+    "macd_signal": 0.00054773221,
+    "sma20": 0.7963375
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：短期震荡偏多",
+      "content": "当前汇价位于0.7996附近，略高于20日均线0.7963，显示短期存在温和上涨动能。日内波动区间仅8.8个基点，表明市场处于低波动整理阶段，多空力量暂时平衡。\n\nMACD柱状线呈现微幅正值0.00092，虽信号线数据缺失，但正柱状线暗示短期动量偏多。需关注能否持续放大以确认上涨动能。价格紧贴日内高点0.8001运行，显示存在试探阻力位的意图。\n\n关键阻力位于0.8007（前高延伸位），突破后可能测试0.8020区域。下方支撑先看20日均线0.7963，重要支撑位于0.7940附近。窄幅震荡格局下需防范假突破风险。\n\n建议现有多头可继续持有，止损设于0.7950下方。新开仓需等待明确突破0.8007阻力或回调至0.7965支撑区域再择机介入，日内交易需严格控制仓位。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "The USD/CHF pair is currently exhibiting minimal volatility, trading within a very tight 24-hour range just below the 0.8000 psychological level. The price is positioned marginally above the 20-period Simple Moving Average at 0.7963, suggesting a slight underlying bullish bias in the short term. This proximity to the SMA indicates a potential consolidation phase as the market seeks a clearer directional catalyst. The immediate trading range is confined between the session's high and low, reflecting a momentary equilibrium between buyers and sellers.\n\nInterpreting the available indicators, the MACD line is positive at 0.00092, which typically signals bullish momentum. However, without the corresponding signal line and histogram data, a full interpretation is limited; the positive value alone hints that short-term momentum may be cautiously favoring the US Dollar. The lack of a significant 24-hour change further underscores the current indecision in the market. Traders should await more conclusive signals from momentum oscillators like the RSI for confirmation.\n\nKey support is identified at the 20-period SMA around 0.7963, with a break below potentially targeting lower supports. The immediate resistance is clearly defined at the day's high of 0.80007, a breach of which could open a path toward higher levels. The psychological barrier of 0.8000 remains a critical focal point for bullish attempts.\n\nTrading suggestions involve a cautious approach given the low volatility. A breakout above 0.8001 could be used for a long position targeting a move toward 0.8020, with a stop below the SMA. Conversely, a break below the 0.7992 support could signal a short-term pullback toward the 0.7963 SMA support. Risk management is paramount in such a narrow range."
+    }
+  }
+}

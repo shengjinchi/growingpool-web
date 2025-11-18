@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-18T17:42:05.813Z",
+  "price": {
+    "close": "0.64999",
+    "high": "0.65064",
+    "low": "0.64948",
+    "open": "0.65051",
+    "change": "-0.08",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 50.8995,
+    "macd": -0.00012742322,
+    "macd_signal": -0.00037285462,
+    "sma20": 0.649283
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：窄幅震荡待突破",
+      "content": "当前汇价0.64999紧贴20日均线0.6493，显示多空力量处于微妙平衡。日内波动仅11.6点，市场交投清淡。价格在0.6495-0.6506极窄区间内整理，需警惕突破行情酝酿。\n\nMACD柱状图微幅负值-0.000127，但信号线数据缺失限制判断效力。若结合价格与均线关系，短期仍属中性偏弱格局。日内高低点构成初步阻力与支撑参考。\n\n关键支撑位于0.6495（日内低点），跌破后可能测试0.6480区域。上方阻力先看0.6506（日内高点），突破后或挑战0.6520关口。20日均线成为多空分水岭。\n\n建议采取区间交易策略，在0.6490-0.6510内高抛低吸。突破区间边界后可顺势跟进，需配合4小时级别K线确认信号。当前低波动率环境下需严格控制仓位。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "The AUD/USD pair is trading in a very tight range just above the 20-period Simple Moving Average at 0.64928, indicating a period of significant consolidation and indecision. The price action, confined within a narrow band between 0.64948 and 0.65064, suggests a lack of strong directional momentum from either bulls or bears. The marginal 24-hour decline of -0.08% further underscores this equilibrium. The immediate trend appears neutral to slightly bearish as the pair struggles to establish a foothold above the 0.6500 psychological handle, requiring a catalyst to break out of this compression.\n\nIndicator analysis presents a mixed but cautious outlook. The MACD histogram is printing a negligible negative value of -0.000127, suggesting extremely weak bearish momentum that is barely distinguishable from a neutral signal. The proximity of the spot price to the SMA(20) acts as a dynamic support level, reinforcing the idea that the market is balanced. Without RSI and MACD signal line data, the technical picture is incomplete, but the available metrics point towards a market in a state of low-volatility stagnation, awaiting a fundamental driver for its next significant move.\n\nKey support and resistance levels are clearly defined by the recent price range. Immediate resistance is found at the session high of 0.65064, with a more significant barrier at the 0.6510 level. On the downside, initial support rests at the daily low of 0.64948, closely aligned with the SMA(20). A break below this confluence could target deeper supports near 0.6480. The 0.6500 level remains a pivotal point; a sustained move above or below it will likely dictate the short-term directional bias.\n\nTrading suggestions should reflect the current low-volatility environment. A range-bound strategy, selling near 0.65060 and buying near 0.64950, could be employed with tight stop-loss orders. However, traders should be prepared for a potential breakout. A confirmed close above 0.6510 could signal a move towards 0.6530, while a break below the SMA(20) and 0.6490 support may initiate a deeper retracement. Risk management is paramount given the compressed nature of the market."
+    }
+  }
+}

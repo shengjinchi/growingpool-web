@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-18T17:40:36.275Z",
+  "price": {
+    "close": "1.31437",
+    "high": "1.31506",
+    "low": "1.31387",
+    "open": "1.31506",
+    "change": "-0.04",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 44.19159,
+    "macd": -0.00030180907,
+    "macd_signal": -0.00025284894,
+    "sma20": 1.31522
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期震荡偏弱",
+      "content": "当前汇价1.31437略低于20日均线1.31522，显示短期存在下行压力。24小时内波动仅0.04%且高低点差距不足12点，表明市场处于极度收敛的整理格局。日线结构呈现低位震荡特征，多头动能明显不足。\n\n技术指标方面，MACD柱状线为负值-0.0003，虽未提供信号线参考，但负动量表明短期趋势偏空。RSI数据缺失使得超买超卖判断受限，需结合价格与均线关系综合研判。当前价格紧贴布林带中轨运行，波动率显著收缩。\n\n关键支撑位于日内低点1.31387，跌破后可能下探1.31200整数关口。上方阻力首先关注20日均线1.31522，突破后方可测试日内高点1.31506。更强阻力位于1.31700前高区域，该位置存在明显卖压。\n\n建议采取区间震荡交易策略，在1.31350-1.31550区间高抛低吸。若有效跌破1.31350支撑可轻仓跟空，目标看向1.31200。多头需等待价格重新站稳1.31550后再考虑介入，严格控制仓位风险。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "GBP/USD is currently trading marginally lower at 1.31437, hovering just below the critical 20-day Simple Moving Average at 1.31522. This proximity to the SMA suggests the pair is at an inflection point, with a bearish bias emerging as price struggles to maintain levels above this average. The very narrow 24-hour range indicates a period of consolidation and indecision, likely preceding a more decisive directional move. The immediate short-term trend is neutral to slightly negative, awaiting a clear break from this tight trading band.\n\nThe provided MACD reading of -0.00030180907, while a very small negative value, indicates that short-term momentum has a slight bearish tilt. The lack of a signal line and RSI data limits a fuller oscillator analysis, but the negative MACD histogram aligns with the price's position below the SMA. This convergence of signals points to building downside pressure. The absence of strong bullish momentum is evident, placing the market in a vulnerable position should selling interest increase.\n\nKey technical levels are clearly defined by the recent high and low. Immediate resistance is found at the daily high and 20-day SMA confluence of 1.31506/22. A break above this zone could trigger a move towards 1.3170. On the downside, initial support sits at the daily low of 1.31387, with a more significant floor likely around the 1.3120 handle. A sustained break below the 1.31387 level would confirm a bearish breakout and open the door for a deeper retracement.\n\nGiven the current technical setup, a cautious approach is warranted. A short position could be considered on a confirmed break below 1.31387, targeting a move towards 1.3120, with a stop placed above the SMA at 1.31550. Alternatively, aggressive traders might look for a rebound from the 1.31387 support for a quick scalp back towards the SMA resistance. Risk management is crucial due to the low volatility and tight range."
+    }
+  }
+}

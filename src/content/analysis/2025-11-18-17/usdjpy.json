@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-18T17:41:19.666Z",
+  "price": {
+    "close": "155.57500",
+    "high": "155.60001",
+    "low": "155.42400",
+    "open": "155.43700",
+    "change": "0.09",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 66.58345,
+    "macd": 0.11344175,
+    "macd_signal": 0.098739303,
+    "sma20": 155.2303
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：高位盘整待突破",
+      "content": "当前汇价交投于155.575附近，略高于20日均线155.23，显示短期仍维持偏强格局。日内波动区间仅17.6基点，市场呈现典型的高位整理特征，多空双方在关键心理关口陷入僵持。\n\nMACD指标显示快线位于0.1134水平，虽未提供完整信号线参考，但正值状态表明动能仍偏多头。价格持续运行于日均线之上，结合近期日本当局干预风险，上行空间可能受限。\n\n关键阻力位于日内高点155.60附近，突破后将测试156.00心理关口。下方支撑首先关注20日均线155.23，若失守可能进一步下探155.00整数防线。\n\n建议现有多头头寸可部分获利了结，新开仓需等待明确方向突破。短线交易者可在155.20-155.60区间操作，有效突破区间边界后可顺势跟进。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair exhibits a strong bullish trend, trading well above its 20-period Simple Moving Average of 155.230. The current price near 155.575 consolidates just below the session's high of 155.600, indicating sustained buying pressure. This positioning above the key SMA confirms the underlying upward momentum remains intact, with any short-term dips likely being bought into by the market. The overall structure continues to favor the US dollar as the dominant currency in this pairing.\n\nWhile the 14-period RSI and MACD signal line are unavailable, the main MACD reading of 0.113 is positive. This suggests bullish momentum is present, though the lack of a signal line comparison makes it difficult to gauge the strength or potential for a reversal. The minimal 24-hour change of 0.09% points to a period of consolidation after recent gains, which is a healthy development within a broader uptrend, allowing the market to absorb its moves.\n\nKey resistance is clearly established at the intraday high of 155.600. A decisive break above this level could open a path toward the 156.00 psychological handle. Immediate support rests at the 20-SMA around 155.230, with a more significant floor near the day's low of 155.424. A breach below the SMA would be the first technical sign of a potential pullback, shifting the short-term bias.\n\nTrading suggestions lean toward buying on dips toward the 155.230-155.424 support confluence, targeting a retest of the 155.60 high and beyond. A conservative approach would await a clear breakout above 155.60 for confirmation of continued upward momentum. Risk management is crucial; any close below the 20-SMA would invalidate the immediate bullish outlook and could signal a deeper retracement."
+    }
+  }
+}

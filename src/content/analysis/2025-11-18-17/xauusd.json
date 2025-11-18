@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-18T17:45:02.645Z",
+  "price": {
+    "close": "4073.38494",
+    "high": "4073.51866",
+    "low": "4061.35646",
+    "open": "4068.18791",
+    "change": "0.13",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 59.21444,
+    "macd": 2.76824,
+    "macd_signal": -4.0049814,
+    "sma20": 4037.47786
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：短期看涨趋势延续",
+      "content": "金价当前交投于4073附近，较前一交易日微涨0.13%，日内波动区间收窄至约12点。价格持续运行于20周期均线4037之上，显示短期多头格局稳固。MACD柱状线维持正值2.77，但信号线数据缺失需保持警惕。\n\n从均线系统看，当前价格明显高于SMA(20)的4037水平，形成约36点的正向偏离。虽然RSI指标暂时缺失，但价格紧邻日内高点4073.5，表明多头动能尚未衰竭。需关注能否有效突破前高阻力。\n\n关键支撑位于20日均线4037区域，若跌破可能下探日内低点4061。上行阻力先看4073.5日内高点，突破后有望测试4080心理关口。当前窄幅整理格局需防范假突破风险。\n\n建议现有多头可继续持有，止损设于4060下方。新开仓需等待回调至4050-4060支撑区域企稳后介入，目标看向4080。由于波动率收缩，需严格控制仓位管理。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading near the upper boundary of its recent range, slightly above the critical 20-period Simple Moving Average. The price is consolidating just below the daily high, indicating a tentative bullish bias within a short-term upward trajectory. The close proximity to the SMA suggests the overall trend remains intact but is approaching a potential inflection point. This positioning often precedes a decisive breakout or a rejection, making the next few price actions crucial for determining the near-term directional bias.\n\nThe MACD reading of 2.76824, while lacking its signal line for context, suggests positive momentum is present. This implies that buying pressure has been sufficient to keep the price elevated. The absence of the RSI data limits a full oscillator analysis, but the price action holding above the SMA reinforces the constructive technical picture. The narrow daily range further points towards a period of consolidation as the market gathers strength for its next significant move.\n\nKey resistance is clearly defined at the session high of 4073.52, with a break above likely triggering further bullish momentum. Immediate support rests at the 20-SMA around 4037.48, with a more significant floor near the daily low of 4061.36. A sustained move below the SMA would signal a potential retracement towards deeper support levels.\n\nTrading suggestions would favor a cautious bullish approach above the SMA, targeting a break of the daily high. A conservative strategy would be to wait for a confirmed breakout above 4073.52 before entering long positions. Conversely, a close below the 4037 support would negate the near-term uptrend, opening the door for a test of lower support zones and potential short opportunities."
+    }
+  }
+}

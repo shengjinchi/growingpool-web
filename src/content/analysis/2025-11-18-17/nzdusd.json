@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-18T17:43:34.944Z",
+  "price": {
+    "close": "0.56612319",
+    "high": "0.56625140",
+    "low": "0.56551486",
+    "open": "0.56615525",
+    "change": "-0.01",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 48.5613,
+    "macd": -0.000066298619,
+    "macd_signal": -0.0001148806,
+    "sma20": 0.5660005
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：窄幅盘整待突破",
+      "content": "最新价格0.5661紧贴20日均线0.5660，显示多空力量处于微妙平衡。24小时内波动不足12点，汇价被困于0.5655-0.5663的极窄区间，市场交投清淡缺乏明确方向性驱动。\n\nMACD柱状图呈现微幅负值-0.000066，虽未提供信号线参考，但负值格局暗示短期动能偏空。需关注是否形成死叉确认下跌趋势，当前仍属于弱势整理阶段。\n\n关键技术位清晰可见。即时支撑位于日内低点0.5655，跌破后可能下探0.5640；上方阻力聚焦日内高点0.5663，突破后或测试0.5675区域。均线集群表明市场即将选择方向。\n\n建议采取区间交易策略，在0.5655-0.5663边界轻仓操作，有效突破任一方向后顺势跟进。鉴于波动率处于低位，需严格控制仓位并设置15点止损保护。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD pair shows minimal movement with a slight 0.01% decline, trading near the 0.5661 level. The current price is positioned just above the 20-period Simple Moving Average at 0.5660, suggesting a tentative and fragile equilibrium between buyers and sellers. The extremely narrow 24-hour range, confined between 0.5655 and 0.5662, indicates a significant period of consolidation and a notable lack of decisive directional momentum in the market currently.\n\nIndicator analysis reveals a market in a state of indecision. The MACD histogram is marginally negative at -0.000066, signaling very slight bearish momentum, though the absence of the signal line value makes a full crossover interpretation difficult. The proximity of the price to the SMA(20) further confirms this neutral stance. This technical picture suggests the market is coiling and awaiting a fundamental catalyst to break out of its current tight trading range.\n\nKey support is clearly established at the daily low of 0.56551, with a break below potentially targeting the 0.5650 psychological handle. Immediate resistance sits at the session high of 0.56625. A sustained move above this level could open a path toward 0.5670. The exceptionally tight range makes these short-term levels critically important for gauging the next directional move.\n\nTrading suggestions involve preparing for a breakout. Given the compressed nature of the pair, positions should be small until volatility expands. A conservative approach would be to wait for a daily close above 0.5663 or below 0.5655 before committing to a directional trade, with tight stop-loss orders to manage risk in what is currently a low-volatility, range-bound environment."
+    }
+  }
+}

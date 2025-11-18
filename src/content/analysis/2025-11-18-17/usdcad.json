@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-18T17:42:51.765Z",
+  "price": {
+    "close": "1.39904",
+    "high": "1.40028",
+    "low": "1.39898",
+    "open": "1.39968",
+    "change": "-0.05",
+    "datetime": "2025-11-19 04:00:00"
+  },
+  "indicators": {
+    "rsi": 23.4099,
+    "macd": -0.00094464801,
+    "macd_signal": -0.0003351028,
+    "sma20": 1.4035
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：短期震荡偏空",
+      "content": "当前汇价1.39904略低于20日均线1.4035，显示短期存在下行压力。日内波动区间仅13点，表明市场处于低波动整理阶段。价格未能突破前高1.4003，暗示上方存在明显阻力。\n\n从均线系统看，现价运行于20日均线下方，短期趋势偏空。MACD柱状线为负值-0.00094，虽未提供信号线参考，但负值状态暗示动能偏弱。需关注能否重新站上均线以改变当前技术格局。\n\n关键支撑位于日内低点1.39898，若跌破可能测试1.3950区域。阻力位首先关注1.4003，更强阻力在1.4035均线位置。窄幅震荡格局下需防范突破行情的发生。\n\n建议采取区间交易策略，在1.3990-1.4010区间内高抛低吸。若有效跌破1.3980可轻仓追空，目标看向1.3950。保守投资者可等待明确突破信号后再行操作。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD is currently trading near 1.3990, exhibiting a slight bearish bias in the very short term as indicated by the negative 24-hour change. The price is positioned just below the key 20-period Simple Moving Average of 1.4035, suggesting near-term selling pressure is dominating. With the pair having retreated from the session high of 1.40028, the immediate momentum appears weak. The primary trend structure will be defined by whether the price can reclaim this SMA level or if it continues to drift lower towards recent support zones.\n\nIndicator interpretation reveals a mixed but cautious signal. The MACD histogram is negative at -0.00094, indicating that bearish momentum is present, though the lack of a provided signal line makes crossovers difficult to assess. The absence of RSI data limits the ability to gauge whether the pair is in overbought or oversold territory. The price action trading below the SMA(20) acts as a dynamic resistance, reinforcing the current bearish tilt. This confluence suggests a lack of bullish conviction in the market at this moment.\n\nKey support and resistance levels are clearly defined by the session’s high and low. Immediate resistance is found at the SMA(20) of 1.4035, with a break above potentially targeting the 1.4050-1.4060 area. On the downside, initial support is firm at the daily low of 1.39898. A sustained break below this level could open a path toward stronger support around 1.3970. The narrow 24-hour range indicates a period of consolidation, awaiting a catalyst for the next directional move.\n\nFor trading, a cautious approach is warranted given the weak momentum and proximity to support. A break below 1.3989 could be used for short entries targeting 1.3970, with a stop above 1.4010. Alternatively, aggressive traders might look for a bounce from the 1.3990 support for a quick rebound toward the 1.4035 SMA, though this carries higher risk. Conservative traders should wait for a clearer breakout from this tight range before committing to a stronger directional position."
+    }
+  }
+}
