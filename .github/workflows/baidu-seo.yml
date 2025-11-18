@@ -7,14 +7,15 @@ on:
       - 'src/app/**/page.tsx'
       - 'src/app/**/layout.tsx'
       - 'package.json'
+      - 'scripts/**'
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
   schedule:
-    # 每天北京时间上午9点 (UTC+8 = UTC+1)
+    # 每天北京时间上午9点 (UTC 01:00 = UTC+8 09:00)
     - cron: '0 1 * * *'
-  # 每周一和周四推送
-  - cron: '0 1 * * 1,4'
+    # 每周一和周四北京时间上午9点额外推送
+    - cron: '0 1 * * 1,4'
 
 jobs:
   baidu-submit:
@@ -35,21 +36,25 @@ jobs:
 
     - name: Generate sitemap.xml
       run: |
-        # 生成sitemap.xml
+        echo "🔧 生成sitemap文件..."
         node scripts/generate-sitemap.js
+        echo "✅ sitemap生成完成"
 
-    - name: Submit to Baidu
+    - name: Submit sitemap to Baidu
       run: |
-        # 提交sitemap到百度
+        echo "📤 提交sitemap到百度..."
         node scripts/baidu-sitemap-submit.js
+        echo "✅ sitemap提交完成"
 
     - name: Submit important pages to Baidu
       run: |
-        # 提交重要页面到百度
+        echo "🚀 推送重要页面到百度..."
         node scripts/baidu-submit.js
+        echo "✅ 页面推送完成"
 
     - name: Submit notification
       if: success()
       run: |
         echo "🎉 百度SEO推送完成！"
         echo "📊 请访问 https://ziyuan.baidu.com/linksubmit/index?site=https://www.shengjinchi.com/ 查看推送结果"
+        echo "⏰ 执行时间: $(date '+%Y-%m-%d %H:%M:%S')"
