@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-19T18:52:19.336Z",
+  "price": {
+    "close": "1.30748",
+    "high": "1.30762",
+    "low": "1.30637",
+    "open": "1.30688",
+    "change": "0.05",
+    "datetime": "2025-11-20 05:00:00"
+  },
+  "indicators": {
+    "rsi": 30.98696,
+    "macd": -0.0018387316,
+    "macd_signal": -0.0012362165,
+    "sma20": 1.31207
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：短期承压于关键均线下方",
+      "content": "当前汇价交投于1.3075附近，低于20周期均线1.3121，显示短期下行压力。日线波动仅0.05%，市场处于低波动整理状态。价格在1.3064-1.3076窄幅区间震荡，需突破该区域选择方向。\n\n技术指标呈现偏空信号。MACD柱状线为负值-0.0018，表明动量偏弱，但信号线数据缺失限制整体判断。RSI指标暂无有效读数，需结合价格行为综合研判短期超买超卖状况。\n\n关键阻力位于20日均线1.3121，突破后可能测试1.3150区域。下方支撑首先关注日内低点1.3064，失守后或下探1.3050心理关口。当前窄幅震荡格局需等待基本面催化。\n\n建议采取谨慎观望策略，突破1.3076可轻仓试多，目标1.3120。若跌破1.3064支撑则顺势短空，严格设置30点止损。低波动环境下需控制仓位风险。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is trading with a slight positive bias at 1.30748, though its position below the 20-period Simple Moving Average of 1.31207 suggests the broader short-term trend remains bearish. The day's narrow trading range between 1.30762 and 1.30637 indicates a period of consolidation and indecision among traders. This pause follows a recent downward move, with the market currently testing whether this is a temporary stabilization or a potential base for a recovery. The minimal 0.05% daily change underscores the current lack of strong directional momentum.\n\nIndicator analysis presents a mixed but cautious picture. The MACD histogram is negative at -0.0018, signaling that bearish momentum may still be present, though the absence of the signal line data limits a full crossover interpretation. The price's location beneath the key SMA(20) acts as a dynamic resistance level, reinforcing the near-term selling pressure. Without RSI data, gauging overbought or oversold conditions is challenging, placing greater emphasis on pure price action and the MACD's bearish tilt for insight into underlying momentum.\n\nKey support is now being tested near the daily low of 1.30637. A decisive break below this level could open a path toward the 1.3000 psychological handle. On the upside, immediate resistance is found at the 20-SMA around 1.31207, with a break above needed to signal a potential trend reversal. Traders might consider a cautious approach, waiting for a clear breakout from the current tight range before committing to new positions, with a preference for short setups on a break of support given the bearish technical structure."
+    }
+  }
+}

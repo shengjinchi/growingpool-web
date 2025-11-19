@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-19T18:53:03.386Z",
+  "price": {
+    "close": "156.73100",
+    "high": "156.85001",
+    "low": "156.68600",
+    "open": "156.74899",
+    "change": "-0.01",
+    "datetime": "2025-11-20 05:00:00"
+  },
+  "indicators": {
+    "rsi": 76.94484,
+    "macd": 0.35982313,
+    "macd_signal": 0.27234878,
+    "sma20": 155.9239
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：短期震荡偏多格局",
+      "content": "美元/日元目前维持在156.73附近窄幅波动，24小时内仅微跌0.01%。价格仍稳定运行于20日均线155.92上方，显示短期多头格局未变。日内波动区间收窄至不足20点，表明市场正处于技术性整理阶段。\n\n从技术指标观察，MACD柱状线值为0.36，虽未提供信号线参考，但正值状态表明动能仍偏向多头。价格持续位于近期高点156.85附近徘徊，显示市场存在继续上探的潜力。需关注能否有效突破前高形成新的上升空间。\n\n关键支撑位于20日均线155.92水平，该位置亦是近期整理区间的下轨。上方阻力首先关注日内高点156.85，突破后可能测试157.00心理关口。当前窄幅整理格局建议等待方向性突破。\n\n交易建议采取谨慎看多策略，有效突破156.85后可轻仓追多，目标看向157.20。若向下跌破155.90支撑则应考虑止损，下方重要支撑位于155.50斐波那契回撤位附近。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "The USD/JPY pair exhibits a dominant bullish trend, currently trading well above its 20-period simple moving average of 155.92. This price action confirms the underlying strength of the upward momentum, with the pair consolidating near multi-decade highs. The recent 24-hour range is notably tight, suggesting a brief pause or period of equilibrium following a significant rally. This consolidation near the highs typically indicates a building of energy for the next directional move, with the overall structure remaining firmly biased to the upside.\n\nWhile the RSI and MACD signal line readings are unavailable, the provided MACD histogram value of 0.3598 is positive. This indicates that the MACD line is above its signal line, a configuration that generally supports the current bullish trend by signaling positive momentum. The lack of an overbought RSI reading, had it been available, would have been a significant factor to monitor for potential weakening of buying pressure. The primary takeaway from the indicators is that they are not currently presenting any bearish divergences against the price.\n\nKey technical levels are clearly defined. Immediate resistance is found at the session high of 156.85, with a break above likely triggering a further advance towards the 157.00 psychological handle. On the downside, initial support rests at the daily low of 156.686, with a more substantial support zone located around the 20-SMA at 155.92. A decisive break below this moving average would be required to signal a potential deeper correction.\n\nGiven the strong trend and bullish indicator alignment, trading strategies should favor long positions on any minor pullbacks towards the 20-SMA support. A conservative approach would be to wait for a breakout above the 156.85 resistance with a target towards 157.00 and beyond. Risk management is crucial; a stop-loss placed below the 20-SMA level would protect against a potential trend reversal, ensuring disciplined capital preservation in this high-volatility pair."
+    }
+  }
+}

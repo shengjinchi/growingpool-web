@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-19T18:51:36.379Z",
+  "price": {
+    "close": "1.15342",
+    "high": "1.15374",
+    "low": "1.15292",
+    "open": "1.15332",
+    "change": "0.01",
+    "datetime": "2025-11-20 05:00:00"
+  },
+  "indicators": {
+    "rsi": 26.72464,
+    "macd": -0.0012107623,
+    "macd_signal": -0.00073540456,
+    "sma20": 1.15707
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：短期震荡偏空格局",
+      "content": "当前欧元/美元交投于1.1534附近，较20日均线1.1570明显承压，显示短期空头格局延续。价格在1.1537高点受阻后回落，表明上方存在技术性卖压，整体走势呈现区间震荡特征。\n\nMACD指标显示-0.0012的负值，虽未提供信号线参考，但柱状图负值状态暗示下行动能持续。价格持续运行于20日均线下方，均线系统呈空头排列，短期技术面偏向悲观。\n\n关键支撑位于日内低点1.1529附近，跌破后可能测试1.1515前低区域。上方阻力首先关注20日均线1.1570，突破后方可上看1.1600心理关口。\n\n建议采取逢高做空策略，在1.1550-1.1570区间分批布局空单，止损设于1.1600上方。若跌破1.1529支撑可追空，目标看向1.1500关口。需密切关注晚间美国数据对美元走势的影响。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD is currently trading in a narrow range around 1.1534, exhibiting minimal volatility with a 24-hour change of just 0.01%. The price is positioned below the 20-period Simple Moving Average of 1.15707, indicating a short-term bearish bias. The recent high of 1.15374 is acting as immediate resistance, while the day's low of 1.15292 provides nearby support. This consolidation suggests the market is pausing, potentially awaiting a fundamental catalyst to determine the next directional move.\n\nFrom an indicator perspective, the MACD histogram reading of -0.0012107623 suggests underlying bearish momentum is present, as the MACD line is below its signal line. The absence of RSI data limits the full momentum picture, but the price's position below the key SMA(20) reinforces the near-term selling pressure. This configuration often precedes a continuation of the downtrend unless buyers can force a decisive break above the moving average, which would signal a potential shift in sentiment.\n\nKey support and resistance levels are clearly defined by the day's range. A break below the 1.15292 support could see the pair target the psychological 1.1500 level. Conversely, a sustained move above the 1.15374 resistance is needed to challenge the SMA at 1.15707. The tight trading range suggests a breakout strategy is appropriate, waiting for a clear move beyond these boundaries with corresponding volume confirmation before establishing a position.\n\nTrading suggestions would favor a cautious approach given the low volatility. A break below 1.15290 could be used for short entries targeting 1.1510, with a stop above 1.1545. For a bullish reversal, traders should wait for a confirmed close above the 20-period SMA before considering long positions, targeting a move towards 1.1600. Risk management is crucial in this environment."
+    }
+  }
+}
