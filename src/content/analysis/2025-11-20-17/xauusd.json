@@ -1,0 +1,30 @@
+{
+  "symbol": "XAU/USD",
+  "name": "Gold vs US Dollar",
+  "nameCn": "黄金/美元",
+  "timestamp": "2025-11-20T17:39:28.297Z",
+  "price": {
+    "close": "4050.48912",
+    "high": "4061.69253",
+    "low": "4045.62352",
+    "open": "4051.75904",
+    "change": "-0.03",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 41.48471,
+    "macd": -4.53239,
+    "macd_signal": -3.047162,
+    "sma20": 4073.28929
+  },
+  "analysis": {
+    "zh": {
+      "title": "黄金/美元技术分析：短期承压下行",
+      "content": "金价当前交投于4050附近，略低于20日均线4073，显示短期下行压力。日内在4061高点受阻后回落，表明上方存在明显卖压。价格未能突破均线阻力，整体趋势偏向弱势整理。\n\nMACD指标显示-4.53的负值，虽无信号线参考，但负柱状线表明空头动能占优。结合价格持续在均线下方运行，短期技术面偏空。需关注能否重新站上4070水平以改变当前格局。\n\n关键支撑位于日内低点4045附近，跌破可能测试4030区域。上方阻力先看4062日内高点，更强阻力在4073的20日均线处。多空双方将在4045-4073区间展开争夺。\n\n建议采取逢高做空策略，在4065上方设置止损。若跌破4045支撑可追空，目标看向4030。保守投资者可等待价格重新站稳4070后再考虑多头入场。"
+    },
+    "en": {
+      "title": "Gold vs US Dollar Technical Analysis",
+      "content": "Gold is currently trading with a slight bearish bias, positioned below the critical 20-day Simple Moving Average at 4073.29. This placement below a key short-term average suggests the immediate momentum remains weak. The daily high of 4061.69, which aligns closely with the SMA, now acts as a significant resistance level. A sustained break above this level would be necessary to shift the near-term outlook from negative to neutral, potentially opening a path for a test of higher resistance zones around the 4080 mark.\n\nThe MACD indicator, showing a value of -4.53239, confirms the prevailing bearish momentum. Although the signal line data is unavailable, the negative histogram reading indicates that the downward pressure is active. The absence of RSI(14) data limits the ability to gauge whether the instrument is in overbought or oversold territory, placing greater emphasis on price action and the MACD. The market appears to be in a consolidation phase following the recent decline, lacking strong directional conviction.\n\nKey support is identified at the recent low of 4045.62. A decisive break below this level could accelerate a decline towards the next major support area, likely around 4035. On the upside, resistance is firmly established at the 20-day SMA and the daily high near 4062. A successful breach above this confluence zone would target the 4075-4080 region. The very minor 24-hour change of -0.03% reflects this ongoing battle between buyers and sellers.\n\nTrading suggestions would favor a cautious approach. A short position could be considered on a break below 4045, targeting 4035, with a stop loss above 4062. Alternatively, aggressive buyers might look for a rebound from the 4045 support, but a long trade is only prudent after a confirmed break above the 20-day SMA resistance. Given the weak momentum and lack of strong bullish signals, the overall bias is to sell on rallies within the current range."
+    }
+  }
+}

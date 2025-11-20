@@ -1,0 +1,30 @@
+{
+  "symbol": "AUD/USD",
+  "name": "Australian Dollar vs US Dollar",
+  "nameCn": "澳元/美元",
+  "timestamp": "2025-11-20T17:36:26.295Z",
+  "price": {
+    "close": "0.64465",
+    "high": "0.64538",
+    "low": "0.64428",
+    "open": "0.64491",
+    "change": "-0.04",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 33.9404,
+    "macd": -0.00048420204,
+    "macd_signal": -0.00020456321,
+    "sma20": 0.6478735
+  },
+  "analysis": {
+    "zh": {
+      "title": "澳元/美元技术分析：弱势盘整格局",
+      "content": "当前汇价0.64465位于20日均线0.64787下方，显示短期空头格局。日线波动仅10点且变化率-0.04%，市场处于极度收敛状态。MACD柱状线负值但信号线缺失，暗示下行动能有所减弱。\n\n关键技术位显示近期高点0.64538构成直接阻力，低点0.64428提供初步支撑。若跌破日内低点，可能测试0.6420区域（心理关口）。上方需突破0.6478（20日均线）才能缓解下行压力。\n\n交易策略建议保持谨慎观望，等待方向性突破。短线交易者可区间操作，突破0.64538追多或下破0.64428追空。中线投资者宜等待更明确反转信号，重点关注0.6478关键阻力表现。\n\n风险控制需严格设置30点止损，鉴于当前波动率收窄，突破后行情或有加速可能。重点关注晚间美国数据对美元指数的指引作用。"
+    },
+    "en": {
+      "title": "Australian Dollar vs US Dollar Technical Analysis",
+      "content": "The Australian Dollar is currently trading in a short-term bearish phase against the US Dollar, with the price of 0.64465 positioned below the key 20-period Simple Moving Average at 0.64787. This placement below the SMA confirms the prevailing downward momentum, indicating that selling pressure has been dominant. The pair has been confined within a tight range, as evidenced by the narrow 24-hour high and low, suggesting a period of consolidation following recent declines. The broader trend remains vulnerable to further losses unless a decisive break above the SMA occurs.\n\nIndicator analysis reveals a bearish bias in the market. The MACD histogram is negative at -0.000484, signaling that the short-term momentum is weaker than the longer-term trend. While the signal line data is unavailable, the negative histogram typically suggests that downward pressure is intact. The absence of RSI data limits the view on potential oversold or overbought conditions, placing greater emphasis on the MACD and price action relative to the moving average for gauging market sentiment.\n\nCritical support is now being tested near the current price and the session low of 0.64428. A break below this level could open a path toward the 0.6420 handle. On the upside, immediate resistance is found at the daily high of 0.64538, with a more significant barrier at the 20-period SMA around 0.6479. A sustained move above this SMA would be necessary to challenge the next resistance and potentially signal a short-term trend reversal.\n\nGiven the current technical posture, a cautious approach is warranted. Traders might consider short positions on a break below 0.64420, targeting the next support zone, with a stop above the daily high. For those looking for a rebound, long entries are higher risk but could be justified on a decisive hold above the 20-period SMA, targeting a move toward 0.6490. Risk management is crucial due to the tight range and lack of clear directional momentum."
+    }
+  }
+}

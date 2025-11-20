@@ -1,0 +1,30 @@
+{
+  "symbol": "NZD/USD",
+  "name": "New Zealand Dollar vs US Dollar",
+  "nameCn": "纽元/美元",
+  "timestamp": "2025-11-20T17:37:56.872Z",
+  "price": {
+    "close": "0.55953449",
+    "high": "0.56022412",
+    "low": "0.55953449",
+    "open": "0.56016135",
+    "change": "-0.04",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 37.051764,
+    "macd": -0.0003592206,
+    "macd_signal": -0.00031956331,
+    "sma20": 0.56117651
+  },
+  "analysis": {
+    "zh": {
+      "title": "纽元/美元技术分析：短期承压下行",
+      "content": "最新价格0.5595略低于20日均线0.5612，显示短期空头压力占据主导。汇价日内波动区间收窄，高低点仅相差7个基点，表明市场正处于方向选择的关键节点。\n\nMACD指标呈现负值-0.00036，虽然信号线数据缺失，但柱状图负值暗示下行动能仍在延续。当前价格紧贴日内低位运行，需警惕向下突破风险。\n\n关键支撑位于日内低点0.5595，跌破后可能下探0.5580区域。上方阻力首先关注20日均线0.5612，若突破则可能测试日内高点0.5602。\n\n建议采取谨慎看空策略，可在0.5600附近轻仓试空，止损设于0.5615上方。若有效跌破0.5590支撑，可顺势加仓目标0.5575。"
+    },
+    "en": {
+      "title": "New Zealand Dollar vs US Dollar Technical Analysis",
+      "content": "The NZD/USD is trading marginally lower at 0.5595, showing signs of consolidation after a period of weakness. The current price is positioned below the 20-period Simple Moving Average of 0.5612, indicating a short-term bearish bias. The market has failed to reclaim the 0.5600 handle decisively, suggesting that sellers remain in control near-term. The immediate downtrend remains intact, though the minimal 24-hour change of -0.04% points to a potential pause in selling pressure as the pair tests recent lows.\n\nIndicator analysis reveals a bearish signal from the MACD, with its value at -0.00036. While the signal line data is unavailable, the negative histogram suggests ongoing downward momentum. The absence of RSI data limits the view on potential oversold or overbought conditions, but the price's position below the SMA confirms the weak underlying structure. The narrow 24-hour range between 0.5595 and 0.5602 reflects a lack of strong directional conviction from either bulls or bears at the moment.\n\nKey support is clearly established at the current low of 0.5595. A break below this level could open a path toward the 0.5580 zone. On the upside, initial resistance sits at the day's high of 0.5602, with a more significant barrier at the 20-SMA around 0.5612. A sustained move above the SMA would be needed to signal a potential reversal of the short-term downtrend and challenge stronger resistance levels.\n\nGiven the bearish technical structure, short-term trading strategies should favor selling into minor rallies, particularly near the 0.5612 SMA resistance. A break below the 0.5595 support could be used to add to short positions with a target toward 0.5580. Conservative traders should wait for a clear break of either the SMA resistance or the immediate support before committing to new positions, as the tight range suggests a potential for a larger directional move."
+    }
+  }
+}

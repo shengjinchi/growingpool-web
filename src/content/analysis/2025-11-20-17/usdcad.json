@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CAD",
+  "name": "US Dollar vs Canadian Dollar",
+  "nameCn": "美元/加元",
+  "timestamp": "2025-11-20T17:37:09.895Z",
+  "price": {
+    "close": "1.41030",
+    "high": "1.41043",
+    "low": "1.40840",
+    "open": "1.40917",
+    "change": "0.08",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 75.71088,
+    "macd": 0.0012636278,
+    "macd_signal": 0.00098803883,
+    "sma20": 1.40586
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/加元技术分析：短期偏强但需警惕回调风险",
+      "content": "当前汇价1.41030略高于20日均线1.40586，显示短期多头占优。日内在1.40840-1.41043区间窄幅震荡，24小时微涨0.08%表明市场处于整理阶段。MACD柱状图值为0.00126但信号线缺失，需结合其他指标确认动能持续性。\n\n从均线系统看，价格站稳20日均线之上，但缺乏明显趋势性突破。关键阻力位于日内高点1.41043区域，若有效突破可能测试1.41200心理关口。下方支撑先看1.40840日内低点，重要支撑位于20日均线1.40586附近。\n\n虽然MACD显示微弱多头信号，但RSI数据缺失影响短期超买超卖判断。建议关注北美交易时段油价波动对加元的影响，当前价位追多风险收益比较低，更适合等待回调至支撑位布局多单。\n\n短期操作建议在1.4080-1.4120区间高抛低吸，突破1.4110可轻仓跟进多头，止损设于1.4050下方。中长期需关注加拿大央行与美联储政策差异对汇率的结构性影响。"
+    },
+    "en": {
+      "title": "US Dollar vs Canadian Dollar Technical Analysis",
+      "content": "The USD/CAD pair is currently trading near the upper end of its recent range, with the latest price of 1.41030 sitting comfortably above the key 20-day Simple Moving Average at 1.40586. This positioning suggests a prevailing bullish bias, as the price action remains supported by this medium-term trend indicator. The day's high of 1.41043 represents a significant technical barrier, and a sustained break above this level could open the door for further upward momentum. The market structure indicates buyers are in control for the short term.\n\nIndicator interpretation is somewhat limited by incomplete data, yet the provided MACD reading of 0.0012636278 offers a crucial insight. This positive histogram value indicates that the MACD line is above its signal line, a classic bullish momentum signal that aligns with the price trading above its SMA. This convergence of positive signals from both trend and momentum oscillators strengthens the case for a continuation of the current uptrend, provided the momentum can be sustained.\n\nKey support is now clearly established at the 20-day SMA level of 1.40586. A break below this point would signal a potential weakening of the bullish structure and could trigger a deeper pullback towards the daily low of 1.40840. On the upside, immediate resistance is found at the day’s high of 1.41043. A decisive break and close above this level would target a move towards the 1.4120-1.4130 zone.\n\nGiven the confluence of bullish technical signals, a cautiously optimistic outlook is warranted. Traders might consider long positions on any minor pullback towards the 1.4085-1.4090 support confluence, targeting a break above 1.4105. A stop-loss order placed below the 20-day SMA would help manage risk should the bullish structure fail. This approach allows for participation in the uptrend while respecting key technical levels."
+    }
+  }
+}

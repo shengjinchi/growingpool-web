@@ -1,0 +1,30 @@
+{
+  "symbol": "EUR/USD",
+  "name": "Euro vs US Dollar",
+  "nameCn": "欧元/美元",
+  "timestamp": "2025-11-20T17:34:09.861Z",
+  "price": {
+    "close": "1.15321",
+    "high": "1.15377",
+    "low": "1.15302",
+    "open": "1.15341",
+    "change": "-0.01",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 48.92746,
+    "macd": -0.00056011964,
+    "macd_signal": -0.00089904258,
+    "sma20": 1.15252
+  },
+  "analysis": {
+    "zh": {
+      "title": "欧元/美元技术分析：窄幅震荡待突破",
+      "content": "当前汇价交投于1.1532附近，日内波幅不足8点，呈现典型整理格局。价格紧贴20日均线1.1525运行，多空力量处于微妙平衡状态，整体维持中性偏多结构。\n\nMACD柱状线显示微弱负值-0.00056，但信号线数据缺失限制了指标有效性。需关注是否形成底背离结构，若后续动能转强可能推动汇价测试近期高点1.1540区域。\n\n关键支撑位于日内低点1.1530及20日均线1.1525双重防线，跌破后将下探1.1515。上方阻力聚焦日内高点1.1538，突破后有望挑战1.1550心理关口。\n\n建议采取区间交易策略，在1.1525-1.1540区间内高抛低吸。若放量突破区间边界，可顺势跟进，但需严格控制仓位风险。"
+    },
+    "en": {
+      "title": "Euro vs US Dollar Technical Analysis",
+      "content": "The EUR/USD pair is currently trading with minimal volatility, exhibiting a neutral short-term bias. The price is hovering just above the 20-period Simple Moving Average at 1.15252, suggesting a tentative consolidation phase. The extremely tight 24-hour range between 1.15377 and 1.15302 indicates a lack of strong directional conviction from market participants. The prevailing environment appears to be one of equilibrium, awaiting a fundamental catalyst to determine the next significant move in the currency pair.\n\nIndicator readings provide limited signals due to incomplete data, but the available MACD histogram value of -0.00056011964 points to a very slight bearish momentum. The close proximity of the current price to the SMA(20) further reinforces this neutral-to-soft bearish technical picture. Without the RSI and full MACD signal line context, the market lacks clear overbought or oversold signals, making it difficult to gauge the strength behind any potential breakout from the current tight consolidation zone.\n\nKey technical levels are tightly clustered, with immediate resistance seen at the session high of 1.15377. A break above this level could target a move towards 1.15450. On the downside, the SMA at 1.15252 offers initial support, followed by the daily low of 1.15302. A sustained break below the 20-period SMA would likely signal a retest of stronger support zones near the 1.15100 handle, which would represent a more significant bearish development.\n\nGiven the current compressed trading range and lack of strong momentum signals, a cautious approach is advisable. Traders might consider waiting for a clear break above 1.15380 or below 1.15250 before initiating new positions. Range-bound strategies could be employed within the defined high and low boundaries, though the narrow band offers limited profit potential. Risk management is crucial as a breakout from this consolidation could trigger a more sustained directional move."
+    }
+  }
+}

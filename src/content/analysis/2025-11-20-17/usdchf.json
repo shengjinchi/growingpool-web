@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/CHF",
+  "name": "US Dollar vs Swiss Franc",
+  "nameCn": "美元/瑞郎",
+  "timestamp": "2025-11-20T17:38:41.988Z",
+  "price": {
+    "close": "0.80536002",
+    "high": "0.80593002",
+    "low": "0.80486000",
+    "open": "0.80540001",
+    "change": "-0.01",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 50.43613,
+    "macd": 0.00072135008,
+    "macd_signal": 0.0010697521,
+    "sma20": 0.80622401
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/瑞郎技术分析：短期承压于关键均线下方",
+      "content": "当前汇价交投于0.8054附近，略低于20日均线0.8062水平，显示短期存在下行压力。日线波动区间收窄至107点，表明市场正处于方向选择的关键阶段。MACD柱状线虽为正值但信号缺失，需警惕动能减弱风险。\n\n从关键技术指标观察，价格持续在均线下方运行暗示空头略占优势。若有效跌破日内低点0.8048，可能进一步下探0.8030支撑区域。上方初步阻力位于日内高点0.8059，更强阻力看向20日均线0.8062关口。\n\n建议采取谨慎看空的交易策略。激进交易者可考虑在0.8055附近轻仓试空，止损设于0.8070上方。保守投资者宜等待价格明确突破0.8065阻力或跌破0.8040支撑后再顺势操作。"
+    },
+    "en": {
+      "title": "US Dollar vs Swiss Franc Technical Analysis",
+      "content": "USD/CHF is currently trading slightly below its 20-period Simple Moving Average at 0.8062, suggesting a minor near-term bearish bias. The pair has experienced minimal net change, indicating a period of consolidation after recent moves. Price action remains confined within a tight daily range, with the high of 0.8059 and low of 0.8049 acting as immediate barriers. This compression often precedes a more decisive directional breakout as market participants await a fresh catalyst.\n\nThe available MACD indicator shows a positive histogram value of 0.00072, which typically suggests some underlying bullish momentum. However, without the corresponding signal line and histogram data, a full interpretation is limited. The lack of an RSI reading makes it difficult to gauge whether the pair is in overbought or oversold territory. Traders should seek confirmation from these oscillators to better assess the strength and sustainability of any potential move.\n\nKey support is clearly established at the daily low of 0.8049. A break below this level could open a path toward the 0.8030 area. On the upside, initial resistance sits at the SMA around 0.8062, with a more significant barrier at the daily high of 0.8059. A sustained move above the SMA would be required to signal a shift in short-term sentiment back toward the bullish side.\n\nGiven the tight range and lack of strong directional momentum, a neutral to cautiously bearish stance is prudent. Traders might consider short positions on a break below 0.8049, targeting a move toward 0.8030, with a stop above 0.8065. Alternatively, a rebound from support with a close above the SMA could offer a long opportunity, targeting a retest of recent highs near 0.8080."
+    }
+  }
+}

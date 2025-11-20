@@ -1,0 +1,30 @@
+{
+  "symbol": "GBP/USD",
+  "name": "British Pound vs US Dollar",
+  "nameCn": "英镑/美元",
+  "timestamp": "2025-11-20T17:34:56.377Z",
+  "price": {
+    "close": "1.30743",
+    "high": "1.30820",
+    "low": "1.30728",
+    "open": "1.30794",
+    "change": "-0.02",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 47.71352,
+    "macd": -0.00019471927,
+    "macd_signal": -0.00064708317,
+    "sma20": 1.30682
+  },
+  "analysis": {
+    "zh": {
+      "title": "英镑/美元技术分析：窄幅震荡待突破",
+      "content": "当前英镑/美元交投于1.3074附近，日内波动仅9.2点，呈现典型的横盘整理格局。价格暂时企稳于20日均线1.3068上方，但未能突破昨日高点1.3082，显示多空双方陷入僵持。短期趋势呈中性偏弱，需关注区间突破方向。\n\n技术指标方面，MACD柱状线为负值-0.00019，表明短期动能偏向下行，但信号线数据缺失限制了指标参考价值。RSI数据暂不可得，建议结合其他振荡指标综合判断。价格在狭窄区间内运行，市场缺乏明确方向性指引。\n\n关键支撑位于1.3073（日内低点），跌破后可能下探1.3068（20日均线）。上方阻力关注1.3082（日内高点），突破后或测试1.3100心理关口。当前窄幅区间需等待基本面催化剂打破平衡。\n\n建议采取区间交易策略，在1.3070-1.3085范围内高抛低吸，严格设置15点止损。若有效突破区间边界，可顺势跟进，目标看向1.3100或1.3050水平。"
+    },
+    "en": {
+      "title": "British Pound vs US Dollar Technical Analysis",
+      "content": "The GBP/USD pair is exhibiting a marginal bearish bias in the short term, with the current price trading just below the daily high. The 24-hour change of -0.02% suggests a period of consolidation following recent movements. The price is hovering near the middle of its recent range, indicating a lack of decisive directional momentum as the market digests underlying fundamental factors. The immediate trend appears to be neutral to slightly negative, awaiting a catalyst for the next significant move.\n\nFrom an indicator perspective, the MACD histogram reading of -0.00019471927 points to very slight bearish momentum, though the signal line data is unavailable for a complete crossover interpretation. The price is trading just above the 20-period Simple Moving Average at 1.30682, which now acts as a crucial near-term support level. A sustained break above this average could signal a shift in short-term sentiment, while a failure to hold may invite further selling pressure.\n\nKey support and resistance levels are clearly defined by the session's high and low. Immediate resistance sits at the daily high of 1.30820, while support is firm at the 1.30728 low. A breach of either level will likely dictate the next directional leg. Beyond these intraday points, broader support is seen around the 1.3050 handle, with more significant resistance awaiting near the 1.3100 psychological level.\n\nTrading suggestions would lean towards a cautious approach given the tight range and minimal momentum. A breakout strategy could be employed, waiting for a clear move above 1.30820 or below 1.30728 with appropriate stop-loss orders. Alternatively, range-bound traders might consider fading the extremes of the current session's range, targeting a move back towards the mean around the 20-SMA, acknowledging the very narrow profit potential in the current environment."
+    }
+  }
+}

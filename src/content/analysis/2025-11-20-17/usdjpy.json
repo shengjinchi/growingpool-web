@@ -1,0 +1,30 @@
+{
+  "symbol": "USD/JPY",
+  "name": "US Dollar vs Japanese Yen",
+  "nameCn": "美元/日元",
+  "timestamp": "2025-11-20T17:35:40.765Z",
+  "price": {
+    "close": "157.45500",
+    "high": "157.54500",
+    "low": "157.25700",
+    "open": "157.41800",
+    "change": "0.02",
+    "datetime": "2025-11-21 04:00:00"
+  },
+  "indicators": {
+    "rsi": 58.42807,
+    "macd": 0.27736308,
+    "macd_signal": 0.33223663,
+    "sma20": 157.40145
+  },
+  "analysis": {
+    "zh": {
+      "title": "美元/日元技术分析：高位震荡偏多",
+      "content": "当前汇价持稳于157.455附近，略高于20日均线157.401，显示短期多头格局未变。日内波动区间仅28点，表明市场处于整理阶段，但整体仍维持上行趋势框架。\n\nMACD柱状线为0.277呈现正值，暗示动能继续偏向多头。虽然缺少信号线数据参考，但指标位于零轴上方且维持扩张，说明买盘力量仍占据主导地位。\n\n关键阻力位于日内高点157.545附近，突破后可能测试158心理关口。下方支撑首先关注157.257日内低点，更重要支撑见于20日均线157.401区域。\n\n建议现有多头可继续持有，短线交易者可在157.30-157.50区间逢低吸纳。若跌破157.20支撑需警惕回调风险，上行需关注158整数关口的突破动能。"
+    },
+    "en": {
+      "title": "US Dollar vs Japanese Yen Technical Analysis",
+      "content": "USD/JPY demonstrates a consolidative tone near current levels, hovering just above its 20-period simple moving average at 157.40145. The pair's minimal 24-hour change of 0.02% and tight trading range between 157.25700 and 157.54500 suggest a momentary equilibrium between buyers and sellers. The proximity of the price to the session's high indicates a slight bullish bias within this short-term consolidation phase. The overall structure remains firmly within the context of a longer-term uptrend, though momentum appears to be pausing for direction.\n\nThe provided MACD reading of 0.277 shows a positive histogram, indicating that the MACD line is above its signal line, a traditionally bullish signal. This suggests underlying momentum may still favor the upside despite the pair's sideways price action. The absence of RSI data limits a full momentum assessment, but the MACD's position implies buying pressure is present. The price action holding above the key SMA reinforces the near-term positive bias, suggesting any dips might be viewed as potential buying opportunities by market participants.\n\nKey intraday support is identified at the session low of 157.257, with a more significant cushion provided by the 20-SMA at 157.401. A break below this confluence area could signal a deeper retracement. Immediate resistance is clearly defined by the day's high at 157.545. A decisive breakout above this level would likely target the recent multi-decade highs, reinforcing the dominant bullish trend. The market appears to be coiling for its next directional move.\n\nTrading suggestions would favor a cautiously bullish approach while price holds above the 20-SMA, targeting a break above the session high. A conservative strategy would await a clear break above 157.545 for confirmation of renewed upward momentum. Alternatively, a close below the SMA would warn of a potential short-term correction, prompting a reassessment of long positions. Risk management remains paramount given the pair's propensity for sharp, intervention-driven moves."
+    }
+  }
+}
