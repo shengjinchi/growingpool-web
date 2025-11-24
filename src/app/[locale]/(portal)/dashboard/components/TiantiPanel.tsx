@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import SupabaseTest from '@/components/SupabaseTest';
+import DatabaseTest from '@/components/DatabaseTest';
 
 export default function TiantiPanel() {
   const [autoRefresh, setAutoRefresh] = useState(false);
@@ -37,6 +39,16 @@ export default function TiantiPanel() {
 
   return (
     <div className="space-y-6">
+      {/* Supabase Connection Test */}
+      <div className="bg-white dark:bg-gray-800 border-2 border-black dark:border-white">
+        <SupabaseTest />
+      </div>
+
+      {/* Database Operations Test */}
+      <div className="bg-white dark:bg-gray-800 border-2 border-black dark:border-white">
+        <DatabaseTest />
+      </div>
+
       {/* Controls */}
       <div className="bg-white dark:bg-gray-800 p-8 border-2 border-black dark:border-white">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
