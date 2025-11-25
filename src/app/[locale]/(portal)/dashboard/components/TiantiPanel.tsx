@@ -12,7 +12,7 @@ export default function TiantiPanel() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
         <div className="flex justify-center mb-6">
           <img
             key={refreshKey}
