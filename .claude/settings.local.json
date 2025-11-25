@@ -3,7 +3,10 @@
     "allow": [
       "Bash(tree:*)",
       "Bash(ls:*)",
-      "Bash(pnpm dev)"
+      "Bash(pnpm dev)",
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

@@ -4,12 +4,14 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import Link from 'next/link';
+import { authenticateUser, setCurrentUser } from '@/lib/user-management';
 
 interface AdminLoginProps {
   onAuthenticate: () => void;
 }
 
 export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const { t } = useLanguage();
@@ -17,15 +19,21 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'noah@growingpool';
+    const result = authenticateUser(username, password);
 
-    if (password === adminPassword) {
+    if (result.success && result.user) {
       // Store authentication in localStorage for persistent login
       localStorage.setItem('dashboard_authenticated', 'true');
+      localStorage.setItem('admin_username', username);
+
+      // Set current user for user management system
+      setCurrentUser(result.user);
+
       onAuthenticate();
     } else {
-      setError(t('login.error'));
+      setError(result.error || t('login.error'));
       setPassword('');
+      setUsername('');
     }
   };
 
@@ -44,6 +52,24 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                {t('login.username.label')}
+              </label>
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  setError('');
+                }}
+                className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 focus:ring-0 focus:border-black dark:focus:border-white dark:bg-gray-700 dark:text-white transition-all"
+                placeholder={t('login.username.placeholder')}
+                autoFocus
+              />
+            </div>
+
+            <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('login.password.label')}
               </label>
@@ -57,7 +83,6 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
                 }}
                 className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 focus:ring-0 focus:border-black dark:focus:border-white dark:bg-gray-700 dark:text-white transition-all"
                 placeholder={t('login.password.placeholder')}
-                autoFocus
               />
               {error && (
                 <p className="mt-2 text-sm text-gray-900 dark:text-white font-semibold">

@@ -2,13 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import BacktestPanel from './components/BacktestPanel';
+import UserManagement from './components/UserManagement';
 import LiveTradePanel from './components/LiveTradePanel';
 import TiantiPanel from './components/TiantiPanel';
 import AdminLogin from './components/AdminLogin';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import type { TradingConfig } from '@/lib/trading/types';
+import { hasPermission } from '@/lib/user-management/types';
+import { getCurrentUser, logoutUser } from '@/lib/user-management/userService';
 
 // 默认配置 - 回调策略（验证通过：1.75盈亏比，57.58%胜率）
 const defaultConfig: TradingConfig = {
@@ -56,6 +58,7 @@ const defaultConfig: TradingConfig = {
 export default function TradingDashboard() {
   const [tradingConfig, setTradingConfig] = useState<TradingConfig>(defaultConfig);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [currentUser, setCurrentUser] = useState(getCurrentUser());
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -63,6 +66,17 @@ export default function TradingDashboard() {
     const authenticated = localStorage.getItem('dashboard_authenticated');
     if (authenticated === 'true') {
       setIsAuthenticated(true);
+    }
+
+    // Get current user from user management system
+    const user = getCurrentUser();
+    setCurrentUser(user);
+
+    // Debug logging
+    console.log('Dashboard - Current user:', user);
+    if (user) {
+      console.log('Dashboard - User group:', user.userGroup);
+      console.log('Dashboard - Has user_read permission:', hasPermission(user, 'user_read'));
     }
 
     // Load saved trading config from localStorage
@@ -83,8 +97,10 @@ export default function TradingDashboard() {
   }, [tradingConfig]);
 
   const handleLogout = () => {
+    logoutUser();
     localStorage.removeItem('dashboard_authenticated');
     setIsAuthenticated(false);
+    setCurrentUser(null);
   };
 
   if (!isAuthenticated) {
@@ -115,26 +131,26 @@ export default function TradingDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <Tabs defaultValue="backtest" className="w-full">
+        <Tabs defaultValue="live" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="backtest">
-              {t('dashboard.tab.backtest')}
-            </TabsTrigger>
             <TabsTrigger value="live">
               {t('dashboard.tab.live')}
             </TabsTrigger>
             <TabsTrigger value="tianti">
               {t('dashboard.tab.tianti')}
             </TabsTrigger>
+            {currentUser && hasPermission(currentUser, 'user_read') ? (
+              <TabsTrigger value="users">
+                {t('dashboard.tab.users')}
+              </TabsTrigger>
+            ) : (
+              <div className="opacity-0 pointer-events-none">
+                {/* Debug: Current user: {currentUser?.username}, Has user_read: {currentUser ? hasPermission(currentUser, 'user_read') : false} */}
+              </div>
+            )}
           </TabsList>
 
-          <TabsContent value="backtest" className="space-y-6">
-            <BacktestPanel
-              tradingConfig={tradingConfig}
-              onConfigChange={setTradingConfig}
-            />
-          </TabsContent>
-
+  
           <TabsContent value="live" className="space-y-6">
             <LiveTradePanel
               tradingConfig={tradingConfig}
@@ -144,6 +160,10 @@ export default function TradingDashboard() {
 
           <TabsContent value="tianti" className="space-y-6">
             <TiantiPanel />
+          </TabsContent>
+
+          <TabsContent value="users" className="space-y-6">
+            <UserManagement />
           </TabsContent>
         </Tabs>
       </div>
