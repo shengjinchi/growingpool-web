@@ -70,7 +70,7 @@ export default function DatabaseTest() {
         operation,
         status: 'error',
         message: `❌ ${operation} 失败: ${error instanceof Error ? error.message : '未知错误'}`,
-        error: error
+        error: error instanceof Error ? error.message : String(error)
       });
     }
   };
@@ -112,7 +112,7 @@ export default function DatabaseTest() {
         operation: '创建测试表',
         status: 'error',
         message: `❌ 创建表失败: ${error instanceof Error ? error.message : '未知错误'}`,
-        error: error
+        error: error instanceof Error ? error.message : String(error)
       });
     }
   };

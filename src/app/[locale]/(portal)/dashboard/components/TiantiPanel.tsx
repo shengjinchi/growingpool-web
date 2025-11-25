@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import SupabaseTest from '@/components/SupabaseTest';
 import DatabaseTest from '@/components/DatabaseTest';
+import Image from 'next/image';
 
 export default function TiantiPanel() {
   const [autoRefresh, setAutoRefresh] = useState(false);
@@ -100,10 +101,12 @@ export default function TiantiPanel() {
       {/* Image Display */}
       <div className="bg-white dark:bg-gray-800 p-8 border-2 border-black dark:border-white">
         <div className="relative w-full overflow-auto">
-          <img
+          <Image
             key={refreshKey}
             src={`${imageUrl}?t=${refreshKey}`}
             alt="天梯趋势指示器"
+            width={800}
+            height={600}
             className="w-full h-auto"
             onError={(e) => {
               const target = e.target as HTMLImageElement;

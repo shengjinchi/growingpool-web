@@ -627,9 +627,11 @@ const DummyContent = () => {
               return (
                 <div key={offset} className="relative h-80 overflow-hidden bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-600">
                   <div className="relative w-full h-full flex items-center justify-center p-4">
-                    <img
+                    <Image
                       src={image}
                       alt={`学员收益 ${imageIndex + 1}`}
+                      width={600}
+                      height={400}
                       className="max-w-full max-h-full object-contain"
                     />
                   </div>

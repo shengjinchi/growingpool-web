@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
+import Link from 'next/link';
 
 interface AdminLoginProps {
   onAuthenticate: () => void;
@@ -74,12 +75,12 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
           </form>
 
           <div className="mt-6 text-center">
-            <a
+            <Link
               href="/"
               className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
             >
               {t('login.back')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

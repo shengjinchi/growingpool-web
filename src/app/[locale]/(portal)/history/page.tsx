@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import type { BacktestResult, Trade } from '@/lib/trading/types';
 import TradingViewChart from '@/components/charts/TradingViewChart';
 import ProfitChart from '../dashboard/components/ProfitChart';
+import Link from 'next/link';
 
 export default function HistoryPage() {
   const [results, setResults] = useState<BacktestResult | null>(null);
@@ -94,12 +95,12 @@ export default function HistoryPage() {
           <p className="text-sm text-gray-500 dark:text-gray-500">
             Run a backtest from the dashboard first
           </p>
-          <a
+          <Link
             href="/dashboard"
             className="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
           >
             Go to Dashboard
-          </a>
+          </Link>
         </div>
       </div>
     );

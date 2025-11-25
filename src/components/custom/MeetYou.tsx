@@ -3,6 +3,7 @@
 import React from 'react';
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import {Text} from "@radix-ui/themes";
+import Image from 'next/image';
 
 export default function MeetYou() {
   return (
@@ -28,10 +29,11 @@ export default function MeetYou() {
 // Peerlist logo
 const Badge = ({ className }: { className?: string }) => {
   return (
-    <img
-      width="64"
-      height="64"
+    <Image
+      width={64}
+      height={64}
       src="/logo.png"
+      alt="GrowingPool Logo"
       className={className}
     />
   );

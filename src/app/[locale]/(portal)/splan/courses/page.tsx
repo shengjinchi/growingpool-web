@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import EmailContactModal from '@/components/custom/EmailContactModal';
+import Link from 'next/link';
 
 export default function CoursesPage() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
@@ -235,12 +236,12 @@ export default function CoursesPage() {
               通过率 &lt; 18%。对你而言，要么是1%，要么是99%。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/splan/psychology-test"
                 className="px-8 py-4 bg-white/10 border-2 border-white/20 text-white font-bold hover:bg-white hover:text-black transition-colors backdrop-blur-sm"
               >
                 交易心理测评
-              </a>
+              </Link>
               <button
                 onClick={() => setIsEmailModalOpen(true)}
                 className="px-8 py-4 bg-white text-black font-bold border-2 border-white hover:bg-transparent hover:text-white transition-colors"

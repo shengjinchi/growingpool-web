@@ -4,6 +4,7 @@ import React from 'react';
 import LocaleLink from '@/components/navigation/LocaleLink';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ShineLinkButton } from '@/components/custom/ShineButton';
+import Image from 'next/image';
 
 export default function SplanFooter() {
   const { t, language } = useLanguage();
@@ -302,9 +303,11 @@ export default function SplanFooter() {
             rel="noopener noreferrer"
             className="inline-block"
           >
-            <img
+            <Image
               src="https://cdn.ftmo.com/ed1811ad91444ae687a19020a9997a86"
               alt="FTMO.com - For serious traders"
+              width={112}
+              height={56}
               className="h-14 w-auto hover:opacity-80 transition-opacity duration-300"
             />
           </a>

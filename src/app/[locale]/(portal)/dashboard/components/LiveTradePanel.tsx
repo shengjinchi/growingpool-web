@@ -240,7 +240,7 @@ export default function LiveTradePanel({ tradingConfig: initialConfig, onConfigC
 
       return () => clearInterval(interval);
     }
-  }, [autoRefresh, tradingConfig]);
+  }, [autoRefresh, tradingConfig, fetchCurrentSignal, fetchPosition]);
 
   return (
     <div className="space-y-6">

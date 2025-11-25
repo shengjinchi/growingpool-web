@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import EmailContactModal from '@/components/custom/EmailContactModal';
 import BrandName from '@/components/custom/BrandName';
 import ShineButton from '@/components/custom/ShineButton';
+import Link from 'next/link';
 
 interface JoinUsModalProps {
   isOpen: boolean;
@@ -97,13 +98,13 @@ export default function JoinUsModal({ isOpen, onClose }: JoinUsModalProps) {
                   >
                      联系团队长
                   </ShineButton>
-                  <a
+                  <Link
                     href="/splan/psychology-test"
                     onClick={onClose}
                     className="w-full py-3 px-6 bg-white dark:bg-gray-700 border-2 border-black dark:border-white text-black dark:text-white font-semibold hover:bg-gray-100 dark:hover:bg-gray-600 transition-all"
                   >
                      完成心理测评
-                  </a>
+                  </Link>
                 </div>
 
                 <p className="mt-6 text-xs text-gray-500 dark:text-gray-400">

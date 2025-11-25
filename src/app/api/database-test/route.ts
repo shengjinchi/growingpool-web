@@ -234,8 +234,8 @@ async function deleteTestData(deleteData: { id: number }) {
   // 删除数据
   const { error: deleteError } = await supabase
     .from('test_users')
-    .eq('id', id)
-    .delete();
+    .delete()
+    .eq('id', id);
 
   if (deleteError) {
     throw new Error(`删除数据失败: ${deleteError.message}`);

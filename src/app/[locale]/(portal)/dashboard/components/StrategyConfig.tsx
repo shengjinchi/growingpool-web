@@ -57,7 +57,7 @@ export default function StrategyConfig({ config, onConfigChange }: StrategyConfi
     };
 
     fetchPopularSymbols();
-  }, []);
+  }, [defaultSymbols]);
 
   const updateConfig = (path: string[], value: any) => {
     const newConfig = { ...config };
