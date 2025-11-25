@@ -514,6 +514,13 @@ const translations: Record<Language, Record<string, string>> = {
     'blog.cta.title': '准备开始您的交易之旅？',
     'blog.cta.subtitle': '加入GrowingPool，接受专业的交易员培训',
     'blog.cta.button': '立即加入',
+
+    // Tianti Panel
+    'tianti.autoRefresh': '自动刷新',
+    'tianti.manualRefresh': '手动刷新',
+    'tianti.countdown': '倒计时: {0}秒',
+    'tianti.refreshStopped': '自动刷新已停止',
+    'tianti.autoRefreshNote': '图片将每60秒自动刷新一次',
   },
   en: {
     // Brand Name
@@ -1013,6 +1020,13 @@ const translations: Record<Language, Record<string, string>> = {
     'blog.cta.title': 'Ready to Start Your Trading Journey?',
     'blog.cta.subtitle': 'Join GrowingPool for professional trader training',
     'blog.cta.button': 'Join Now',
+
+    // Tianti Panel
+    'tianti.autoRefresh': 'Auto Refresh',
+    'tianti.manualRefresh': 'Manual Refresh',
+    'tianti.countdown': 'Countdown: {0}s',
+    'tianti.refreshStopped': 'Auto refresh stopped',
+    'tianti.autoRefreshNote': 'Image will auto-refresh every 60 seconds',
   }
 };
 

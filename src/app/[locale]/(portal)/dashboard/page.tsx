@@ -9,7 +9,7 @@ import AdminLogin from './components/AdminLogin';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import type { TradingConfig } from '@/lib/trading/types';
-import { hasPermission } from '@/lib/user-management/types';
+import { hasPermission, USER_GROUPS } from '@/lib/user-management/types';
 import { getCurrentUser, logoutUser } from '@/lib/user-management/userService';
 
 // 默认配置 - 回调策略（验证通过：1.75盈亏比，57.58%胜率）
@@ -74,10 +74,10 @@ export default function TradingDashboard() {
 
     // Debug logging
     console.log('Dashboard - Current user:', user);
-    if (user) {
-      console.log('Dashboard - User group:', user.userGroup);
-      console.log('Dashboard - Has user_read permission:', hasPermission(user, 'user_read'));
-    }
+    console.log('Dashboard - User group:', user?.userGroup);
+    console.log('Dashboard - Has user_read permission:', user ? hasPermission(user, 'user_read') : 'No user');
+    console.log('Dashboard - USER_GROUPS:', USER_GROUPS);
+    console.log('Dashboard - Admin permissions:', USER_GROUPS[0]?.permissions);
 
     // Load saved trading config from localStorage
     const savedConfig = localStorage.getItem('trading_config');
@@ -89,6 +89,32 @@ export default function TradingDashboard() {
         console.error('Failed to load saved config:', error);
       }
     }
+  }, []);
+
+  // Listen for storage changes to update user state in real-time
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const user = getCurrentUser();
+      setCurrentUser(user);
+      console.log('Dashboard - Storage change detected, updated user:', user);
+    };
+
+    // Listen for storage events (for changes in other tabs)
+    window.addEventListener('storage', handleStorageChange);
+
+    // Custom event listener for same-tab changes
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function(key, value) {
+      originalSetItem.call(this, key, value);
+      if (key === 'current_user') {
+        handleStorageChange();
+      }
+    };
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      localStorage.setItem = originalSetItem;
+    };
   }, []);
 
   // Save config to localStorage whenever it changes

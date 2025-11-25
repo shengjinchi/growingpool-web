@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { hasPermission, USER_GROUPS } from '@/lib/user-management/types';
+import { hasPermission, USER_GROUPS, type User } from '@/lib/user-management/types';
 import {
   generateRandomPassword,
   getAllUsers,
@@ -28,6 +28,7 @@ export default function UserManagement() {
   // 创建用户表单状态
   const [newUsername, setNewUsername] = useState('');
   const [newUserGroup, setNewUserGroup] = useState('observer');
+  const [visiblePasswords, setVisiblePasswords] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     loadUsers();
@@ -254,6 +255,29 @@ export default function UserManagement() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                     {user.createdAt.toLocaleDateString()}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-500 dark:text-gray-400">
+                        {visiblePasswords.has(user.id) ? user.password : '••••'}
+                      </span>
+                      {currentUser && hasPermission(currentUser, 'user_write') && (
+                        <button
+                          onClick={() => {
+                            const newVisible = new Set(visiblePasswords);
+                            if (newVisible.has(user.id)) {
+                              newVisible.delete(user.id);
+                            } else {
+                              newVisible.add(user.id);
+                            }
+                            setVisiblePasswords(newVisible);
+                          }}
+                          className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-xs"
+                        >
+                          {visiblePasswords.has(user.id) ? '隐藏密码' : '显示密码'}
+                        </button>
+                      )}
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                     {user.lastLogin ? user.lastLogin.toLocaleDateString() : '从未登录'}
