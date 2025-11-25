@@ -15,7 +15,7 @@ import {
   setCurrentUser,
   logoutUser
 } from '@/lib/user-management/userService';
-import { USER_GROUPS, type User, type UserGroup } from '@/lib/user-management/types';
+import { USER_GROUPS, type User, type UserGroup, hasPermission } from '@/lib/user-management/types';
 
 export default function UserManagement() {
   const { t } = useLanguage();
@@ -56,7 +56,7 @@ export default function UserManagement() {
       return;
     }
 
-    const result = createUser(newUsername.trim(), newUserGroup, currentUser.username);
+    const result = createUser(newUsername.trim(), newUserGroup, currentUser?.username || 'system');
 
     if (result.success) {
       showMessage('success', `用户 ${newUsername} 创建成功，密码: ${result.password}`);
@@ -79,7 +79,7 @@ export default function UserManagement() {
       return;
     }
 
-    if (username === currentUser.username) {
+    if (currentUser && username === currentUser.username) {
       showMessage('error', '不能删除自己的账户');
       return;
     }
@@ -117,7 +117,7 @@ export default function UserManagement() {
       return;
     }
 
-    if (user.username === currentUser.username) {
+    if (currentUser && user.username === currentUser.username) {
       showMessage('error', '不能修改自己的账户状态');
       return;
     }
@@ -230,7 +230,7 @@ export default function UserManagement() {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm font-medium text-gray-900 dark:text-white">
                       {user.username}
-                      {user.username === currentUser.username && (
+                      {currentUser && user.username === currentUser.username && (
                         <span className="ml-2 text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded">
                           当前用户
                         </span>
@@ -261,7 +261,7 @@ export default function UserManagement() {
                       {currentUser && hasPermission(currentUser, 'user_write') && (
                         <button
                           onClick={() => handleToggleUserStatus(user)}
-                          disabled={user.username === currentUser.username}
+                          disabled={currentUser ? user.username === currentUser.username : false}
                           className="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                         >
                           {user.status === 'active' ? '禁用' : '启用'}
@@ -281,7 +281,7 @@ export default function UserManagement() {
                           详情
                         </button>
                       )}
-                      {user.username !== currentUser.username && currentUser && hasPermission(currentUser, 'user_delete') && (
+                      {currentUser && user.username !== currentUser.username && hasPermission(currentUser, 'user_delete') && (
                         <button
                           onClick={() => handleDeleteUser(user.username)}
                           className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300 transition-colors"

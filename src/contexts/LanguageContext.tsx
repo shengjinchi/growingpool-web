@@ -27,7 +27,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.tradingTools': '工具',
     'nav.blog': '博客',
     'nav.psychology': '测评',
-    'nav.dashboard': '量化',
+    'nav.dashboard': '内部系统',
     'nav.faq': 'FAQ',
     'nav.membership': '捐赠',
     'nav.join': '立即报名',

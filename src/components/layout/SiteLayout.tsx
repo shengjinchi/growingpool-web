@@ -30,7 +30,7 @@ const navItems = [
     link: "/splan/psychology-test",
   },
   {
-    name: "量化系统",
+    name: "内部系统",
     link: "/dashboard",
   },
 ];

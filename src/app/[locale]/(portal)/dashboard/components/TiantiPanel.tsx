@@ -17,7 +17,7 @@ export default function TiantiPanel() {
           <img
             key={refreshKey}
             src={imageUrl}
-            alt="天梯榜单"
+            alt="Tianti Ranking"
             width={800}
             height={450}
             className="rounded-lg"
@@ -28,7 +28,7 @@ export default function TiantiPanel() {
             onClick={handleRefresh}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
-            刷新天梯
+            Refresh Ranking
           </button>
         </div>
       </div>
