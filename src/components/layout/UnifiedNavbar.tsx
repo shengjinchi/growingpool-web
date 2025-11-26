@@ -27,13 +27,6 @@ export default function UnifiedNavbar() {
     {
       name: language === 'zh' ? '教育中心' : 'Education',
       link: "/education",
-      hasDropdown: true,
-      dropdownItems: [
-        { name: language === 'zh' ? '基础知识' : 'Basics', link: '/education#basics' },
-        { name: language === 'zh' ? '技术分析' : 'Technical Analysis', link: '/education#technical' },
-        { name: language === 'zh' ? '交易策略' : 'Trading Strategies', link: '/education#strategies' },
-        { name: language === 'zh' ? '风险管理' : 'Risk Management', link: '/education#risk' },
-      ]
     },
     {
       name: language === 'zh' ? '行情' : 'Market',
