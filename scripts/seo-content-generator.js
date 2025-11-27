@@ -125,7 +125,7 @@ async function rewriteWithGroqZh(content) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'deepseek-ai/DeepSeek-V3.1',
+        model: 'Qwen/Qwen3-32B',
         messages: [
           {
             role: 'user',
@@ -177,7 +177,7 @@ async function rewriteWithGroqEn(content) {
     const response = await axios.post(
       `${OPENAI_BASE_URL}/v1/chat/completions`,
       {
-        model: 'deepseek-ai/DeepSeek-V3.1',
+        model: 'Qwen/Qwen3-32B',
         messages: [
           {
             role: 'user',
