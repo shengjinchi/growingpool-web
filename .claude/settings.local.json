@@ -5,7 +5,9 @@
       "Bash(find:*)",
       "Bash(node scripts/check-translation-completeness.js:*)",
       "Bash(pnpm dev)",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(dir:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

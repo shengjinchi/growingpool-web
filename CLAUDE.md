@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-GrowingPool 是一个基于 Next.js 15 的专业交易员培训平台，集成交易教育、实践训练、市场分析和SEO优化功能。
+GrowingPool 是一个基于 Next.js 15 的专业交易员培训平台，集成交易教育、实践训练、市场分析和SEO优化功能。项目原名为 pinbar-trader-app，现使用 pnpm 作为包管理器。
 
 ## 开发命令
 
@@ -33,6 +33,9 @@ pnpm baidu-all           # 执行完整的SEO自动化流程
 - **Tailwind CSS + Radix UI** - 样式和组件库
 - **Supabase** - 数据库和认证
 - **PostgreSQL + Redis** - 数据存储和缓存
+- **Binance API** - 期货交易接口
+- **Three.js + React Three Fiber** - 3D可视化
+- **Lightweight Charts** - 交易图表库
 
 ### 核心目录
 
@@ -41,24 +44,67 @@ pnpm baidu-all           # 执行完整的SEO自动化流程
 src/app/
 ├── (server)/           # 服务端组件组 - 数据处理和API调用
 ├── [locale]/          # 国际化路由 - 多语言支持
+│   └── (portal)/      # 主要功能页面组
+│       ├── dashboard/      # 仪表板
+│       ├── education/      # 教育培训
+│       ├── live-trading/  # 实时交易
+│       ├── market-analysis/# 市场分析
+│       ├── tools/         # 交易工具
+│       └── ...其他功能页面
 ├── api/               # API路由 - 后端接口
+│   ├── trading/      # 交易相关API
+│   ├── database-test/  # 数据库测试
+│   └── supabase-test/  # Supabase测试
 ├── layout.tsx         # 根布局
-├── page.tsx           # 首页
-└── robots.ts          # SEO配置
+├── page.tsx           # 首页（重定向到中文版）
+├── robots.ts          # SEO配置
+├── sitemap.ts         # 站点地图
+└── globals.css        # 全局样式
 ```
 
 #### 交易引擎 (`src/lib/trading/`)
 ```
-trading/
+src/lib/trading/
 ├── connectors/        # API连接器 (Binance等)
+│   └── binance.ts # Binance API连接器
 ├── indicators/        # 技术指标计算
+│   ├── bollinger.ts
+│   ├── macd.ts
+│   ├── keltner.ts
+│   └── supertrend.ts
 ├── strategies/        # 交易策略实现
-└── backtest/         # 回测系统
+│   └── xauusd-strategy.ts
+├── backtest/         # 回测系统
+└── types.ts       # 交易数据类型定义
+```
+
+#### 组件库 (`src/components/`)
+```
+src/components/
+├── ui/               # 基础UI组件 (基于Radix UI)
+├── navigation/       # 导航组件
+├── charts/           # 图表组件
+├── education/        # 教育相关组件
+├── custom/           # 自定义组件
+└── magicui/          # 动画效果组件
+```
+
+#### 重要工具目录
+```
+src/lib/
+├── user-management/   # 用户管理
+├── utils.ts           # 工具函数
+└── getServerLanguage.ts # 服务器语言检测
+
+scripts/               # 自动化脚本
+├── generate-sitemap.js    # 站点地图生成
+├── baidu-sitemap-submit.js # 百度SEO提交
+└── baidu-submit.js         # 百度链接提交
 ```
 
 #### 内容管理 (`src/content/`)
 ```
-content/
+src/content/
 ├── news/             # 自动新闻内容
 ├── analysis/         # 市场分析内容
 └── education/        # 教育培训内容
@@ -89,6 +135,9 @@ RESTful API设计，主要端点：
 ├── positions         # 持仓管理
 ├── symbols           # 交易对信息
 └── live              # 实时交易数据
+
+/api/database-test/   # 数据库连接测试
+/api/supabase-test/   # Supabase服务测试
 ```
 
 ### 样式系统
