@@ -4,7 +4,8 @@
       "Bash(tree:*)",
       "Bash(find:*)",
       "Bash(node scripts/check-translation-completeness.js:*)",
-      "Bash(pnpm dev)"
+      "Bash(pnpm dev)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []

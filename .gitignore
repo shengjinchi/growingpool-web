@@ -35,3 +35,4 @@ pnpm-debug.log*
 next-env.d.ts
 public/cryptocashcontrol-a101c084ca74.json
 nul
+.claude/settings.local.json
