@@ -16,12 +16,6 @@ export default function robots(): MetadataRoute.Robots {
           '/admin',
         ],
       },
-      // 针对百度爬虫
-      {
-        userAgent: 'Baiduspider',
-        allow: '/',
-        crawlDelay: 1,
-      },
       // 针对Google爬虫
       {
         userAgent: 'Googlebot',
