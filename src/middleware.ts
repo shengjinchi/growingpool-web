@@ -37,25 +37,47 @@ export function middleware(request: NextRequest) {
   );
 
   if (pathnameHasLocale) {
-    // If it's English locale, redirect to Chinese
-    if (pathname.startsWith('/en')) {
-      const chinesePath = pathname.replace('/en', '/zh');
-      const newUrl = new URL(chinesePath, request.url);
-      newUrl.search = request.nextUrl.search;
-      return NextResponse.redirect(newUrl, 301);
-    }
-    // If it's already Chinese, allow it
+    // Allow both zh and en locales - no redirecting between them
     return NextResponse.next();
   }
 
-  // Always use default locale (Chinese) for consistent experience
-  const locale = defaultLocale;
+  // For paths without locale, detect user's preferred language
+  const acceptLanguage = request.headers.get('accept-language');
+  const preferredLocale = getPreferredLocale(acceptLanguage);
 
-  // Redirect to locale-prefixed URL
-  const newUrl = new URL(`/${locale}${pathname}`, request.url);
+  // Redirect to locale-prefixed URL based on user preference
+  const newUrl = new URL(`/${preferredLocale}${pathname}`, request.url);
   newUrl.search = request.nextUrl.search;
 
   return NextResponse.redirect(newUrl);
+}
+
+// Helper function to detect user's preferred language
+function getPreferredLocale(acceptLanguage: string | null): string {
+  if (!acceptLanguage) return defaultLocale;
+
+  // Parse Accept-Language header
+  const languages = acceptLanguage.split(',').map(lang => lang.split(';')[0].trim().toLowerCase());
+
+  // Check for exact matches
+  for (const preferredLang of languages) {
+    if (locales.includes(preferredLang)) {
+      return preferredLang;
+    }
+  }
+
+  // Check for language prefix matches
+  for (const preferredLang of languages) {
+    const matchedLocale = locales.find(locale =>
+      preferredLang.startsWith(locale.split('-')[0])
+    );
+    if (matchedLocale) {
+      return matchedLocale;
+    }
+  }
+
+  // Default to Chinese
+  return defaultLocale;
 }
 
 export const config = {

@@ -8,13 +8,11 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import LocaleLink from '@/components/navigation/LocaleLink';
-import ContactModal from '@/components/custom/ContactModal';
 
 export default function UnifiedNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const pathname = usePathname();
   const { theme, toggleTheme, mounted } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
@@ -199,41 +197,33 @@ export default function UnifiedNavbar() {
 
           {/* Right Side Actions (Desktop) - 靠右 */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Contact Us Button */}
+            {/* Language Switcher */}
             <motion.button
-              onClick={() => setIsContactModalOpen(true)}
-              className="px-3 py-2 bg-black text-white text-sm font-bold border-2 border-black relative overflow-hidden group"
+              onClick={() => {
+                // Implement language switching
+                const newLang = language === 'zh' ? 'en' : 'zh';
+                const currentPath = window.location.pathname;
+
+                // Replace language prefix
+                let newPath = currentPath.replace(/^\/(zh|en)/, `/${newLang}`);
+
+                // Add language prefix if not present
+                if (!newPath.startsWith('/zh') && !newPath.startsWith('/en')) {
+                  newPath = `/${newLang}${currentPath === '/' ? '' : currentPath}`;
+                }
+
+                // Perform full page refresh
+                window.location.href = newPath;
+              }}
+              className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors flex items-center gap-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-yellow-500 dark:hover:border-yellow-400"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                // Bouncing animation
-                y: [0, -3, 0]
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 25,
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut"
-                }
-              }}
+              title={language === 'zh' ? 'Switch to English' : '切换到中文'}
             >
-              {/* Hover effect background */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              {/* Button text */}
-              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
-                {language === 'zh' ? '联系我们' : 'Contact Us'}
-              </span>
-
-              {/* Shine effect on hover */}
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-40 transition-transform duration-700 ease-out" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+              {language === 'zh' ? 'EN' : '中文'}
             </motion.button>
           </div>
 
@@ -333,42 +323,34 @@ export default function UnifiedNavbar() {
                 </div>
               ))}
 
-              {/* Mobile Contact Button */}
+              {/* Mobile Language Switcher */}
               <div className="px-4 pt-2">
                 <motion.button
-                  onClick={() => setIsContactModalOpen(true)}
-                  className="w-full px-4 py-3 bg-black text-white text-sm font-bold border-2 border-black relative overflow-hidden group"
+                  onClick={() => {
+                    // Implement language switching
+                    const newLang = language === 'zh' ? 'en' : 'zh';
+                    const currentPath = window.location.pathname;
+
+                    // Replace language prefix
+                    let newPath = currentPath.replace(/^\/(zh|en)/, `/${newLang}`);
+
+                    // Add language prefix if not present
+                    if (!newPath.startsWith('/zh') && !newPath.startsWith('/en')) {
+                      newPath = `/${newLang}${currentPath === '/' ? '' : currentPath}`;
+                    }
+
+                    // Perform full page refresh
+                    window.location.href = newPath;
+                  }}
+                  className="w-full px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-yellow-500 dark:hover:border-yellow-400"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: 1,
-                    // Bouncing animation
-                    y: [0, -3, 0]
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 25,
-                    delay: 0.1,
-                    y: {
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut"
-                    }
-                  }}
+                  title={language === 'zh' ? 'Switch to English' : '切换到中文'}
                 >
-                  {/* Hover effect background */}
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Button text */}
-                  <span className="relative z-10 group-hover:text-black transition-colors duration-300">
-                    {language === 'zh' ? '联系我们' : 'Contact Us'}
-                  </span>
-
-                  {/* Shine effect on hover */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-40 transition-transform duration-700 ease-out" />
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
+                  {language === 'zh' ? 'Switch to English' : '切换到中文'}
                 </motion.button>
               </div>
               </div>
@@ -376,12 +358,6 @@ export default function UnifiedNavbar() {
         )}
       </AnimatePresence>
         </motion.nav>
-
-      {/* Contact Modal */}
-      <ContactModal
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
     </>
   );
 }

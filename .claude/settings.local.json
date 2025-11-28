@@ -2,12 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(tree:*)",
-      "Bash(ls:*)",
-      "Bash(pnpm dev)",
-      "Bash(taskkill:*)",
-      "Bash(curl:*)",
-      "Bash(node:*)",
-      "Bash(npm run dev)"
+      "Bash(find:*)",
+      "Bash(node scripts/check-translation-completeness.js:*)",
+      "Bash(pnpm dev)"
     ],
     "deny": [],
     "ask": []

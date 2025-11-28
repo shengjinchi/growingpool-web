@@ -1071,9 +1071,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [pathname, language]);
 
   const toggleLanguage = () => {
-    // Language switching disabled - always keep Chinese
-    console.log('Language switching has been disabled');
-    return;
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      const newLanguage = language === 'zh' ? 'en' : 'zh';
+
+      // Smart path replacement
+      let newPath = currentPath;
+
+      if (currentPath.startsWith('/zh') || currentPath.startsWith('/en')) {
+        // Replace existing language prefix
+        newPath = currentPath.replace(/^\/(zh|en)/, `/${newLanguage}`);
+      } else {
+        // Add language prefix
+        newPath = `/${newLanguage}${currentPath === '/' ? '' : currentPath}`;
+      }
+
+      // Use window.location.href for full page refresh
+      window.location.href = newPath;
+    }
   };
 
   const t = (key: string): string => {
