@@ -2,89 +2,32 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## 今日完成的工作
-
-### 🔧 **导航栏优化**
-- ✅ **移除了新闻和行情导航项**
-- ✅ **修改了 `src/components/layout/UnifiedNavbar.tsx`**
-- ✅ **保留了其他核心功能**：培训、教育、博客、心理测试、仪表板、实时交易、日历、交易工具、常见问题、会员信息
-
-### 🚀 **博客页面修复**
-- ✅ **识别了404错误根本原因**：缺少博客文章列表页面
-- ✅ **发现原有博客数据**：`src/data/blogPosts.ts` (410KB，包含完整文章数据）
-- ✅ **恢复原有博客系统**：
-  - 创建了博客文章列表页面 `src/app/[locale]/(portal)/splan/blog/page.tsx`
-  - 集成了原有 `blogPosts.ts` 数据
-  - 实现了多语言支持（中英文）
-  - 使用了现代化UI设计（Tailwind CSS + Radix UI）
-  - 包含分类筛选、标签显示、作者信息、发布时间
-
-### 🗑️ **百度SEO清理**
-- ✅ **删除了完整的百度SEO自动化系统**：
-  - 移除了GitHub Actions工作流：`.github/workflows/baidu-seo.yml`
-  - 删除了相关脚本文件：
-    - `scripts/generate-sitemap.js`
-    - `scripts/baidu-sitemap-submit.js`
-    - `scripts/baidu-submit.js`
-- ✅ **清理了package.json命令**：
-  - 移除了 `"baidu-all": "npm run generate-sitemap && npm run baidu-sitemap && npm run baidu-submit"`
-- ✅ **恢复了简洁的package.json**：保留核心开发命令
-- ✅ **更新了robots.ts**：移除了百度爬虫特殊配置
-
-### 🎯 **服务器状态**
-- ✅ **开发服务器正常运行**：`http://localhost:3001`
-- ✅ **编译成功**：所有页面正常访问
-- ✅ **博客页面完全恢复**：显示原有410KB数据
-
-## 📋 **建议后续开发重点**
-
-### 1. **博客系统完善**
-- 实现博客文章的增删改功能
-- 添加评论系统
-- 实现搜索功能
-- 添加文章分类和标签管理
-- 优化SEO元数据生成
-
-### 2. **交易功能开发**
-- 完善Binance API集成
-- 实现实时交易界面
-- 添加交易历史记录
-- 完善风险管理系统
-
-### 3. **SEO优化**
-- 实现动态sitemap生成
-- 添加结构化数据标记
-- 优化页面加载性能
-- 实现多语言SEO优化
-
 ## 项目概述
 
-GrowingPool 是一个基于 Next.js 15 的专业交易员培训平台，集成交易教育、实践训练、市场分析和SEO优化功能。项目原名为 pinbar-trader-app，现使用 pnpm 作为包管理器。
+GrowingPool 是一个基于 Next.js 15 的专业交易员培训平台，集成交易教育、实践训练、市场分析和SEO优化功能。项目原名为 pinbar-trader-app，现使用 pnpm 作为包管理器。这是一个严格筛选的交易员培养平台，通过30天考核期筛选10-15%通过率的优秀交易员，并提供资金管理权限。
 
 ## 开发命令
 
 ### 核心开发命令
 ```bash
-pnpm dev              # 启动开发服务器
+pnpm dev              # 启动开发服务器 (localhost:3001)
 pnpm build            # 生产构建
 pnpm start            # 生产运行
 pnpm lint             # 代码质量检查
+pnpm generate-sitemap # 生成站点地图
 ```
 
-### SEO自动化命令
-```bash
-pnpm generate-sitemap     # 生成站点地图
-pnpm baidu-sitemap        # 提交百度站点地图
-pnpm baidu-submit         # 百度SEO提交
-pnpm baidu-all           # 执行完整的SEO自动化流程
-```
+### 重要环境配置
+- **端口**: 开发服务器默认运行在3001端口
+- **测试网络**: 使用 `BINANCE_TESTNET=true` 进行测试
+- **双语支持**: 默认语言为中文，根路径重定向到 `/zh`
 
-## 架构结构
+## 核心架构
 
 ### 技术栈
 - **Next.js 15.0.3** - App Router架构，支持SSR/SSG
 - **React 19.0.0-rc** - 最新版本React
-- **TypeScript** - 严格类型检查
+- **TypeScript** - 严格类型检查，路径别名 `@/*`
 - **Tailwind CSS + Radix UI** - 样式和组件库
 - **Supabase** - 数据库和认证
 - **PostgreSQL + Redis** - 数据存储和缓存
@@ -92,20 +35,30 @@ pnpm baidu-all           # 执行完整的SEO自动化流程
 - **Three.js + React Three Fiber** - 3D可视化
 - **Lightweight Charts** - 交易图表库
 
-### 核心目录
+### 国际化架构
+- **双语支持**: 真正的URL路径级别国际化 (`/zh/`, `/en/`)
+- **默认路径**: 根路径重定向到 `/zh`
+- **语言切换**: 智能语言切换，保持当前页面
+- **SEO优化**: 针对不同语言的SEO策略
 
-#### 应用架构 (`src/app/`)
+### 关键配置
+- **Next.js配置**: 支持外部图片域名和原生Node.js模块
+- **包管理**: pnpm 10.18.3，React 19特定的依赖覆盖
+- **TypeScript**: 严格模式，增量编译，路径映射
+
+### 目录结构
+
+#### App Router 架构
 ```
 src/app/
 ├── (server)/           # 服务端组件组 - 数据处理和API调用
-├── [locale]/          # 国际化路由 - 多语言支持
+├── [locale]/          # 国际化路由 (/zh/, /en/)
 │   └── (portal)/      # 主要功能页面组
-│       ├── dashboard/      # 仪表板
+│       ├── dashboard/      # 交易仪表板
 │       ├── education/      # 教育培训
 │       ├── live-trading/  # 实时交易
-│       ├── market-analysis/# 市场分析
-│       ├── tools/         # 交易工具
-│       └── ...其他功能页面
+│       ├── splan/         # 会员系统
+│       └── blog/          # 博客系统
 ├── api/               # API路由 - 后端接口
 │   ├── trading/      # 交易相关API
 │   ├── database-test/  # 数据库测试
@@ -117,71 +70,49 @@ src/app/
 └── globals.css        # 全局样式
 ```
 
-#### 交易引擎 (`src/lib/trading/`)
+#### 交易系统架构
 ```
 src/lib/trading/
 ├── connectors/        # API连接器 (Binance等)
-│   └── binance.ts # Binance API连接器
-├── indicators/        # 技术指标计算
-│   ├── bollinger.ts
-│   ├── macd.ts
-│   ├── keltner.ts
-│   └── supertrend.ts
+├── indicators/        # 技术指标计算 (MACD, Bollinger, Keltner, Supertrend)
 ├── strategies/        # 交易策略实现
-│   └── xauusd-strategy.ts
 ├── backtest/         # 回测系统
-└── types.ts       # 交易数据类型定义
+└── types.ts          # 完整的TypeScript类型定义
 ```
 
-#### 组件库 (`src/components/`)
+#### 组件分层
 ```
 src/components/
 ├── ui/               # 基础UI组件 (基于Radix UI)
+├── layout/           # 布局组件
 ├── navigation/       # 导航组件
 ├── charts/           # 图表组件
 ├── education/        # 教育相关组件
-├── custom/           # 自定义组件
+├── custom/           # 自定义业务组件
+├── providers/        # 全局Provider
 └── magicui/          # 动画效果组件
 ```
 
-#### 重要工具目录
+#### 数据与内容管理
 ```
-src/lib/
-├── user-management/   # 用户管理
-├── utils.ts           # 工具函数
-└── getServerLanguage.ts # 服务器语言检测
-
-scripts/               # 自动化脚本
-├── generate-sitemap.js    # 站点地图生成
-├── baidu-sitemap-submit.js # 百度SEO提交
-└── baidu-submit.js         # 百度链接提交
+src/
+├── data/             # 静态数据 (blogPosts.ts 410KB博客数据)
+├── content/          # 自动生成内容 (新闻、分析、教育)
+├── contexts/         # React Context (LanguageContext)
+├── hooks/            # 自定义Hooks
+├── middleware.ts     # 中间件 (语言检测)
+└── types/            # 全局类型定义
 ```
 
-#### 内容管理 (`src/content/`)
-```
-src/content/
-├── news/             # 自动新闻内容
-├── analysis/         # 市场分析内容
-└── education/        # 教育培训内容
-```
-
-### 数据流架构
-
-```
-外部数据源 → Next.js API路由 → 数据处理层 → 数据存储 → React UI
-     ↓              ↓               ↓           ↓          ↓
-Binance API → API Routes → 业务逻辑 → PostgreSQL/Redis → 用户界面
-```
-
-## 重要约定
+## 开发约定
 
 ### 组件开发模式
-- **服务端组件**：放在`(server)`组，用于数据获取和处理
-- **客户端组件**：业务逻辑和用户交互，使用`'use client'`
-- **UI组件**：基于Radix UI，无障碍访问优先
+- **服务端组件**: 放在`(server)`组，用于数据获取和处理
+- **客户端组件**: 业务逻辑和用户交互，使用`'use client'`
+- **UI组件**: 基于Radix UI，无障碍访问优先，使用CVA管理变体
 
 ### API设计模式
-RESTful API设计，主要端点：
+RESTful API架构，主要端点：
 ```
 /api/trading/
 ├── test-connection    # 连接测试
@@ -195,29 +126,22 @@ RESTful API设计，主要端点：
 /api/supabase-test/   # Supabase服务测试
 ```
 
+### 核心业务逻辑
+- **30天考核机制**: 严格的交易员筛选流程
+- **分阶段培训**: 规则学习(1-5天)→盈利练习(6-20天)→盈利考核(21-30天)
+- **通过率控制**: 仅10-15%通过考核
+- **收益分成**: 通过考核后获得60%-90%利润分成
+- **资金管理**: 优秀交易员获得大额资金管理权限
+
 ### 样式系统
-- Tailwind CSS为主，配合Radix UI主题
-- 支持深色模式切换
-- 响应式设计优先
-- 使用CVA管理组件变体
+- **主框架**: Tailwind CSS + Radix UI主题
+- **组件变体**: Class Variance Authority (CVA)
+- **响应式**: 移动优先设计
+- **主题**: 支持深色模式切换
 
-## 自动化系统
+## 环境配置
 
-### 内容自动生成
-- **新闻内容**：每30分钟自动生成
-- **市场分析**：每80分钟自动更新
-- **SEO提交**：定期向百度提交站点地图
-
-### 测试环境配置
-```env
-BINANCE_TESTNET=true      # 使用测试网络
-BINANCE_API_KEY=xxx      # Binance API密钥
-BINANCE_API_SECRET=xxx   # Binance API密钥
-```
-
-## 环境变量
-
-必需的环境变量：
+### 必需环境变量
 ```env
 BINANCE_API_KEY=xxx
 BINANCE_API_SECRET=xxx
@@ -227,41 +151,43 @@ SUPABASE_ANON_KEY=xxx
 GOOGLE_SERVICE_ACCOUNT_KEY=xxx
 ```
 
-## 国际化支持
+### 开发注意事项
+- **安全**: 所有API密钥通过环境变量管理，客户端不暴露敏感信息
+- **测试**: 使用 `BINANCE_TESTNET=true` 进行开发测试
+- **端口**: 开发服务器默认3001端口
+- **语言**: 默认中文，支持完整的中英双语切换
 
-项目支持多语言，使用Next.js 15的国际化路由：
-- 路由格式：`/[locale]/page`
-- 配置文件：`src/lib/i18n/config.ts`
+## 关键技术特性
 
-## 重要注意事项
+### 数据管理与缓存
+- **增量静态生成**: Next.js 15的ISR和SSG优化
+- **Redis缓存**: 热点数据和交易指标缓存
+- **图片优化**: 自动图片优化和懒加载
+- **数据库**: PostgreSQL + Supabase集成
 
-### 安全考虑
-- 所有API密钥通过环境变量管理
-- 客户端不暴露敏感信息
-- API路由实现适当的验证和授权
+### 实时交易功能
+- **Binance API**: 完整的期货交易API集成
+- **WebSocket**: 实时数据推送和价格更新
+- **技术指标**: MACD、Bollinger、Keltner、Supertrend实时计算
+- **风险控制**: 完整的风险管理和仓位控制
 
-### 性能优化
-- 使用Next.js的增量静态生成
-- 图片优化和懒加载
-- Redis缓存热点数据
+### 可视化与交互
+- **3D可视化**: Three.js + React Three Fiber
+- **交易图表**: Lightweight Charts专业图表库
+- **动画效果**: Framer Motion和MagicUI组件
+- **响应式设计**: 移动优先的自适应布局
 
-### 代码质量
-- 严格的TypeScript配置
-- ESLint规则配置
-- 统一的代码风格和类型定义
+### SEO与性能
+- **多语言SEO**: 针对中英文的SEO优化
+- **自动内容**: 新闻和分析内容自动生成
+- **结构化数据**: 完整的SEO元数据
+- **性能监控**: Vercel Analytics和Speed Insights
 
-## 特色功能
+## 重要文件说明
 
-### 3D可视化
-- Three.js + React Three Fiber
-- 自定义3D图表和动画效果
-
-### 实时交易
-- Binance期货交易完整支持
-- WebSocket实时数据推送
-- 技术指标实时计算
-
-### SEO优化
-- 自动内容生成系统
-- 结构化数据标记
-- 多语言SEO优化
+- **`src/data/blogPosts.ts`**: 410KB博客数据，包含完整文章内容
+- **`src/middleware.ts`**: 语言检测和路径重定向中间件
+- **`src/contexts/LanguageContext.tsx`**: 双语切换Context
+- **`src/components/layout/UnifiedNavbar.tsx`**: 统一导航栏组件
+- **`next.config.ts`**: Next.js配置，支持外部图片和原生模块
+- **`tsconfig.json`**: TypeScript配置，路径映射和增量编译
