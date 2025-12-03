@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import Link from 'next/link';
-import { authenticateUser, setCurrentUser } from '@/lib/user-management';
+import databaseAuth, { type AuthUser } from '@/lib/auth/database-auth';
 
 interface AdminLoginProps {
   onAuthenticate: () => void;
@@ -14,26 +14,31 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const { t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
 
-    const result = authenticateUser(username, password);
+    try {
+      const result = await databaseAuth.login(username, password);
 
-    if (result.success && result.user) {
-      // Store authentication in localStorage for persistent login
-      localStorage.setItem('dashboard_authenticated', 'true');
-      localStorage.setItem('admin_username', username);
+      if (result.success && result.user) {
+        // Update dashboard authentication flag for compatibility
+        localStorage.setItem('dashboard_authenticated', 'true');
 
-      // Set current user for user management system
-      setCurrentUser(result.user);
-
-      onAuthenticate();
-    } else {
-      setError(result.error || t('login.error'));
+        onAuthenticate();
+      } else {
+        setError(result.error || '登录失败');
+        setPassword('');
+      }
+    } catch (err) {
+      setError('登录过程中发生错误');
       setPassword('');
-      setUsername('');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -66,6 +71,7 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
                 className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 focus:ring-0 focus:border-black dark:focus:border-white dark:bg-gray-700 dark:text-white transition-all"
                 placeholder={t('login.username.placeholder')}
                 autoFocus
+                disabled={loading}
               />
             </div>
 
@@ -83,6 +89,7 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
                 }}
                 className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 focus:ring-0 focus:border-black dark:focus:border-white dark:bg-gray-700 dark:text-white transition-all"
                 placeholder={t('login.password.placeholder')}
+                disabled={loading}
               />
               {error && (
                 <p className="mt-2 text-sm text-gray-900 dark:text-white font-semibold">
@@ -93,9 +100,10 @@ export default function AdminLogin({ onAuthenticate }: AdminLoginProps) {
 
             <button
               type="submit"
-              className="w-full py-3 px-4 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all"
+              disabled={loading || !username || !password}
+              className="w-full py-3 px-4 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {t('login.button')}
+              {loading ? '登录中...' : t('login.button')}
             </button>
           </form>
 

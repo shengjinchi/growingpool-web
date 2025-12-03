@@ -3,100 +3,61 @@
 import React, { useState, useEffect } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import UserManagement from './components/UserManagement';
-import LiveTradePanel from './components/LiveTradePanel';
 import TiantiPanel from './components/TiantiPanel';
 import AdminLogin from './components/AdminLogin';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
-import type { TradingConfig } from '@/lib/trading/types';
-import { hasPermission, USER_GROUPS } from '@/lib/user-management/types';
-import { getCurrentUser, logoutUser } from '@/lib/user-management/userService';
-
-// 默认配置 - 回调策略（验证通过：1.75盈亏比，57.58%胜率）
-const defaultConfig: TradingConfig = {
-  symbol: 'XAUUSDT', // 默认XAUUSDT黄金
-  interval: '1m', // 1分钟K线
-  strategy: {
-    aggressiveness: 3, // 激进模式（回调策略推荐）
-    trailingActivation: 1.5, // 1.5R激活跟踪止盈（验证通过）
-    trailingDistance: 1.0, // 1 ATR跟踪距离（验证通过）
-    indicators: {
-      keltner: {
-        maPeriod: 20, // 肯特那通道MA周期
-        atrPeriod: 14, // ATR周期14（更稳定）
-        atrMultiple: 1.5, // 1.5倍ATR（更宽的通道）
-      },
-      bollinger: {
-        period: 20, // BB周期20（回调策略核心）
-        deviation: 2.0, // 2倍标准差
-      },
-      macd: {
-        fastPeriod: 12,
-        slowPeriod: 26,
-        signalPeriod: 9,
-      },
-      cci: {
-        period: 14, // CCI周期14（超买超卖判断）
-      },
-      supertrend: {
-        period: 10,
-        multiplier: 3.0,
-      },
-    },
-  },
-  risk: {
-    maxDailyLoss: 90000, // 90%资金（回测用）
-    maxDrawdown: 0.50, // 50%最大回撤（回测用）
-    maxPositions: 1,
-    positionSize: 0.01, // 0.01 USDT仓位
-    leverage: 20, // 20倍杠杆
-    stopLossMultiple: 2.0, // 2 ATR止损（验证通过）
-    takeProfitLevels: [3.0, 6.0, 9.0], // 3R/6R/9R（验证通过，1.75盈亏比）
-  },
-};
+import databaseAuth, { type AuthUser } from '@/lib/auth/database-auth';
+import { hasPermission } from '@/lib/user-management/types';
 
 export default function TradingDashboard() {
-  const [tradingConfig, setTradingConfig] = useState<TradingConfig>(defaultConfig);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [currentUser, setCurrentUser] = useState(getCurrentUser());
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
+  const [loading, setLoading] = useState(true);
   const { t } = useLanguage();
 
   useEffect(() => {
-    // Check if user is already authenticated (use localStorage for persistent login)
-    const authenticated = localStorage.getItem('dashboard_authenticated');
-    if (authenticated === 'true') {
-      setIsAuthenticated(true);
-    }
-
-    // Get current user from user management system
-    const user = getCurrentUser();
-    setCurrentUser(user);
-
-    // Debug logging
-    console.log('Dashboard - Current user:', user);
-    console.log('Dashboard - User group:', user?.userGroup);
-    console.log('Dashboard - Has user_read permission:', user ? hasPermission(user, 'user_read') : 'No user');
-    console.log('Dashboard - USER_GROUPS:', USER_GROUPS);
-    console.log('Dashboard - Admin permissions:', USER_GROUPS[0]?.permissions);
-
-    // Load saved trading config from localStorage
-    const savedConfig = localStorage.getItem('trading_config');
-    if (savedConfig) {
+    // Check if user is already authenticated
+    const checkAuth = async () => {
       try {
-        const parsedConfig = JSON.parse(savedConfig);
-        setTradingConfig(parsedConfig);
+        // Check localStorage for authentication flag
+        const authenticated = localStorage.getItem('dashboard_authenticated');
+
+        if (authenticated === 'true' && databaseAuth.isAuthenticated()) {
+          // Verify session with server
+          const result = await databaseAuth.verifySession();
+
+          if (result.success && result.user) {
+            setIsAuthenticated(true);
+            setCurrentUser(result.user);
+          } else {
+            // Invalid session, clear authentication
+            databaseAuth.logout();
+            setIsAuthenticated(false);
+            setCurrentUser(null);
+          }
+        } else {
+          setIsAuthenticated(false);
+          setCurrentUser(null);
+        }
       } catch (error) {
-        console.error('Failed to load saved config:', error);
+        console.error('认证检查失败:', error);
+        setIsAuthenticated(false);
+        setCurrentUser(null);
+      } finally {
+        setLoading(false);
       }
-    }
+    };
+
+    checkAuth();
   }, []);
 
   // Listen for storage changes to update user state in real-time
   useEffect(() => {
     const handleStorageChange = () => {
-      const user = getCurrentUser();
+      const user = databaseAuth.getCurrentUser();
       setCurrentUser(user);
-      console.log('Dashboard - Storage change detected, updated user:', user);
+      console.log('Dashboard - Storage change detected, updated user:', user?.username);
     };
 
     // Listen for storage events (for changes in other tabs)
@@ -117,17 +78,22 @@ export default function TradingDashboard() {
     };
   }, []);
 
-  // Save config to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('trading_config', JSON.stringify(tradingConfig));
-  }, [tradingConfig]);
-
   const handleLogout = () => {
-    logoutUser();
-    localStorage.removeItem('dashboard_authenticated');
+    databaseAuth.logout();
     setIsAuthenticated(false);
     setCurrentUser(null);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black dark:border-white mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">验证身份中...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!isAuthenticated) {
     return <AdminLogin onAuthenticate={() => setIsAuthenticated(true)} />;
@@ -145,6 +111,11 @@ export default function TradingDashboard() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {t('dashboard.subtitle')}
             </p>
+            {currentUser && (
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                当前用户: {currentUser.username} ({currentUser.user_groups?.name})
+              </p>
+            )}
           </div>
           <button
             onClick={handleLogout}
@@ -157,32 +128,22 @@ export default function TradingDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <Tabs defaultValue="live" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="live">
-              {t('dashboard.tab.live')}
-            </TabsTrigger>
+        <Tabs defaultValue="tianti" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="tianti">
               {t('dashboard.tab.tianti')}
             </TabsTrigger>
-            {currentUser && hasPermission(currentUser, 'user_read') ? (
+            {currentUser && hasPermission(currentUser as any, 'user_read') ? (
               <TabsTrigger value="users">
                 {t('dashboard.tab.users')}
               </TabsTrigger>
             ) : (
               <div className="opacity-0 pointer-events-none">
                 {/* Debug: Current user: {currentUser?.username}, Has user_read: {currentUser ? hasPermission(currentUser, 'user_read') : false} */}
+                Debug - User: {currentUser?.username || 'null'}, user_read: {currentUser ? hasPermission(currentUser as any, 'user_read') : false}
               </div>
             )}
           </TabsList>
-
-  
-          <TabsContent value="live" className="space-y-6">
-            <LiveTradePanel
-              tradingConfig={tradingConfig}
-              onConfigChange={setTradingConfig}
-            />
-          </TabsContent>
 
           <TabsContent value="tianti" className="space-y-6">
             <TiantiPanel />

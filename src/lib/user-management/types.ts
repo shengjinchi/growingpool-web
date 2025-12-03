@@ -50,5 +50,30 @@ export const USER_GROUPS: UserGroup[] = [
 ];
 
 export function hasPermission(user: User, permissionId: string): boolean {
-  return user.userGroup.permissions.some(p => p.id === permissionId);
+  // Handle both old format (userGroup) and new format (user_groups)
+  const userGroup = (user as any).user_groups || user.userGroup;
+  if (!userGroup) return false;
+
+  // Handle both array format and object format
+  const permissions = userGroup.permissions;
+  if (!permissions) return false;
+
+  // If permissions is a string (from database JSON), parse it
+  if (typeof permissions === 'string') {
+    try {
+      const parsedPermissions = JSON.parse(permissions);
+      return Array.isArray(parsedPermissions) && parsedPermissions.includes(permissionId);
+    } catch {
+      return false;
+    }
+  }
+
+  // If permissions is an array of objects (old format)
+  if (Array.isArray(permissions)) {
+    return permissions.some((p: any) =>
+      typeof p === 'string' ? p === permissionId : p.id === permissionId
+    );
+  }
+
+  return false;
 }

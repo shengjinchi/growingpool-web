@@ -1,0 +1,141 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
+
+// 获取环境变量
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!supabaseUrl || !supabaseServiceKey) {
+  throw new Error('缺少 Supabase 环境变量');
+}
+
+// 创建服务端客户端
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+export async function POST(request: NextRequest) {
+  try {
+    console.log('开始创建用户表...');
+
+    // 首先尝试直接插入数据到用户组表（如果表存在）
+    const { error: groupsInsertError, data: existingGroups } = await supabase
+      .from('user_groups')
+      .select('*')
+      .limit(1);
+
+    const tablesExist = !groupsInsertError;
+
+    if (!tablesExist) {
+      console.log('表不存在，请通过Supabase Dashboard创建表');
+      return NextResponse.json({
+        success: false,
+        message: '表不存在，请手动创建',
+        sql: `
+-- 请在 Supabase Dashboard 的 SQL Editor 中执行以下SQL:
+
+-- 创建用户组表
+CREATE TABLE user_groups (
+  id VARCHAR(50) PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  permissions JSONB NOT NULL DEFAULT '[]',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- 创建用户表
+CREATE TABLE users (
+  id VARCHAR(50) PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  user_group_id VARCHAR(50) REFERENCES user_groups(id),
+  status VARCHAR(20) DEFAULT 'active' CHECK (status IN ('active', 'inactive', 'suspended')),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  last_login TIMESTAMP WITH TIME ZONE,
+  created_by VARCHAR(50)
+);
+
+-- 创建索引
+CREATE INDEX idx_users_username ON users(username);
+CREATE INDEX idx_users_status ON users(status);
+CREATE INDEX idx_users_group ON users(user_group_id);
+        `
+      });
+    }
+
+    // 插入默认用户组
+    const { error: groupsError, data: groups } = await supabase
+      .from('user_groups')
+      .upsert([
+        {
+          id: 'admin',
+          name: '管理员',
+          description: '拥有所有权限的管理员',
+          permissions: JSON.stringify(['user_read', 'user_write', 'user_delete', 'system_admin'])
+        },
+        {
+          id: 'manager',
+          name: '经理',
+          description: '可以管理用户但不能删除系统',
+          permissions: JSON.stringify(['user_read', 'user_write'])
+        },
+        {
+          id: 'viewer',
+          name: '查看者',
+          description: '只能查看用户信息',
+          permissions: JSON.stringify(['user_read'])
+        }
+      ])
+      .select();
+
+    // 创建默认管理员账户 (noahzeng/19961203)
+    const passwordHash = await hashPassword('19961203');
+
+    const { error: userError, data: users } = await supabase
+      .from('users')
+      .upsert({
+        id: '1',
+        username: 'noahzeng',
+        password_hash: passwordHash,
+        user_group_id: 'admin',
+        status: 'active',
+        created_by: 'system'
+      })
+      .select(`
+        *,
+        user_groups: user_group_id (
+          id,
+          name,
+          description,
+          permissions
+        )
+      `);
+
+    return NextResponse.json({
+      success: true,
+      message: '用户认证系统设置完成',
+      results: {
+        tablesExisted: tablesExist,
+        groupsCreated: !groupsError,
+        adminUserCreated: !userError,
+        userGroups: groups || [],
+        users: users || []
+      }
+    });
+
+  } catch (error) {
+    console.error('设置用户认证系统失败:', error);
+    return NextResponse.json({
+      success: false,
+      error: error instanceof Error ? error.message : '未知错误',
+      details: error
+    }, { status: 500 });
+  }
+}
+
+// 简单的密码哈希函数
+async function hashPassword(password: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password + 'supabase_salt');
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
