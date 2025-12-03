@@ -1,8 +1,21 @@
 import type { User, UserGroup } from '@/lib/user-management/types';
 
-export interface AuthUser extends Omit<User, 'userGroup'> {
+export interface AuthUser {
+  id: string;
+  username: string;
   user_group_id: string;
   user_groups: UserGroup;
+  status: 'active' | 'inactive' | 'suspended';
+  created_at: string; // 数据库中的时间戳字段
+  last_login?: string; // 数据库中的最后登录时间
+  password_hash?: string; // 数据库中的密码哈希
+  created_by?: string;
+
+  // 兼容原有字段
+  createdAt?: Date;
+  lastLogin?: Date;
+  userGroup?: UserGroup;
+  createdBy?: string;
 }
 
 export interface LoginResponse {

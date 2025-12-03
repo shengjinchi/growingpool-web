@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import dynamic from 'next/dynamic';
-import CompactStrategyConfig from './CompactStrategyConfig';
 import type { TradingConfig, BacktestResult } from '@/lib/trading/types';
 
 const ProfitChart = dynamic(() => import('./ProfitChart'), {
@@ -138,13 +137,6 @@ export default function BacktestPanel({ tradingConfig: initialConfig, onConfigCh
 
   return (
     <div className="space-y-6">
-      {/* Strategy Config */}
-      <CompactStrategyConfig
-        config={tradingConfig}
-        onConfigChange={handleConfigChange}
-        showPresets={true}
-      />
-
       {/* Controls */}
       <div className="bg-white dark:bg-gray-800 p-8 border-2 border-black dark:border-white">
         <h2 className="text-2xl font-bold text-black dark:text-white mb-6 pb-3 border-b-2 border-black dark:border-white">

@@ -11,8 +11,9 @@ export interface User {
 
 export interface UserGroup {
   id: string;
-  displayName: string;
-  permissions: Permission[];
+  name: string;
+  displayName?: string; // 兼容原有字段
+  permissions: Permission[] | string; // 可能是数组或JSON字符串
 }
 
 export interface Permission {
@@ -24,6 +25,7 @@ export interface Permission {
 export const USER_GROUPS: UserGroup[] = [
   {
     id: 'admin',
+    name: '管理员',
     displayName: '管理员',
     permissions: [
       { id: 'user_read', name: '查看用户', description: '可以查看用户列表' },
@@ -34,6 +36,7 @@ export const USER_GROUPS: UserGroup[] = [
   },
   {
     id: 'trader',
+    name: '交易员',
     displayName: '交易员',
     permissions: [
       { id: 'trade_read', name: '查看交易', description: '可以查看交易数据' },
@@ -42,6 +45,7 @@ export const USER_GROUPS: UserGroup[] = [
   },
   {
     id: 'observer',
+    name: '观察者',
     displayName: '观察者',
     permissions: [
       { id: 'view_dashboard', name: '查看仪表板', description: '可以查看仪表板数据' },

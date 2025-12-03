@@ -335,7 +335,7 @@ export default function UserManagement() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                    {new Date(user.created_at).toLocaleDateString('zh-CN')}
+                    {new Date(user.createdAt || user.created_at).toLocaleDateString('zh-CN')}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                     {currentUser && hasPermission(currentUser as any, 'user_write') && user.username !== currentUser.username && (
@@ -406,8 +406,8 @@ export default function UserManagement() {
                   onChange={(e) => setNewUserGroup(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
-                  <option value="viewer">查看者</option>
-                  <option value="manager">经理</option>
+                  <option value="observer">观察者</option>
+                  <option value="trader">交易员</option>
                   <option value="admin">管理员</option>
                 </select>
               </div>
