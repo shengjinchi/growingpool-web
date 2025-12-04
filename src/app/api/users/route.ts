@@ -199,7 +199,7 @@ export async function DELETE(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
-    const { userId, username, newPassword, status } = await request.json();
+    const { userId, username, newPassword, status, userGroupId, updatedBy } = await request.json();
 
     if (!userId && !username) {
       return NextResponse.json({
@@ -219,6 +219,15 @@ export async function PUT(request: NextRequest) {
     if (status) {
       updateData.status = status;
     }
+
+    if (userGroupId) {
+      updateData.user_group_id = userGroupId;
+    }
+
+    // updatedBy 字段在数据库中不存在，暂时移除
+    // if (updatedBy) {
+    //   updateData.updated_by = updatedBy;
+    // }
 
     let query = supabase.from('users').update(updateData);
 

@@ -196,18 +196,6 @@ export default function TradingDashboard() {
         <div className="mb-8 border-b border-gray-200 dark:border-gray-700">
           <div className="flex space-x-8">
             <button
-              onClick={() => setActiveTab('tianti')}
-              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'tianti'
-                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
-              }`}
-            >
-              <span className="mr-2">🏆</span>
-              {t('dashboard.tab.tianti')}
-            </button>
-
-            <button
               onClick={() => setActiveTab('function1')}
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === 'function1'
@@ -241,6 +229,18 @@ export default function TradingDashboard() {
             >
               <span className="mr-2">🚀</span>
               {t('dashboard.tab.function3')}
+            </button>
+
+            <button
+              onClick={() => setActiveTab('tianti')}
+              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+                activeTab === 'tianti'
+                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+              }`}
+            >
+              <span className="mr-2">🏆</span>
+              {t('dashboard.tab.tianti')}
             </button>
           </div>
         </div>

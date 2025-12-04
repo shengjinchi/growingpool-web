@@ -32,6 +32,7 @@ export const USER_GROUPS: UserGroup[] = [
       { id: 'user_write', name: '管理用户', description: '可以创建、修改用户' },
       { id: 'user_delete', name: '删除用户', description: '可以删除用户' },
       { id: 'system_admin', name: '系统管理', description: '完全系统管理权限' },
+      { id: 'tianti_read', name: '查看天梯', description: '可以查看天梯交易信号' },
     ],
   },
   {
@@ -41,12 +42,22 @@ export const USER_GROUPS: UserGroup[] = [
     permissions: [
       { id: 'trade_read', name: '查看交易', description: '可以查看交易数据' },
       { id: 'trade_write', name: '执行交易', description: '可以执行交易操作' },
+      { id: 'tianti_read', name: '查看天梯', description: '可以查看天梯交易信号' },
     ],
   },
   {
     id: 'observer',
     name: '观察者',
     displayName: '观察者',
+    permissions: [
+      { id: 'view_dashboard', name: '查看仪表板', description: '可以查看仪表板数据' },
+      { id: 'tianti_read', name: '查看天梯', description: '可以查看天梯交易信号' },
+    ],
+  },
+  {
+    id: 'new_student',
+    name: '新学员',
+    displayName: '新学员',
     permissions: [
       { id: 'view_dashboard', name: '查看仪表板', description: '可以查看仪表板数据' },
     ],

@@ -11,10 +11,7 @@ export default function Function1Panel() {
     setShowPart4(true);
   };
 
-  const openLink = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
+  
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
@@ -102,9 +99,15 @@ export default function Function1Panel() {
         </div>
 
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-          <p className="text-gray-700 dark:text-gray-300 mb-6">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             {t('dashboard.preparation.part3.step1')}
           </p>
+
+          <div className="mb-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 dark:border-yellow-600">
+            <p className="text-yellow-800 dark:text-yellow-200 font-medium">
+              {t('dashboard.preparation.part3.focus')}
+            </p>
+          </div>
 
           {!showPart4 && (
             <div className="text-center">

@@ -77,9 +77,10 @@ CREATE INDEX idx_notifications_type ON notifications(type);
 
 -- 插入默认用户组（与前端保持一致）
 INSERT INTO user_groups (id, name, description, permissions) VALUES
-('admin', '管理员', '拥有所有权限的管理员', '["user_read", "user_write", "user_delete", "system_admin"]'),
-('trader', '交易员', '可以查看交易数据并执行交易操作', '["trade_read", "trade_write"]'),
-('observer', '观察者', '只能查看仪表板数据', '["view_dashboard"]');
+('admin', '管理员', '拥有所有权限的管理员', '["user_read", "user_write", "user_delete", "system_admin", "tianti_read"]'),
+('trader', '交易员', '可以查看交易数据并执行交易操作', '["trade_read", "trade_write", "tianti_read"]'),
+('observer', '观察者', '只能查看仪表板数据', '["view_dashboard", "tianti_read"]'),
+('new_student', '新学员', '新注册的学员，仅基础权限', '["view_dashboard"]');
         `
       });
     }
@@ -92,18 +93,24 @@ INSERT INTO user_groups (id, name, description, permissions) VALUES
           id: 'admin',
           name: '管理员',
           description: '拥有所有权限的管理员',
-          permissions: JSON.stringify(['user_read', 'user_write', 'user_delete', 'system_admin'])
+          permissions: JSON.stringify(['user_read', 'user_write', 'user_delete', 'system_admin', 'tianti_read'])
         },
         {
           id: 'trader',
           name: '交易员',
           description: '可以查看交易数据并执行交易操作',
-          permissions: JSON.stringify(['trade_read', 'trade_write'])
+          permissions: JSON.stringify(['trade_read', 'trade_write', 'tianti_read'])
         },
         {
           id: 'observer',
           name: '观察者',
           description: '只能查看仪表板数据',
+          permissions: JSON.stringify(['view_dashboard', 'tianti_read'])
+        },
+        {
+          id: 'new_student',
+          name: '新学员',
+          description: '新注册的学员，仅基础权限',
           permissions: JSON.stringify(['view_dashboard'])
         }
       ])

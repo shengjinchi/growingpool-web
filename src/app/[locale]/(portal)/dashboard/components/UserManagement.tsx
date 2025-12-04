@@ -14,7 +14,7 @@ export default function UserManagement() {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState<AuthUser | null>(null);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const [showPasswords, setShowPasswords] = useState(false);
+  const [showPasswords, setShowPasswords] = useState(true);
 
   // 创建用户表单状态
   const [newUsername, setNewUsername] = useState('');
@@ -28,6 +28,11 @@ export default function UserManagement() {
   const [notificationTitle, setNotificationTitle] = useState('');
   const [notificationMessage, setNotificationMessage] = useState('');
   const [notificationType, setNotificationType] = useState<'info' | 'warning' | 'error' | 'success'>('info');
+
+  // 调整用户组状态
+  const [isEditGroupModalOpen, setIsEditGroupModalOpen] = useState(false);
+  const [editUserTarget, setEditUserTarget] = useState<AuthUser | null>(null);
+  const [editUserGroup, setEditUserGroup] = useState('');
 
   // 存储创建用户的密码信息
   const [userPasswords, setUserPasswords] = useState<Map<string, string>>(new Map());
@@ -57,7 +62,7 @@ export default function UserManagement() {
 
   const showMessage = (type: 'success' | 'error', text: string) => {
     setMessage({ type, text });
-    setTimeout(() => setMessage(null), 3000);
+    setTimeout(() => setMessage(null), 15000);
   };
 
   const handleCreateUser = async () => {
@@ -234,6 +239,57 @@ export default function UserManagement() {
     }
   };
 
+  const handleEditUserGroup = async () => {
+    if (!currentUser || !hasPermission(currentUser as any, 'user_write')) {
+      showMessage('error', '没有修改用户组的权限');
+      return;
+    }
+
+    if (!editUserTarget || !editUserGroup) {
+      showMessage('error', '请选择用户组');
+      return;
+    }
+
+    if (editUserTarget.username === currentUser.username) {
+      showMessage('error', '不能修改自己的用户组');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/users', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: editUserTarget.id,
+          userGroupId: editUserGroup
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        showMessage('success', `用户 ${editUserTarget.username} 的用户组已更新为: ${USER_GROUPS.find(g => g.id === editUserGroup)?.name}`);
+        loadUsers();
+        setIsEditGroupModalOpen(false);
+        setEditUserTarget(null);
+        setEditUserGroup('');
+      } else {
+        showMessage('error', data.error || '更新用户组失败');
+      }
+    } catch (error) {
+      console.error('更新用户组失败:', error);
+      showMessage('error', '更新用户组失败');
+    }
+  };
+
+  const openEditGroupModal = (user: AuthUser) => {
+    setEditUserTarget(user);
+    setEditUserGroup(user.user_groups?.id || '');
+    setIsEditGroupModalOpen(true);
+  };
+
   const openNotificationModal = (user: AuthUser) => {
     setNotificationTarget(user);
     setNotificationTitle('');
@@ -307,15 +363,6 @@ export default function UserManagement() {
           用户管理
         </h2>
         <div className="flex items-center space-x-4">
-          <label className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300">
-            <input
-              type="checkbox"
-              checked={showPasswords}
-              onChange={(e) => setShowPasswords(e.target.checked)}
-              className="rounded border-gray-300 dark:border-gray-600 text-black dark:text-white focus:ring-black dark:focus:ring-white"
-            />
-            <span>显示密码</span>
-          </label>
           {currentUser && hasPermission(currentUser as any, 'user_write') && (
             <button
               onClick={() => setIsCreateModalOpen(true)}
@@ -336,11 +383,9 @@ export default function UserManagement() {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                   用户名
                 </th>
-                {showPasswords && (
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                    密码
-                  </th>
-                )}
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  密码
+                </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                   用户组
                 </th>
@@ -363,28 +408,19 @@ export default function UserManagement() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                     {user.username}
                   </td>
-                  {showPasswords && (
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                      {userPassword ? (
-                        <div className="flex items-center space-x-2">
-                          <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs font-mono">
-                            {visiblePasswords.has(user.id) ? userPassword : '•••••••••'}
-                          </code>
-                          <button
-                            onClick={() => togglePasswordVisibility(user.id)}
-                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                            title="显示/隐藏密码"
-                          >
-                            {visiblePasswords.has(user.id) ? '👁️' : '👁️‍🗨️'}
-                          </button>
-                        </div>
-                      ) : (
-                        <span className="text-gray-400 dark:text-gray-500 text-xs">
-                          密码未记录
-                        </span>
-                      )}
-                    </td>
-                  )}
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                    {userPassword ? (
+                      <div className="flex items-center space-x-2">
+                        <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs font-mono">
+                          {userPassword}
+                        </code>
+                      </div>
+                    ) : (
+                      <span className="text-gray-400 dark:text-gray-500 text-xs">
+                        密码未记录
+                      </span>
+                    )}
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                     {getUserGroupDisplay(user.user_groups)}
                   </td>
@@ -399,6 +435,12 @@ export default function UserManagement() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                     {currentUser && hasPermission(currentUser as any, 'user_write') && user.username !== currentUser.username && (
                       <>
+                        <button
+                          onClick={() => openEditGroupModal(user)}
+                          className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-900 dark:hover:text-yellow-300"
+                        >
+                          调整用户组
+                        </button>
                         <button
                           onClick={() => openNotificationModal(user)}
                           className="text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300"
@@ -471,6 +513,7 @@ export default function UserManagement() {
                   onChange={(e) => setNewUserGroup(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
+                  <option value="new_student">新学员</option>
                   <option value="observer">观察者</option>
                   <option value="trader">交易员</option>
                   <option value="admin">管理员</option>
@@ -564,6 +607,70 @@ export default function UserManagement() {
                 className="px-4 py-2 bg-green-600 dark:bg-green-500 text-white font-semibold border-2 border-green-600 dark:border-green-500 hover:bg-green-700 dark:hover:bg-green-600 transition-all"
               >
                 发送通知
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 调整用户组弹窗 */}
+      {isEditGroupModalOpen && editUserTarget && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              调整用户组 - {editUserTarget.username}
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  当前用户组
+                </label>
+                <div className="px-3 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white">
+                  {getUserGroupDisplay(editUserTarget.user_groups)}
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  新用户组
+                </label>
+                <select
+                  value={editUserGroup}
+                  onChange={(e) => setEditUserGroup(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white"
+                >
+                  <option value="">请选择用户组</option>
+                  <option value="new_student">新学员</option>
+                  <option value="observer">观察者</option>
+                  <option value="trader">交易员</option>
+                  <option value="admin">管理员</option>
+                </select>
+              </div>
+              <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 dark:border-yellow-600">
+                <p className="text-yellow-800 dark:text-yellow-200 text-sm">
+                  <strong>权限说明：</strong><br/>
+                  • 新学员：仅查看仪表板<br/>
+                  • 观察者：查看仪表板 + 天梯<br/>
+                  • 交易员：查看仪表板 + 天梯 + 交易权限<br/>
+                  • 管理员：完全系统管理权限
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-end space-x-3 mt-6">
+              <button
+                onClick={() => {
+                  setIsEditGroupModalOpen(false);
+                  setEditUserTarget(null);
+                  setEditUserGroup('');
+                }}
+                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+              >
+                取消
+              </button>
+              <button
+                onClick={handleEditUserGroup}
+                className="px-4 py-2 bg-yellow-600 dark:bg-yellow-500 text-white font-semibold border-2 border-yellow-600 dark:border-yellow-500 hover:bg-yellow-700 dark:hover:bg-yellow-600 transition-all"
+              >
+                更新用户组
               </button>
             </div>
           </div>
