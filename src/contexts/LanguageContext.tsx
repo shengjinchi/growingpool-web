@@ -152,7 +152,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.time.cost': '时间成本',
     'cta.time.value': '45天',
     'cta.money.cost': '金钱成本',
-    'cta.money.value': '完全免费',
+    'cta.money.value': '训练免费',
     'cta.button.interview': '立即预约面试',
     'cta.button.note': '请在充分了解并确认自己符合全部条件后再申请',
 

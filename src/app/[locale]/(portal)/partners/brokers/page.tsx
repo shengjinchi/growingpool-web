@@ -11,23 +11,6 @@ export default function PartnerBrokersPage() {
   // Partner broker data - real GrowingPool partners
   const brokers = [
     {
-      id: 'ec-markets',
-      name: 'EC Markets',
-      regulation: isZh ? 'ASIC & CySEC 双重监管' : 'ASIC & CySEC Dual Regulated',
-      regulationNumber: isZh ? 'ASIC 648 / CySEC 258/14' : 'ASIC 648 / CySEC 258/14',
-      features: [
-        isZh ? '点差: EUR/USD 0.0起 + $3佣金' : 'Spread: EUR/USD from 0.0 + $3 commission',
-        isZh ? '杠杆: 最高1:500' : 'Leverage: Up to 1:500',
-        isZh ? '最低入金: $200' : 'Min Deposit: $200',
-        isZh ? 'ECN账户超低点差' : 'ECN accounts with ultra-low spreads',
-      ],
-      suitableFor: isZh ? '专业交易者、剥头皮策略、EA交易' : 'Professional Traders, Scalpers, EA Trading',
-      description: isZh
-        ? 'EC Markets受澳大利亚ASIC和塞浦路斯CySEC双重监管，提供真实ECN账户，点差从0.0起。执行速度快，支持剥头皮和EA交易，适合专业交易者和高频策略。'
-        : 'EC Markets is dual regulated by Australian ASIC and Cyprus CySEC, offering true ECN accounts with spreads from 0.0. Fast execution, supports scalping and EA trading, suitable for professional traders and high-frequency strategies.',
-      link: 'https://i.ecmarkets.com/api/client/pm/2/99R9C',
-    },
-    {
       id: 'tickmill',
       name: 'TickMill',
       regulation: isZh ? 'FCA & CySEC & FSCA 监管' : 'FCA & CySEC & FSCA Regulated',

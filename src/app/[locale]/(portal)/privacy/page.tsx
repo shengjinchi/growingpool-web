@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
           title: "7. 第三方服务",
           content: [
             "我们的网站可能包含指向第三方网站的链接，包括：",
-            "• 合作经纪商（EC Markets、TickMill）",
+            "• 合作经纪商（TickMill）",
             "• 自营交易公司（FTMO、FundedNext）",
             "• 交易平台（MetaAPI、MetaTrader）",
             "这些第三方网站有自己的隐私政策，我们不对其内容或做法负责。"
@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
           title: "7. Third-Party Services",
           content: [
             "Our website may contain links to third-party sites, including:",
-            "• Partner brokers (EC Markets, TickMill)",
+            "• Partner brokers (TickMill)",
             "• Prop trading firms (FTMO, FundedNext)",
             "• Trading platforms (MetaAPI, MetaTrader)",
             "These third-party sites have their own privacy policies. We are not responsible for their content or practices."
