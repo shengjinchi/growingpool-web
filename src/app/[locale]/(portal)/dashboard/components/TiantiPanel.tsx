@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function TiantiPanel() {
   const [refreshKey, setRefreshKey] = useState(0);
+  const { t } = useLanguage();
   const imageUrl = 'https://qingwuwei.github.io/tianti/images/tianti.png';
 
   const handleRefresh = () => {
@@ -17,7 +19,7 @@ export default function TiantiPanel() {
           <img
             key={refreshKey}
             src={imageUrl}
-            alt="Tianti Ranking"
+            alt="Tianti Trading Signals"
             width={800}
             height={450}
             className="rounded-lg"
@@ -26,9 +28,9 @@ export default function TiantiPanel() {
         <div className="flex justify-center">
           <button
             onClick={handleRefresh}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:border-yellow-600 dark:hover:border-yellow-400 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all rounded"
           >
-            Refresh Ranking
+            {t('dashboard.tianti.refresh')}
           </button>
         </div>
       </div>

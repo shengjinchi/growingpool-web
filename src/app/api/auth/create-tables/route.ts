@@ -53,10 +53,27 @@ CREATE TABLE users (
   created_by VARCHAR(50)
 );
 
+-- 创建通知表
+CREATE TABLE notifications (
+  id VARCHAR(50) PRIMARY KEY,
+  user_id VARCHAR(50) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  title VARCHAR(200) NOT NULL,
+  message TEXT NOT NULL,
+  type VARCHAR(20) DEFAULT 'info' CHECK (type IN ('info', 'warning', 'error', 'success')),
+  read_status BOOLEAN DEFAULT FALSE,
+  created_by VARCHAR(50) REFERENCES users(id),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  read_at TIMESTAMP WITH TIME ZONE
+);
+
 -- 创建索引
 CREATE INDEX idx_users_username ON users(username);
 CREATE INDEX idx_users_status ON users(status);
 CREATE INDEX idx_users_group ON users(user_group_id);
+CREATE INDEX idx_notifications_user_id ON notifications(user_id);
+CREATE INDEX idx_notifications_read_status ON notifications(read_status);
+CREATE INDEX idx_notifications_created_at ON notifications(created_at);
+CREATE INDEX idx_notifications_type ON notifications(type);
 
 -- 插入默认用户组（与前端保持一致）
 INSERT INTO user_groups (id, name, description, permissions) VALUES

@@ -22,6 +22,13 @@ export default function UserManagement() {
   const [newPassword, setNewPassword] = useState('');
   const [visiblePasswords, setVisiblePasswords] = useState<Set<string>>(new Set());
 
+  // 发送通知状态
+  const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
+  const [notificationTarget, setNotificationTarget] = useState<AuthUser | null>(null);
+  const [notificationTitle, setNotificationTitle] = useState('');
+  const [notificationMessage, setNotificationMessage] = useState('');
+  const [notificationType, setNotificationType] = useState<'info' | 'warning' | 'error' | 'success'>('info');
+
   // 存储创建用户的密码信息
   const [userPasswords, setUserPasswords] = useState<Map<string, string>>(new Map());
 
@@ -183,6 +190,58 @@ export default function UserManagement() {
     }
   };
 
+  const handleSendNotification = async () => {
+    if (!currentUser || !hasPermission(currentUser as any, 'user_write')) {
+      showMessage('error', '没有发送通知的权限');
+      return;
+    }
+
+    if (!notificationTarget || !notificationTitle.trim() || !notificationMessage.trim()) {
+      showMessage('error', '请填写完整的通知信息');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/notifications', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: notificationTarget.id,
+          title: notificationTitle.trim(),
+          message: notificationMessage.trim(),
+          type: notificationType,
+          createdBy: currentUser.id
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        showMessage('success', `通知已发送给 ${notificationTarget.username}`);
+        setIsNotificationModalOpen(false);
+        setNotificationTarget(null);
+        setNotificationTitle('');
+        setNotificationMessage('');
+        setNotificationType('info');
+      } else {
+        showMessage('error', data.error || '发送通知失败');
+      }
+    } catch (error) {
+      console.error('发送通知失败:', error);
+      showMessage('error', '发送通知失败');
+    }
+  };
+
+  const openNotificationModal = (user: AuthUser) => {
+    setNotificationTarget(user);
+    setNotificationTitle('');
+    setNotificationMessage('');
+    setNotificationType('info');
+    setIsNotificationModalOpen(true);
+  };
+
   const togglePasswordVisibility = (userId: string) => {
     const newVisible = new Set(visiblePasswords);
     if (newVisible.has(userId)) {
@@ -341,6 +400,12 @@ export default function UserManagement() {
                     {currentUser && hasPermission(currentUser as any, 'user_write') && user.username !== currentUser.username && (
                       <>
                         <button
+                          onClick={() => openNotificationModal(user)}
+                          className="text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300"
+                        >
+                          发送通知
+                        </button>
+                        <button
                           onClick={() => handleResetPassword(user)}
                           className="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300"
                         >
@@ -428,6 +493,77 @@ export default function UserManagement() {
                 className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all"
               >
                 创建
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 发送通知弹窗 */}
+      {isNotificationModalOpen && notificationTarget && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              发送通知给 {notificationTarget.username}
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  通知标题
+                </label>
+                <input
+                  type="text"
+                  value={notificationTitle}
+                  onChange={(e) => setNotificationTitle(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  placeholder="输入通知标题"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  通知内容
+                </label>
+                <textarea
+                  value={notificationMessage}
+                  onChange={(e) => setNotificationMessage(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white h-32 resize-none"
+                  placeholder="输入通知内容"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  通知类型
+                </label>
+                <select
+                  value={notificationType}
+                  onChange={(e) => setNotificationType(e.target.value as any)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-gray-700 dark:text-white"
+                >
+                  <option value="info">信息</option>
+                  <option value="success">成功</option>
+                  <option value="warning">警告</option>
+                  <option value="error">错误</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex justify-end space-x-3 mt-6">
+              <button
+                onClick={() => {
+                  setIsNotificationModalOpen(false);
+                  setNotificationTarget(null);
+                  setNotificationTitle('');
+                  setNotificationMessage('');
+                  setNotificationType('info');
+                }}
+                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+              >
+                取消
+              </button>
+              <button
+                onClick={handleSendNotification}
+                className="px-4 py-2 bg-green-600 dark:bg-green-500 text-white font-semibold border-2 border-green-600 dark:border-green-500 hover:bg-green-700 dark:hover:bg-green-600 transition-all"
+              >
+                发送通知
               </button>
             </div>
           </div>

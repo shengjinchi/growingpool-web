@@ -54,7 +54,7 @@ const translations: Record<Language, Record<string, string>> = {
     'comparison.vs': 'VS 传统交易培训',
     'comparison.growingpool': '生金池',
     'comparison.traditional': '传统培训机构',
-    'comparison.free': '完全免费 - 无任何培训费用',
+    'comparison.free': '学习免费 - 无培训费用',
     'comparison.practical': '实战培养 - 30交易日系统化交易员职业训练',
     'comparison.selection': '精准筛选 - 只接受特定人群，不适合直接劝退，节省时间',
     'comparison.funding': '资金支持 - 通过考核后与我们共同管理基金',
@@ -430,13 +430,17 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Trading Dashboard
     'dashboard.title': '内部系统',
-    'dashboard.subtitle': 'XAUUSD Hybrid Strategy - Professional Trading System',
+    'dashboard.subtitle': '交易员内部系统',
     'dashboard.logout': '退出登录',
     'dashboard.tab.backtest': '回测分析',
     'dashboard.tab.live': '实时交易',
     'dashboard.tab.tianti': '天梯',
     'dashboard.tab.config': '策略配置',
     'dashboard.tab.users': '用户管理',
+    'dashboard.tab.function1': '功能1',
+    'dashboard.tab.function2': '功能2',
+    'dashboard.tab.function3': '功能3',
+    'dashboard.tianti.refresh': '刷新信号',
     'dashboard.footer.warning': ' 仅用于测试环境。实盘交易需要充分测试和风险评估。',
     'dashboard.footer.copyright': '2024-2025 © GrowingPool 专业外汇交易员培训平台',
 
@@ -947,6 +951,10 @@ const translations: Record<Language, Record<string, string>> = {
     'dashboard.tab.tianti': 'Leaderboard',
     'dashboard.tab.config': 'Strategy Config',
     'dashboard.tab.users': 'User Management',
+    'dashboard.tab.function1': 'Function 1',
+    'dashboard.tab.function2': 'Function 2',
+    'dashboard.tab.function3': 'Function 3',
+    'dashboard.tianti.refresh': 'Refresh Signals',
     'dashboard.footer.warning': ' For testing environment only. Live trading requires thorough testing and risk assessment.',
     'dashboard.footer.copyright': '2024-2025 © GrowingPool Professional Forex Trader Training Platform',
 
