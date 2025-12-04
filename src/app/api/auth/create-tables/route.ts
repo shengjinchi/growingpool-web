@@ -57,11 +57,17 @@ CREATE TABLE users (
 CREATE INDEX idx_users_username ON users(username);
 CREATE INDEX idx_users_status ON users(status);
 CREATE INDEX idx_users_group ON users(user_group_id);
+
+-- 插入默认用户组（与前端保持一致）
+INSERT INTO user_groups (id, name, description, permissions) VALUES
+('admin', '管理员', '拥有所有权限的管理员', '["user_read", "user_write", "user_delete", "system_admin"]'),
+('trader', '交易员', '可以查看交易数据并执行交易操作', '["trade_read", "trade_write"]'),
+('observer', '观察者', '只能查看仪表板数据', '["view_dashboard"]');
         `
       });
     }
 
-    // 插入默认用户组
+    // 插入默认用户组（与前端USER_GROUPS保持一致）
     const { error: groupsError, data: groups } = await supabase
       .from('user_groups')
       .upsert([
@@ -72,16 +78,16 @@ CREATE INDEX idx_users_group ON users(user_group_id);
           permissions: JSON.stringify(['user_read', 'user_write', 'user_delete', 'system_admin'])
         },
         {
-          id: 'manager',
-          name: '经理',
-          description: '可以管理用户但不能删除系统',
-          permissions: JSON.stringify(['user_read', 'user_write'])
+          id: 'trader',
+          name: '交易员',
+          description: '可以查看交易数据并执行交易操作',
+          permissions: JSON.stringify(['trade_read', 'trade_write'])
         },
         {
-          id: 'viewer',
-          name: '查看者',
-          description: '只能查看用户信息',
-          permissions: JSON.stringify(['user_read'])
+          id: 'observer',
+          name: '观察者',
+          description: '只能查看仪表板数据',
+          permissions: JSON.stringify(['view_dashboard'])
         }
       ])
       .select();
