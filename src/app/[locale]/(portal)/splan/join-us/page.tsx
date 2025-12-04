@@ -239,6 +239,27 @@ export default function JoinUsPage() {
             <h2 className="text-4xl font-black text-gray-900 dark:text-white">{t('joinus.plan.title')}</h2>
           </div>
           <div className="space-y-6">
+            {/* Phase 0 */}
+            <div className="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 border-2 border-gray-300 dark:border-gray-600 p-8 hover:shadow-lg transition-all">
+              <div className="absolute -left-3 -top-3 w-12 h-12 bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 dark:border-gray-600 flex items-center justify-center">
+                <span className="text-white dark:text-white font-black text-xl">0</span>
+              </div>
+              <div className="ml-4">
+                <div className="inline-block px-4 py-1 bg-gray-500 dark:bg-gray-600 text-white dark:text-white text-sm font-bold mb-4">
+                  {t('joinus.plan.phase0.days')}
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">{t('joinus.plan.phase0.title')}</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('joinus.plan.phase0.desc')}
+                </p>
+                <div className="bg-gray-100 dark:bg-gray-900 p-4 border-l-2 border-gray-400">
+                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                    <li><strong>{t('joinus.plan.phase0.note')}</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* Phase 1 */}
             <div className="group relative bg-white dark:bg-gray-800 border-2 border-black dark:border-white p-8 hover:shadow-lg transition-all">
               <div className="absolute -left-3 -top-3 w-12 h-12 bg-black dark:bg-white border-2 border-black dark:border-white flex items-center justify-center">
@@ -276,9 +297,9 @@ export default function JoinUsPage() {
                 </p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-4 border-l-2 border-gray-600">
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                    <li><strong>{language === 'zh' ? '第一周' : 'Week 1'}</strong>：{t('joinus.plan.phase2.week1')}</li>
-                    <li><strong>{language === 'zh' ? '第二周' : 'Week 2'}</strong>：{t('joinus.plan.phase2.week2')}</li>
-                    <li><strong>{language === 'zh' ? '第三周' : 'Week 3'}</strong>：{t('joinus.plan.phase2.week3')}</li>
+                    <li><strong>{language === 'zh' ? '阶段一' : 'Week 1'}</strong>：{t('joinus.plan.phase2.week1')}</li>
+                    <li><strong>{language === 'zh' ? '阶段二' : 'Week 2'}</strong>：{t('joinus.plan.phase2.week2')}</li>
+                    <li><strong>{language === 'zh' ? '阶段三' : 'Week 3'}</strong>：{t('joinus.plan.phase2.week3')}</li>
                   </ul>
                 </div>
               </div>
@@ -299,7 +320,7 @@ export default function JoinUsPage() {
                 </p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-4 border-l-2 border-gray-700">
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                    <li><strong>{language === 'zh' ? '盈利考核要求' : 'Profit assessment requirement'}</strong>：{t('joinus.plan.phase3.req')}</li>
+                    <li><strong>{language === 'zh' ? '⚠️需要承担的费用' : 'Profit assessment requirement'}</strong>：{t('joinus.plan.phase3.req')}</li>
                     <li><strong>{t('joinus.plan.phase3.warning')}</strong></li>
                   </ul>
                 </div>
