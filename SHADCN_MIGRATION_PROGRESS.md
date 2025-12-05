@@ -103,12 +103,35 @@ pnpm dlx shadcn@latest add dialog
 - 🔘 **主按钮**: 单一金色 (`bg-amber-500`)
 - 🔘 **次按钮**: 标准灰色，符合shadcn规范
 
-#### 8. 解决的技术问题
+#### 8. 心理测试页面全面重构 (2025-12-05)
+
+##### 8.1 安装必要组件
+```bash
+pnpm dlx shadcn@latest add button
+pnpm dlx shadcn@latest add card
+pnpm dlx shadcn@latest add progress
+pnpm add html2canvas
+```
+
+##### 8.2 页面重构
+**文件**: `src/app/[locale]/(portal)/splan/psychology-test/page.tsx`
+- ✅ 完整的 shadcn 组件生态系统集成 (Button, Card, Progress)
+- ✅ 金色主题统一配色方案，与品牌形象一致
+- ✅ 现代化的卡片设计和视觉层次
+- ✅ 进度条显示各维度得分，增强数据可视化
+- ✅ 响应式布局优化，适配各种屏幕尺寸
+- ✅ 报告下载功能 - 使用 html2canvas 生成高质量PNG图片
+- ✅ 动画效果保留，提升用户体验
+- ✅ 完整的双语支持和错误处理
+
+#### 9. 解决的技术问题
 - ✅ **按钮闪烁问题**: 移除 CSS hover 样式冲突，使用 Framer Motion
 - ✅ **编译错误**: Sheet 组件定义问题，完全重写为 Dialog
-- ✅ **语法错误**: 简化复杂的容器变体配置
+- ✅ **语法错误**: 修复 downloadReport 函数和容器结构问题
 - ✅ **功能缺失**: 修复"免费领取交易资料"按钮无响应问题
 - ✅ **视频控制**: 添加 Bilibili 视频默认静音参数
+- ✅ **报告生成**: 实现完整的图片下载功能和加载状态
+- ✅ **Vercel构建错误**: 修复courses页面EmailContactModal API接口不匹配问题 (isOpen → open, onClose → onOpenChange)
 
 ---
 
@@ -132,6 +155,10 @@ pnpm dlx shadcn@latest add input-group
 - [✅] **FloatingContactForm** (`src/components/custom/FloatingContactForm.tsx`)
   - 当前: 已完成转换为 shadcn Dialog + Form 组件
   - 状态: ✅ 已完成 - 使用 Dialog 替代 Sheet，按钮改为矩形
+
+- [✅] **心理测试页面** (`src/app/[locale]/(portal)/splan/psychology-test/page.tsx`)
+  - 当前: 已完成完整的 shadcn 组件生态系统集成
+  - 状态: ✅ 已完成 - Button, Card, Progress 完整应用，包含报告下载功能
 
 ### 🎨 第三阶段：展示组件优化 (优先级：中)
 
@@ -272,12 +299,12 @@ interface ComponentProps {
 ## 📊 进度统计
 
 ### 🏆 完成情况
-- ✅ **已完成**: 10个组件 + 5个文件更新
+- ✅ **已完成**: 11个组件 + 5个文件更新
 - 🔄 **进行中**: 0个
 - ⏳ **待完成**: 10+ 个组件
 
 ### 📈 详细完成统计
-#### ✅ 已完成的组件 (10个)
+#### ✅ 已完成的组件 (11个)
 1. **ContactModal** - shadcn Dialog 集成
 2. **EmailContactModal** - 完整 shadcn 生态系统
 3. **FloatingContactForm** - Dialog + Form 标准化
@@ -285,6 +312,11 @@ interface ComponentProps {
 5. **WelcomeModalTrigger** - 按钮标准化
 6. **SubscriptionNotification** - Card + Badge 组件
 7. **主页面按钮** (3个) - shadcn Button 集成
+8. **心理学测试页面** - 完整的 shadcn 组件生态系统集成 (Button, Card, Progress)
+   - 金色主题统一
+   - 报告下载功能
+   - 响应式设计
+   - 数据可视化增强
 
 #### 🔄 待完成的组件 (10+个)
 - **表单组件**: EducationPasswordProtection
@@ -336,10 +368,10 @@ interface ComponentProps {
 - **Modal组件**: 100% 完成 ✅
 - **浮动组件**: 100% 完成 ✅
 - **按钮组件**: 80% 完成 ✅ (主要按钮已完成，剩余可选优化)
-- **表单组件**: 60% 完成 ⏳ (FloatingContactForm已完成，剩余EducationPasswordProtection)
+- **表单组件**: 80% 完成 ⏳ (FloatingContactForm和心理测试页面已完成，剩余EducationPasswordProtection)
 
 ---
 
-**最后更新**: 2025-12-05 (第一阶段完成)
+**最后更新**: 2025-12-05 (Vercel构建错误修复 + API接口标准化)
 **下次检查**: 建议每周回顾一次进度
-**当前状态**: 第一阶段圆满完成，准备进入第二阶段表单组件迁移
+**当前状态**: 第一阶段 + 心理测试页面迁移完成，已进入第二阶段部分完成，构建系统正常

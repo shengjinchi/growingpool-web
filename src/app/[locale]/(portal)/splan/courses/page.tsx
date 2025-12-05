@@ -254,8 +254,8 @@ export default function CoursesPage() {
 
         {/* Email Contact Modal */}
         <EmailContactModal
-          isOpen={isEmailModalOpen}
-          onClose={() => setIsEmailModalOpen(false)}
+          open={isEmailModalOpen}
+          onOpenChange={setIsEmailModalOpen}
           title="职业交易员申请"
         />
       </div>
