@@ -356,8 +356,8 @@ export default function DonatePage() {
 
       {/* Email Contact Modal */}
       <EmailContactModal
-        isOpen={isEmailModalOpen}
-        onClose={() => setIsEmailModalOpen(false)}
+        open={isEmailModalOpen}
+        onOpenChange={setIsEmailModalOpen}
         title={t('donate.modal.title')}
       />
     </div>

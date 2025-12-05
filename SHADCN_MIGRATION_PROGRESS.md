@@ -85,6 +85,8 @@ pnpm dlx shadcn@latest add dialog
 - ✅ `src/components/custom/Pricing.tsx`
 - ✅ `src/components/custom/InterviewCTA.tsx`
 - ✅ `src/app/[locale]/(portal)/live-trading/LiveTradingClient.tsx`
+- ✅ `src/app/[locale]/(portal)/splan/courses/page.tsx` (2025-12-05修复)
+- ✅ `src/app/[locale]/(portal)/splan/donate/page.tsx` (2025-12-05修复)
 
 **API变化**:
 ```typescript
@@ -131,7 +133,7 @@ pnpm add html2canvas
 - ✅ **功能缺失**: 修复"免费领取交易资料"按钮无响应问题
 - ✅ **视频控制**: 添加 Bilibili 视频默认静音参数
 - ✅ **报告生成**: 实现完整的图片下载功能和加载状态
-- ✅ **Vercel构建错误**: 修复courses页面EmailContactModal API接口不匹配问题 (isOpen → open, onClose → onOpenChange)
+- ✅ **Vercel构建错误**: 修复所有页面EmailContactModal API接口不匹配问题 (courses/donate页面，isOpen → open, onClose → onOpenChange)
 
 ---
 
