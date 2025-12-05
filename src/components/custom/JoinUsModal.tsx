@@ -116,8 +116,8 @@ export default function JoinUsModal({ isOpen, onClose }: JoinUsModalProps) {
 
           {/* Email Modal */}
           <EmailContactModal
-            isOpen={isEmailModalOpen}
-            onClose={() => setIsEmailModalOpen(false)}
+            open={isEmailModalOpen}
+            onOpenChange={setIsEmailModalOpen}
             title="申请加入培训"
           />
         </>
