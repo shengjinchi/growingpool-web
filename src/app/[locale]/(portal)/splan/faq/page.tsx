@@ -488,8 +488,8 @@ export default function FAQPage() {
 
       {/* Email Contact Modal */}
       <EmailContactModal
-        isOpen={isEmailModalOpen}
-        onClose={() => setIsEmailModalOpen(false)}
+        open={isEmailModalOpen}
+        onOpenChange={setIsEmailModalOpen}
         title={t('faq.contact.modal.title')}
       />
     </div>
