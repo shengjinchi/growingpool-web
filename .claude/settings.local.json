@@ -12,7 +12,11 @@
       "Bash(curl:*)",
       "Bash(pnpm run build:*)",
       "mcp__shadcn__list_items_in_registries",
-      "Bash(pnpm dlx shadcn@latest add:*)"
+      "Bash(pnpm dlx shadcn@latest add:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(pnpm build)",
+      "Bash(npx tsc:*)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

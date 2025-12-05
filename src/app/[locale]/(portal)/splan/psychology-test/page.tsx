@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import ShineButton from '@/components/custom/ShineButton';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
+import html2canvas from 'html2canvas';
 
 // Types
 type DimensionKey = 'risk' | 'emotion' | 'decision' | 'discipline' | 'stress';
@@ -645,6 +648,50 @@ export default function PsychologyTestPage() {
     }
   };
 
+  const reportRef = useRef<HTMLDivElement>(null);
+
+  const downloadReport = async () => {
+    if (!reportRef.current) return;
+
+    // 显示加载状态
+    const button = document.querySelector('[data-testid="download-report"]') as HTMLButtonElement;
+    if (button) {
+      button.textContent = language === 'zh' ? '生成报告中...' : 'Generating report...';
+      button.disabled = true;
+    }
+
+    try {
+      // 配置html2canvas选项
+      const canvas = await html2canvas(reportRef.current, {
+        scale: 2, // 提高图片质量
+        backgroundColor: '#ffffff', // 白色背景
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+      });
+
+      // 创建下载链接
+      const link = document.createElement('a');
+      link.download = `trading-psychology-assessment-${new Date().toISOString().split('T')[0]}.png`;
+      link.href = canvas.toDataURL('image/png');
+
+      // 触发下载
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+    } catch (error) {
+      console.error('生成报告失败:', error);
+      alert(language === 'zh' ? '生成报告失败，请稍后重试' : 'Failed to generate report, please try again later');
+    } finally {
+      // 恢复按钮状态
+      if (button) {
+        button.textContent = language === 'zh' ? '下载报告' : 'Download Report';
+        button.disabled = false;
+      }
+    }
+  };
+
   const currentQuestion = QUESTIONS[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / QUESTIONS.length) * 100;
 
@@ -659,10 +706,12 @@ export default function PsychologyTestPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="bg-white dark:bg-gray-800 p-12 border-2 border-gray-200 dark:border-gray-700 text-center max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto"
             >
-              <div className="inline-flex p-6 bg-black dark:bg-white mb-8 border-2 border-black dark:border-white">
-                <svg className="w-16 h-16 text-white dark:text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <Card className="border-2 border-amber-500/30 shadow-2xl">
+                <CardContent className="p-12 text-center">
+              <div className="inline-flex p-6 bg-amber-500 mb-8 border-2 border-amber-600/30 shadow-lg">
+                <svg className="w-16 h-16 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
                   <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
                 </svg>
@@ -671,55 +720,66 @@ export default function PsychologyTestPage() {
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-10">{t('psytest.welcome.subtitle')}</p>
 
               <div className="grid grid-cols-3 gap-6 mb-10">
-                <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700">
-                  <div className="w-10 h-10 bg-black dark:bg-white flex items-center justify-center border-2 border-black dark:border-white">
-                    <span className="text-white dark:text-black font-bold text-sm">{t('psytest.welcome.duration.label')}</span>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.duration.title')}</h3>
-                    <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.duration.value')}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700">
-                  <div className="w-10 h-10 bg-black dark:bg-white flex items-center justify-center border-2 border-black dark:border-white">
-                    <span className="text-white dark:text-black font-bold text-sm">{t('psytest.welcome.questions.label')}</span>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.questions.title')}</h3>
-                    <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.questions.value')}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700">
-                  <div className="w-10 h-10 bg-black dark:bg-white flex items-center justify-center border-2 border-black dark:border-white">
-                    <span className="text-white dark:text-black font-bold text-sm">{t('psytest.welcome.dimensions.label')}</span>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.dimensions.title')}</h3>
-                    <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.dimensions.value')}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-900 p-6 mb-10 text-left border-2 border-gray-200 dark:border-gray-700">
-                <h3 className="text-base font-bold mb-4 text-gray-900 dark:text-white">{t('psytest.welcome.includes')}</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {Object.values(DIMENSIONS).map((dim, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                      <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 text-xs font-bold">{dim.icon}</span>
-                      <span>{dim.name}</span>
+                <Card className="border-2 border-gray-200 dark:border-gray-700">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-amber-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">{t('psytest.welcome.duration.label')}</span>
                     </div>
-                  ))}
-                </div>
+                    <div className="text-left">
+                      <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.duration.title')}</h3>
+                      <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.duration.value')}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-2 border-gray-200 dark:border-gray-700">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-amber-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">{t('psytest.welcome.questions.label')}</span>
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.questions.title')}</h3>
+                      <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.questions.value')}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-2 border-gray-200 dark:border-gray-700">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-amber-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">{t('psytest.welcome.dimensions.label')}</span>
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase">{t('psytest.welcome.dimensions.title')}</h3>
+                      <p className="text-base font-semibold text-gray-900 dark:text-white">{t('psytest.welcome.dimensions.value')}</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
 
-              <ShineButton
+              <Card className="mb-10">
+                <CardContent className="p-6 text-left">
+                  <h3 className="text-base font-bold mb-4 text-gray-900 dark:text-white">{t('psytest.welcome.includes')}</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {Object.values(DIMENSIONS).map((dim, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                        <span className="bg-amber-500 text-white px-2 py-1 text-xs font-bold">{dim.icon}</span>
+                        <span>{dim.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Button
                 onClick={startTest}
-                className="px-10 py-4 bg-black dark:bg-white text-white dark:text-black text-lg font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors"
+                size="lg"
+                className="px-10 py-4 bg-amber-500 hover:bg-amber-600 text-white text-lg font-semibold shadow-lg transition-all duration-200"
               >
                 {t('psytest.welcome.start')}
-              </ShineButton>
+              </Button>
 
               <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 italic">{t('psytest.welcome.note')}</p>
+                </CardContent>
+              </Card>
             </motion.div>
           )}
 
@@ -732,20 +792,15 @@ export default function PsychologyTestPage() {
               exit={{ opacity: 0 }}
             >
               {/* Progress Bar */}
-              <div className="bg-white dark:bg-gray-800 p-6 border-2 border-gray-200 dark:border-gray-700 mb-8">
-                <div className="flex justify-between mb-3 text-sm font-semibold text-gray-600 dark:text-gray-400">
-                  <span>{t('psytest.progress.question')} {currentQuestionIndex + 1} / {QUESTIONS.length}</span>
-                  <span className="text-black dark:text-white">{Math.round(progress)}%</span>
-                </div>
-                <div className="h-2 bg-gray-100 dark:bg-gray-700 overflow-hidden">
-                  <motion.div
-                    className="h-full bg-black dark:bg-white"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.5 }}
-                  />
-                </div>
-              </div>
+              <Card className="mb-8">
+                <CardContent className="p-6">
+                  <div className="flex justify-between mb-3 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                    <span>{t('psytest.progress.question')} {currentQuestionIndex + 1} / {QUESTIONS.length}</span>
+                    <span className="text-amber-600 dark:text-amber-400">{Math.round(progress)}%</span>
+                  </div>
+                  <Progress value={progress} className="h-2" />
+                </CardContent>
+              </Card>
 
               {/* Question Card */}
               <motion.div
@@ -753,30 +808,38 @@ export default function PsychologyTestPage() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                className="bg-white dark:bg-gray-800 p-10 border-2 border-gray-200 dark:border-gray-700 min-h-[450px]"
               >
-                <div className="inline-block px-4 py-2 bg-black dark:bg-white text-white dark:text-black text-sm font-semibold mb-6">
-                  {currentQuestion.category}
-                </div>
-                <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white leading-snug">
-                  {currentQuestion.text}
-                </h2>
-                <div className="flex flex-col gap-4">
-                  {currentQuestion.options.map((option, index) => (
-                    <motion.button
-                      key={index}
-                      onClick={() => selectOption(index)}
-                      whileHover={{ x: 8 }}
-                      className={`w-full p-5 text-left border-2 transition-all ${
-                        answers[currentQuestionIndex] === index
-                          ? 'bg-gray-100 dark:bg-gray-700 border-black dark:border-white text-black dark:text-white font-semibold'
-                          : 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-600 dark:hover:border-gray-500'
-                      }`}
-                    >
-                      {option.text}
-                    </motion.button>
-                  ))}
-                </div>
+                <Card className="min-h-[450px] border-2 border-amber-500/30">
+                  <CardContent className="p-10">
+                    <div className="inline-block px-4 py-2 bg-amber-500 text-white text-sm font-semibold mb-6">
+                      {currentQuestion.category}
+                    </div>
+                    <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white leading-snug">
+                      {currentQuestion.text}
+                    </h2>
+                    <div className="flex flex-col gap-4">
+                      {currentQuestion.options.map((option, index) => (
+                        <motion.div
+                          key={index}
+                          whileHover={{ x: 8 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <Button
+                            variant={answers[currentQuestionIndex] === index ? "default" : "outline"}
+                            onClick={() => selectOption(index)}
+                            className={`w-full p-5 text-left justify-start h-auto transition-all ${
+                              answers[currentQuestionIndex] === index
+                                ? 'bg-amber-500 border-amber-500 text-white font-semibold hover:bg-amber-600'
+                                : 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:border-amber-300 dark:hover:border-amber-600'
+                            }`}
+                          >
+                            {option.text}
+                          </Button>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </motion.div>
           )}
@@ -789,110 +852,156 @@ export default function PsychologyTestPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
             >
-              <div className="text-center mb-12">
-                <div className="inline-block mb-4 px-6 py-3 bg-black dark:bg-white">
-                  <span className="text-white dark:text-black font-bold text-2xl">{t('psytest.result.complete')}</span>
-                </div>
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">{t('psytest.result.title')}</h1>
-                <p className="text-lg text-gray-600 dark:text-gray-400">{t('psytest.result.subtitle')}</p>
-              </div>
+              {/* Report Content Container - for download */}
+              <div ref={reportRef} className="bg-white dark:bg-gray-950 p-8">
+                <motion.div
+                  className="text-center mb-12"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="inline-flex items-center justify-center px-6 py-3 bg-amber-500/10 border-2 border-amber-500/20 rounded-full mb-6">
+                    <span className="text-amber-700 dark:text-amber-300 font-semibold text-lg">{t('psytest.result.complete')}</span>
+                  </div>
+                  <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">{t('psytest.result.title')}</h1>
+                  <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">{t('psytest.result.subtitle')}</p>
+                </motion.div>
 
               {/* Overall Score */}
-              <div className="bg-white dark:bg-gray-800 p-10 border-2 border-gray-200 dark:border-gray-700 mb-8 flex items-center gap-12">
-                <div className="relative w-48 h-48 flex-shrink-0">
-                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#e5e7eb" strokeWidth="12" className="dark:stroke-gray-700"/>
-                    <motion.circle
-                      cx="100"
-                      cy="100"
-                      r="90"
-                      fill="none"
-                      stroke="#000000"
-                      className="dark:stroke-white"
-                      strokeWidth="12"
-                      strokeLinecap="square"
-                      strokeDasharray={565.48}
-                      initial={{ strokeDashoffset: 565.48 }}
-                      animate={{ strokeDashoffset: 565.48 - (scores.percentage / 100) * 565.48 }}
-                      transition={{ duration: 1.5, ease: "easeOut" }}
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <div className="text-5xl font-bold text-black dark:text-white">{scores.percentage}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('psytest.result.overall')}</div>
+              <Card className="mb-8">
+                <CardContent className="p-10 flex items-center gap-12">
+                  <div className="relative w-48 h-48 flex-shrink-0">
+                    <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                      <circle cx="100" cy="100" r="90" fill="none" stroke="#e5e7eb" strokeWidth="12" className="dark:stroke-gray-700"/>
+                      <motion.circle
+                        cx="100"
+                        cy="100"
+                        r="90"
+                        fill="none"
+                        stroke="#eab308"
+                        strokeWidth="12"
+                        strokeLinecap="square"
+                        strokeDasharray={565.48}
+                        initial={{ strokeDashoffset: 565.48 }}
+                        animate={{ strokeDashoffset: 565.48 - (scores.percentage / 100) * 565.48 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <div className="text-5xl font-bold text-amber-600 dark:text-amber-400">{scores.percentage}</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('psytest.result.overall')}</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white">{getScoreLevel(scores.percentage).level}</h3>
-                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">{getScoreLevel(scores.percentage).description}</p>
-                </div>
-              </div>
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white">{getScoreLevel(scores.percentage).level}</h3>
+                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">{getScoreLevel(scores.percentage).description}</p>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Dimension Scores */}
-              <div className="bg-white dark:bg-gray-800 p-10 border-2 border-gray-200 dark:border-gray-700 mb-8">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t('psytest.result.dimensions.title')}</h3>
-                <div className="flex flex-col gap-6">
-                  {Object.keys(DIMENSIONS).map((key, index) => {
-                    const dim = DIMENSIONS[key];
-                    const data = scores.dimensions[key];
-                    return (
-                      <div key={key}>
-                        <div className="flex justify-between mb-2">
-                          <span className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                            <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 text-xs font-bold">{dim.icon}</span>
-                            {dim.name}
-                          </span>
-                          <span className="font-bold text-black dark:text-white">{data.percentage}分</span>
-                        </div>
-                        <div className="h-3 bg-gray-100 dark:bg-gray-700 overflow-hidden">
-                          <motion.div
-                            className="h-full bg-black dark:bg-white"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${data.percentage}%` }}
-                            transition={{ duration: 1, delay: index * 0.1 }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <Card className="mb-8">
+                <CardContent className="p-10">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t('psytest.result.dimensions.title')}</h3>
+                  <div className="flex flex-col gap-6">
+                    {Object.keys(DIMENSIONS).map((key, index) => {
+                      const dim = DIMENSIONS[key];
+                      const data = scores.dimensions[key];
+                      return (
+                        <motion.div
+                          key={key}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.1, duration: 0.5 }}
+                        >
+                          <Card className="mb-4 border border-gray-200 dark:border-gray-700">
+                            <CardContent className="p-4">
+                              <div className="flex justify-between mb-3">
+                                <span className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                                  <span className="bg-amber-500 text-white px-2 py-1 text-xs font-bold rounded">{dim.icon}</span>
+                                  {dim.name}
+                                </span>
+                                <span className="font-bold text-amber-600 dark:text-amber-400 text-lg">{data.percentage}分</span>
+                              </div>
+                              <Progress
+                                value={data.percentage}
+                                className="h-4 bg-gray-100 dark:bg-gray-700 [&>[data-slot=progress-indicator]]:bg-amber-500"
+                              />
+                              <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                                等级: {data.percentage >= 85 ? '优秀' : data.percentage >= 70 ? '良好' : data.percentage >= 55 ? '及格' : '待提升'}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Recommendations */}
-              <div className="bg-white dark:bg-gray-800 p-10 border-2 border-gray-200 dark:border-gray-700 mb-8">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t('psytest.result.recommendations.title')}</h3>
-                <div className="flex flex-col gap-4">
-                  {[
-                    { label: t('psytest.result.rec1.label'), title: t('psytest.result.rec1.title'), text: t('psytest.result.rec1.text') },
-                    { label: t('psytest.result.rec2.label'), title: t('psytest.result.rec2.title'), text: t('psytest.result.rec2.text') },
-                    { label: t('psytest.result.rec3.label'), title: t('psytest.result.rec3.title'), text: t('psytest.result.rec3.text') },
-                    { label: t('psytest.result.rec4.label'), title: t('psytest.result.rec4.title'), text: t('psytest.result.rec4.text') },
-                  ].map((rec, index) => (
-                    <div key={index} className="flex gap-4 p-5 bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700">
-                      <div className="flex-shrink-0 w-12 h-12 bg-black dark:bg-white flex items-center justify-center border-2 border-black dark:border-white">
-                        <span className="text-white dark:text-black font-bold text-xs">{rec.label}</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{rec.title}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{rec.text}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <Card className="mb-8">
+                <CardContent className="p-10">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t('psytest.result.recommendations.title')}</h3>
+                  <div className="flex flex-col gap-4">
+                    {[
+                      { label: t('psytest.result.rec1.label'), title: t('psytest.result.rec1.title'), text: t('psytest.result.rec1.text') },
+                      { label: t('psytest.result.rec2.label'), title: t('psytest.result.rec2.title'), text: t('psytest.result.rec2.text') },
+                      { label: t('psytest.result.rec3.label'), title: t('psytest.result.rec3.title'), text: t('psytest.result.rec3.text') },
+                      { label: t('psytest.result.rec4.label'), title: t('psytest.result.rec4.title'), text: t('psytest.result.rec4.text') },
+                    ].map((rec, index) => (
+                      <Card key={index} className="bg-amber-50/50 dark:bg-amber-900/10 border-2 border-amber-200/50 dark:border-amber-700/30">
+                        <CardContent className="p-5 flex gap-4">
+                          <div className="flex-shrink-0 w-12 h-12 bg-amber-500 flex items-center justify-center">
+                            <span className="text-white font-bold text-xs">{rec.label}</span>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{rec.title}</h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{rec.text}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+                {/* End Report Content Container */}
               </div>
 
-              {/* Actions */}
+              {/* Download Button - outside report */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                className="flex justify-center mb-8"
+              >
+                <Button
+                  onClick={downloadReport}
+                  data-testid="download-report"
+                  size="lg"
+                  className="px-10 py-4 bg-amber-500 hover:bg-amber-600 text-white font-medium shadow-lg transition-all duration-200 flex items-center gap-2 mx-auto min-w-[200px]"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  {language === 'zh' ? '下载报告' : 'Download Report'}
+                </Button>
+              </motion.div>
+
+              {/* Retry Button */}
               <div className="flex justify-center">
-                <ShineButton
+                <Button
                   onClick={() => {
                     if (confirm(t('psytest.result.retry.confirm'))) {
                       startTest();
                     }
                   }}
-                  className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors"
+                  size="lg"
+                  className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold shadow-lg transition-all duration-200"
                 >
                   {t('psytest.result.retry')}
-                </ShineButton>
+                </Button>
               </div>
             </motion.div>
           )}

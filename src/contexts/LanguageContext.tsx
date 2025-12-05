@@ -385,7 +385,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'psytest.progress.question': '问题',
 
-    'psytest.result.complete': '完成',
+    'psytest.result.complete': '🎉 测评完成',
     'psytest.result.title': '测试完成',
     'psytest.result.subtitle': '您的交易心理素质评估报告',
     'psytest.result.overall': '综合得分',
@@ -929,7 +929,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'psytest.progress.question': 'Question',
 
-    'psytest.result.complete': 'Complete',
+    'psytest.result.complete': '🎉 Assessment Complete',
     'psytest.result.title': 'Test Complete',
     'psytest.result.subtitle': 'Your Trading Psychology Assessment Report',
     'psytest.result.overall': 'Overall Score',
