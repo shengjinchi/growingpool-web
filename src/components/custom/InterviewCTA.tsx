@@ -202,8 +202,8 @@ export default function InterviewCTA() {
 
       {/* Email Modal */}
       <EmailContactModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
         title={language === 'zh' ? '职业交易员面试预约' : 'Professional Trader Interview'}
       />
     </>

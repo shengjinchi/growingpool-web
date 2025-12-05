@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 interface Notification {
   id: string;
@@ -46,10 +48,10 @@ export default function SubscriptionNotification() {
 
       setNotifications(prev => [...prev, newNotification]);
 
-      // 3秒后自动移除通知
+      // 4秒后自动移除通知
       setTimeout(() => {
         setNotifications(prev => prev.filter(n => n.id !== newNotification.id));
-      }, 3000);
+      }, 4000);
     };
 
     // 首次延迟2秒显示
@@ -84,27 +86,33 @@ export default function SubscriptionNotification() {
             }}
             className="mb-3 pointer-events-auto"
           >
-            <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-4 max-w-sm">
-              <div className="flex items-start gap-3">
-                {/* 图标 */}
-                <div className="flex-shrink-0 w-10 h-10 bg-black dark:bg-white flex items-center justify-center">
-                  <span className="text-white dark:text-black font-bold text-sm">NEW</span>
-                </div>
+            <Card className="bg-white dark:bg-gray-900 border-2 border-amber-500/30 shadow-xl max-w-sm">
 
-                {/* 内容 */}
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-bold text-gray-900 dark:text-gray-100 truncate">
-                    {notification.email}
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                    {t(notification.messageKey)}
-                  </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-                    {t('notification.time')}
-                  </p>
+              <div className="p-4">
+                <div className="flex items-start gap-3">
+                  {/* NEW 标签 */}
+                  <Badge
+                    variant="default"
+                    className="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-2 py-1 h-auto flex-shrink-0"
+                  >
+                    NEW
+                  </Badge>
+
+                  {/* 内容 */}
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 truncate mb-1">
+                      {notification.email}
+                    </p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
+                      {t(notification.messageKey)}
+                    </p>
+                    <p className="text-xs text-amber-600 dark:text-amber-400 font-medium">
+                      {t('notification.time')}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Card>
           </motion.div>
         ))}
       </AnimatePresence>

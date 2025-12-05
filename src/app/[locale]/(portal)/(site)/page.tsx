@@ -11,6 +11,7 @@ import { FadeInSlide, ScaleFadeIn, HoverCard, PulseButton, FloatingBadge, Stagge
 import CandlestickChart from '@/components/custom/CandlestickChart';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
 import ShineButton from '@/components/custom/ShineButton';
 
 const DummyContent = () => {
@@ -95,19 +96,20 @@ const DummyContent = () => {
             <FadeInSlide direction="right" delay={0.6}>
               <div className="flex flex-col sm:flex-row gap-6">
                 <PulseButton>
-                  <ShineButton
+                  <Button
                     onClick={() => router.push(`/${language}/splan/join-us`)}
                     className="px-12 py-6 bg-black dark:bg-white text-white dark:text-black text-xl font-black border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all shadow-lg sm:min-w-[200px] min-w-[240px]"
                   >
                     {t('hero.cta.learn')}
-                  </ShineButton>
+                  </Button>
                 </PulseButton>
-                <button
+                <Button
                   onClick={() => router.push(`/${language}/dashboard`)}
+                  variant="outline"
                   className="px-12 py-6 bg-white dark:bg-black text-black dark:text-white text-xl font-black border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
                 >
                   {t('hero.cta.dashboard')}
-                </button>
+                </Button>
               </div>
             </FadeInSlide>
             </div>
@@ -795,12 +797,12 @@ const DummyContent = () => {
           </div>
 
           <div className="space-y-4">
-            <button
+            <Button
               onClick={() => setIsEmailModalOpen(true)}
               className="px-10 py-5 bg-white text-black font-bold text-lg border-2 border-white hover:bg-black hover:text-white transition-colors animate-shake"
             >
               {t('cta.button.interview')}
-            </button>
+            </Button>
             <p className="text-sm text-gray-500">
               {t('cta.button.note')}
             </p>
@@ -811,8 +813,8 @@ const DummyContent = () => {
       {/* Email Contact Modal */}
 
       <EmailContactModal
-        isOpen={isEmailModalOpen}
-        onClose={() => setIsEmailModalOpen(false)}
+        open={isEmailModalOpen}
+        onOpenChange={setIsEmailModalOpen}
         title="职业交易员面试"
       />
     </div>

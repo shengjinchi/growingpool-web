@@ -1,7 +1,20 @@
 "use client";
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Card } from '@/components/ui/card';
 
 export default function FloatingContactForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,174 +48,206 @@ export default function FloatingContactForm() {
     <>
       {/* Floating Toggle Button */}
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed right-8 bottom-24 z-40 bg-black dark:bg-white text-white dark:text-black p-4 border-2 border-black dark:border-white shadow-2xl hover:scale-110 transition-transform"
-          aria-label={isZh ? '联系我们' : 'Contact Us'}
-          title={isZh ? '快速联系我们' : 'Quick Contact'}
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="fixed right-8 bottom-24 z-40"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <Button
+            onClick={() => setIsOpen(true)}
+            size="lg"
+            className="px-6 h-14 rounded-lg bg-amber-500 hover:bg-amber-600 text-white shadow-2xl border-2 border-amber-600/20 flex items-center gap-2"
+            aria-label={isZh ? '联系我们' : 'Contact Us'}
+            title={isZh ? '快速联系我们' : 'Quick Contact'}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
-        </button>
-      )}
-
-      {/* Floating Form */}
-      {isOpen && (
-        <div className="fixed right-8 bottom-24 z-40 w-96 max-w-[calc(100vw-3rem)]">
-          <div className="bg-white dark:bg-gray-900 border-2 border-black dark:border-white shadow-2xl">
-            {/* Header */}
-            <div className="bg-black dark:bg-white text-white dark:text-black px-6 py-4 flex items-center justify-between">
-              <h3 className="text-lg font-bold">
-                {isZh ? '快速联系' : 'Quick Contact'}
-              </h3>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="hover:scale-110 transition-transform"
-                aria-label={isZh ? '关闭' : 'Close'}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            {/* Form */}
-            <form
-              action={`https://formsubmit.co/${emailAddress}`}
-              method="POST"
-              onSubmit={handleSubmit}
-              className="p-6 space-y-4"
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {/* Hidden Fields */}
-              <input
-                type="hidden"
-                name="_next"
-                value={`${siteUrl}/${language}/thank-you`}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
-              <input
-                type="hidden"
-                name="_subject"
-                value="职业交易员沟通"
-              />
-              <input type="hidden" name="_captcha" value="false" />
-
-              {/* Name Field */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-bold mb-2 text-black dark:text-white"
-                >
-                  {isZh ? '姓名 *' : 'Name *'}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-black dark:focus:border-white outline-none transition-colors"
-                  placeholder={isZh ? '请输入您的姓名' : 'Enter your name'}
-                />
-              </div>
-
-              {/* Email Field */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-bold mb-2 text-black dark:text-white"
-                >
-                  {isZh ? '邮箱 *' : 'Email *'}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-black dark:focus:border-white outline-none transition-colors"
-                  placeholder={isZh ? '请输入您的邮箱' : 'Enter your email'}
-                />
-              </div>
-
-              {/* Phone Field */}
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-bold mb-2 text-black dark:text-white"
-                >
-                  {isZh ? '电话' : 'Phone'}
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-black dark:focus:border-white outline-none transition-colors"
-                  placeholder={isZh ? '请输入您的电话（可选）' : 'Enter your phone (optional)'}
-                />
-              </div>
-
-              {/* Message Field */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-bold mb-2 text-black dark:text-white"
-                >
-                  {isZh ? '留言' : 'Message'}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={3}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-black dark:focus:border-white outline-none transition-colors resize-none"
-                  placeholder={isZh ? '请告诉我们您的需求...' : 'Tell us your needs...'}
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-bold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors"
-              >
-                {isZh ? '快联系我' : 'Contact Me'}
-              </button>
-
-              {/* Privacy Note */}
-              <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
-                {isZh
-                  ? '我们重视您的隐私，不会分享您的信息。'
-                  : 'We value your privacy and will not share your information.'}
-              </p>
-            </form>
-          </div>
-        </div>
+            </svg>
+            <span className="font-medium">
+              {isZh ? '联系我们' : 'Contact'}
+            </span>
+          </Button>
+        </motion.div>
       )}
+
+      {/* Floating Form - Using shadcn Dialog */}
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="max-w-md w-full bg-white dark:bg-gray-900 border-2 border-amber-500/30 shadow-2xl">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-gray-900 dark:text-white">
+              {isZh ? '快速联系' : 'Quick Contact'}
+            </DialogTitle>
+            <div className="w-full h-0.5 bg-amber-500/60 rounded-full mt-2 mb-4"></div>
+            <DialogDescription>
+              {isZh
+                ? '填写表单，我们会尽快回复您'
+                : 'Fill out the form and we will respond as soon as possible'
+              }
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <Label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                {isZh ? '姓名 *' : 'Name *'}
+              </Label>
+              <Input
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                placeholder={isZh ? '请输入您的姓名' : 'Enter your name'}
+                className="mt-1 border-gray-200 dark:border-gray-600 focus:border-amber-500 dark:focus:border-amber-400"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                {isZh ? '邮箱 *' : 'Email *'}
+              </Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                placeholder={isZh ? '请输入您的邮箱' : 'Enter your email'}
+                className="mt-1 border-gray-200 dark:border-gray-600 focus:border-amber-500 dark:focus:border-amber-400"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <Label htmlFor="phone" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                {isZh ? '电话' : 'Phone'}
+                <span className="text-gray-400 ml-1">({isZh ? '可选' : 'optional'})</span>
+              </Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder={isZh ? '请输入您的电话' : 'Enter your phone'}
+                className="mt-1 border-gray-200 dark:border-gray-600 focus:border-amber-500 dark:focus:border-amber-400"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <Label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                {isZh ? '留言' : 'Message'}
+              </Label>
+              <Textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                placeholder={isZh ? '请告诉我们您的需求...' : 'Tell us your needs...'}
+                className="mt-1 border-gray-200 dark:border-gray-600 focus:border-amber-500 dark:focus:border-amber-400 resize-none"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <Card className="bg-amber-50/50 dark:bg-amber-900/10 border border-amber-200/50 dark:border-amber-700/30 p-3">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  🔒 {isZh
+                    ? '我们重视您的隐私，不会分享您的信息。'
+                    : 'We value your privacy and will not share your information.'}
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="pt-4"
+            >
+              <Button
+                onClick={() => {
+                  // 创建临时表单提交
+                  const form = document.createElement('form');
+                  form.action = `https://formsubmit.co/${emailAddress}`;
+                  form.method = 'POST';
+                  form.style.display = 'none';
+
+                  const hiddenNext = document.createElement('input');
+                  hiddenNext.type = 'hidden';
+                  hiddenNext.name = '_next';
+                  hiddenNext.value = `${siteUrl}/${language}/thank-you`;
+
+                  const hiddenSubject = document.createElement('input');
+                  hiddenSubject.type = 'hidden';
+                  hiddenSubject.name = '_subject';
+                  hiddenSubject.value = isZh ? '快速联系 - 浮动表单' : 'Quick Contact - Floating Form';
+
+                  const hiddenCaptcha = document.createElement('input');
+                  hiddenCaptcha.type = 'hidden';
+                  hiddenCaptcha.name = '_captcha';
+                  hiddenCaptcha.value = 'false';
+
+                  form.appendChild(hiddenNext);
+                  form.appendChild(hiddenSubject);
+                  form.appendChild(hiddenCaptcha);
+
+                  // 添加表单字段
+                  Object.entries(formData).forEach(([key, value]) => {
+                    const input = document.createElement('input');
+                    input.type = key === 'email' ? 'email' : key === 'phone' ? 'tel' : 'text';
+                    input.name = key;
+                    input.value = value;
+                    input.required = key === 'name' || key === 'email';
+                    form.appendChild(input);
+                  });
+
+                  document.body.appendChild(form);
+                  form.submit();
+                  document.body.removeChild(form);
+
+                  setIsOpen(false);
+                }}
+                className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium shadow-sm hover:shadow transition-all duration-200"
+              >
+                {isZh ? '发送消息' : 'Send Message'}
+              </Button>
+            </motion.div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

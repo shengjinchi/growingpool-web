@@ -1,16 +1,24 @@
 "use client";
 
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 interface EmailContactModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
   title?: string;
 }
 
-export default function EmailContactModal({ isOpen, onClose, title }: EmailContactModalProps) {
+export default function EmailContactModal({ open, onOpenChange, title }: EmailContactModalProps) {
   const { t } = useLanguage();
   const emailAddress = "growingpool@gmail.com";
 
@@ -26,86 +34,97 @@ export default function EmailContactModal({ isOpen, onClose, title }: EmailConta
     alert(t('email.copied'));
   };
 
-  if (!isOpen) return null;
-
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={onClose}
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-      >
-        <motion.div
-          initial={{ scale: 0.95, y: 20 }}
-          animate={{ scale: 1, y: 0 }}
-          exit={{ scale: 0.95, y: 20 }}
-          onClick={(e) => e.stopPropagation()}
-          className="bg-white dark:bg-gray-900 max-w-md w-full p-6 border-2 border-gray-200 dark:border-gray-700"
-        >
-          <div className="flex items-start justify-between mb-4">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{displayTitle}</h2>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-md w-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl">
+        {/* Subtle Gold Header */}
+        <div className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-6 py-4 -mx-6 -mt-6 mb-4">
+          <DialogTitle className="text-2xl font-bold text-gray-900 dark:text-white inline-block">
+            {displayTitle}
+          </DialogTitle>
+          <div className="w-full h-1 bg-amber-500/60 rounded-full mt-2"></div>
+        </div>
 
-          <div className="space-y-4">
-            <p className="text-gray-700 dark:text-gray-300">
-              {t('email.description')}
-            </p>
+        <div className="space-y-4">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-gray-700 dark:text-gray-300"
+          >
+            {t('email.description')}
+          </motion.p>
 
-            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('email.address.label')}</p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 p-4 shadow-sm">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">{t('email.address.label')}</p>
               <div className="flex items-center justify-between gap-2">
-                <code className="text-black dark:text-white font-mono text-sm flex-1">
+                <code className="text-gray-900 dark:text-white font-mono text-sm flex-1">
                   {emailAddress}
                 </code>
-                <button
+                <Button
+                  variant="ghost"
+                  size="sm"
                   onClick={handleCopyEmail}
-                  className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 text-sm font-semibold whitespace-nowrap"
+                  className="text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-900/20 font-medium whitespace-nowrap"
                 >
                   {t('email.copy')}
-                </button>
+                </Button>
               </div>
-            </div>
+            </Card>
+          </motion.div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('email.subject.label')}</p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 p-4 shadow-sm">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">{t('email.subject.label')}</p>
               <code className="text-gray-900 dark:text-white font-mono text-sm">
                 {emailSubject}
               </code>
-            </div>
+            </Card>
+          </motion.div>
 
-            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-4">
-              <p className="text-sm text-gray-800 dark:text-gray-200">
-                <strong>{t('email.tip')}</strong>{t('email.tip.text')}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Card className="bg-amber-50/50 dark:bg-amber-900/10 border border-amber-200/50 dark:border-amber-700/30 p-4 shadow-sm">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong className="text-amber-700 dark:text-amber-300">{t('email.tip')}</strong>{t('email.tip.text')}
               </p>
-            </div>
+            </Card>
+          </motion.div>
 
-            <div className="flex gap-3 pt-4">
-              <button
-                onClick={handleSendEmail}
-                className="flex-1 px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all"
-              >
-                {t('email.send')}
-              </button>
-              <button
-                onClick={onClose}
-                className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
-              >
-                {t('email.close')}
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex gap-3 pt-4"
+          >
+            <Button
+              onClick={handleSendEmail}
+              className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-medium shadow-sm hover:shadow transition-all duration-200"
+            >
+              {t('email.send')}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium transition-all"
+            >
+              {t('email.close')}
+            </Button>
+          </motion.div>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }

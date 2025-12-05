@@ -119,8 +119,8 @@ export default function Pricing() {
 
       {/* Email Contact Modal */}
       <EmailContactModal
-        isOpen={isEmailModalOpen}
-        onClose={() => setIsEmailModalOpen(false)}
+        open={isEmailModalOpen}
+        onOpenChange={setIsEmailModalOpen}
         title="业务咨询"
       />
     </div>

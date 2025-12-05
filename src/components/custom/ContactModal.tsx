@@ -1,15 +1,24 @@
 "use client";
 
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 interface ContactModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }
 
-export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export default function ContactModal({ open, onOpenChange }: ContactModalProps) {
   const { language } = useLanguage();
 
   const contactOptions = [
@@ -53,88 +62,62 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   ];
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-50 flex items-center justify-center"
-          onClick={onClose}
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-md mx-4 overflow-hidden p-0 border-2 border-black dark:border-white">
+        {/* Custom Header */}
+        <div className="bg-black dark:bg-white text-white dark:text-black px-6 py-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-bold">
+              {language === 'zh' ? '联系我们' : 'Contact Us'}
+            </h2>
+          </div>
+        </div>
 
-          {/* Modal Content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.2, type: "spring", damping: 25, stiffness: 400 }}
-            className="relative bg-white dark:bg-gray-900 border-2 border-black dark:border-white rounded-lg shadow-2xl max-w-md w-full mx-4 overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className="bg-black dark:bg-white text-white dark:text-black px-6 py-4">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold">
-                  {language === 'zh' ? '联系我们' : 'Contact Us'}
-                </h2>
-                <button
-                  onClick={onClose}
-                  className="text-white dark:text-black hover:bg-white/10 dark:hover:bg-black/10 rounded-lg p-1 transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        {/* Contact Options */}
+        <div className="p-6 space-y-3">
+          {contactOptions.map((option, index) => (
+            <motion.div
+              key={option.name}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Button
+                variant="outline"
+                onClick={option.action}
+                className="w-full justify-start h-auto p-4 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-black dark:hover:border-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-all hover:shadow-md group"
+              >
+                <div className="flex-shrink-0 text-black dark:text-white group-hover:scale-110 transition-transform mr-4">
+                  {option.icon}
+                </div>
+                <div className="flex-1 text-left">
+                  <div className="font-semibold text-black dark:text-white">
+                    {option.name}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    {option.handle}
+                  </div>
+                </div>
+                <div className="text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
-              </div>
-            </div>
+                </div>
+              </Button>
+            </motion.div>
+          ))}
+        </div>
 
-            {/* Contact Options */}
-            <div className="p-6 space-y-3">
-              {contactOptions.map((option, index) => (
-                <motion.button
-                  key={option.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  onClick={option.action}
-                  className="w-full flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-black dark:hover:border-white rounded-lg transition-all hover:shadow-md group"
-                >
-                  <div className="flex-shrink-0 text-black dark:text-white group-hover:scale-110 transition-transform">
-                    {option.icon}
-                  </div>
-                  <div className="flex-1 text-left">
-                    <div className="font-semibold text-black dark:text-white">
-                      {option.name}
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      {option.handle}
-                    </div>
-                  </div>
-                  <div className="text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-
-            {/* Footer */}
-            <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-              <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-                {language === 'zh'
-                  ? '选择您偏好的联系方式，我们会尽快回复您，请备注您希望咨询的问题，如“交易员训练”'
-                  : 'Choose your preferred contact method and we will respond as soon as possible'
-                }
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        {/* Footer */}
+        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+          <DialogDescription className="text-sm text-gray-600 dark:text-gray-400 text-center">
+            {language === 'zh'
+              ? '选择您偏好的联系方式，我们会尽快回复您，请备注您希望咨询的问题，如"交易员训练"'
+              : 'Choose your preferred contact method and we will respond as soon as possible'
+            }
+          </DialogDescription>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
