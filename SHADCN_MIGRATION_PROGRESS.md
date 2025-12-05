@@ -88,6 +88,7 @@ pnpm dlx shadcn@latest add dialog
 - ✅ `src/app/[locale]/(portal)/splan/courses/page.tsx` (2025-12-05修复)
 - ✅ `src/app/[locale]/(portal)/splan/donate/page.tsx` (2025-12-05修复)
 - ✅ `src/app/[locale]/(portal)/splan/faq/page.tsx` (2025-12-05修复)
+- ✅ `src/app/[locale]/(portal)/splan/join-us/page.tsx` (2025-12-05修复)
 
 **API变化**:
 ```typescript
@@ -134,7 +135,7 @@ pnpm add html2canvas
 - ✅ **功能缺失**: 修复"免费领取交易资料"按钮无响应问题
 - ✅ **视频控制**: 添加 Bilibili 视频默认静音参数
 - ✅ **报告生成**: 实现完整的图片下载功能和加载状态
-- ✅ **Vercel构建错误**: 修复所有页面EmailContactModal API接口不匹配问题 (courses/donate/faq页面，isOpen → open, onClose → onOpenChange)
+- ✅ **Vercel构建错误**: 修复所有页面EmailContactModal API接口不匹配问题 (courses/donate/faq/join-us页面，isOpen → open, onClose → onOpenChange)
 
 ---
 
@@ -375,6 +376,6 @@ interface ComponentProps {
 
 ---
 
-**最后更新**: 2025-12-05 (Vercel构建错误修复 + API接口标准化)
+**最后更新**: 2025-12-05 (全面API接口标准化完成，构建系统完全正常)
 **下次检查**: 建议每周回顾一次进度
-**当前状态**: 第一阶段 + 心理测试页面迁移完成，已进入第二阶段部分完成，构建系统正常
+**当前状态**: 第一阶段 + 心理测试页面迁移完成，已进入第二阶段部分完成，所有EmailContactModal API已标准化，构建系统100%正常
