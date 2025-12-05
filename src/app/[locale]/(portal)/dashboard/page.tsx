@@ -12,6 +12,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import BrandName from '@/components/custom/BrandName';
 import databaseAuth, { type AuthUser } from '@/lib/auth/database-auth';
 import { hasPermission } from '@/lib/user-management/types';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 export default function TradingDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -19,7 +20,7 @@ export default function TradingDashboard() {
   const [loading, setLoading] = useState(true);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
-  const [activeTab, setActiveTab] = useState<string>('tianti');
+  const [isUserManagementVisible, setIsUserManagementVisible] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -96,13 +97,26 @@ export default function TradingDashboard() {
 
     try {
       const response = await fetch(`/api/notifications?userId=${currentUser.id}&unreadOnly=true&limit=1`);
+
+      if (!response.ok) {
+        console.warn('Notifications API not available:', response.status);
+        return;
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        console.warn('Notifications API returned non-JSON response');
+        return;
+      }
+
       const data = await response.json();
 
       if (data.success) {
         setUnreadCount(data.unreadCount || 0);
       }
     } catch (error) {
-      console.error('获取未读通知数量失败:', error);
+      // 静默处理错误，避免影响用户体验
+      // console.error('获取未读通知数量失败:', error);
     }
   };
 
@@ -153,9 +167,9 @@ export default function TradingDashboard() {
             {/* 用户管理按钮 - 仅对有权限的用户显示 */}
             {currentUser && hasPermission(currentUser as any, 'user_read') && (
               <button
-                onClick={() => setActiveTab('users')}
+                onClick={() => setIsUserManagementVisible(!isUserManagementVisible)}
                 className={`px-4 py-2 text-sm font-medium transition-all rounded ${
-                  activeTab === 'users'
+                  isUserManagementVisible
                     ? 'bg-yellow-600 text-white border-yellow-600'
                     : 'text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:border-yellow-600 dark:hover:border-yellow-400 hover:text-yellow-600 dark:hover:text-yellow-400'
                 }`}
@@ -192,93 +206,60 @@ export default function TradingDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        {/* Tab Navigation */}
-        <div className="mb-8 border-b border-gray-200 dark:border-gray-700">
-          <div className="flex space-x-8">
-            <button
-              onClick={() => setActiveTab('function1')}
-              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'function1'
-                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
-              }`}
-            >
-              <span className="mr-2">🔧</span>
-              {t('dashboard.tab.function1')}
-            </button>
-
-            <button
-              onClick={() => setActiveTab('function2')}
-              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'function2'
-                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
-              }`}
-            >
-              <span className="mr-2">⚙️</span>
-              {t('dashboard.tab.function2')}
-            </button>
-
-            <button
-              onClick={() => setActiveTab('function3')}
-              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'function3'
-                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
-              }`}
-            >
-              <span className="mr-2">🚀</span>
-              {t('dashboard.tab.function3')}
-            </button>
-
-            <button
-              onClick={() => setActiveTab('tianti')}
-              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'tianti'
-                  ? 'border-yellow-600 text-yellow-600 dark:text-yellow-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
-              }`}
-            >
-              <span className="mr-2">🏆</span>
-              {t('dashboard.tab.tianti')}
-            </button>
+        {/* 用户管理页面 - 如果有权限且按钮被点击则显示在tabs上方 */}
+        {currentUser && hasPermission(currentUser as any, 'user_read') && isUserManagementVisible && (
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                <span>👥</span>
+                {t('dashboard.tab.users')}
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <UserManagement />
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* 根据activeTab显示对应内容 */}
-        {activeTab === 'tianti' && (
-          <div className="space-y-6">
+        {/* Tabs for other functions */}
+        <Tabs defaultValue="tianti" className="space-y-6">
+          <div className="flex justify-center mb-6">
+            <TabsList>
+              <TabsTrigger value="function1">
+                <span className="mr-2">🔧</span>
+                {t('dashboard.tab.function1')}
+              </TabsTrigger>
+              <TabsTrigger value="function2">
+                <span className="mr-2">⚙️</span>
+                {t('dashboard.tab.function2')}
+              </TabsTrigger>
+              <TabsTrigger value="function3">
+                <span className="mr-2">🚀</span>
+                {t('dashboard.tab.function3')}
+              </TabsTrigger>
+              <TabsTrigger value="tianti">
+                <span className="mr-2">🏆</span>
+                {t('dashboard.tab.tianti')}
+              </TabsTrigger>
+            </TabsList>
+          </div>
+
+          <TabsContent value="tianti" className="space-y-6">
             <TiantiPanel />
-          </div>
-        )}
+          </TabsContent>
 
-        {/* 用户管理页面 */}
-        {activeTab === 'users' && currentUser && hasPermission(currentUser as any, 'user_read') && (
-          <div className="space-y-6">
-            <UserManagement />
-          </div>
-        )}
-
-        {/* 功能1页面 */}
-        {activeTab === 'function1' && (
-          <div className="space-y-6">
+          <TabsContent value="function1" className="space-y-6">
             <Function1Panel />
-          </div>
-        )}
+          </TabsContent>
 
-        {/* 功能2页面 */}
-        {activeTab === 'function2' && (
-          <div className="space-y-6">
+          <TabsContent value="function2" className="space-y-6">
             <Function2Panel />
-          </div>
-        )}
+          </TabsContent>
 
-        {/* 功能3页面 */}
-        {activeTab === 'function3' && (
-          <div className="space-y-6">
+          <TabsContent value="function3" className="space-y-6">
             <Function3Panel />
-          </div>
-        )}
+          </TabsContent>
+        </Tabs>
       </div>
 
       {/* Footer */}

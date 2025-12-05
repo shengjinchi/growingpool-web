@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import databaseAuth, { type AuthUser } from '@/lib/auth/database-auth';
 import { USER_GROUPS, type UserGroup, hasPermission } from '@/lib/user-management/types';
+import { Button } from '@/components/ui/button';
+import { ButtonGroup } from '@/components/ui/button-group';
 
 export default function UserManagement() {
   const { t } = useLanguage();
@@ -364,12 +366,13 @@ export default function UserManagement() {
         </h2>
         <div className="flex items-center space-x-4">
           {currentUser && hasPermission(currentUser as any, 'user_write') && (
-            <button
+            <Button
               onClick={() => setIsCreateModalOpen(true)}
-              className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all"
+              className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900"
+              size="default"
             >
               创建用户
-            </button>
+            </Button>
           )}
         </div>
       </div>
@@ -432,36 +435,44 @@ export default function UserManagement() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                     {new Date(user.createdAt || user.created_at).toLocaleDateString('zh-CN')}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     {currentUser && hasPermission(currentUser as any, 'user_write') && user.username !== currentUser.username && (
-                      <>
-                        <button
+                      <ButtonGroup>
+                        <Button
                           onClick={() => openEditGroupModal(user)}
-                          className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-900 dark:hover:text-yellow-300"
+                          variant="ghost"
+                          size="sm"
+                          className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 px-3 py-1.5 text-xs"
                         >
                           调整用户组
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                           onClick={() => openNotificationModal(user)}
-                          className="text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300"
+                          variant="ghost"
+                          size="sm"
+                          className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 px-3 py-1.5 text-xs"
                         >
                           发送通知
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                           onClick={() => handleResetPassword(user)}
-                          className="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300"
+                          variant="ghost"
+                          size="sm"
+                          className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 px-3 py-1.5 text-xs"
                         >
                           重置密码
-                        </button>
+                        </Button>
                         {currentUser && hasPermission(currentUser as any, 'user_delete') && (
-                          <button
+                          <Button
                             onClick={() => handleDeleteUser(user)}
-                            className="text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300"
+                            variant="ghost"
+                            size="sm"
+                            className="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 dark:hover:text-red-300 px-3 py-1.5 text-xs"
                           >
                             删除
-                          </button>
+                          </Button>
                         )}
-                      </>
+                      </ButtonGroup>
                     )}
                   </td>
                 </tr>
@@ -521,22 +532,22 @@ export default function UserManagement() {
               </div>
             </div>
             <div className="flex justify-end space-x-3 mt-6">
-              <button
+              <Button
                 onClick={() => {
                   setIsCreateModalOpen(false);
                   setNewUsername('');
                   setNewPassword('');
                 }}
-                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                variant="outline"
               >
                 取消
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={handleCreateUser}
-                className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black font-semibold border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all"
+                className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900"
               >
                 创建
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -590,7 +601,7 @@ export default function UserManagement() {
               </div>
             </div>
             <div className="flex justify-end space-x-3 mt-6">
-              <button
+              <Button
                 onClick={() => {
                   setIsNotificationModalOpen(false);
                   setNotificationTarget(null);
@@ -598,16 +609,16 @@ export default function UserManagement() {
                   setNotificationMessage('');
                   setNotificationType('info');
                 }}
-                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                variant="outline"
               >
                 取消
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={handleSendNotification}
-                className="px-4 py-2 bg-green-600 dark:bg-green-500 text-white font-semibold border-2 border-green-600 dark:border-green-500 hover:bg-green-700 dark:hover:bg-green-600 transition-all"
+                className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900"
               >
                 发送通知
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -656,22 +667,22 @@ export default function UserManagement() {
               </div>
             </div>
             <div className="flex justify-end space-x-3 mt-6">
-              <button
+              <Button
                 onClick={() => {
                   setIsEditGroupModalOpen(false);
                   setEditUserTarget(null);
                   setEditUserGroup('');
                 }}
-                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                variant="outline"
               >
                 取消
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={handleEditUserGroup}
-                className="px-4 py-2 bg-yellow-600 dark:bg-yellow-500 text-white font-semibold border-2 border-yellow-600 dark:border-yellow-500 hover:bg-yellow-700 dark:hover:bg-yellow-600 transition-all"
+                className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900"
               >
                 更新用户组
-              </button>
+              </Button>
             </div>
           </div>
         </div>

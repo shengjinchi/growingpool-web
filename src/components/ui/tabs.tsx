@@ -26,7 +26,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "inline-flex w-fit items-center justify-center bg-white dark:bg-gray-800 border-2 border-black dark:border-white",
+        "inline-flex w-fit items-center justify-center mx-auto bg-white dark:bg-gray-800 border-2 border-black dark:border-white rounded-full p-1",
         className
       )}
       {...props}
@@ -42,11 +42,11 @@ function TabsTrigger({
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        "inline-flex flex-1 items-center justify-center gap-1.5 border-r-2 border-gray-300 dark:border-gray-700 last:border-r-0 px-6 py-3 text-sm font-bold whitespace-nowrap transition-colors",
-        "text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800",
-        "hover:bg-gray-100 dark:hover:bg-gray-700",
-        "data-[state=active]:bg-black dark:data-[state=active]:bg-white data-[state=active]:text-white dark:data-[state=active]:text-black",
-        "focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+        "inline-flex items-center justify-center gap-1.5 px-6 py-2 text-sm font-bold whitespace-nowrap transition-all duration-200 rounded-full",
+        "text-gray-600 dark:text-gray-400",
+        "hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-200",
+        "data-[state=active]:bg-black dark:data-[state=active]:bg-white data-[state=active]:text-white dark:data-[state=active]:text-black shadow-sm",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}

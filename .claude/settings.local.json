@@ -16,7 +16,14 @@
       "mcp__ide__getDiagnostics",
       "Bash(pnpm build)",
       "Bash(npx tsc:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(findstr LISTENING)",
+      "Bash(wmic:*)",
+      "Bash(cmd:*)",
+      "Bash(powershell \"Stop-Process -Id 50872 -Force\")"
     ],
     "deny": [],
     "ask": []
