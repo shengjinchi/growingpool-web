@@ -372,7 +372,7 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
                         </div>
                         <button
                           onClick={() => {
-                            if (confirm(t('notification.manage.deleteOldConfirm', { days: deleteDays }))) {
+                            if (confirm(`确定要清空 ${deleteDays} 天前的所有通知吗？`)) {
                               deleteNotifications('old');
                             }
                           }}
@@ -425,7 +425,7 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
                         </div>
                         <button
                           onClick={() => {
-                            if (confirm(t('notification.manage.deleteOldAllUsersConfirm', { days: deleteDaysAllUsers }))) {
+                            if (confirm(`确定要清空所有用户 ${deleteDaysAllUsers} 天前的通知吗？这将影响所有用户！`)) {
                               deleteNotifications('oldAllUsers');
                             }
                           }}
