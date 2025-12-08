@@ -142,8 +142,6 @@ export async function DELETE(request: NextRequest) {
     const all = searchParams.get('all') === 'true';
     const allUsers = searchParams.get('allUsers') === 'true';
 
-    let query = supabase.from('notifications');
-
     if (allUsers) {
       // 删除所有用户的通知（管理员功能）
       if (beforeDate) {
@@ -167,7 +165,7 @@ export async function DELETE(request: NextRequest) {
       } else {
         // 删除所有用户的所有通知
         try {
-          // 方法1：先获取所有通知的ID，然后批量删除
+          // 先获取所有通知的ID，然后批量删除
           const { data: allNotifications, error: fetchError } = await supabase
             .from('notifications')
             .select('id')
@@ -215,36 +213,43 @@ export async function DELETE(request: NextRequest) {
         }, { status: 400 });
       }
 
+      let query = supabase.from('notifications');
+
       if (all) {
         // 删除指定用户的所有通知
-        query = query.delete().eq('user_id', userId);
+        const { error } = await query.delete().eq('user_id', userId);
+
+        if (error) {
+          return NextResponse.json({
+            success: false,
+            error: error.message
+          }, { status: 500 });
+        }
       } else if (beforeDate) {
         // 删除指定用户在某个日期之前的所有通知
-        query = query
+        const { error } = await query
           .delete()
           .eq('user_id', userId)
           .lt('created_at', beforeDate);
+
+        if (error) {
+          return NextResponse.json({
+            success: false,
+            error: error.message
+          }, { status: 500 });
+        }
       } else {
         return NextResponse.json({
           success: false,
           error: '参数错误，需要指定 beforeDate 或 all=true'
         }, { status: 400 });
       }
-    }
 
-    const { error } = await query;
-
-    if (error) {
       return NextResponse.json({
-        success: false,
-        error: error.message
-      }, { status: 500 });
+        success: true,
+        message: '通知删除成功'
+      });
     }
-
-    return NextResponse.json({
-      success: true,
-      message: allUsers ? '所有用户通知删除成功' : '通知删除成功'
-    });
 
   } catch (error) {
     console.error('删除通知失败:', error);
