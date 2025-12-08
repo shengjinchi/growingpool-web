@@ -11,13 +11,9 @@ export default function DonatePage() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const { t } = useLanguage();
 
-  // 计算捐赠金额：从2025年10月1日开始，每天增加$5
+  // 固定捐赠金额
   useEffect(() => {
-    const startDate = new Date('2025-10-01T00:00:00');
-    const today = new Date();
-    const daysPassed = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
-    const currentAmount = 999 + (daysPassed * 5);
-    setDonationAmount(Math.max(999, currentAmount)); // 最低999
+    setDonationAmount(999);
   }, []);
 
   return (
@@ -64,7 +60,63 @@ export default function DonatePage() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-20">
 
-        {/* Donation Amount Card - 重新设计 */}
+        {/* Donation Cards - 两栏布局 */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Mini Donation Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+            className="relative"
+          >
+            {/* 背景光效 */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-2xl"></div>
+
+            <div className="relative bg-gradient-to-br from-black to-gray-900 dark:from-white dark:to-gray-100 p-12 border-2 border-black dark:border-white shadow-2xl">
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 backdrop-blur-sm mb-6">
+                  <p className="text-sm font-semibold text-white dark:text-black">迷你捐赠会员</p>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-baseline justify-center gap-3 mb-3">
+                    <span className="text-7xl md:text-8xl font-black text-white dark:text-black">
+                      $399
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="px-3 py-1 bg-white/20 dark:bg-black/20 text-white dark:text-black text-sm font-bold">USDT</span>
+                    <span className="text-white/60 dark:text-black/60">/</span>
+                    <span className="px-3 py-1 bg-white/20 dark:bg-black/20 text-white dark:text-black text-sm font-bold">USDC</span>
+                  </div>
+                </div>
+
+                <div className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500/20 border border-yellow-500/30 backdrop-blur-sm">
+                  <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-yellow-500 font-bold text-sm">仅接受一次迷你捐赠</span>
+                </div>
+
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
+                    <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">试用期</p>
+                    <p className="text-2xl font-bold text-white dark:text-black">30日</p>
+                  </div>
+                  <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
+                    <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">教练陪跑</p>
+                    <p className="text-2xl font-bold text-white dark:text-black">全程</p>
+                  </div>
+                  <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
+                    <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">晋级机会</p>
+                    <p className="text-2xl font-bold text-white dark:text-black">1次</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Donation Amount Card - 重新设计 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -103,20 +155,21 @@ export default function DonatePage() {
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
                   <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">{t('donate.amount.start')}</p>
-                  <p className="text-2xl font-bold text-white dark:text-black">$999</p>
+                  <p className="text-2xl font-bold text-white dark:text-black">90日</p>
                 </div>
                 <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
-                  <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">{t('donate.amount.daily')}</p>
-                  <p className="text-2xl font-bold text-white dark:text-black">+$5</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">教练陪跑</p>
+                  <p className="text-2xl font-bold text-white dark:text-black">全程</p>
                 </div>
                 <div className="bg-white/5 dark:bg-black/5 backdrop-blur-sm p-4 border border-white/10 dark:border-black/10">
                   <p className="text-xs text-gray-400 dark:text-gray-600 mb-1">{t('donate.amount.payment')}</p>
-                  <p className="text-sm font-bold text-white dark:text-black">{t('donate.amount.crypto')}</p>
+                  <p className="text-2xl font-bold text-white dark:text-black">{t('donate.amount.crypto')}</p>
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
+        </div>
 
         {/* Benefits Section - 重新设计 */}
         <motion.div
