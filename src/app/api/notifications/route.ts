@@ -132,3 +132,125 @@ export async function POST(request: NextRequest) {
     }, { status: 500 });
   }
 }
+
+// DELETE - 删除通知
+export async function DELETE(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+    const beforeDate = searchParams.get('beforeDate');
+    const all = searchParams.get('all') === 'true';
+    const allUsers = searchParams.get('allUsers') === 'true';
+
+    let query = supabase.from('notifications');
+
+    if (allUsers) {
+      // 删除所有用户的通知（管理员功能）
+      if (beforeDate) {
+        // 删除所有用户在某个日期之前的所有通知
+        const { error } = await supabase
+          .from('notifications')
+          .delete()
+          .lt('created_at', beforeDate);
+
+        if (error) {
+          return NextResponse.json({
+            success: false,
+            error: error.message
+          }, { status: 500 });
+        }
+
+        return NextResponse.json({
+          success: true,
+          message: '所有用户通知删除成功'
+        });
+      } else {
+        // 删除所有用户的所有通知
+        try {
+          // 方法1：先获取所有通知的ID，然后批量删除
+          const { data: allNotifications, error: fetchError } = await supabase
+            .from('notifications')
+            .select('id')
+            .limit(1000); // 限制数量避免内存问题
+
+          if (fetchError) {
+            return NextResponse.json({
+              success: false,
+              error: `获取通知列表失败: ${fetchError.message}`
+            }, { status: 500 });
+          }
+
+          if (allNotifications && allNotifications.length > 0) {
+            const idsToDelete = allNotifications.map(n => n.id);
+            const { error: deleteError } = await supabase
+              .from('notifications')
+              .delete()
+              .in('id', idsToDelete);
+
+            if (deleteError) {
+              return NextResponse.json({
+                success: false,
+                error: `删除通知失败: ${deleteError.message}`
+              }, { status: 500 });
+            }
+          }
+
+          return NextResponse.json({
+            success: true,
+            message: `成功删除 ${allNotifications?.length || 0} 条通知`
+          });
+        } catch (error) {
+          return NextResponse.json({
+            success: false,
+            error: `删除通知时发生错误: ${error instanceof Error ? error.message : '未知错误'}`
+          }, { status: 500 });
+        }
+      }
+    } else {
+      // 删除指定用户的通知
+      if (!userId) {
+        return NextResponse.json({
+          success: false,
+          error: '缺少必需参数: userId'
+        }, { status: 400 });
+      }
+
+      if (all) {
+        // 删除指定用户的所有通知
+        query = query.delete().eq('user_id', userId);
+      } else if (beforeDate) {
+        // 删除指定用户在某个日期之前的所有通知
+        query = query
+          .delete()
+          .eq('user_id', userId)
+          .lt('created_at', beforeDate);
+      } else {
+        return NextResponse.json({
+          success: false,
+          error: '参数错误，需要指定 beforeDate 或 all=true'
+        }, { status: 400 });
+      }
+    }
+
+    const { error } = await query;
+
+    if (error) {
+      return NextResponse.json({
+        success: false,
+        error: error.message
+      }, { status: 500 });
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: allUsers ? '所有用户通知删除成功' : '通知删除成功'
+    });
+
+  } catch (error) {
+    console.error('删除通知失败:', error);
+    return NextResponse.json({
+      success: false,
+      error: error instanceof Error ? error.message : '未知错误'
+    }, { status: 500 });
+  }
+}

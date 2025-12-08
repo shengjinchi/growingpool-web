@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import databaseAuth from '@/lib/auth/database-auth';
+import { hasPermission } from '@/lib/user-management/types';
 
 interface Notification {
   id: string;
@@ -30,6 +32,74 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
   const [unreadCount, setUnreadCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [markingAll, setMarkingAll] = useState(false);
+
+  // 管理员功能相关状态
+  const [isCurrentUserAdmin, setIsCurrentUserAdmin] = useState(false);
+  const [showManageOptions, setShowManageOptions] = useState(false);
+  const [deleteDays, setDeleteDays] = useState('30');
+  const [deleteDaysAllUsers, setDeleteDaysAllUsers] = useState('30');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  // 检查当前用户是否是管理员
+  const checkAdminPermissions = () => {
+    const currentUser = databaseAuth.getCurrentUser();
+    if (currentUser && hasPermission(currentUser as any, 'user_delete')) {
+      setIsCurrentUserAdmin(true);
+    } else {
+      setIsCurrentUserAdmin(false);
+    }
+  };
+
+  // 删除通知的函数
+  const deleteNotifications = async (type: 'old' | 'all' | 'oldAllUsers' | 'allAllUsers') => {
+    setIsDeleting(true);
+    try {
+      let url = '/api/notifications';
+
+      if (type === 'oldAllUsers' || type === 'allAllUsers') {
+        // 删除所有用户的通知
+        url += '?allUsers=true';
+        if (type === 'oldAllUsers') {
+          const beforeDate = new Date();
+          beforeDate.setDate(beforeDate.getDate() - parseInt(deleteDaysAllUsers));
+          url += `&beforeDate=${beforeDate.toISOString()}`;
+        }
+      } else {
+        // 删除指定用户的通知
+        if (!currentUserId) return;
+        url += `?userId=${currentUserId}`;
+        if (type === 'old') {
+          const beforeDate = new Date();
+          beforeDate.setDate(beforeDate.getDate() - parseInt(deleteDays));
+          url += `&beforeDate=${beforeDate.toISOString()}`;
+        } else {
+          url += `&all=true`;
+        }
+      }
+
+      const response = await fetch(url, {
+        method: 'DELETE',
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // 如果是删除自己的通知，重新加载通知列表
+        if (type === 'old' || type === 'all') {
+          await loadNotifications();
+        }
+        alert(type.includes('AllUsers') ? t('notification.manage.successAllUsers') : t('notification.manage.success'));
+        setShowManageOptions(false);
+      } else {
+        alert(`${t('notification.manage.error')}: ${data.error}`);
+      }
+    } catch (error) {
+      console.error('删除通知失败:', error);
+      alert(t('notification.manage.error'));
+    } finally {
+      setIsDeleting(false);
+    }
+  };
 
   // 加载通知列表
   const loadNotifications = async () => {
@@ -153,10 +223,11 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
     return `${diffDays}天前`;
   };
 
-  // 当面板打开时加载通知
+  // 当面板打开时加载通知和检查权限
   useEffect(() => {
     if (isOpen && currentUserId) {
       loadNotifications();
+      checkAdminPermissions();
     }
   }, [isOpen, currentUserId]);
 
@@ -196,10 +267,22 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
                 <button
                   onClick={markAllAsRead}
                   disabled={markingAll}
-                  className="w-full bg-white dark:bg-black text-black dark:text-white py-2 px-4 rounded hover:opacity-90 transition-opacity disabled:opacity-50"
+                  className="w-full bg-white dark:bg-black text-black dark:text-white py-2 px-4 rounded hover:opacity-90 transition-opacity disabled:opacity-50 mb-2"
                 >
                   {markingAll ? '标记中...' : '全部标记为已读'}
                 </button>
+              )}
+
+              {/* 管理员操作 */}
+              {isCurrentUserAdmin && (
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <button
+                    onClick={() => setShowManageOptions(!showManageOptions)}
+                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded transition-colors"
+                  >
+                    {t('notification.manage.title')}
+                  </button>
+                </div>
               )}
             </div>
 
@@ -261,6 +344,114 @@ export default function NotificationsPanel({ currentUserId, isOpen, onClose }: N
                       </div>
                     </motion.div>
                   ))}
+                </div>
+              )}
+
+              {/* 管理员操作面板 */}
+              {isCurrentUserAdmin && showManageOptions && (
+                <div className="mt-6 space-y-4">
+                  {/* 我的通知管理 */}
+                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+                      {t('notification.manage.myNotifications')}
+                    </h3>
+
+                    <div className="space-y-3">
+                      {/* 清空我的旧通知 */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <input
+                            type="number"
+                            value={deleteDays}
+                            onChange={(e) => setDeleteDays(e.target.value)}
+                            placeholder={t('notification.manage.daysPlaceholder')}
+                            className="w-20 px-3 py-2 border border-blue-300 dark:border-blue-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                            min="1"
+                          />
+                          <span className="text-gray-700 dark:text-gray-300">天前</span>
+                        </div>
+                        <button
+                          onClick={() => {
+                            if (confirm(t('notification.manage.deleteOldConfirm', { days: deleteDays }))) {
+                              deleteNotifications('old');
+                            }
+                          }}
+                          disabled={isDeleting}
+                          className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white py-2 px-4 rounded transition-colors"
+                        >
+                          {isDeleting ? t('notification.manage.deleting') : t('notification.manage.deleteOld')}
+                        </button>
+                      </div>
+
+                      {/* 清空我的所有通知 */}
+                      <div>
+                        <button
+                          onClick={() => {
+                            if (confirm(t('notification.manage.deleteAllConfirm'))) {
+                              deleteNotifications('all');
+                            }
+                          }}
+                          disabled={isDeleting}
+                          className="w-full bg-red-500 hover:bg-red-600 disabled:bg-gray-400 text-white py-2 px-4 rounded transition-colors"
+                        >
+                          {isDeleting ? t('notification.manage.deleting') : t('notification.manage.deleteAll')}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 所有用户通知管理 */}
+                  <div className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-300 dark:border-red-700 rounded-lg">
+                    <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4 flex items-center gap-2">
+                      ⚠️ {t('notification.manage.allUsersNotifications')}
+                    </h3>
+                    <p className="text-sm text-red-700 dark:text-red-300 mb-4">
+                      警告：以下操作将影响所有用户的通知，请谨慎操作！
+                    </p>
+
+                    <div className="space-y-3">
+                      {/* 清空所有用户旧通知 */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <input
+                            type="number"
+                            value={deleteDaysAllUsers}
+                            onChange={(e) => setDeleteDaysAllUsers(e.target.value)}
+                            placeholder={t('notification.manage.daysPlaceholder')}
+                            className="w-20 px-3 py-2 border border-red-300 dark:border-red-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                            min="1"
+                          />
+                          <span className="text-gray-700 dark:text-gray-300">天前</span>
+                        </div>
+                        <button
+                          onClick={() => {
+                            if (confirm(t('notification.manage.deleteOldAllUsersConfirm', { days: deleteDaysAllUsers }))) {
+                              deleteNotifications('oldAllUsers');
+                            }
+                          }}
+                          disabled={isDeleting}
+                          className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white py-2 px-4 rounded transition-colors"
+                        >
+                          {isDeleting ? t('notification.manage.deleting') : t('notification.manage.deleteOldAllUsers')}
+                        </button>
+                      </div>
+
+                      {/* 清空所有用户所有通知 */}
+                      <div>
+                        <button
+                          onClick={() => {
+                            if (confirm(t('notification.manage.deleteAllAllUsersConfirm'))) {
+                              deleteNotifications('allAllUsers');
+                            }
+                          }}
+                          disabled={isDeleting}
+                          className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white py-2 px-4 rounded transition-colors border-2 border-red-700"
+                        >
+                          {isDeleting ? t('notification.manage.deleting') : t('notification.manage.deleteAllAllUsers')}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

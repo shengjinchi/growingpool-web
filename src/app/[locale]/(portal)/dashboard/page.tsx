@@ -229,14 +229,15 @@ export default function TradingDashboard() {
                 <span className="mr-2">🔧</span>
                 {t('dashboard.tab.function1')}
               </TabsTrigger>
-              <TabsTrigger value="function2">
+              {/* 功能2和功能3暂时隐藏，待开发完成后显示 */}
+              {/* <TabsTrigger value="function2">
                 <span className="mr-2">⚙️</span>
                 {t('dashboard.tab.function2')}
               </TabsTrigger>
               <TabsTrigger value="function3">
                 <span className="mr-2">🚀</span>
                 {t('dashboard.tab.function3')}
-              </TabsTrigger>
+              </TabsTrigger> */}
               <TabsTrigger value="tianti">
                 <span className="mr-2">🏆</span>
                 {t('dashboard.tab.tianti')}

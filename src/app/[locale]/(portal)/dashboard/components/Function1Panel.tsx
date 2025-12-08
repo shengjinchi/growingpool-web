@@ -6,9 +6,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function Function1Panel() {
   const { t } = useLanguage();
   const [showPart4, setShowPart4] = useState(false);
+  const [showPart5, setShowPart5] = useState(false);
 
   const handleCompleteNotes = () => {
     setShowPart4(true);
+  };
+
+  const handleActivation = () => {
+    setShowPart5(true);
   };
 
   
@@ -132,7 +137,7 @@ export default function Function1Panel() {
 
       {/* 下载并安装交易系统 */}
       {showPart4 && (
-        <section>
+        <section className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-1 h-8 bg-yellow-600 dark:bg-yellow-400"></div>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -186,35 +191,75 @@ export default function Function1Panel() {
                 <span className="font-bold mr-2">6.</span>
                 <span>{t('dashboard.preparation.part4.install.step6')}</span>
               </li>
+            </ol>
+
+            {!showPart5 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={handleActivation}
+                  className="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors font-medium"
+                >
+                  {t('dashboard.preparation.part4.button')}
+                </button>
+              </div>
+            )}
+
+            {showPart5 && (
+              <div className="text-center mt-6">
+                <div className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 text-green-800 dark:text-green-200 rounded-lg">
+                  ✓ {t('dashboard.preparation.part4.button')}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* 完成激活 */}
+      {showPart5 && (
+        <section>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-1 h-8 bg-yellow-600 dark:bg-yellow-400"></div>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+              {t('dashboard.preparation.part5.title')}
+            </h2>
+          </div>
+
+          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+            <ol className="space-y-3 text-gray-700 dark:text-gray-300">
               <li className="flex">
                 <span className="font-bold mr-2">7.</span>
-                <span>{t('dashboard.preparation.part4.install.step7')}</span>
+                <span>{t('dashboard.preparation.part5.step7')}</span>
               </li>
               <li className="flex">
                 <span className="font-bold mr-2">8.</span>
-                <span>{t('dashboard.preparation.part4.install.step8')}</span>
+                <span>{t('dashboard.preparation.part5.step8')}</span>
               </li>
               <li className="flex">
                 <span className="font-bold mr-2">9.</span>
-                <span>{t('dashboard.preparation.part4.install.step9')}</span>
+                <span>{t('dashboard.preparation.part5.step9')}</span>
               </li>
               <li className="flex">
                 <span className="font-bold mr-2">10.</span>
-                <span>{t('dashboard.preparation.part4.install.step10')}</span>
+                <span>{t('dashboard.preparation.part5.step10')}</span>
               </li>
               <li className="flex">
                 <span className="font-bold mr-2">11.</span>
-                <span>{t('dashboard.preparation.part4.install.step11')}</span>
+                <span>{t('dashboard.preparation.part5.step11')}</span>
               </li>
               <li className="flex">
                 <span className="font-bold mr-2">12.</span>
-                <span>{t('dashboard.preparation.part4.install.step12')}</span>
+                <span>{t('dashboard.preparation.part5.step12')}</span>
+              </li>
+              <li className="flex">
+                <span className="font-bold mr-2">13.</span>
+                <span>{t('dashboard.preparation.part5.step13')}</span>
               </li>
             </ol>
 
             <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 dark:border-yellow-600">
               <p className="text-yellow-800 dark:text-yellow-200 font-medium">
-                {t('dashboard.preparation.part4.note')}
+                {t('dashboard.preparation.part5.note')}
               </p>
             </div>
           </div>
